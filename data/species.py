@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Seed dataset for the Mushroom Search Index.
+Seed dataset for the Spore Drop Index.
 
 Each entry is a dict with a consistent schema. The backend derives filter
 facets (cap colors, edibility, habitat, etc.) dynamically from this list, so

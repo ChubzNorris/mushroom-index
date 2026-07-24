@@ -1,4 +1,4 @@
-/* Mushroom Search Index - frontend logic */
+/* Spore Drop Index - frontend logic */
 'use strict';
 
 const state = {
@@ -232,7 +232,7 @@ async function init() {
   try {
     const all = await fetchJSON('/api/species');
     document.querySelector('.site-footer p').innerHTML =
-      `Mushroom Search Index · ${all.length} species · A Hermes-built educational reference.`;
+      `Spore Drop Index · ${all.length} species · A Hermes-built educational reference.`;
   } catch (e) {}
 
   try {

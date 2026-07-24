@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Mushroom Search Index - backend server.
+Spore Drop Index - backend server.
 
 Zero-dependency: uses only the Python standard library so it runs anywhere
 `python app.py` works (Python 3.7+). Serves a small JSON search API plus the
@@ -217,7 +217,7 @@ def search(params):
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "MushroomIndex/1.0"
+    server_version = "SporeDropIndex/1.0"
 
     def _send_json(self, payload, status=200):
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
@@ -302,7 +302,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="Mushroom Search Index server")
+    parser = argparse.ArgumentParser(description="Spore Drop Index server")
     parser.add_argument("--host", default=os.environ.get("HOST", "0.0.0.0"))
     parser.add_argument("--port", type=int,
                         default=int(os.environ.get("PORT", "8000")))
@@ -310,7 +310,7 @@ def main():
 
     httpd = ThreadingHTTPServer((args.host, args.port), Handler)
     url = f"http://{args.host}:{args.port}/"
-    print(f"Mushroom Search Index running at {url}")
+    print(f"Spore Drop Index running at {url}")
     print(f"Serving {len(SPECIES)} species. Press Ctrl+C to stop.")
     try:
         httpd.serve_forever()
