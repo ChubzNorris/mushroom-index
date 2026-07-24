@@ -1,29 +1,38 @@
 :root {
-  --bg: #0f1410;
-  --bg-soft: #16201a;
-  --panel: #1b2620;
-  --panel-2: #223029;
-  --ink: #e8f0ea;
-  --ink-dim: #9fb3a6;
-  --line: #2c3b32;
-  --accent: #6fcf97;
-  --accent-2: #4cae7e;
-  --danger: #e05a5a;
-  --warn: #e0a64b;
-  --unknown: #8a9ba0;
+  --bg: #14110c;
+  --bg-soft: #1c1812;
+  --panel: #221d15;
+  --panel-2: #2c251a;
+  --ink: #ece3d2;
+  --ink-dim: #a99c84;
+  --line: #3a3122;
+  --accent: #8fb96b;   /* moss green */
+  --accent-2: #6f9a4e;
+  --bark: #9c7a4d;     /* earthy tan */
+  --danger: #d96b5a;
+  --warn: #d9a44b;
+  --unknown: #9a8b72;
   --radius: 14px;
-  --shadow: 0 8px 30px rgba(0,0,0,.35);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --shadow: 0 8px 30px rgba(0,0,0,.45);
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
 
+/* Forest theme: serif headings for a foraged, natural feel */
+h1, h2, h3, .detail-head h2, .filters h2, .tagline {
+  font-family: var(--serif);
+  letter-spacing: .2px;
+}
+
 body {
   margin: 0;
-  background: radial-gradient(1200px 600px at 80% -10%, #1d2c23 0%, var(--bg) 55%) fixed;
+  background: radial-gradient(1200px 600px at 80% -10%, #2a2114 0%, var(--bg) 55%) fixed;
   color: var(--ink);
   min-height: 100vh;
   line-height: 1.5;
+  font-family: var(--sans);
 }
 
 /* Header */

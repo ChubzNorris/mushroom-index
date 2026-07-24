@@ -1,4 +1,4 @@
-# 🍄 Mushroom Search Index
+# 🍄 Spore Drop Index
 
 A small, fast, dependency-free web app for **searching and identifying mushrooms
 by their traits** — cap color, gills vs. pores, habitat, ecology, spore print,
