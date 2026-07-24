@@ -32,6 +32,30 @@
     Always confirm with an expert and a spore print before any consumption.
   </div>
 
+  <section class="identify" aria-label="Identify from a photo">
+    <div class="identify-head">
+      <span class="brand-mark" aria-hidden="true">🔎</span>
+      <div>
+        <h2>Identify from a photo</h2>
+        <p class="identify-sub">Upload a mushroom photo to find <b>visually similar</b> species in the index.
+          This is a colour/texture match, <b>not an identification</b> — always confirm with an expert.</p>
+      </div>
+    </div>
+    <div class="identify-controls">
+      <label class="upload-btn">
+        <input id="identify-input" type="file" accept="image/*" hidden />
+        Choose photo
+      </label>
+      <span id="identify-filename" class="identify-filename"></span>
+      <button id="identify-btn" type="button" class="primary" disabled>Find similar</button>
+    </div>
+    <div id="identify-preview" class="identify-preview" hidden>
+      <img id="identify-preview-img" alt="Uploaded preview" />
+    </div>
+    <p id="identify-note" class="identify-note" hidden></p>
+    <div id="identify-results" class="grid identify-grid" hidden></div>
+  </section>
+
   <main class="layout">
     <aside class="filters" id="filters" aria-label="Filter by traits">
       <button class="filters-toggle" id="filters-toggle" type="button" aria-expanded="true" aria-controls="filter-groups">Filters ▾</button>

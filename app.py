@@ -32,6 +32,7 @@ import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 from functools import partial
+from PIL import Image, ImageFilter
 
 # Make the data package importable regardless of where the server is launched.
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -49,6 +50,81 @@ def _load_manifest():
         return {}
 
 MANIFEST = _load_manifest()
+
+# --- Photo-based "visual similarity" matcher (local, no external API) -------
+# Cheap, dependency-free features (Pillow only): an HSV colour histogram plus
+# an edge-density measure. This is NOT identification -- it ranks our indexed
+# photos by how much they look like the uploaded one. The UI is required to
+# present results as "visually similar", never "this is species X".
+import math as _math
+
+def _photo_features(img):
+    """Return {hsv: [768 ints], edge: float} for a PIL image."""
+    small = img.convert("RGB").resize((64, 64))
+    hsv = small.convert("HSV").histogram()  # 256*3 bins
+    edge = small.convert("L").filter(ImageFilter.FIND_EDGES).histogram()
+    edge_density = sum(i * c for i, c in enumerate(edge)) / float(64 * 64 * 255)
+    return {"hsv": hsv, "edge": edge_density}
+
+def _features_from_file(path):
+    with open(path, "rb") as f:
+        return _photo_features(Image.open(f))
+
+def _dist(a, b):
+    """Lower = more visually similar. Combines HSV histogram distance
+    (chi-square) with edge-density difference."""
+    ha, hb = a["hsv"], b["hsv"]
+    chi = 0.0
+    for x, y in zip(ha, hb):
+        s = x + y
+        if s:
+            chi += (x - y) ** 2 / s
+    chi *= 0.5  # normalise to ~[0, 1]
+    edge_diff = abs(a["edge"] - b["edge"])
+    return 0.85 * chi + 0.15 * min(edge_diff, 1.0)
+
+# Precompute features for every indexed photo so an upload ranks in O(n).
+_PHOTO_FEATURES = {}
+for _sid, _meta in MANIFEST.items():
+    _p = os.path.join(HERE, "images", _meta.get("file", ""))
+    if _p and os.path.isfile(_p):
+        try:
+            _PHOTO_FEATURES[_sid] = _features_from_file(_p)
+        except Exception:
+            pass
+
+def identify_by_photo(upload_path, top_n=8):
+    """Rank indexed species by visual similarity to an uploaded photo.
+    Returns a list of dicts with id/name/edibility/similarity, best first."""
+    q = _features_from_file(upload_path)
+    scored = []
+    for s in SPECIES:
+        f = _PHOTO_FEATURES.get(s["id"])
+        if not f:
+            continue
+        scored.append((_dist(q, f), s))
+    if not scored:
+        return []
+    scored.sort(key=lambda t: t[0])
+    lo = scored[0][0]
+    hi = max(t[0] for t in scored)
+    span = (hi - lo) or 1.0
+    out = []
+    for d, s in scored[:top_n]:
+        sim = 1.0 - (d - lo) / span  # 1.0 = closest match
+        rec = {
+            "id": s["id"],
+            "name": s["name"],
+            "scientific_name": s["scientific_name"],
+            "edibility": s.get("edibility"),
+            "similarity": round(sim, 3),
+        }
+        img = with_image(s).get("image")
+        if img:
+            rec["image"] = img
+        out.append(rec)
+    return out
+
 
 # --- Lookalike resolver -------------------------------------------------
 # Lookalikes are stored as free-text {name, distinguish} with no id link.
@@ -333,6 +409,73 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send_file(candidate)
 
         self.send_error(404, "Not found")
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        route = parsed.path
+        if route != "/api/identify":
+            return self.send_error(404, "Not found")
+        try:
+            ctype = self.headers.get("Content-Type", "")
+            if "multipart/form-data" not in ctype:
+                return self.send_error(400, "Expected multipart/form-data")
+            # Boundary looks like: boundary=----WebKitFormBoundaryXXXX
+            boundary = None
+            for part in ctype.split(";"):
+                part = part.strip()
+                if part.startswith("boundary="):
+                    boundary = part[len("boundary="):].strip().strip('"')
+            if not boundary:
+                return self.send_error(400, "Missing multipart boundary")
+            try:
+                length = int(self.headers.get("Content-Length", "0"))
+            except ValueError:
+                return self.send_error(400, "Bad Content-Length")
+            raw = self.rfile.read(length)
+            # Split into parts on \r\n--<boundary>
+            delim = ("--" + boundary).encode("utf-8")
+            parts = raw.split(b"\r\n" + delim)
+            image_bytes = None
+            for p in parts:
+                if not p or p == b"--\r\n" or p == b"--":
+                    continue
+                # Each part: headers \r\n\r\n body, with a leading \r\n we strip.
+                if p.startswith(b"\r\n"):
+                    p = p[2:]
+                sep = b"\r\n\r\n"
+                idx = p.find(sep)
+                if idx < 0:
+                    continue
+                header_block = p[:idx].decode("utf-8", "replace")
+                body = p[idx + len(sep):]
+                # Drop trailing \r\n that belongs to the boundary delimiter.
+                if body.endswith(b"\r\n"):
+                    body = body[:-2]
+                if 'name="image"' in header_block and body:
+                    image_bytes = body
+                    break
+            if not image_bytes:
+                return self.send_error(400, "No image uploaded")
+            # Stash to a temp file and run the local similarity matcher.
+            import tempfile
+            fd, tmppath = tempfile.mkstemp(suffix=".jpg", prefix="id_")
+            with os.fdopen(fd, "wb") as fh:
+                fh.write(image_bytes)
+            try:
+                from PIL import UnidentifiedImageError
+                try:
+                    Image.open(tmppath).verify()
+                except (UnidentifiedImageError, OSError):
+                    os.remove(tmppath)
+                    return self.send_error(400, "File is not a valid image")
+                results = identify_by_photo(tmppath, top_n=8)
+            finally:
+                if os.path.exists(tmppath):
+                    os.remove(tmppath)
+            self._send_json({"results": results})
+        except Exception as e:  # noqa: BLE001
+            sys.stderr.write("[mushroom-index] identify error: %s\n" % e)
+            self.send_error(500, "Identification failed")
 
     def log_message(self, fmt, *args):  # quieter logs
         sys.stderr.write("[mushroom-index] " + (fmt % args) + "\n")

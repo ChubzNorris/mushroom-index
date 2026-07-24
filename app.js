@@ -216,6 +216,89 @@ function closeDetail() {
   document.body.style.overflow = '';
 }
 
+/* ---- Photo identify (local visual-similarity, not identification) ---- */
+function initIdentify() {
+  const input = el('identify-input');
+  const btn = el('identify-btn');
+  const fname = el('identify-filename');
+  const preview = el('identify-preview');
+  const previewImg = el('identify-preview-img');
+  const note = el('identify-note');
+  const results = el('identify-results');
+  let pendingFile = null;
+
+  input.addEventListener('change', () => {
+    const f = input.files && input.files[0];
+    pendingFile = f || null;
+    if (!f) {
+      btn.disabled = true;
+      fname.textContent = '';
+      preview.hidden = true;
+      return;
+    }
+    fname.textContent = f.name;
+    btn.disabled = false;
+    preview.hidden = false;
+    const reader = new FileReader();
+    reader.onload = e => { previewImg.src = e.target.result; };
+    reader.readAsDataURL(f);
+    results.hidden = true;
+    results.innerHTML = '';
+    note.hidden = true;
+  });
+
+  btn.addEventListener('click', async () => {
+    if (!pendingFile) return;
+    btn.disabled = true;
+    btn.textContent = 'Matching…';
+    note.hidden = false;
+    note.textContent = 'Finding visually similar species…';
+    try {
+      const fd = new FormData();
+      fd.append('image', pendingFile);
+      const res = await fetch('/api/identify', { method: 'POST', body: fd });
+      if (!res.ok) throw new Error('Identify failed: ' + res.status);
+      const data = await res.json();
+      const list = data.results || [];
+      results.innerHTML = list.map(r => identifyCardHTML(r)).join('');
+      results.hidden = false;
+      note.hidden = false;
+      if (!list.length) {
+        note.textContent = 'No indexed photos to compare against.';
+      } else {
+        note.innerHTML = 'Top matches by <b>visual similarity</b> (colour/texture). ' +
+          'This is <b>not</b> an identification — confirm with an expert.';
+      }
+      results.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => openDetail(card.dataset.id));
+      });
+    } catch (e) {
+      note.hidden = false;
+      note.textContent = 'Could not process that photo. Try a different image.';
+      console.error(e);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Find similar';
+    }
+  });
+}
+
+function identifyCardHTML(r) {
+  const emoji = EMOJI_FOR[r.edibility] || '🍄';
+  const img = r.image
+    ? `<img class="card-img" src="${r.image.url}" alt="${escapeHTML(r.name)}" loading="lazy" />`
+    : `<div class="card-emoji">${emoji}</div>`;
+  const pct = Math.round((r.similarity || 0) * 100);
+  return `
+    <article class="card" data-id="${r.id}" tabindex="0">
+      <div class="card-media">${img}</div>
+      <h3>${escapeHTML(r.name)}</h3>
+      <p class="sci">${escapeHTML(r.scientific_name)}</p>
+      <span class="badge ${r.edibility}">${r.edibility}</span>
+      <div class="traits"><span class="tag">${pct}% similar</span></div>
+    </article>`;
+}
+
 /* ---- Orchestration ---- */
 async function refresh() {
   const qs = buildQueryString();
@@ -287,6 +370,9 @@ async function init() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDetail();
   });
+
+  // Photo identify panel (local visual-similarity, never an identification).
+  initIdentify();
 
   // Mobile filter toggle: collapse the filter panel by default on small screens
   // so the results show first; the "Filters" button expands it.
