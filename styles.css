@@ -371,6 +371,13 @@ img { max-width: 100%; }
 }
 .identify .primary:hover:not(:disabled) { border-color: var(--accent); box-shadow: 0 0 10px var(--glow); }
 .identify .primary:disabled { opacity: .45; cursor: not-allowed; }
+.identify .ghost {
+  padding: 10px 14px; border-radius: 11px; cursor: pointer;
+  background: transparent; color: var(--ink-dim);
+  border: 1px solid var(--line); font-size: .88rem; font-weight: 600;
+  transition: all .15s ease;
+}
+.identify .ghost:hover { color: var(--ink); border-color: var(--accent-2); }
 .identify-preview { margin-top: 14px; }
 .identify-preview img {
   max-height: 220px; border-radius: 12px; display: block;

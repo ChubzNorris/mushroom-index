@@ -220,6 +220,7 @@ function closeDetail() {
 function initIdentify() {
   const input = el('identify-input');
   const btn = el('identify-btn');
+  const removeBtn = el('identify-remove');
   const fname = el('identify-filename');
   const preview = el('identify-preview');
   const previewImg = el('identify-preview-img');
@@ -227,16 +228,29 @@ function initIdentify() {
   const results = el('identify-results');
   let pendingFile = null;
 
+  // Reset everything back to the empty/choose state.
+  function resetIdentify() {
+    pendingFile = null;
+    input.value = '';
+    fname.textContent = '';
+    preview.hidden = true;
+    previewImg.removeAttribute('src');
+    removeBtn.hidden = true;
+    btn.disabled = true;
+    note.hidden = true;
+    results.hidden = true;
+    results.innerHTML = '';
+  }
+
   input.addEventListener('change', () => {
     const f = input.files && input.files[0];
     pendingFile = f || null;
     if (!f) {
-      btn.disabled = true;
-      fname.textContent = '';
-      preview.hidden = true;
+      resetIdentify();
       return;
     }
     fname.textContent = f.name;
+    removeBtn.hidden = false;
     btn.disabled = false;
     preview.hidden = false;
     const reader = new FileReader();
@@ -246,6 +260,8 @@ function initIdentify() {
     results.innerHTML = '';
     note.hidden = true;
   });
+
+  removeBtn.addEventListener('click', resetIdentify);
 
   btn.addEventListener('click', async () => {
     if (!pendingFile) return;
