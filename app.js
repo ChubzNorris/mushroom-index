@@ -274,6 +274,21 @@ async function init() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDetail();
   });
+
+  // Mobile filter toggle: collapse the filter panel by default on small screens
+  // so the results show first; the "Filters" button expands it.
+  const filtersEl = el('filters');
+  const toggle = el('filters-toggle');
+  if (toggle) {
+    const isMobile = window.matchMedia('(max-width: 820px)').matches;
+    if (isMobile) filtersEl.classList.add('collapsed');
+    toggle.setAttribute('aria-expanded', String(!filtersEl.classList.contains('collapsed')));
+    toggle.addEventListener('click', () => {
+      const collapsed = filtersEl.classList.toggle('collapsed');
+      toggle.setAttribute('aria-expanded', String(!collapsed));
+      toggle.textContent = collapsed ? 'Filters ▾' : 'Filters ▴';
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);
