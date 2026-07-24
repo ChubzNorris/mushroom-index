@@ -20,6 +20,17 @@
 
 * { box-sizing: border-box; }
 
+/* Looping, semi-transparent animated background (Spore Drop Index) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/bg.gif") center / cover no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+}
+
 /* Forest theme: serif headings for a foraged, natural feel */
 h1, h2, h3, .detail-head h2, .filters h2, .tagline {
   font-family: var(--serif);

@@ -200,6 +200,7 @@ class Handler(BaseHTTPRequestHandler):
             ".css": "text/css; charset=utf-8",
             ".svg": "image/svg+xml",
             ".ico": "image/x-icon",
+            ".gif": "image/gif",
             ".json": "application/json; charset=utf-8",
         }.get(ext, "application/octet-stream")
         self.send_response(200)
@@ -236,6 +237,7 @@ class Handler(BaseHTTPRequestHandler):
             "/app.js": "app.js",
             "/favicon.ico": "favicon.svg",
             "/favicon.svg": "favicon.svg",
+            "/bg.gif": "bg.gif",
         }
         if route in STATIC_WHITELIST:
             return self._send_file(os.path.join(HERE, STATIC_WHITELIST[route]))
