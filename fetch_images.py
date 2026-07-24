@@ -40,12 +40,25 @@ def inat_lookup(sci):
     r0 = results[0]
     dp = r0.get("default_photo") or {}
     photo = dp.get("medium_url") or dp.get("url")
+    # Honest attribution: iNaturalist returns the photographer + license on the
+    # photo record. Prefer those over a generic placeholder.
+    lic_code = (dp.get("license_code") or "").lower()  # e.g. "cc-by-nc"
+    if lic_code:
+        license = "CC " + lic_code.replace("cc-", "").upper()  # "CC BY-NC"
+    else:
+        license = (dp.get("license") or "CC BY-SA")
+    # attribution looks like "(c) Name, some rights reserved (CC BY-NC),
+    # uploaded by Uploader" -- extract just the photographer's name.
+    attr = dp.get("attribution") or ""
+    credit = attr.split(", some rights reserved")[0].replace("(c) ", "").strip()
+    if not credit:
+        credit = "iNaturalist contributor"
     return {
         "taxon_id": r0.get("id"),
         "photo": photo,
-        "license": (dp.get("license_code") and "CC " + dp["license_code"].upper().replace("CC-", ""))
-                   or dp.get("license") or "CC BY-SA",
-        "attribution": dp.get("attribution") or "iNaturalist contributor",
+        "license": license,
+        "credit": credit,
+        "source": "iNaturalist",
         "matched_name": r0.get("name"),
         "rank": r0.get("rank"),
     }
@@ -83,7 +96,7 @@ def main():
             continue
         manifest[sid] = {
             "file": sid + ".jpg",
-            "credit": info["attribution"],
+            "credit": info["credit"],
             "license": info["license"],
             "source": "iNaturalist",
             "taxon_id": info["taxon_id"],

@@ -1,350 +1,682 @@
 {
   "amanita-muscaria": {
     "file": "amanita-muscaria.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 48715,
+    "matched_name": "Amanita muscaria"
   },
   "amanita-phalloides": {
     "file": "amanita-phalloides.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 52135,
+    "matched_name": "Amanita phalloides"
   },
   "amanita-bisporigera": {
     "file": "amanita-bisporigera.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Kathie Hodge",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 125390,
+    "matched_name": "Amanita bisporigera"
   },
   "amanita-caesarea": {
     "file": "amanita-caesarea.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 204588,
+    "matched_name": "Amanita caesarea"
   },
   "agaricus-bisporus": {
     "file": "agaricus-bisporus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Spencer Wimmer, all rights reserved, uploaded by Spencer Wimmer",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 61395,
+    "matched_name": "Agaricus bisporus"
   },
   "agaricus-campestris": {
     "file": "agaricus-campestris.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Felipe Hidalgo",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 143563,
+    "matched_name": "Agaricus campestris"
   },
   "agaricus-xanthodermus": {
     "file": "agaricus-xanthodermus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Damon Tighe",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 118394,
+    "matched_name": "Agaricus xanthodermus"
   },
   "boletus-edulis": {
     "file": "boletus-edulis.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "wp-polzin",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 48701,
+    "matched_name": "Boletus edulis"
   },
   "boletus-satanas": {
     "file": "boletus-satanas.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 544554,
+    "matched_name": "Rubroboletus satanas"
   },
   "cantharellus-cibarius": {
     "file": "cantharellus-cibarius.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 47347,
+    "matched_name": "Cantharellus cibarius"
   },
   "omphalotus-olearius": {
     "file": "omphalotus-olearius.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "rcaccia",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 64021,
+    "matched_name": "Omphalotus olearius"
   },
   "morchella-esculenta": {
     "file": "morchella-esculenta.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "k_eper",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 58682,
+    "matched_name": "Morchella esculenta"
   },
   "gyromitra-esculenta": {
     "file": "gyromitra-esculenta.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Kari Pihlaviita",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 85120,
+    "matched_name": "Gyromitra esculenta"
   },
   "lactarius-deliciosus": {
     "file": "lactarius-deliciosus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "timendez",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 155197,
+    "matched_name": "Lactarius deliciosus"
   },
   "pleurotus-ostreatus": {
     "file": "pleurotus-ostreatus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "N.W.R",
+    "license": "CC BY-NC-ND",
+    "source": "iNaturalist",
+    "taxon_id": 1196165,
+    "matched_name": "Pleurotus ostreatus"
   },
   "lentinula-edodes": {
     "file": "lentinula-edodes.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Masaki Hamaguchi",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 123351,
+    "matched_name": "Lentinula edodes"
   },
   "coprinus-comatus": {
     "file": "coprinus-comatus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Tom Norton",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 47392,
+    "matched_name": "Coprinus comatus"
   },
   "macrolepiota-procera": {
     "file": "macrolepiota-procera.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Lucian Clanet",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 63401,
+    "matched_name": "Macrolepiota procera"
   },
   "chlorophyllum-molybdites": {
     "file": "chlorophyllum-molybdites.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 117308,
+    "matched_name": "Chlorophyllum molybdites"
   },
   "armillaria-mellea": {
     "file": "armillaria-mellea.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Nathan Wilson",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 55950,
+    "matched_name": "Armillaria mellea"
   },
   "galerina-marginata": {
     "file": "galerina-marginata.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Benjamin J. Dion",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 1672638,
+    "matched_name": "Galerina marginata"
   },
   "hericium-erinaceus": {
     "file": "hericium-erinaceus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Adam, all rights reserved, uploaded by Adam",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 1520823,
+    "matched_name": "Hericium erinaceus"
   },
   "sparassis-crispa": {
     "file": "sparassis-crispa.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Aurelija",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 63014,
+    "matched_name": "Sparassis crispa"
   },
   "trametes-versicolor": {
     "file": "trametes-versicolor.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "no rights reserved, uploaded by Ken Kneidel",
+    "license": "CC CC0",
+    "source": "iNaturalist",
+    "taxon_id": 1153556,
+    "matched_name": "Trametes versicolor"
   },
   "fomes-fomentarius": {
     "file": "fomes-fomentarius.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Vladimir Travkin",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 127510,
+    "matched_name": "Fomes fomentarius"
   },
   "calvatia-gigantea": {
     "file": "calvatia-gigantea.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Krystelle Denis",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 57692,
+    "matched_name": "Calvatia gigantea"
   },
   "scleroderma-citrinum": {
     "file": "scleroderma-citrinum.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Jason M Crockwell",
+    "license": "CC BY-NC-ND",
+    "source": "iNaturalist",
+    "taxon_id": 55927,
+    "matched_name": "Scleroderma citrinum"
   },
   "lycoperdon-perlatum": {
     "file": "lycoperdon-perlatum.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Stephan Pflume",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 48443,
+    "matched_name": "Lycoperdon perlatum"
   },
   "suillus-luteus": {
     "file": "suillus-luteus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 53488,
+    "matched_name": "Suillus luteus"
   },
   "tricholoma-matsutake": {
     "file": "tricholoma-matsutake.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 62486,
+    "matched_name": "Tricholoma matsutake"
   },
   "russula-emetica": {
     "file": "russula-emetica.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "noah_siegel",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 49449,
+    "matched_name": "Russula emetica"
   },
   "russula-cyanoxantha": {
     "file": "russula-cyanoxantha.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 194437,
+    "matched_name": "Russula cyanoxantha"
   },
   "hypholoma-fasciculare": {
     "file": "hypholoma-fasciculare.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Nicolas Schwab",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 48767,
+    "matched_name": "Hypholoma fasciculare"
   },
   "cortinarius-rubellus": {
     "file": "cortinarius-rubellus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 500053,
+    "matched_name": "Cortinarius rubellus"
   },
   "clitocybe-dealbata": {
     "file": "clitocybe-dealbata.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Kurt Miller",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 1525535,
+    "matched_name": "Collybia dealbata"
   },
   "psilocybe-cubensis": {
     "file": "psilocybe-cubensis.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Teodoro Chivatá Bedoya",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 328244,
+    "matched_name": "Psilocybe cubensis"
   },
   "flammulina-velutipes": {
     "file": "flammulina-velutipes.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "stephenjaygould",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 67594,
+    "matched_name": "Flammulina velutipes"
   },
   "auricularia-auricula-judae": {
     "file": "auricularia-auricula-judae.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Jurga Motiejūnaitė",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 1138427,
+    "matched_name": "Auricularia auricula-judae"
   },
   "tremella-fuciformis": {
     "file": "tremella-fuciformis.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Alex Abair",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 143384,
+    "matched_name": "Tremella fuciformis"
   },
   "schizophyllum-commune": {
     "file": "schizophyllum-commune.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Grey Smith",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 54573,
+    "matched_name": "Schizophyllum commune"
   },
   "phallus-impudicus": {
     "file": "phallus-impudicus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Nick Weller, all rights reserved, uploaded by Nick Weller",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 54594,
+    "matched_name": "Phallus impudicus"
   },
   "ramaria-formosa": {
     "file": "ramaria-formosa.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Ahmed Mujčinović",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 48770,
+    "matched_name": "Ramaria formosa"
   },
   "clavulina-cristata": {
     "file": "clavulina-cristata.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Drew T Henderson",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 63260,
+    "matched_name": "Clavulina coralloides"
   },
   "leccinum-scrobum": {
     "file": "leccinum-scrobum.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 63232,
+    "matched_name": "Leccinum scabrum"
   },
   "verpa-bohemica": {
     "file": "verpa-bohemica.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Taye Bright",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 126131,
+    "matched_name": "Verpa bohemica"
   },
   "laetiporus-sulphureus": {
     "file": "laetiporus-sulphureus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Stephen John Davies",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 53713,
+    "matched_name": "Laetiporus sulphureus"
   },
   "amerenia-smithiana": {
     "file": "amerenia-smithiana.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 62485,
+    "matched_name": "Amanita smithiana"
   },
   "amanita-ocreata": {
     "file": "amanita-ocreata.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "noah_siegel",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 67356,
+    "matched_name": "Amanita ocreata"
   },
   "entoloma-sinuatum": {
     "file": "entoloma-sinuatum.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 510199,
+    "matched_name": "Entoloma sinuatum"
   },
   "sarcosphaera-crassa": {
     "file": "sarcosphaera-crassa.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 68183,
+    "matched_name": "Sarcosphaera coronaria"
   },
   "mutinus-caninus": {
     "file": "mutinus-caninus.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Antonio Ezquerro Antoñana, all rights reserved, uploaded by Antonio Ezquerro Antoñana",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 63580,
+    "matched_name": "Mutinus caninus"
   },
   "battarrea-phalloides": {
     "file": "battarrea-phalloides.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Adam J. Searcy",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 119969,
+    "matched_name": "Battarrea phalloides"
   },
   "xerocomellus-chrysenteron": {
     "file": "xerocomellus-chrysenteron.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Marco Floriani",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 438013,
+    "matched_name": "Xerocomellus chrysenteron"
   },
   "stropharia-rugosoannulata": {
     "file": "stropharia-rugosoannulata.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "tchitcherine",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 119151,
+    "matched_name": "Stropharia rugosoannulata"
   },
   "pleurotus-pulmonarius": {
     "file": "pleurotus-pulmonarius.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 136399,
+    "matched_name": "Pleurotus pulmonarius"
   },
   "grifola-frondosa": {
     "file": "grifola-frondosa.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 53714,
+    "matched_name": "Grifola frondosa"
   },
   "tuber-melanosporum": {
     "file": "tuber-melanosporum.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Elena Regina, no known copyright restrictions (public domain)",
+    "license": "CC PD",
+    "source": "iNaturalist",
+    "taxon_id": 120281,
+    "matched_name": "Tuber melanosporum"
   },
   "morchella-conica": {
     "file": "morchella-conica.jpg",
-    "credit": "iNaturalist contributor (CC)",
-    "license": "CC",
-    "source": "iNaturalist"
+    "credit": "Armin Weise, all rights reserved, uploaded by Armin Weise",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 133686,
+    "matched_name": "Morchella angusticeps"
+  },
+  "amanita-virosa": {
+    "file": "amanita-virosa.jpg",
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 58685,
+    "matched_name": "Amanita virosa"
+  },
+  "amanita-rubescens": {
+    "file": "amanita-rubescens.jpg",
+    "credit": "Nicoleta",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 1678242,
+    "matched_name": "Amanita rubescens"
+  },
+  "cortinarius-orellanus": {
+    "file": "cortinarius-orellanus.jpg",
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 337849,
+    "matched_name": "Cortinarius orellanus"
+  },
+  "lepiota-brunneoincarnata": {
+    "file": "lepiota-brunneoincarnata.jpg",
+    "credit": "salvatore_bacciu_paola_mereu",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 515954,
+    "matched_name": "Lepiota brunneoincarnata"
+  },
+  "galerina-autumnalis": {
+    "file": "galerina-autumnalis.jpg",
+    "credit": "Fluff Berger, all rights reserved",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 154735,
+    "matched_name": "Galerina marginata"
+  },
+  "kuehneromyces-mutabilis": {
+    "file": "kuehneromyces-mutabilis.jpg",
+    "credit": "Dr. Hans-Günter Wagner",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 153033,
+    "matched_name": "Kuehneromyces mutabilis"
+  },
+  "entoloma-rhodopolium": {
+    "file": "entoloma-rhodopolium.jpg",
+    "credit": "Harte Singer",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 344658,
+    "matched_name": "Entoloma rhodopolium"
+  },
+  "hebeloma-crustuliniforme": {
+    "file": "hebeloma-crustuliniforme.jpg",
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 194307,
+    "matched_name": "Hebeloma crustuliniforme"
+  },
+  "tricholoma-equestre": {
+    "file": "tricholoma-equestre.jpg",
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 118215,
+    "matched_name": "Tricholoma equestre"
+  },
+  "marasmius-oreades": {
+    "file": "marasmius-oreades.jpg",
+    "credit": "Giorgio Bardelli",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 118240,
+    "matched_name": "Marasmius oreades"
+  },
+  "agaricus-arvensis": {
+    "file": "agaricus-arvensis.jpg",
+    "credit": "Felipe Hidalgo",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 58699,
+    "matched_name": "Agaricus arvensis"
+  },
+  "pleurotus-eryngii": {
+    "file": "pleurotus-eryngii.jpg",
+    "credit": "Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 205516,
+    "matched_name": "Pleurotus eryngii"
+  },
+  "craterellus-cornucopioides": {
+    "file": "craterellus-cornucopioides.jpg",
+    "credit": "Paul George",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 48607,
+    "matched_name": "Craterellus cornucopioides"
+  },
+  "boletus-bicolor": {
+    "file": "boletus-bicolor.jpg",
+    "credit": "Fluff Berger",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 636546,
+    "matched_name": "Baorangia bicolor"
+  },
+  "suillus-americanus": {
+    "file": "suillus-americanus.jpg",
+    "credit": "Dave Lewis",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 125716,
+    "matched_name": "Suillus americanus"
+  },
+  "russula-brevipes": {
+    "file": "russula-brevipes.jpg",
+    "credit": "zetapass, all rights reserved",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 118179,
+    "matched_name": "Russula brevipes"
+  },
+  "armillaria-tabescens": {
+    "file": "armillaria-tabescens.jpg",
+    "credit": "Nicolò Oppicelli",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 895035,
+    "matched_name": "Desarmillaria tabescens"
+  },
+  "psilocybe-semilanceata": {
+    "file": "psilocybe-semilanceata.jpg",
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 54025,
+    "matched_name": "Psilocybe semilanceata"
+  },
+  "ganoderma-lucidum": {
+    "file": "ganoderma-lucidum.jpg",
+    "credit": "Elena_Sherehora",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 1581188,
+    "matched_name": "Ganoderma lucidum"
+  },
+  "fistulina-hepatica": {
+    "file": "fistulina-hepatica.jpg",
+    "credit": "mycowalt",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 123897,
+    "matched_name": "Fistulina hepatica"
+  },
+  "calocybe-gambosa": {
+    "file": "calocybe-gambosa.jpg",
+    "credit": "Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 450829,
+    "matched_name": "Calocybe gambosa"
+  },
+  "lactarius-piperatus": {
+    "file": "lactarius-piperatus.jpg",
+    "credit": "nikolall, all rights reserved, uploaded by nikolall",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 351321,
+    "matched_name": "Lactifluus piperatus"
+  },
+  "chlorophyllum-brunneum": {
+    "file": "chlorophyllum-brunneum.jpg",
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 58693,
+    "matched_name": "Chlorophyllum brunneum"
+  },
+  "morchella-angusticeps": {
+    "file": "morchella-angusticeps.jpg",
+    "credit": "Armin Weise, all rights reserved, uploaded by Armin Weise",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 133686,
+    "matched_name": "Morchella angusticeps"
+  },
+  "tuber-aestivum": {
+    "file": "tuber-aestivum.jpg",
+    "credit": "Luis Ballester",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 352626,
+    "matched_name": "Tuber aestivum"
+  },
+  "hericium-coralloides": {
+    "file": "hericium-coralloides.jpg",
+    "credit": "raquel crites",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 49162,
+    "matched_name": "Hericium coralloides"
+  },
+  "agrocybe-aegerita": {
+    "file": "agrocybe-aegerita.jpg",
+    "credit": "Inés Vázquez Cabrillana",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 578456,
+    "matched_name": "Cyclocybe cylindracea"
   }
 }
