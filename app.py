@@ -322,7 +322,6 @@ class Handler(BaseHTTPRequestHandler):
             "/app.js": "app.js",
             "/favicon.ico": "favicon.svg",
             "/favicon.svg": "favicon.svg",
-            "/bg.gif": "bg.gif",
         }
         if route in STATIC_WHITELIST:
             return self._send_file(os.path.join(HERE, STATIC_WHITELIST[route]))
