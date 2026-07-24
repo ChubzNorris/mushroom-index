@@ -1,0 +1,2 @@
+# This app uses only the Python standard library -- no third-party deps.
+# An empty requirements file keeps platform deploy tools happy.

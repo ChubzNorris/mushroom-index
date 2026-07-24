@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.pyc
+
+# Local images are committed (they're part of the app), but ignore editor/OS cruft.
+.DS_Store
+*.swp

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mushroom Search Index</title>
+  <meta name="description" content="Search and identify mushrooms by traits, habitat, and edibility. Educational reference only." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">🍄</span>
+      <div>
+        <h1>Mushroom Search Index</h1>
+        <p class="tagline">Identify, filter, and learn about fungi by their traits.</p>
+      </div>
+    </div>
+    <form id="search-form" class="search-bar" role="search">
+      <input id="search-input" type="search" autocomplete="off"
+             placeholder="Search by name, scientific name, or trait…" aria-label="Search mushrooms" />
+      <button type="submit" title="Search">Search</button>
+      <button type="button" id="clear-btn" title="Clear filters" class="ghost">Reset</button>
+    </form>
+  </header>
+
+  <div class="disclaimer" role="alert">
+    <strong>⚠ Educational use only.</strong>
+    This index is a learning tool, not a foraging guide. Many mushrooms are deadly and closely
+    resemble edible ones. <strong>Never eat a wild mushroom based on an app.</strong>
+    Always confirm with an expert and a spore print before any consumption.
+  </div>
+
+  <main class="layout">
+    <aside class="filters" id="filters" aria-label="Filter by traits">
+      <h2>Filter by trait</h2>
+      <div id="filter-groups"><!-- populated by JS --></div>
+      <div class="filter-meta">
+        <span id="result-count">—</span> species match
+      </div>
+    </aside>
+
+    <section class="results" aria-label="Search results">
+      <div class="results-toolbar">
+        <label>Sort:
+          <select id="sort-select">
+            <option value="name">Name (A–Z)</option>
+            <option value="edibility">Edibility (safe → dangerous)</option>
+            <option value="random">Random</option>
+          </select>
+        </label>
+      </div>
+      <div id="results-grid" class="grid"><!-- populated by JS --></div>
+      <p id="no-results" class="no-results" hidden>No species match these filters. Try resetting.</p>
+    </section>
+  </main>
+
+  <!-- Detail modal -->
+  <div id="detail-overlay" class="overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="detail-name">
+      <button class="modal-close" id="detail-close" aria-label="Close">×</button>
+      <div id="detail-content"><!-- populated by JS --></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Mushroom Search Index · {count} species · A Hermes-built educational reference.</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
