@@ -70,19 +70,58 @@ for _s in SPECIES:
     for _t in [_s['name'], _s['scientific_name']] + list(_s.get('aliases', [])):
         _LOOKUP.setdefault(_slug(_t), _s['id'])
 
-def _resolve_lookalike(name):
-    """Return a species id if `name` clearly refers to a species we have."""
+# Canonical genus -> species id, used only when a lookalike names a genus we
+# have exactly one (or one canonical) species of. Keeps "Psilocybe species",
+# "Verpa species", "Young puffballs (Calvatia)", etc. clickable without
+# hand-editing every lookalike entry.
+_GENUS_MAP = {
+    "psilocybe": "psilocybe-cubensis",
+    "verpa": "verpa-bohemica",
+    "calvatia": "calvatia-gigantea",
+    "galerina": "galerina-marginata",
+    "morchella": "morchella-esculenta",  # canonical edible morel
+}
+
+
+def _resolve_lookalike(name, source_id=None):
+    """Return a species id if `name` clearly refers to a species we have.
+
+    Resolution order: exact slug -> whole-word term match -> a specific
+    indexed organism named inside the label -> genus-level fallback.
+    `source_id` is excluded so a species never links to itself.
+    """
     n = _slug(name)
     if not n:
         return None
-    # Exact (slug-collapsed) match on a real name / alias / scientific name.
+    # 1) Exact (slug-collapsed) match on a real name / alias / scientific name.
     if n in _LOOKUP:
         return _LOOKUP[n]
-    # Substring match on any real term (e.g. the parenthetical common name
-    # "(chanterelle)" or "jack-o'-lantern"), whole-word bounded to avoid
-    # partial collisions like "jack" matching something unrelated.
+    # 2) Whole-word substring on any lookup term (parenthetical common names,
+    #    e.g. "(chanterelle)" or "jack-o'-lantern").
     for cand, sid in _LOOKUP.items():
-        if _re.search(r'\b' + _re.escape(cand) + r'\b', n):
+        if sid != source_id and _re.search(r'\b' + _re.escape(cand) + r'\b', n):
+            return sid
+    # 3) The label names a specific indexed organism as a phrase
+    #    ("Galerina marginata (deadly galerina)", "Agaricus campestris
+    #    (field mushroom)", ...). Link to the longest matching term.
+    best = None
+    best_len = 0
+    for sp in SPECIES:
+        sid = sp["id"]
+        if sid == source_id:
+            continue
+        for term in [sp["name"], sp["scientific_name"]] + list(sp.get("aliases", [])):
+            t = _slug(term)
+            if len(t) < 4:
+                continue
+            if _re.search(r'\b' + _re.escape(t) + r'\b', n) and len(t) > best_len:
+                best = sid
+                best_len = len(t)
+    if best:
+        return best
+    # 4) Genus-level fallback for single/canonical-species genera.
+    for genus, sid in _GENUS_MAP.items():
+        if sid != source_id and _re.search(r'\b' + _re.escape(genus) + r'\b', n):
             return sid
     return None
 
@@ -103,7 +142,7 @@ def with_image(s):
     lookalikes = s.get("lookalikes")
     if lookalikes:
         rec["lookalikes"] = [
-            dict(la, link=_resolve_lookalike(la["name"])) for la in lookalikes
+            dict(la, link=_resolve_lookalike(la["name"], s["id"])) for la in lookalikes
         ]
     return rec
 

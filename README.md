@@ -1,4 +1,14 @@
-# 🍄 Spore Drop Index
+# 🍄 Spore Drop Index  ·  v1 (launch)
+
+> **Status: v1 — public, usable.** The index is live and good enough to share.
+> Trait filters, full-text search, 58 species with real photos, edibility
+> colour-coding, and clickable look-alikes for every *named* dangerous confusion
+> are all in. Known gaps (more species, image-based ID, broader look-alike
+> coverage for generic "other genus" references) are v2, not blockers.
+
+> ⚠️ **Educational use only.** Many mushrooms are deadly and closely resemble
+> edible ones. Never eat a wild mushroom based on an app. Always confirm with an
+> expert and a spore print before consumption.
 
 A small, fast, dependency-free web app for **searching and identifying mushrooms
 by their traits** — cap color, gills vs. pores, habitat, ecology, spore print,
