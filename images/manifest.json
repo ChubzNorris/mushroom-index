@@ -678,5 +678,13 @@
     "source": "iNaturalist",
     "taxon_id": 578456,
     "matched_name": "Cyclocybe cylindracea"
+  },
+  "enoki": {
+    "file": "enoki.jpg",
+    "credit": "stephenjaygould",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 67594,
+    "matched_name": "Flammulina velutipes"
   }
 }
