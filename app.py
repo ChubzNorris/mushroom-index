@@ -50,6 +50,42 @@ def _load_manifest():
 
 MANIFEST = _load_manifest()
 
+# --- Lookalike resolver -------------------------------------------------
+# Lookalikes are stored as free-text {name, distinguish} with no id link.
+# Resolve each to a species id when the named organism is in our dataset so
+# the frontend can make the lookalike clickable.
+import re as _re
+
+def _slug(s):
+    """Lowercase and squash non-alphanumerics to single spaces. Parenthetical
+    text is KEPT (separated by spaces) so common names in lookalike labels like
+    "Omphalotus (jack-o'-lantern)" or "Cantharellus (chanterelle)" still match
+    our aliases ("jack o lantern", "chanterelle") instead of being discarded."""
+    s = s.lower().replace('(', ' ').replace(')', ' ')
+    return _re.sub(r'[^a-z0-9]+', ' ', s).strip()
+
+# normalized term -> species id (first definition wins)
+_LOOKUP = {}
+for _s in SPECIES:
+    for _t in [_s['name'], _s['scientific_name']] + list(_s.get('aliases', [])):
+        _LOOKUP.setdefault(_slug(_t), _s['id'])
+
+def _resolve_lookalike(name):
+    """Return a species id if `name` clearly refers to a species we have."""
+    n = _slug(name)
+    if not n:
+        return None
+    # Exact (slug-collapsed) match on a real name / alias / scientific name.
+    if n in _LOOKUP:
+        return _LOOKUP[n]
+    # Substring match on any real term (e.g. the parenthetical common name
+    # "(chanterelle)" or "jack-o'-lantern"), whole-word bounded to avoid
+    # partial collisions like "jack" matching something unrelated.
+    for cand, sid in _LOOKUP.items():
+        if _re.search(r'\b' + _re.escape(cand) + r'\b', n):
+            return sid
+    return None
+
 
 def with_image(s):
     """Return a copy of the species record with an `image` field attached when
@@ -63,6 +99,12 @@ def with_image(s):
             "license": meta.get("license"),
             "source": meta.get("source", "iNaturalist"),
         }
+    # Make lookalikes clickable when they resolve to a species in the index.
+    lookalikes = s.get("lookalikes")
+    if lookalikes:
+        rec["lookalikes"] = [
+            dict(la, link=_resolve_lookalike(la["name"])) for la in lookalikes
+        ]
     return rec
 
 # Vocabulary used for sorting edibility from safest to most dangerous.

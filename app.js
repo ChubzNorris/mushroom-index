@@ -169,8 +169,12 @@ function detailHTML(s) {
   const specs = rows.map(([k, v]) =>
     `<tr><td>${k}</td><td>${escapeHTML(v)}</td></tr>`).join('');
 
-  const look = (s.lookalikes || []).map(l =>
-    `<div class="lookalike"><b>${escapeHTML(l.name)}</b><br>${escapeHTML(l.distinguish)}</div>`).join('');
+  const look = (s.lookalikes || []).map(l => {
+    const nameHTML = l.link
+      ? `<a class="lookalike-link" href="#" data-id="${escapeHTML(l.link)}" title="View ${escapeHTML(l.name)}">${escapeHTML(l.name)} ↗</a>`
+      : `<b>${escapeHTML(l.name)}</b>`;
+    return `<div class="lookalike">${nameHTML}<br>${escapeHTML(l.distinguish)}</div>`;
+  }).join('');
 
   const aliases = (s.aliases || []).length
     ? `<p>${s.aliases.map(escapeHTML).join(' · ')}</p>` : '';
@@ -270,6 +274,15 @@ async function init() {
   el('detail-close').addEventListener('click', closeDetail);
   el('detail-overlay').addEventListener('click', e => {
     if (e.target === el('detail-overlay')) closeDetail();
+  });
+  // Lookalike links navigate to that species' detail view (modal stays open).
+  el('detail-content').addEventListener('click', e => {
+    const a = e.target.closest('.lookalike-link');
+    if (a) {
+      e.preventDefault();
+      openDetail(a.dataset.id);
+      el('detail-content').scrollTop = 0;
+    }
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDetail();

@@ -204,6 +204,9 @@ body {
 .spec-table td:first-child { color: var(--ink-dim); width: 38%; }
 .lookalike { border-left: 3px solid var(--warn); padding: 8px 12px; margin-bottom: 10px; background: rgba(224,166,75,.07); border-radius: 0 8px 8px 0; }
 .lookalike b { color: #f1c684; }
+.lookalike-link { color: #f1c684; text-decoration: none; font-weight: 700; cursor: pointer; }
+.lookalike-link:hover { text-decoration: underline; color: #ffd9a0; }
+.lookalike:has(.lookalike-link):hover { background: rgba(224,166,75,.14); }
 .fun-fact { border-left: 3px solid var(--accent); padding: 8px 12px; background: rgba(111,207,151,.07); border-radius: 0 8px 8px 0; margin-top: 14px; }
 
 /* Prevent sideways scroll on phones */
