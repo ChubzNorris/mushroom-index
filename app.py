@@ -201,6 +201,10 @@ class Handler(BaseHTTPRequestHandler):
             ".svg": "image/svg+xml",
             ".ico": "image/x-icon",
             ".gif": "image/gif",
+            ".jpg": "image/jpeg",
+            ".jpeg": "image/jpeg",
+            ".png": "image/png",
+            ".webp": "image/webp",
             ".json": "application/json; charset=utf-8",
         }.get(ext, "application/octet-stream")
         self.send_response(200)
