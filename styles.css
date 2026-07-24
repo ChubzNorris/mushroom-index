@@ -187,13 +187,16 @@ body {
   transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease;
   display: flex; flex-direction: column; gap: 8px;
   overflow: hidden;
+  /* Cap silhouette: domed top, straight (stem-side) bottom */
+  border-radius: 80px 80px 14px 14px;
+  border-top: 1px solid rgba(127,207,155,.28);
 }
-/* the "cap" rim across the top of each card */
+/* the "cap" wash: a soft dome gradient over the top of each card */
 .card::before {
   content: "";
-  position: absolute; left: 0; right: 0; top: 0; height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: .6;
+  position: absolute; left: 0; right: 0; top: 0; height: 46px;
+  background: linear-gradient(180deg, rgba(127,207,155,.14), transparent);
+  pointer-events: none;
 }
 .card:hover {
   transform: translateY(-4px);
@@ -204,7 +207,7 @@ body {
 .card h3 { margin: 0; font-size: 1.02rem; color: var(--ink); }
 .card .sci { color: var(--ink-dim); font-style: italic; font-size: .82rem; margin: 0; }
 .card-media {
-  width: 100%; height: 132px; border-radius: 12px; overflow: hidden;
+  width: 100%; height: 132px; border-radius: 64px 64px 10px 10px; overflow: hidden;
   background: var(--panel-2); display: flex; align-items: center; justify-content: center;
   border: 1px solid rgba(127,207,155,.10);
 }
