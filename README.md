@@ -1,10 +1,14 @@
-# 🍄 Spore Drop Index  ·  v1 (launch)
+# 🍄 Spore Drop Index  ·  v1 — live
 
-> **Status: v1 — public, usable.** The index is live and good enough to share.
-> Trait filters, full-text search, 58 species with real photos, edibility
-> colour-coding, and clickable look-alikes for every *named* dangerous confusion
-> are all in. Known gaps (more species, image-based ID, broader look-alike
-> coverage for generic "other genus" references) are v2, not blockers.
+> **Status: v1 — public, usable, and evolving.** The index is live and good
+> enough to share. Trait filters, full-text search, **85 species** with real
+> photos, edibility colour-coding, a local photo **"identify"** matcher, and
+> clickable look-alikes for every *named* dangerous confusion are all in.
+>
+> **v2 progress:** the species set has grown from 58 → 85 and look-alike
+> coverage is now fully named — no generic "other genus" placeholders remain.
+> The remaining v2 item is *real* image identification (species-level) via an
+> external API; parked until an iNaturalist token is provisioned.
 
 > ⚠️ **Educational use only.** Many mushrooms are deadly and closely resemble
 > edible ones. Never eat a wild mushroom based on an app. Always confirm with an
@@ -26,6 +30,11 @@ season, and edibility. It's an educational reference, not a foraging guide.
 - **Detail view** for each species: traits table, description, look-alikes with
   how to tell them apart, and a fun fact.
 - **Edibility badges** with a conservative vocabulary (choice → deadly).
+- **Photo "identify" matcher** — upload a photo and get a ranked list of the
+  indexed species it is *visually similar* to (colour/texture, computed
+  locally). This is **not** species identification — it flags likely look-alikes
+  so you know what to rule out, never asserts "this is species X." No external
+  API, no token required.
 - **Zero dependencies** — pure Python standard library backend + vanilla
   HTML/CSS/JS frontend. Runs anywhere `python` does.
 
@@ -127,7 +136,8 @@ with no gills or pores use `"attachment": "n/a"`.
 
 The app already binds to `$PORT` and `0.0.0.0` (Railway/Render/Heroku convention),
 and ships `requirements.txt` + `Procfile`, so hosting is near-zero-config. The
-`images/` folder (~6 MB of CC photos) is part of the repo, so photos work on deploy.
+The `images/` folder (~14 MB of CC photos across 85 species) is part of the
+repo, so photos work on deploy.
 
 ### Option A — Railway (easiest)
 1. Put this folder in a GitHub repo.

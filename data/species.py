@@ -542,7 +542,8 @@ SPECIES = [
         "description": ("A large, ruffled mass resembling a head of cauliflower growing at the base of "
                         "conifers. Mild, crunchy, and good eating. Unmistakable once seen."),
         "lookalikes": [
-            {"name": "Gyromitra / other brain fungi", "distinguish": "Those are rounded, on the ground, and some are deadly."}
+            {"name": "Gyromitra esculenta (false morel)", "distinguish": "Brain-lobed and on the ground (not at a wood base); contains gyromitrin and is POISONOUS. Sparassis is a ruffled mass on wood."},
+            {"name": "Hericium species (tooth fungi)", "distinguish": "Also cauliflower-like but covered in spiky teeth rather than smooth ruffled lobes; edible."}
         ]
     },
     {
@@ -586,7 +587,8 @@ SPECIES = [
                         "Used historically as tinder (Ötzi the Iceman carried it) and for amadou. "
                         "Inedible but culturally fascinating."),
         "lookalikes": [
-            {"name": "Phellinus species", "distinguish": "Similar brackets; context color differs."}
+            {"name": "Phellinus igniarius (false tinder fungus)", "distinguish": "Near-identical hoof bracket; also inedible with darker context flesh."},
+            {"name": "Ganoderma species (reishi)", "distinguish": "Lacquered reddish shelf with a lateral stem and rusty-brown spores; not hoof-shaped."}
         ]
     },
     {
@@ -674,7 +676,8 @@ SPECIES = [
                         "Peel the slimy cap skin before eating. Common under pines, easy and safe once "
                         "you recognize the pore surface."),
         "lookalikes": [
-            {"name": "Other Suillus", "distinguish": "Most are edible; the slimy cap + ring is characteristic."}
+            {"name": "Suillus granulatus", "distinguish": "Nearly identical but lacks the slimy ring on the stem; edible."},
+            {"name": "Boletus edulis (porcini)", "distinguish": "Larger with a dry, non-slimy cap and no ring; a choice edible, so confusion is harmless."}
         ]
     },
     {
@@ -696,7 +699,8 @@ SPECIES = [
                         "stays white when cut, with a partial veil that often leaves a ring zone. "
                         "Forms mycorrhizae with specific pines/oaks."),
         "lookalikes": [
-            {"name": "Amanita species", "distinguish": "Matsutake has white spores and no volva; some toxic Amanitas smell similar."}
+            {"name": "Amanita species", "distinguish": "Matsutake has white spores and no volva; some toxic Amanitas smell similar."},
+            {"name": "Tricholoma pardinum (tiger trich)", "distinguish": "POISONOUS; similar size and white gills but a scaly/felted cap and an abruptly bulbous stem base causing violent GI poisoning. Check the cap surface and base."}
         ]
     },
     {
@@ -872,7 +876,8 @@ SPECIES = [
         "description": ("A rubbery, ear-shaped jelly fungus, brown when moist and brittle when dry. "
                         "Flavorless but prized for crunch in Asian cooking. No dangerous lookalikes."),
         "lookalikes": [
-            {"name": "Other jelly fungi", "distinguish": "Most are harmless; wood ear is thin and ear-shaped."}
+            {"name": "Auricularia polytricha (cloud ear)", "distinguish": "Closely related, darker and hairier on top; equally edible."},
+            {"name": "Tremella species (white/yellow jellies)", "distinguish": "Lobed or branched jellies, not ear-shaped; also edible."}
         ]
     },
     {
@@ -893,7 +898,8 @@ SPECIES = [
         "description": ("A translucent, ruffled white jelly fungus used in Chinese desserts and soups for "
                         "its texture and supposed health benefits. Requires a host fungus to fruit."),
         "lookalikes": [
-            {"name": "Other white jelly fungi", "distinguish": "Generally all harmless."}
+            {"name": "Tremella mesenterica (yellow brain)", "distinguish": "Bright yellow lobed jelly; edible but insubstantial."},
+            {"name": "Auricularia (wood ear)", "distinguish": "Ear-shaped brown/black jelly rather than white-lobed; both edible."}
         ]
     },
     {
@@ -1001,7 +1007,8 @@ SPECIES = [
         "description": ("A bolete (pores) with a gray-brown cap and a stem covered in dark scabrous "
                         "dots. Common under birch. Edible and easy to ID within the safe bolete group."),
         "lookalikes": [
-            {"name": "Other Leccinum", "distinguish": "Most are edible; scabrous stem dots are distinctive."}
+            {"name": "Leccinum aurantiacum (red-capped bolete)", "distinguish": "Orange-red cap, also under hardwoods; edible."},
+            {"name": "Boletus edulis (porcini)", "distinguish": "No scabrous stem dots and a smooth stem; a choice edible."}
         ]
     },
     {
@@ -1132,7 +1139,8 @@ SPECIES = [
         "distribution": "Europe, North America (west)",
         "description": ("A striking cup fungus that splits into star-like segments, revealing violet to lilac inner flesh. Contains gyromitrin-like compounds and is considered poisonous, especially when consumed with alcohol."),
         "lookalikes": [
-            {"name": "Other cup fungi (Peziza)", "distinguish": "Most lack the violet pigment and the crown-like splitting; still not recommended eating."}
+            {"name": "Peziza species (cup fungi)", "distinguish": "Similar cups but lack the violet pigment and star-like splitting; many are edible but verify."},
+            {"name": "Sarcoscypha (scarlet cup)", "distinguish": "Smaller brilliant-red cup with no violet tone or crown split; edible."}
         ],
         "fun_fact": "Its color fades to cream as it ages and dries in the sun."
     },
@@ -1528,7 +1536,7 @@ SPECIES = [
         "description": ("Small, tough, fragrant mushroom that grows in rings on lawns and pastures -- the classic 'fairy ring'. A good edible with a nutty flavour, best dried. Must be well cooked."),
         "lookalikes": [
             {"name": "Clitocybe dealbata (ivory funnel)", "distinguish": "Deadly ivory funnel also forms rings in grass but has a mealy smell and is muscarine-poisonous."},
-            {"name": "Other small grassland species", "distinguish": "Many tiny lawn mushrooms are unsafe; the dense, meaty cap and fairy-ring habit help ID this one."}
+            {"name": "Agaricus campestris (field mushroom)", "distinguish": "Edible and also lawn-growing, but has pink-then-brown gills and a ring; no fairy-ring confusion risk since it is safe too."}
         ],
         "fun_fact": "The rings it forms can grow outward for decades -- some are centuries old."
     },
@@ -1638,7 +1646,7 @@ SPECIES = [
         "description": ("Slimy-capped, dotted-stemmed bolete under pines. Edible after the slimy cuticle and pore layer are removed; mild flavour. A safe, common beginner bolete."),
         "lookalikes": [
             {"name": "Suillus luteus (slippery jack)", "distinguish": "Nearly identical and also edible; americanus has dotted (not ring-only) stems and grows with eastern pines."},
-            {"name": "Other Suillus", "distinguish": "Most Suillus are edible after trimming; the genus has no deadly members."}
+            {"name": "Suillus spraguei (painted suillus)", "distinguish": "Red-scaled cap, also eastern pine + edible; the dotted stem on americanus separates them."}
         ],
         "fun_fact": "The slimy cap is the 'slippery' part -- peel it and the mushroom underneath is the meal."
     },
@@ -1747,7 +1755,7 @@ SPECIES = [
         "distribution": "Northern Hemisphere",
         "description": ("Red, tongue-shaped bracket that bleeds a blood-red juice when cut and tastes faintly of beef. Edible and tangy; often grows on old oaks. Individual tubes (not a fused pore surface) are the giveaway."),
         "lookalikes": [
-            {"name": "Other bracket fungi", "distinguish": "Most brackets are inedible or medicinal; the red bleeding flesh is unique to this one."},
+            {"name": "Ganoderma lucidum (reishi)", "distinguish": "Lacquered red-brown shelf, inedible/medicinal and never bleeds red juice when cut."},
             {"name": "Laetiporus sulphureus (chicken of the woods)", "distinguish": "Chicken of the woods is yellow and also edible; beefsteak is red and tongue-shaped."}
         ],
         "fun_fact": "Cut it and the juice really does look like blood -- hence 'beefsteak'."
@@ -1880,7 +1888,7 @@ SPECIES = [
         "description": ("Cascading white mass of fine hanging teeth, like a frozen waterfall. Choice edible with a seafood-like flavour, closely related to Lion's Mane. Grows on dead hardwoods."),
         "lookalikes": [
             {"name": "Hericium erinaceus (lion's mane)", "distinguish": "Lion's mane has longer, shaggier single clusters; both are choice and nearly interchangeable in the kitchen."},
-            {"name": "Other white coral fungi", "distinguish": "Some coral fungi are inedible; the hanging-tooth structure is the Hericium signal."}
+            {"name": "Artomyces pyxidatus (crown-tipped coral)", "distinguish": "Branched coral with little crown-tipped ends; edible but less choice than Hericium. Confusion is harmless."}
         ],
         "fun_fact": "All three Hericium species are edible -- a rare group where every member is a good meal."
     },
