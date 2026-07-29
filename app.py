@@ -12,6 +12,7 @@ API
 GET /api/species            list/search species (query params below)
 GET /api/species/<id>       full record for one species
 GET /api/facets             available filter values (for building the UI)
+GET /api/lookalike-pairs    dangerous cross-species lookalike pairs (safety mode)
 GET /                      frontend (index.html)
 
 Query params for /api/species (all optional, combined with AND):
@@ -426,7 +427,10 @@ def _matches_filters(s, params):
         return False
     if not eq("spore_print", s.get("spore_print")):
         return False
-    if not eq("season", s.get("season")):
+    # Season: species stores a list of seasons it fruits in; the filter is a
+    # single value that must appear in that list (bug fix -- this used to be
+    # an exact `eq` against the whole list, which could never match).
+    if not has_value("season", s.get("season", [])):
         return False
 
     # Cap color: species stores a list of colors.
@@ -483,6 +487,60 @@ def build_facets():
 
 
 FACETS = build_facets()
+
+
+# --- Dangerous lookalike pairs -------------------------------------------
+# Walks every species' resolved lookalikes (see _resolve_lookalike above) and
+# surfaces cross-species pairs where the safety stakes are real: the two
+# species have different edibility and at least one side is poisonous/deadly.
+# Pairs where both sides are in the "safe-ish" tier (edible/choice) are not
+# the safety-relevant case and are skipped, as are same-edibility pairs.
+_DANGEROUS_TIERS = {"poisonous", "deadly"}
+
+
+def _lookalike_brief(sp):
+    rec = {
+        "id": sp["id"],
+        "name": sp["name"],
+        "scientific_name": sp["scientific_name"],
+        "edibility": sp.get("edibility"),
+    }
+    img = with_image(sp).get("image")
+    if img:
+        rec["image"] = img
+    return rec
+
+
+def build_lookalike_pairs():
+    by_id = {s["id"]: s for s in SPECIES}
+    seen = set()  # unordered {id, id} pairs already emitted
+    pairs = []
+    for s in SPECIES:
+        for la in s.get("lookalikes", []) or []:
+            link = _resolve_lookalike(la["name"], s["id"])
+            other = by_id.get(link)
+            if not other:
+                continue
+            a_ed, b_ed = s.get("edibility"), other.get("edibility")
+            if a_ed == b_ed:
+                continue  # not a cross-tier confusion
+            if not (a_ed in _DANGEROUS_TIERS or b_ed in _DANGEROUS_TIERS):
+                continue  # e.g. edible vs choice -- not the safety-relevant case
+            key = frozenset((s["id"], other["id"]))
+            if key in seen:
+                continue
+            seen.add(key)
+            pairs.append({
+                "a": _lookalike_brief(s),
+                "b": _lookalike_brief(other),
+                "distinguish": la.get("distinguish", ""),
+            })
+    # Most dangerous first (deadly involved, then poisonous), then by name.
+    def rank(p):
+        eds = {p["a"]["edibility"], p["b"]["edibility"]}
+        return (0 if "deadly" in eds else 1, p["a"]["name"])
+    pairs.sort(key=rank)
+    return pairs
 
 
 def search(params):
@@ -613,6 +671,9 @@ class Handler(BaseHTTPRequestHandler):
 
         if route == "/api/facets":
             return self._send_json(FACETS)
+
+        if route == "/api/lookalike-pairs":
+            return self._send_json(build_lookalike_pairs())
 
         if route == "/api/species":
             return self._send_json([with_image(s) for s in search(params)])

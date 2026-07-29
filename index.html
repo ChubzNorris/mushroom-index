@@ -32,55 +32,88 @@
     Always confirm with an expert and a spore print before any consumption.
   </div>
 
-  <section class="identify" aria-label="Identify from a photo">
-    <div class="identify-head">
-      <span class="brand-mark" aria-hidden="true">🔎</span>
+  <section class="quick-filter" aria-label="What's fruiting near me now">
+    <div class="quick-filter-head">
+      <span class="brand-mark" aria-hidden="true">📍</span>
       <div>
-        <h2>Identify from a photo</h2>
-        <p class="identify-sub">Upload a mushroom photo to find <b>visually similar</b> species in the index.
-          This is a colour/texture match, <b>not an identification</b> — always confirm with an expert.</p>
+        <h2>What's fruiting near me, right now?</h2>
+        <p class="quick-filter-sub">Quick cross-filter by season + region. (Full trait filters are in the sidebar.)</p>
       </div>
     </div>
-    <div class="identify-controls">
-      <label class="upload-btn">
-        <input id="identify-input" type="file" accept="image/*" hidden />
-        Choose photo
+    <div class="quick-filter-controls">
+      <button type="button" id="qf-season-btn" class="ghost" title="Use the current calendar month">This season: <span id="qf-season-label">—</span></button>
+      <label class="qf-region-label">Region:
+        <select id="qf-region-select">
+          <option value="">Any region</option>
+        </select>
       </label>
-      <span id="identify-filename" class="identify-filename"></span>
-      <button id="identify-remove" type="button" class="ghost" hidden>Remove</button>
-      <button id="identify-btn" type="button" class="primary" disabled>Find similar</button>
+      <button type="button" id="qf-apply-btn" class="primary">Show what's fruiting</button>
     </div>
-    <div id="identify-preview" class="identify-preview" hidden>
-      <img id="identify-preview-img" alt="Uploaded preview" />
-    </div>
-    <p id="identify-note" class="identify-note" hidden></p>
-    <div id="identify-results" class="grid identify-grid" hidden></div>
   </section>
 
-  <main class="layout">
-    <aside class="filters" id="filters" aria-label="Filter by traits">
-      <button class="filters-toggle" id="filters-toggle" type="button" aria-expanded="true" aria-controls="filter-groups">Filters ▾</button>
-      <h2>Filter by trait</h2>
-      <div id="filter-groups"><!-- populated by JS --></div>
-      <div class="filter-meta">
-        <span id="result-count">—</span> species match
-      </div>
-    </aside>
+  <div class="mode-toggle" role="tablist" aria-label="Browsing mode">
+    <button type="button" id="mode-search-btn" class="mode-btn active" role="tab" aria-selected="true">🔍 Search &amp; filter</button>
+    <button type="button" id="mode-lookalikes-btn" class="mode-btn" role="tab" aria-selected="false">☠️ Browse dangerous lookalikes</button>
+  </div>
 
-    <section class="results" aria-label="Search results">
-      <div class="results-toolbar">
-        <label>Sort:
-          <select id="sort-select">
-            <option value="name">Name (A–Z)</option>
-            <option value="edibility">Edibility (safe → dangerous)</option>
-            <option value="random">Random</option>
-          </select>
-        </label>
+  <div id="search-mode-wrap">
+    <section class="identify" aria-label="Identify from a photo">
+      <div class="identify-head">
+        <span class="brand-mark" aria-hidden="true">🔎</span>
+        <div>
+          <h2>Identify from a photo</h2>
+          <p class="identify-sub">Upload a mushroom photo to find <b>visually similar</b> species in the index.
+            This is a colour/texture match, <b>not an identification</b> — always confirm with an expert.</p>
+        </div>
       </div>
-      <div id="results-grid" class="grid"><!-- populated by JS --></div>
-      <p id="no-results" class="no-results" hidden>No species match these filters. Try resetting.</p>
+      <div class="identify-controls">
+        <label class="upload-btn">
+          <input id="identify-input" type="file" accept="image/*" hidden />
+          Choose photo
+        </label>
+        <span id="identify-filename" class="identify-filename"></span>
+        <button id="identify-remove" type="button" class="ghost" hidden>Remove</button>
+        <button id="identify-btn" type="button" class="primary" disabled>Find similar</button>
+      </div>
+      <div id="identify-preview" class="identify-preview" hidden>
+        <img id="identify-preview-img" alt="Uploaded preview" />
+      </div>
+      <p id="identify-note" class="identify-note" hidden></p>
+      <div id="identify-results" class="grid identify-grid" hidden></div>
     </section>
-  </main>
+
+    <main class="layout">
+      <aside class="filters" id="filters" aria-label="Filter by traits">
+        <button class="filters-toggle" id="filters-toggle" type="button" aria-expanded="true" aria-controls="filter-groups">Filters ▾</button>
+        <h2>Filter by trait</h2>
+        <div id="filter-groups"><!-- populated by JS --></div>
+        <div class="filter-meta">
+          <span id="result-count">—</span> species match
+        </div>
+      </aside>
+
+      <section class="results" aria-label="Search results">
+        <div class="results-toolbar">
+          <label>Sort:
+            <select id="sort-select">
+              <option value="name">Name (A–Z)</option>
+              <option value="edibility">Edibility (safe → dangerous)</option>
+              <option value="random">Random</option>
+            </select>
+          </label>
+        </div>
+        <div id="results-grid" class="grid"><!-- populated by JS --></div>
+        <p id="no-results" class="no-results" hidden>No species match these filters. Try resetting.</p>
+      </section>
+    </main>
+  </div>
+
+  <section id="lookalikes-mode-wrap" class="lookalikes-mode" aria-label="Dangerous lookalike pairs" hidden>
+    <p class="lookalikes-intro">Cross-species pairs where a poisonous or deadly mushroom is commonly confused with
+      one that isn't (or with another dangerous look-alike) — the safety-critical confusions worth learning by sight.</p>
+    <p id="lookalikes-count" class="lookalikes-count"></p>
+    <div id="lookalikes-grid" class="lookalikes-grid"><!-- populated by JS --></div>
+  </section>
 
   <!-- Detail modal -->
   <div id="detail-overlay" class="overlay" hidden>

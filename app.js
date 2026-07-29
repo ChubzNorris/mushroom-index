@@ -56,6 +56,134 @@ const POTENCY_LABELS = {
 
 function el(id) { return document.getElementById(id); }
 
+function pairCardHTML(sp) {
+  const emoji = EMOJI_FOR[sp.edibility] || '🍄';
+  const img = sp.image
+    ? `<img class="card-img" src="${sp.image.url}" alt="${escapeHTML(sp.name)}" loading="lazy" />`
+    : `<div class="card-emoji">${emoji}</div>`;
+  return `
+    <div class="pair-side" data-id="${sp.id}" tabindex="0" role="button" aria-label="View ${escapeHTML(sp.name)} details">
+      <div class="card-media">${img}</div>
+      <h3>${escapeHTML(sp.name)}</h3>
+      <p class="sci">${escapeHTML(sp.scientific_name)}</p>
+      <span class="badge ${sp.edibility}">${sp.edibility}</span>
+    </div>`;
+}
+
+function pairComparisonHTML(pair) {
+  return `
+    <article class="pair-card">
+      <div class="pair-sides">
+        ${pairCardHTML(pair.a)}
+        <div class="pair-vs" aria-hidden="true">vs</div>
+        ${pairCardHTML(pair.b)}
+      </div>
+      ${pair.distinguish ? `<p class="pair-distinguish"><b>How to tell them apart:</b> ${escapeHTML(pair.distinguish)}</p>` : ''}
+    </article>`;
+}
+
+async function loadLookalikePairs() {
+  const grid = el('lookalikes-grid');
+  const countEl = el('lookalikes-count');
+  grid.innerHTML = '';
+  countEl.textContent = 'Loading…';
+  try {
+    const pairs = await fetchJSON('/api/lookalike-pairs');
+    countEl.textContent = pairs.length
+      ? `${pairs.length} dangerous look-alike pair${pairs.length === 1 ? '' : 's'}`
+      : 'No dangerous look-alike pairs found in the current dataset.';
+    grid.innerHTML = pairs.map(pairComparisonHTML).join('');
+    grid.querySelectorAll('.pair-side').forEach(sideEl => {
+      const open = () => openDetail(sideEl.dataset.id);
+      sideEl.addEventListener('click', open);
+      sideEl.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    });
+  } catch (e) {
+    countEl.textContent = 'Could not load look-alike pairs.';
+    console.error(e);
+  }
+}
+
+let lookalikesLoaded = false;
+
+function setMode(mode) {
+  const isLookalikes = mode === 'lookalikes';
+  el('search-mode-wrap').hidden = isLookalikes;
+  el('lookalikes-mode-wrap').hidden = !isLookalikes;
+  el('mode-search-btn').classList.toggle('active', !isLookalikes);
+  el('mode-search-btn').setAttribute('aria-selected', String(!isLookalikes));
+  el('mode-lookalikes-btn').classList.toggle('active', isLookalikes);
+  el('mode-lookalikes-btn').setAttribute('aria-selected', String(isLookalikes));
+  if (isLookalikes && !lookalikesLoaded) {
+    lookalikesLoaded = true;
+    loadLookalikePairs();
+  }
+}
+
+/* ---- "What's fruiting near me now" quick-filter ----
+   Northern Hemisphere month->season mapping assumed here (spring: Mar-May,
+   summer: Jun-Aug, autumn: Sep-Nov, winter: Dec-Feb). Good enough for a
+   quick client-side default; users in the Southern Hemisphere can still
+   pick season manually via the sidebar's full Season filter. */
+function currentSeasonNorthernHemisphere(date = new Date()) {
+  const month = date.getMonth(); // 0-11
+  if (month >= 2 && month <= 4) return 'spring';
+  if (month >= 5 && month <= 7) return 'summer';
+  if (month >= 8 && month <= 10) return 'autumn';
+  return 'winter';
+}
+
+function initQuickFilter(facets) {
+  const season = currentSeasonNorthernHemisphere();
+  const seasonBtn = el('qf-season-btn');
+  const seasonLabel = el('qf-season-label');
+  const regionSelect = el('qf-region-select');
+  const applyBtn = el('qf-apply-btn');
+
+  seasonLabel.textContent = season.charAt(0).toUpperCase() + season.slice(1);
+  let seasonSelected = true; // "This season" is on by default
+
+  function refreshSeasonBtn() {
+    seasonBtn.classList.toggle('active', seasonSelected);
+  }
+  refreshSeasonBtn();
+  seasonBtn.addEventListener('click', () => {
+    seasonSelected = !seasonSelected;
+    refreshSeasonBtn();
+  });
+
+  // Populate the region dropdown from the same vocabulary as the sidebar's
+  // regions facet (array of {value, label}).
+  const regions = facets.regions || [];
+  for (const r of regions) {
+    const opt = document.createElement('option');
+    opt.value = r.value;
+    opt.textContent = r.label;
+    regionSelect.appendChild(opt);
+  }
+
+  applyBtn.addEventListener('click', () => {
+    // Switch to the normal search/filter view and apply via the same
+    // filter-application state/rendering path as the sidebar chips.
+    setMode('search');
+    if (seasonSelected) {
+      state.filters.season = season;
+    } else {
+      delete state.filters.season;
+    }
+    const region = regionSelect.value;
+    if (region) {
+      state.filters.regions = [region];
+    } else {
+      delete state.filters.regions;
+    }
+    renderFilters(facets);
+    refresh();
+  });
+}
+
 async function fetchJSON(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error('Request failed: ' + res.status);
@@ -469,6 +597,7 @@ async function init() {
   try {
     const facets = await fetchJSON('/api/facets');
     renderFilters(facets);
+    initQuickFilter(facets);
   } catch (e) { console.error(e); }
 
   await refresh();
@@ -518,6 +647,9 @@ async function init() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDetail();
   });
+
+  el('mode-search-btn').addEventListener('click', () => setMode('search'));
+  el('mode-lookalikes-btn').addEventListener('click', () => setMode('lookalikes'));
 
   // Photo identify panel (local visual-similarity, never an identification).
   initIdentify();
