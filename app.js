@@ -10,6 +10,7 @@ const state = {
 const stateKey = (k) => k;
 const FILTER_DEFS = [
   { key: 'edibility', title: 'Edibility' },
+  { key: 'potency', title: 'Potency (psychoactive)' },
   { key: 'habitat', title: 'Habitat' },
   { key: 'substrate', title: 'Substrate' },
   { key: 'ecology', title: 'Ecology' },
@@ -17,7 +18,12 @@ const FILTER_DEFS = [
   { key: 'cap_color', title: 'Cap color' },
   { key: 'gill_attachment', title: 'Gills / pores' },
   { key: 'season', title: 'Season' },
+  { key: 'regions', title: 'Region', multi: true },
 ];
+
+// Keys whose state.filters value is an array (multi-select, matches ANY);
+// everything else is a single-select string.
+const MULTI_KEYS = new Set(FILTER_DEFS.filter(d => d.multi).map(d => d.key));
 
 const GILL_LABELS = {
   'free': 'Gills (free)',
@@ -32,6 +38,22 @@ const EMOJI_FOR = {
   'unknown': '❓', 'edible': '🍽️', 'choice': '⭐',
 };
 
+const REGION_LABELS = {
+  'north-america': 'North America',
+  'europe': 'Europe',
+  'asia': 'Asia',
+  'south-america': 'South America',
+  'africa': 'Africa',
+  'oceania': 'Oceania',
+  'global': 'Global / widespread',
+};
+
+const POTENCY_LABELS = {
+  'low': 'Low potency',
+  'moderate': 'Moderate potency',
+  'high': 'High potency',
+};
+
 function el(id) { return document.getElementById(id); }
 
 async function fetchJSON(url) {
@@ -44,7 +66,12 @@ function buildQueryString() {
   const p = new URLSearchParams();
   if (state.q) p.set('q', state.q);
   for (const [k, v] of Object.entries(state.filters)) {
-    if (v) p.set(k, v);
+    if (!v) continue;
+    if (Array.isArray(v)) {
+      if (v.length) p.set(k, v.join(','));
+    } else {
+      p.set(k, v);
+    }
   }
   if (state.sort !== 'name') p.set('sort', state.sort);
   return p.toString();
@@ -61,6 +88,7 @@ function renderFilters(facets) {
   for (const def of FILTER_DEFS) {
     const values = facets[def.key] || [];
     if (!values.length) continue;
+    const isMulti = MULTI_KEYS.has(def.key);
     const isCollapsed = collapsedGroups.has(def.key);
     const group = document.createElement('div');
     group.className = 'filter-group' + (isCollapsed ? ' collapsed' : '');
@@ -70,9 +98,10 @@ function renderFilters(facets) {
     title.className = 'fg-title';
     title.setAttribute('aria-expanded', String(!isCollapsed));
     const activeVal = state.filters[def.key];
+    const activeCount = isMulti ? (activeVal || []).length : (activeVal ? 1 : 0);
     title.innerHTML =
       `<span>${def.title}</span>` +
-      (activeVal ? `<span class="fg-count">1 selected</span>` : '') +
+      (activeCount ? `<span class="fg-count">${activeCount} selected</span>` : '') +
       `<span class="fg-caret" aria-hidden="true">▾</span>`;
     title.addEventListener('click', () => {
       const nowCollapsed = group.classList.toggle('collapsed');
@@ -85,19 +114,32 @@ function renderFilters(facets) {
     const row = document.createElement('div');
     row.className = 'chip-row';
     for (const v of values) {
-      // Facet values are strings, except `edibility` which is {value, label}.
+      // Facet values are strings, except `edibility`/`potency`/`regions`
+      // which are {value, label}.
       const isObj = v && typeof v === 'object';
       const val = isObj ? v.value : v;
       const label = isObj ? v.label
         : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
       const chip = document.createElement('span');
       const edClass = def.key === 'edibility' ? ' ed-' + val : '';
-      chip.className = 'chip' + edClass + (state.filters[def.key] === val ? ' active' : '');
+      const potClass = def.key === 'potency' ? ' pot-' + val : '';
+      const isActive = isMulti
+        ? (state.filters[def.key] || []).includes(val)
+        : state.filters[def.key] === val;
+      chip.className = 'chip' + edClass + potClass + (isActive ? ' active' : '');
       chip.textContent = label;
       chip.addEventListener('click', () => {
-        // single-select toggle
-        if (state.filters[def.key] === val) delete state.filters[def.key];
-        else state.filters[def.key] = val;
+        if (isMulti) {
+          const current = new Set(state.filters[def.key] || []);
+          if (current.has(val)) current.delete(val);
+          else current.add(val);
+          if (current.size) state.filters[def.key] = Array.from(current);
+          else delete state.filters[def.key];
+        } else {
+          // single-select toggle
+          if (state.filters[def.key] === val) delete state.filters[def.key];
+          else state.filters[def.key] = val;
+        }
         renderFilters(facets); // refresh active states
         refresh();
       });
@@ -116,12 +158,15 @@ function cardHTML(s) {
   const img = s.image
     ? `<img class="card-img" src="${s.image.url}" alt="${escapeHTML(s.name)}" loading="lazy" />`
     : `<div class="card-emoji">${emoji}</div>`;
+  const potencyBadge = s.potency
+    ? `<span class="badge-potency pot-${s.potency}" title="Psychoactive potency (see detail for sourcing)">${POTENCY_LABELS[s.potency] || s.potency}</span>`
+    : '';
   return `
     <article class="card" data-id="${s.id}" tabindex="0">
       <div class="card-media">${img}</div>
       <h3>${escapeHTML(s.name)}</h3>
       <p class="sci">${escapeHTML(s.scientific_name)}</p>
-      <span class="badge ${s.edibility}">${s.edibility}</span>
+      <span class="badge ${s.edibility}">${s.edibility}</span>${potencyBadge}
       <div class="traits">${colors}
         <span class="tag">${escapeHTML(s.habitat || '—')}</span>
       </div>
@@ -233,6 +278,7 @@ function detailHTML(s) {
     ['Ecology', s.ecology || '—'],
     ['Season', (s.season || []).join(', ')],
     ['Distribution', s.distribution || '—'],
+    ['Regions', (s.regions || []).map(r => REGION_LABELS[r] || r).join(', ') || '—'],
   ];
   const specs = rows.map(([k, v]) =>
     `<tr><td>${k}</td><td>${escapeHTML(v)}</td></tr>`).join('');
@@ -253,13 +299,17 @@ function detailHTML(s) {
          (${escapeHTML(s.image.license || 'CC')}) via ${escapeHTML(s.image.source || 'iNaturalist')}.</p>`
     : `<div class="detail-emoji">${emoji}</div>`;
 
+  const potencyBadge = s.potency
+    ? `<span class="badge-potency pot-${s.potency}" style="margin-left:8px" title="Psychoactive potency">${POTENCY_LABELS[s.potency] || s.potency}</span>`
+    : '';
+
   return `
     <div class="detail-head">
       <div>
         <h2 id="detail-name">${escapeHTML(s.name)}</h2>
         <div class="sci">${escapeHTML(s.scientific_name)}</div>
       </div>
-      <span class="badge ${s.edibility}" style="margin-left:auto">${s.edibility}</span>
+      <span class="badge ${s.edibility}" style="margin-left:auto">${s.edibility}</span>${potencyBadge}
     </div>
     <div class="detail-hero">${hero}</div>
     <div class="detail-section">
@@ -471,6 +521,13 @@ async function init() {
 
   // Photo identify panel (local visual-similarity, never an identification).
   initIdentify();
+
+  // Per-species permalink deep-link: app.py's /species/<id> route stamps
+  // window.__DEEPLINK_SPECIES_ID before this script loads. Open that
+  // species' detail modal on boot so the SPA lands on the right view.
+  if (window.__DEEPLINK_SPECIES_ID) {
+    openDetail(window.__DEEPLINK_SPECIES_ID);
+  }
 
   // Mobile filter toggle: collapse the filter panel by default on small screens
   // so the results show first; the "Filters" button expands it.

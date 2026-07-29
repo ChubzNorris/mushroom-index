@@ -24,6 +24,9 @@ Query params for /api/species (all optional, combined with AND):
     cap_color    e.g. red, brown, ... (matches any cap color)
     gill_attachment  free | attached | decurrent | pores | n/a
     season       spring | summer | autumn | winter
+    potency      low | moderate | high (psychoactive species only)
+    regions      north-america | europe | asia | south-america | africa |
+                 oceania | global (matches ANY of comma-separated values)
     sort         name | edibility | random
 """
 import json
@@ -255,6 +258,18 @@ def _slug(s):
     s = s.lower().replace('(', ' ').replace(')', ' ')
     return _re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
+
+def _esc_html(s):
+    """Minimal HTML-attribute-safe escaping for server-side meta tag
+    injection (no templating engine dependency)."""
+    return (
+        str(s)
+        .replace("&", "&amp;")
+        .replace('"', "&quot;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+    )
+
 # normalized term -> species id (first definition wins)
 _LOOKUP = {}
 for _s in SPECIES:
@@ -353,6 +368,25 @@ EDIBILITY_LABELS = {
     "deadly": "Deadly",
 }
 
+# Vocabulary + labels for the psychoactive potency tier (subset of species).
+POTENCY_ORDER = {"low": 0, "moderate": 1, "high": 2}
+POTENCY_LABELS = {
+    "low": "Low potency",
+    "moderate": "Moderate potency",
+    "high": "High potency",
+}
+
+# Controlled vocabulary + labels for the structured region filter.
+REGION_LABELS = {
+    "north-america": "North America",
+    "europe": "Europe",
+    "asia": "Asia",
+    "south-america": "South America",
+    "africa": "Africa",
+    "oceania": "Oceania",
+    "global": "Global / widespread",
+}
+
 
 def _matches_filters(s, params):
     # `params` carries single string values from the query (or is {}). A key
@@ -406,6 +440,20 @@ def _matches_filters(s, params):
     if g_att and gill != g_att:
         return False
 
+    # Potency (psychoactive species only -- exact match, like edibility).
+    if not eq("potency", s.get("potency")):
+        return False
+
+    # Regions: species stores a list; query param may be comma-separated
+    # (array-style, like cap_color) -- matches if ANY requested region is
+    # present on the species.
+    regions_param = params.get("regions")
+    if regions_param:
+        requested = {r.strip() for r in regions_param.split(",") if r.strip()}
+        species_regions = set(s.get("regions", []))
+        if not (requested & species_regions):
+            return False
+
     return True
 
 
@@ -426,6 +474,10 @@ def build_facets():
         "cap_color": collect("cap_color", lambda s: s.get("cap", {}).get("colors", [])),
         "gill_attachment": collect("gill", lambda s: [s.get("gills", {}).get("attachment")] if s.get("gills", {}).get("attachment") else []),
         "season": sorted({se for s in SPECIES for se in s.get("season", [])}),
+        "potency": [{"value": k, "label": POTENCY_LABELS[k]} for k in POTENCY_ORDER
+                    if any(s.get("potency") == k for s in SPECIES)],
+        "regions": [{"value": k, "label": REGION_LABELS[k]} for k in REGION_LABELS
+                    if any(k in s.get("regions", []) for s in SPECIES)],
     }
     return facets
 
@@ -485,6 +537,75 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _origin(self):
+        """Best-effort absolute origin for building og:image/og:url. Prefers
+        the Host header (works behind Railway's proxy) over host/port."""
+        host = self.headers.get("Host")
+        if not host:
+            host = "%s:%s" % self.server.server_address[:2]
+        scheme = "https" if os.environ.get("RAILWAY_ENVIRONMENT") else "http"
+        return "%s://%s" % (scheme, host)
+
+    def _send_species_page(self, species):
+        """Serve index.html with per-species <title>/meta tags swapped in via
+        plain string replacement (no templating engine). The SPA's own JS/CSS
+        is untouched, so app.js boots normally and opens this species'
+        detail view (see app.js's DEEPLINK_SPECIES_ID / init())."""
+        try:
+            with open(os.path.join(HERE, "index.html"), encoding="utf-8") as f:
+                html = f.read()
+        except OSError:
+            self.send_error(404, "Not found")
+            return
+
+        name = species.get("name", "")
+        sci = species.get("scientific_name", "")
+        desc = species.get("description", "") or ""
+        # Keep the meta description short and punchy.
+        short_desc = (desc[:197] + "...") if len(desc) > 200 else desc
+        title = "%s (%s) — Spore Drop Index" % (name, sci) if sci else "%s — Spore Drop Index" % name
+
+        origin = self._origin()
+        img_url = origin + "/images/" + species["id"] + ".jpg"
+        page_url = origin + "/species/" + species["id"]
+
+        html = _re.sub(r"<title>.*?</title>", "<title>%s</title>" % _esc_html(title), html, count=1, flags=_re.S)
+
+        # Replace/insert each meta tag. If the tag already exists (matched by
+        # its name/property attribute), swap its content; otherwise inject it
+        # right before </head>.
+        def upsert_meta(html, attr, attr_value, content):
+            pattern = _re.compile(
+                r'<meta\s+%s="%s"[^>]*>' % (attr, _re.escape(attr_value)), _re.IGNORECASE
+            )
+            tag = '<meta %s="%s" content="%s" />' % (attr, attr_value, _esc_html(content))
+            if pattern.search(html):
+                return pattern.sub(tag, html, count=1)
+            return html.replace("</head>", "  " + tag + "\n</head>", 1)
+
+        html = upsert_meta(html, "name", "description", short_desc)
+        html = upsert_meta(html, "property", "og:title", title)
+        html = upsert_meta(html, "property", "og:description", short_desc)
+        html = upsert_meta(html, "property", "og:image", img_url)
+        html = upsert_meta(html, "property", "og:url", page_url)
+        html = upsert_meta(html, "property", "og:type", "article")
+        html = upsert_meta(html, "name", "twitter:card", "summary_large_image")
+
+        # Hand the species id to the frontend so app.js's init() opens that
+        # species' detail modal on load (see DEEPLINK_SPECIES_ID in app.js).
+        boot_script = (
+            '<script>window.__DEEPLINK_SPECIES_ID = %s;</script>\n'
+            % json.dumps(species["id"])
+        )
+        html = html.replace("</head>", "  " + boot_script + "</head>", 1)
+
+        body = html.encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
     def do_GET(self):
         parsed = urlparse(self.path)
         route = parsed.path
@@ -502,6 +623,19 @@ class Handler(BaseHTTPRequestHandler):
             if match:
                 return self._send_json(with_image(match))
             return self._send_json({"error": "not found"}, status=404)
+
+        # Per-species permalink: same SPA shell (index.html) with server-side
+        # rewritten <title>/meta tags so link previews (Twitter/X, Discord,
+        # etc.) show that species' real name/description/photo instead of
+        # the generic site-wide OG tags. Does not collide with the JSON API
+        # above (that's /api/species/<id>; this is /species/<id>).
+        if route.startswith("/species/"):
+            sid = route[len("/species/"):]
+            match = next((s for s in SPECIES if s["id"] == sid), None)
+            if not match:
+                self.send_error(404, "Species not found")
+                return
+            return self._send_species_page(match)
 
         # Static files -- served from a strict whitelist so we never leak
         # source (app.py, data/*.py) or allow traversal. Images are served

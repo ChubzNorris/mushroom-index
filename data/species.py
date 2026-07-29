@@ -34,6 +34,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn", "winter"],
         "distribution": "Northern Hemisphere, widespread",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Iconic red cap flecked with white warts (universal veil remnants). "
                         "Contains ibotenic acid and muscimol; psychoactive and toxic, historically "
                         "used ritually. Not deadly in typical doses but causes severe poisoning."),
@@ -58,6 +59,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere; introduced with oak/chestnut worldwide",
+        "regions": ["asia", "europe", "global", "north-america"],
         "description": ("Responsible for the majority of fatal mushroom poisonings worldwide. "
                         "Contains amatoxins that cause irreversible liver and kidney failure, often "
                         "with a deceptive symptom-free delay. Caps are greenish to tan and easily "
@@ -84,6 +86,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Eastern North America",
+        "regions": ["north-america"],
         "description": ("A pure white, beautiful mushroom that is among the deadliest on Earth. "
                         "Same amatoxin family as the death cap. The white volva at the stem base "
                         "and white gills are key identifiers -- but so do several edible whites, "
@@ -109,6 +112,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Southern Europe, North Africa, parts of North America",
+        "regions": ["africa", "europe", "north-america"],
         "description": ("A prized Mediterranean delicacy with a vivid orange cap and golden stem, "
                         "eaten since Roman times (reserved for emperors). Safe only because its "
                         "features are distinctive -- a good lesson in learning ONE mushroom well."),
@@ -132,6 +136,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["year-round"],
         "distribution": "Grown globally in cultivation",
+        "regions": ["global"],
         "description": ("The supermarket mushroom in its white (button) and brown (cremini/portobello) "
                         "forms. Young gills are pink, maturing to chocolate brown -- a reliable field "
                         "mark for the whole Agaricus genus."),
@@ -155,6 +160,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Worldwide in pastures and lawns",
+        "regions": ["global"],
         "description": ("The classic wild relative of the button mushroom, found in rings in pastures. "
                         "Pink-to-brown gills and a brown spore print. A good beginner edible -- but "
                         "only after ruling out the yellow stainer and any white-gilled lookalikes."),
@@ -178,6 +184,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Widespread in lawns and gardens",
+        "regions": ["global"],
         "description": ("Looks like an edible field mushroom but bruises bright yellow and emits a "
                         "sharp phenol/ink smell. Causes gastrointestinal upset. The yellow staining "
                         "at the base is the giveaway -- always check before eating any Agaricus."),
@@ -200,6 +207,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere; widespread",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("The king of edibles: a bun-shaped brown cap over a spongy pore layer (no "
                         "gills) and a fat, finely netted stem. Boletes are some of the safest edible "
                         "groups because the deadly Amanita types have gills, not pores."),
@@ -224,6 +232,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, rarer in North America",
+        "regions": ["europe", "north-america"],
         "description": ("A pale capped bolete with a bulbous red/yellow stem and red pores. Causes "
                         "severe GI poisoning. The red pores and bulbous red stem separate it from "
                         "the choice king bolete."),
@@ -246,6 +255,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Egg-yellow, fruity-smelling, with blunt false-gills (ridges, not sharp blades) "
                         "running down the stem. A top edible. Its apricot aroma is a good ID clue."),
         "lookalikes": [
@@ -268,6 +278,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Eastern North America, Europe",
+        "regions": ["europe", "north-america"],
         "description": ("Brilliant orange with true, sharp, decurrent gills. Causes severe vomiting/"
                         "diarrhea. Famous for bioluminescence -- its gills glow faintly green at night. "
                         "Grows in clusters on wood, unlike chanterelles."),
@@ -291,6 +302,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Honeycomb-capped, hollow spring delicacy. MUST be cooked -- raw morels are "
                         "toxic. Prized by chefs. Found in disturbed ground, old orchards, and burns."),
         "lookalikes": [
@@ -313,6 +325,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring"],
         "distribution": "Northern Hemisphere, conifer regions",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Resembles a morel but the cap is a lobed, brain-like mass that is NOT a "
                         "regular honeycomb and is attached only at the top. Contains gyromitrin, a "
                         "carcinogenic toxin converted to monomethylhydrazine. Deadly if eaten raw/"
@@ -336,6 +349,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere pine forests",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("When cut or bruised it weeps carrot-orange latex (milk). Cap has concentric "
                         "zones. Mild and good when cooked, with a piney note. A mycorrhizal partner "
                         "of pines."),
@@ -359,6 +373,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter", "spring"],
         "distribution": "Worldwide",
+        "regions": ["global"],
         "description": ("Shelf-like, fan-shaped caps in overlapping clusters on dead hardwood. Oyster-"
                         "shaped, with decurrent gills and a lilac-gray spore print. Easy to cultivate "
                         "and a reliable edible."),
@@ -382,6 +397,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "East Asia; cultivated worldwide",
+        "regions": ["asia", "global"],
         "description": ("Cultivated on oak logs; dark brown cap with white cracks when mature, tough "
                         "stem best removed. Rich, savory umami flavor. One of the most eaten mushrooms "
                         "globally."),
@@ -404,6 +420,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "autumn"],
         "distribution": "Worldwide, lawns and disturbed ground",
+        "regions": ["global"],
         "description": ("Tall white cylindrical cap covered in shaggy scales that auto-digests (deliquesces) "
                         "into black ink from the bottom up. Edible when young and fresh; do NOT combine "
                         "with alcohol (coprine causes a disulfiram-like reaction)."),
@@ -427,6 +444,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Worldwide, grassy open areas",
+        "regions": ["global"],
         "description": ("Large, with a shaggy brown-scaled cap, a movable snake-skin-patterned ring, and "
                         "a stem that swells like a bulb at the base. Excellent edible -- but must be "
                         "distinguished from the green-spored parasol."),
@@ -450,6 +468,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "North America, warm regions worldwide",
+        "regions": ["global", "north-america"],
         "description": ("The most common cause of mushroom poisoning in North America. Looks like an "
                         "edible parasol but the gills turn greenish with age and the spore print is "
                         "distinctly green. Causes violent GI illness."),
@@ -472,6 +491,7 @@ SPECIES = [
         "ecology": "parasitic",
         "season": ["autumn"],
         "distribution": "Worldwide",
+        "regions": ["global"],
         "description": ("Honey-colored caps in clusters at the base of trees, with a ring and black "
                         "rhizomorphs ('shoelaces') under the bark. Edible when young and thoroughly "
                         "cooked; some people are sensitive. A notorious plant pathogen."),
@@ -494,6 +514,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Small brown mushroom on wood containing amatoxins -- same family as the death "
                         "cap. Looks alarmingly like an edible honey fungus or a magic mushroom. The "
                         "rusty-brown spore print and wood habitat are clues."),
@@ -517,6 +538,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["late summer", "autumn"],
         "distribution": "Northern Hemisphere hardwoods",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A white, cascading mass of icicle-like teeth rather than gills or pores. No "
                         "poisonous lookalikes resemble it. Tastes like seafood (lobster/crab) when "
                         "cooked. Studied for potential nerve-regenerative effects."),
@@ -539,6 +561,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["late summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A large, ruffled mass resembling a head of cauliflower growing at the base of "
                         "conifers. Mild, crunchy, and good eating. Unmistakable once seen."),
         "lookalikes": [
@@ -561,6 +584,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["year-round"],
         "distribution": "Worldwide",
+        "regions": ["global"],
         "description": ("Thin, tough, concentric-zoned bracket fungus in overlapping colorful bands. "
                         "Too leathery to eat but valued in traditional medicine (PSP/beta-glucans). "
                         "A benchmark 'polypore' for ID practice."),
@@ -583,6 +607,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["year-round"],
         "distribution": "Northern Hemisphere, on birch",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Hard, hoof-shaped bracket with concentric rings and a pore surface underneath. "
                         "Used historically as tinder (Ötzi the Iceman carried it) and for amadou. "
                         "Inedible but culturally fascinating."),
@@ -606,6 +631,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["late summer", "autumn"],
         "distribution": "Worldwide in pastures",
+        "regions": ["global"],
         "description": ("A soccer-ball-sized white sphere with no stem, gills, or cap. Edible ONLY while "
                         "pure white inside; once it yellows or turns into spores, discard. Cut one open "
                         "to confirm -- never eat anything that isn't uniformly white throughout."),
@@ -629,6 +655,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Looks like a puffball but the interior is dark purple-black and powdery even "
                         "when young, and the skin is thick and yellow-cracked. Causes GI upset. The "
                         "dark interior is the key difference from edible puffballs."),
@@ -651,6 +678,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Worldwide",
+        "regions": ["global"],
         "description": ("Pear-shaped, covered in small warts, with a stem-like base. Edible when young "
                         "and solid white inside. A safe, common beginner foraging find."),
         "lookalikes": [
@@ -672,6 +700,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere pine plantations",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A bolete (pores, no gills) with a slimy brown cap and a slimy ring on the stem. "
                         "Peel the slimy cap skin before eating. Common under pines, easy and safe once "
                         "you recognize the pore surface."),
@@ -695,6 +724,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["autumn"],
         "distribution": "Asia, North America, Europe (declining)",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Highly prized in Japan for its spicy, cinnamon-pine aroma. White flesh that "
                         "stays white when cut, with a partial veil that often leaves a ring zone. "
                         "Forms mycorrhizae with specific pines/oaks."),
@@ -718,6 +748,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A red-capped Russula with very brittle white gills and stem (characteristic of "
                         "the genus -- they snap like chalk). Acrid and emetic; causes vomiting. Many "
                         "Russulas are edible, so species-level ID matters."),
@@ -740,6 +771,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A variable-colored Russula with flexible, greasy gills (unusual -- most Russula "
                         "gills are brittle) and a mild, non-peppery taste. A reliable edible once you "
                         "learn the genus."),
@@ -762,6 +794,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "autumn"],
         "distribution": "Worldwide",
+        "regions": ["global"],
         "description": ("Dense clusters of sulfur-yellow caps with greenish-yellow gills on rotting wood. "
                         "Bitter and poisonous (contains fasciculol). The clustered growth on wood and "
                         "yellow coloring are distinctive."),
@@ -785,6 +818,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["autumn"],
         "distribution": "Northern Europe and North America",
+        "regions": ["europe", "north-america"],
         "description": ("Contains orellanine, which causes delayed (days to weeks) but often fatal kidney "
                         "failure. Rusty-orange with a cobweb (cortina) veil when young. Part of a large, "
                         "difficult genus best avoided by amateurs."),
@@ -807,6 +841,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere lawns and pastures",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Small, pale, funnel-shaped and easily confused with edible field mushrooms or "
                         "oyster mushrooms. Contains muscarine, which can be fatal, especially dangerous "
                         "because it looks so innocuous and grows in grazed areas."),
@@ -829,6 +864,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Subtropical/tropical worldwide",
+        "regions": ["global"],
+        "potency": "moderate",  # ~0.14-0.42% psilocybin (avg ~0.63% combined psilocybin+psilocin in some assays); Beug & Bigwood 1982; commonly cited moderate range 0.5-1%
         "description": ("Contains psilocybin and is a controlled hallucinogen in most jurisdictions. "
                         "Bruises blue, grows on dung, has a purple-brown spore print. Listed here for "
                         "education and harm reduction -- not recommended or legal in many places."),
@@ -852,6 +889,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter", "spring"],
         "distribution": "Worldwide on hardwood",
+        "regions": ["global"],
         "description": ("In the wild: small brown caps on a dark, velvety stem in clusters on dead trees. "
                         "Cultivated forms are the long, white, noodle-like enoki. Edible and mild."),
         "lookalikes": [
@@ -873,6 +911,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["year-round"],
         "distribution": "Worldwide on elder and other hardwoods",
+        "regions": ["global"],
         "description": ("A rubbery, ear-shaped jelly fungus, brown when moist and brittle when dry. "
                         "Flavorless but prized for crunch in Asian cooking. No dangerous lookalikes."),
         "lookalikes": [
@@ -895,6 +934,7 @@ SPECIES = [
         "ecology": "parasitic",
         "season": ["summer", "autumn"],
         "distribution": "Tropical/subtropical Asia; cultivated",
+        "regions": ["asia"],
         "description": ("A translucent, ruffled white jelly fungus used in Chinese desserts and soups for "
                         "its texture and supposed health benefits. Requires a host fungus to fruit."),
         "lookalikes": [
@@ -917,6 +957,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["year-round"],
         "distribution": "Cosmopolitan",
+        "regions": ["global"],
         "description": ("Tiny fuzzy shells with gills that split lengthwise when dry and close when wet -- "
                         "a unique feature. Too tough and thin to eat; primarily of interest for its "
                         "unusual biology (it has over 20,000 sexes)."),
@@ -939,6 +980,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Europe, North America",
+        "regions": ["europe", "north-america"],
         "description": ("Emerges as a white 'egg' (edible at this stage, like a truffle-ish delicacy in "
                         "some cuisines), then rapidly expands into a stinky, olive-spored phallus that "
                         "attracts flies to spread spores. The young egg is the edible part."),
@@ -961,6 +1003,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A pink, branching coral-shaped fungus. Causes GI upset in many people. Coral "
                         "fungi are a mixed bag -- some edible, some not -- so species ID is essential "
                         "and beginners should avoid them."),
@@ -983,6 +1026,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("White, intricately branched coral with toothed tips. Generally considered edible "
                         "and mild, though not choice. A good example of the coral growth form."),
         "lookalikes": [
@@ -1004,6 +1048,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere under birch",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A bolete (pores) with a gray-brown cap and a stem covered in dark scabrous "
                         "dots. Common under birch. Edible and easy to ID within the safe bolete group."),
         "lookalikes": [
@@ -1026,6 +1071,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A morel-lookalike with a cap attached only at the top like a thimble on a stem, "
                         "and a hollow stem. Edible when cooked but easily confused with the deadly "
                         "false morel (Gyromitra) -- learn the difference before foraging."),
@@ -1049,6 +1095,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Worldwide on hardwoods (and conifers in some regions)",
+        "regions": ["global"],
         "description": ("Bright orange and yellow shelf clusters on tree trunks with a texture and taste "
                         "likened to chicken (when young). A favorite edible -- but some react to the "
                         "conifer form, so try a small amount first."),
@@ -1071,6 +1118,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Pacific Northwest of North America; also reported in Europe",
+        "regions": ["europe", "north-america"],
         "description": ("A pale, innocuous-looking Amanita whose toxins (aminohexadienoic acid) cause irreversible kidney failure. It lacks the classic volva of death-cap types, which makes it dangerously easy to mistake for a harmless white mushroom."),
         "lookalikes": [
             {"name": "Amanita velosa (veiled amanita)", "distinguish": "An edible West Coast Amanita with a tan cap and similar size; positive ID requires microscopy."},
@@ -1093,6 +1141,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["winter", "spring"],
         "distribution": "Western North America (California to Baja)",
+        "regions": ["north-america"],
         "description": ("A pure white, ringed amanita with a cup (volva) at the base. Contains amatoxins and is responsible for fatal poisonings, often in spring when foragers confuse it with edible mushrooms."),
         "lookalikes": [
             {"name": "Amanita velosa", "distinguish": "Edible, but the margin of the cap is distinctly fuzzy/striate; still risky without expertise."},
@@ -1115,6 +1164,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe and North America",
+        "regions": ["europe", "north-america"],
         "description": ("A large gray-cap mushroom with the giveaway pink gills and spores of the Entoloma family. Causes severe gastrointestinal poisoning; responsible for many European poisonings because it vaguely resembles an edible field mushroom."),
         "lookalikes": [
             {"name": "Agaricus campestris (field mushroom)", "distinguish": "Has chocolate-brown spores and browner gills; Entoloma keeps pink gills from the start."},
@@ -1137,6 +1187,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["spring", "summer"],
         "distribution": "Europe, North America (west)",
+        "regions": ["europe", "north-america"],
         "description": ("A striking cup fungus that splits into star-like segments, revealing violet to lilac inner flesh. Contains gyromitrin-like compounds and is considered poisonous, especially when consumed with alcohol."),
         "lookalikes": [
             {"name": "Peziza species (cup fungi)", "distinguish": "Similar cups but lack the violet pigment and star-like splitting; many are edible but verify."},
@@ -1159,6 +1210,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Europe, North America",
+        "regions": ["europe", "north-america"],
         "description": ("A small, orange-tipped, phallus-shaped fungus covered in olive spore slime (gleba) at the tip that attracts flies for spore dispersal. Not poisonous but inedible and foul-smelling; related to the larger stinkhorns."),
         "lookalikes": [
             {"name": "Phallus impudicus (common stinkhorn)", "distinguish": "Much larger with a lacy skirt (indusium) and a more prominent smelly gleba."}
@@ -1180,6 +1232,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter"],
         "distribution": "Arid and semi-arid regions worldwide",
+        "regions": ["global"],
         "description": ("A desert puffball on a tall, shaggy stem with a ragged skirt-like veil. Spores release from a powdery cap at the top. Too tough and insubstantial to eat; admired for its odd, sculptural form."),
         "lookalikes": [
             {"name": "Young puffballs (Calvatia)", "distinguish": "Lack the long stem and the torn skirt; Battarrea is all stalk."}
@@ -1201,6 +1254,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, North America",
+        "regions": ["europe", "north-america"],
         "description": ("A common bolete whose brown cap cracks to reveal reddish flesh beneath. Mild and edible, though not as prized as porcini. A good beginner bolete to learn the pore-under-cap structure."),
         "lookalikes": [
             {"name": "Boletus edulis (porcini)", "distinguish": "Larger, paler, with a fine net pattern on the stem; both edible."},
@@ -1223,6 +1277,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "Europe, North America; widely cultivated",
+        "regions": ["europe", "north-america"],
         "description": ("A large, wine-red capped mushroom that fruits on wood chips and mulched garden beds. Easy to cultivate and a reliable edible with a meaty texture. A favorite for permaculture gardens."),
         "lookalikes": [
             {"name": "Chlorophyllum molybdites", "distinguish": "Poisonous; has green spores and a scaly tan cap, not wine-red."},
@@ -1245,6 +1300,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "Worldwide",
+        "regions": ["global"],
         "description": ("A pale, fan-shaped oyster mushroom that fruits on dead hardwoods, often in warm weather (unlike the cooler-loving pearl oyster). Excellent edible, mild and tender; nearly identical in use to the pearl oyster."),
         "lookalikes": [
             {"name": "Pleurotus ostreatus (pearl oyster)", "distinguish": "Very similar; distinguished mainly by season and spore print shade."},
@@ -1267,6 +1323,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Asia, Europe, North America",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A large, clustered 'rosette' of grayish fan caps at the base of oaks and other hardwoods. Prized edible (maitake) with a rich, earthy flavor and a celebrated status in Asian cuisine and medicine."),
         "lookalikes": [
             {"name": "Clustered Polyporus (Meripilus)", "distinguish": "Has pores rather than gills and blackens when bruised."},
@@ -1289,6 +1346,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["winter", "spring"],
         "distribution": "Mediterranean Europe, cultivated worldwide",
+        "regions": ["europe", "global"],
         "description": ("A subterranean, knobbly black fungus forming with oak and hazel roots. Among the most prized edibles in the world for its intense aroma. Found by trained dogs or pigs; never visible above ground."),
         "lookalikes": [
             {"name": "Tuber aestivum (summer truffle)", "distinguish": "Lighter, milder, and found in warmer months; similar but less aromatic."},
@@ -1311,6 +1369,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A classic morel with a tall, conical, deeply pitted cap. A top-tier edible with a nutty, smoky flavor — but MUST be cooked; raw morels are toxic. Found in spring, often after disturbance or burns."),
         "lookalikes": [
             {"name": "Gyromitra esculenta (false morel)", "distinguish": "Brain-like wrinkled cap, not honeycomb pits; contains gyromitrin and is poisonous."},
@@ -1333,6 +1392,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, introduced N. America",
+        "regions": ["europe", "north-america"],
         "description": ("Pallid all-white destroying angel in the same lethal group as A. bisporigera and A. ocreata. Contains amatoxins; the white volva cup at the base is the tell-tale death sign."),
         "lookalikes": [
             {"name": "Amanita bisporigera", "distinguish": "Near-identical NA destroying angel; both deadly -- volva + white gills are the danger signal."},
@@ -1356,6 +1416,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("One of the few edible Amanitas -- but only for the experienced. Flesh and stem bruise pink/red, and it keeps a skirt-like ring + volva remnants. A key teaching species: most Amanitas kill, this one is eaten."),
         "lookalikes": [
             {"name": "Amanita muscaria (fly agaric)", "distinguish": "Fly agaric is red-capped and poisonous; the Blusher is brown and reddens where bruised."},
@@ -1378,6 +1439,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["autumn"],
         "distribution": "Europe, N. America",
+        "regions": ["europe", "north-america"],
         "description": ("Ounce-for-ounce one of the most dangerous mushrooms: contains orellanine, which causes irreversible kidney failure with a delay of days to weeks. Rusty spores and an orange-brown cap."),
         "lookalikes": [
             {"name": "Many Cortinarius species", "distinguish": "Most webcaps are unsafe to eat; the genus is best avoided entirely."},
@@ -1400,6 +1462,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["late summer", "autumn"],
         "distribution": "Europe, N. America",
+        "regions": ["europe", "north-america"],
         "description": ("Small, deadly Lepiota containing amatoxins, easily mistaken for an edible parasol or button mushroom. Brown scaly cap, a ring on the stem, and a bulbous base."),
         "lookalikes": [
             {"name": "Macrolepiota procera (parasol)", "distinguish": "True parasol is much larger (cap 10-25cm) with a shaggy brown-scaled cap and movable ring."},
@@ -1422,6 +1485,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Amatoxin-containing little brown mushroom that grows on wood and is a classic fatal confusion with edible oysters and honey fungus. Rusty-brown spores and a ring on the stem."),
         "lookalikes": [
             {"name": "Pleurotus ostreatus (oyster mushroom)", "distinguish": "Oysters grow on wood too but have white decurrent gills and a white spore print, no ring."},
@@ -1445,6 +1509,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Wood-growing brown mushroom with a ring, once eaten in parts of Europe but now widely considered toxic and a dangerous Galerina lookalike. Colour shifts from damp dark-brown to pale when dry."),
         "lookalikes": [
             {"name": "Galerina marginata (deadly galerina)", "distinguish": "Near-identical and amatoxin-deadly; the two are separated only by microscopy. Do not eat either without expert ID."},
@@ -1467,6 +1532,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A grey-brown mushroom with pink gills and a pink spore print -- the hallmark of the Entoloma genus, many of which are poisonous. Causes severe gastrointestinal illness."),
         "lookalikes": [
             {"name": "Tricholoma species", "distinguish": "Some Tricholomas are edible but have white spores, not pink."},
@@ -1489,6 +1555,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["late summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Common mycorrhizal mushroom with a sticky pale cap and a mealy, radish-like smell. Poisonous, causing vomiting and diarrhea; a frequent accidental pickup by new foragers."),
         "lookalikes": [
             {"name": "Agaricus species (field/button mushrooms)", "distinguish": "Edible Agaricus have pink-then-brown gills and a brown spore print; Hebeloma gills stay pale and it smells of radish."},
@@ -1511,6 +1578,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Once considered a good edible, now linked to rhabdomyolysis (muscle breakdown) and at least one death when eaten repeatedly. Yellowish cap and yellow gills, growing under conifers."),
         "lookalikes": [
             {"name": "Cantharellus (chanterelle)", "distinguish": "Chanterelles are yellow but have blunt false gills and grow in moss/leaf litter, not with the white spores of Tricholoma."},
@@ -1533,6 +1601,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Small, tough, fragrant mushroom that grows in rings on lawns and pastures -- the classic 'fairy ring'. A good edible with a nutty flavour, best dried. Must be well cooked."),
         "lookalikes": [
             {"name": "Clitocybe dealbata (ivory funnel)", "distinguish": "Deadly ivory funnel also forms rings in grass but has a mealy smell and is muscarine-poisonous."},
@@ -1555,6 +1624,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A large, choice meadow Agaricus with a pleasant anise scent, closely related to the button mushroom. Flesh may yellow slightly when bruised. One of the best wild edibles."),
         "lookalikes": [
             {"name": "Agaricus xanthodermus (yellow stainer)", "distinguish": "Poisonous stainer also yellows but smells of phenol/ink; arvensis smells sweetly of anise."},
@@ -1577,6 +1647,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter"],
         "distribution": "Mediterranean, Europe, Asia",
+        "regions": ["asia", "europe"],
         "description": ("Meaty, thick-stemmed oyster relative that grows on the roots of spiny shrubs (eryngo). Prized for its firm texture and umami flavour; widely cultivated."),
         "lookalikes": [
             {"name": "Pleurotus ostreatus (oyster mushroom)", "distinguish": "True oyster has a fan cap and the same edible status; eryngii is chunkier with a solid stem."},
@@ -1599,6 +1670,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Fragrant, all-black funnel mushroom that hides in leaf litter and is easy to miss. Intensely flavoured, highly prizzed edible. No dangerous lookalikes share its combo of black colour and hollow funnel shape."),
         "lookalikes": [
             {"name": "Cantharellus (chanterelle)", "distinguish": "Chanterelles are yellow/orange; black trumpets are dark and have a smokier taste."},
@@ -1621,6 +1693,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "E. North America",
+        "regions": ["north-america"],
         "description": ("Red-capped bolete with yellow pores that bruise blue. Edible and good when young, but the blue bruising must be told apart from the poisonous red-capped boletes."),
         "lookalikes": [
             {"name": "Boletus sensibilis", "distinguish": "Very similar and also blue-bruising but can cause illness; the two are hard to separate -- caution advised."},
@@ -1643,6 +1716,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "N. America (pine)",
+        "regions": ["north-america"],
         "description": ("Slimy-capped, dotted-stemmed bolete under pines. Edible after the slimy cuticle and pore layer are removed; mild flavour. A safe, common beginner bolete."),
         "lookalikes": [
             {"name": "Suillus luteus (slippery jack)", "distinguish": "Nearly identical and also edible; americanus has dotted (not ring-only) stems and grows with eastern pines."},
@@ -1665,6 +1739,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "N. America",
+        "regions": ["north-america"],
         "description": ("Large, squat white Russula with a peppery taste raw (mild when cooked). Edible and common; the peppery bite is typical of many Russulas, most of which are at worst unpalatable, not deadly."),
         "lookalikes": [
             {"name": "Russula emetica (the sickener)", "distinguish": "The sickener is also white but intensely peppery and poisonous; brevipes is mild-to-moderate and edible cooked."},
@@ -1687,6 +1762,7 @@ SPECIES = [
         "ecology": "parasitic",
         "season": ["autumn"],
         "distribution": "N. America, Europe, Asia",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Honey-coloured clustered mushroom like Honey Fungus but lacking the ring. Edible when cooked (the cause of many poisoning cases is eating it undercooked). Grows at the base of trees in big clumps."),
         "lookalikes": [
             {"name": "Armillaria mellea (honey fungus)", "distinguish": "The ringed cousin; both edible cooked, both confused with deadly Galerina on wood."},
@@ -1709,6 +1785,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
+        "potency": "high",  # ~1.0-2.37% psilocybin, among the highest of any Psilocybe; Beug & Bigwood 1982 / Gartz 1994
         "description": ("Small conical grassland mushroom containing psilocybin (a psychedelic). Legally restricted in many places and not food -- included here for education, not use. Bruises blue and has a distinct nipple on the cap."),
         "lookalikes": [
             {"name": "Panaeolus species", "distinguish": "Some Panaeolus are also psychoactive; many grassland little brown mushrooms are not -- microscopy is needed."},
@@ -1731,6 +1809,7 @@ SPECIES = [
         "ecology": "parasitic",
         "season": ["summer", "autumn"],
         "distribution": "Worldwide (temperate/tropical)",
+        "regions": ["global"],
         "description": ("Glossy red-brown shelf fungus used in traditional medicine (usually as a tea/extract, not eaten). Too woody to eat but prizzed. Kidney-shaped cap with a lacquered sheen."),
         "lookalikes": [
             {"name": "Ganoderma tsugae", "distinguish": "Near-identical hemlock reishi, also medicinal; the two are used interchangeably."},
@@ -1753,6 +1832,7 @@ SPECIES = [
         "ecology": "parasitic",
         "season": ["late summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Red, tongue-shaped bracket that bleeds a blood-red juice when cut and tastes faintly of beef. Edible and tangy; often grows on old oaks. Individual tubes (not a fused pore surface) are the giveaway."),
         "lookalikes": [
             {"name": "Ganoderma lucidum (reishi)", "distinguish": "Lacquered red-brown shelf, inedible/medicinal and never bleeds red juice when cut."},
@@ -1775,6 +1855,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring"],
         "distribution": "Europe, N. America",
+        "regions": ["europe", "north-america"],
         "description": ("Meaty, fragrant spring mushroom that appears around St George's Day (23 Apr). Choice edible with a strong floury smell. Grows in rings in grassy places."),
         "lookalikes": [
             {"name": "Clitocybe dealbata (ivory funnel)", "distinguish": "Deadly ivory funnel also rings in grass; St George's has a strong mealy/flour smell and white (not dangerously muscarine) profile -- but expert ID is essential."},
@@ -1797,6 +1878,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Pure white milkcap that exudes white latex and is ferociously peppery raw. Too acrid to eat for most, though some cultures salt-cure it. A classic 'beware' mushroom of the milkcap group."),
         "lookalikes": [
             {"name": "Lactarius deliciosus (saffron milkcap)", "distinguish": "Saffron milkcap is edible with orange milk and carrot-coloured stains; piperatus is white and searingly hot."},
@@ -1819,6 +1901,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "N. America",
+        "regions": ["north-america"],
         "description": ("Large parasol with a brown scaly cap, a movable ring, and a fat, often bulbous stem that bruises orange-yellow. Poisonous, causing severe GI upset -- easily confused with the edible true parasol."),
         "lookalikes": [
             {"name": "Macrolepiota procera (parasol)", "distinguish": "True parasol is edible with a slender, snake-skin stem; brunneum has a swollen stem that stains yellow."},
@@ -1841,6 +1924,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring"],
         "distribution": "E. North America",
+        "regions": ["north-america"],
         "description": ("Prized black-capped morel of eastern North American springs. Top-tier edible with a deep, smoky flavour -- but MUST be cooked; raw morels are toxic. Honeycomb pits on a dark conical cap."),
         "lookalikes": [
             {"name": "Gyromitra esculenta (false morel)", "distinguish": "False morel has a lobed, brain-like cap, not honeycomb pits, and is deadly."},
@@ -1863,6 +1947,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, N. Africa, Middle East",
+        "regions": ["africa", "europe"],
         "description": ("Subterranean, aromatic truffle with a black warty skin and a pale marbled interior. Highly prizzed edible, hunted with trained dogs or pigs. Found by smell, not sight, under hardwoods."),
         "lookalikes": [
             {"name": "Tuber melanosporum (black truffle)", "distinguish": "The prizzed Perigord truffle, near-identical and also choice; aestivum is milder and ripens in summer."},
@@ -1885,6 +1970,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["late summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Cascading white mass of fine hanging teeth, like a frozen waterfall. Choice edible with a seafood-like flavour, closely related to Lion's Mane. Grows on dead hardwoods."),
         "lookalikes": [
             {"name": "Hericium erinaceus (lion's mane)", "distinguish": "Lion's mane has longer, shaggier single clusters; both are choice and nearly interchangeable in the kitchen."},
@@ -1907,6 +1993,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Brown capped mushroom in clusters on poplar and other hardwoods. Edible with a mild, pleasant flavour; widely cultivated in Asia (where it is called yanagi-matsutake)."),
         "lookalikes": [
             {"name": "Kuehneromyces mutabilis", "distinguish": "Also wood-clustered and ringed but rusty-spored and best avoided; Agrocybe has a brown spore print."},
@@ -1929,6 +2016,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter"],
         "distribution": "Pacific Northwest (native), introduced to Europe with wood mulch",
+        "regions": ["europe", "north-america"],
+        "potency": "high",  # ~0.3-1.96% combined psilocybin/psilocin, high-potency wood-chip species; Beug & Bigwood 1982
         "description": ("Contains psilocybin and psilocin and is a controlled hallucinogen in most jurisdictions. "
                         "Wavy caramel-brown caps with a distinctive wavy margin, growing in dense troops on wood "
                         "chip mulch in parks and gardens. Bruises deep blue when handled. Listed here for education "
@@ -1954,6 +2043,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter"],
         "distribution": "Pacific coast of Oregon and Washington, USA",
+        "regions": ["north-america"],
+        "potency": "high",  # ~1.8% psilocybin average, up to 1.93% combined alkaloids -- among the most potent known Psilocybe; Gartz 1996 / Stamets 1996
         "description": ("Contains one of the highest psilocybin concentrations of any known mushroom, making it a "
                         "controlled and potent hallucinogen. Caramel-colored, caramel-to-chestnut caps growing in "
                         "sandy soil among dune grasses and beach wood debris; bruises blue. Listed here for "
@@ -1979,6 +2070,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Mexico and Central America",
+        "regions": ["north-america"],
+        "potency": "low",  # ~0.3-0.7% psilocybin dry weight (sclerotia/fruit bodies); Azarius/Miraculix truffle assay data
         "description": ("Contains psilocybin and psilocin; the species used ceremonially by Mesoamerican cultures "
                         "under the Nahuatl name teonanacatl (\"flesh of the gods\") and the mushroom Albert Hofmann "
                         "first isolated psilocybin from. Small, slender, tan-brown caps growing in grassy, disturbed "
@@ -2005,6 +2098,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Originally found near Tampa, Florida, USA; now cultivated worldwide",
+        "regions": ["global", "north-america"],
+        "potency": "moderate",  # up to ~1% combined psilocybin+psilocin in fruit bodies (Beug 2011); sclerotia lower at ~0.3-0.7%
         "description": ("Contains psilocybin and psilocin; famous for producing 'magic truffles' (sclerotia) -- "
                         "hardened underground masses of mycelium that store the same compounds as the mushroom and "
                         "are sold legally as truffles in some countries (e.g. the Netherlands) even where the "
@@ -2029,6 +2124,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Mexico and Central America",
+        "regions": ["north-america"],
+        "potency": "moderate",  # ~0.3-0.85% psilocybin reported in Mexican collections; Guzman 1983 chemotaxonomic surveys
         "description": ("Contains psilocybin and is another of the traditional 'teonanacatl' mushrooms used "
                         "ceremonially in Mexico, notably by Mazatec curandera Maria Sabina. Grows on eroded soil of "
                         "landslides, banks, and roadcuts, bruising blue when handled. Listed here for education and "
@@ -2054,6 +2151,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Pacific Northwest, USA",
+        "regions": ["north-america"],
+        "potency": "high",  # ~0.85% psilocybin plus notable baeocystin content (first isolated from this species); Leung & Paul 1968
         "description": ("Contains psilocybin, psilocin, and baeocystin, an alkaloid first identified in this "
                         "species and named after it. Olive-brown, umbonate caps that bruise blue, found on mulch "
                         "and wood debris. Listed here for education and harm reduction only -- not recommended or "
@@ -2079,6 +2178,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Pantropical; also found in warm temperate regions",
+        "regions": ["africa", "asia", "oceania", "south-america"],
+        "potency": "high",  # ~0.2-1.75% combined psilocybin/psilocin, among the most potent dung-loving species; Stijve & Kuyper 1985
         "description": ("Contains high levels of psilocybin and psilocin, among the most potent of the "
                         "dung-loving hallucinogenic mushrooms, sometimes classified in the genus Copelandia. "
                         "Pale gray-white cap, mottled black gills, and a black spore print; stains blue readily "
@@ -2105,6 +2206,8 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Widespread in temperate regions worldwide",
+        "regions": ["global"],
+        "potency": "low",  # low, highly variable psilocybin (<0.3% or trace/absent in many collections); Hatfield et al. 1978
         "description": ("A large, showy, bright orange mushroom that grows in dense clusters at the base of trees "
                         "and stumps. Some populations of Gymnopilus contain low, variable levels of psilocybin and "
                         "have a folk reputation for causing giddy, 'laughing' intoxication if eaten, though potency "
@@ -2130,6 +2233,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["spring", "summer"],
         "distribution": "Europe, in calcareous beech and lime woodland",
+        "regions": ["europe"],
         "description": ("A pale, fibrous-capped mushroom that reddens or bruises pinkish-red with age and handling. "
                         "Contains high levels of muscarine and is one of the most dangerous Inocybe species -- "
                         "ingestion causes severe muscarinic poisoning (excessive sweating, salivation, blurred "
@@ -2155,6 +2259,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn", "winter"],
         "distribution": "Widespread in Europe and North America",
+        "regions": ["europe", "north-america"],
         "description": ("A striking violet-to-lilac mushroom found in leaf litter and compost piles in autumn. "
                         "Edible and popular in Europe, but must be well cooked (raw or undercooked specimens can "
                         "cause gastrointestinal upset) and correctly distinguished from purple Cortinarius species."),
@@ -2179,6 +2284,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["autumn"],
         "distribution": "Widespread in temperate Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("Densely shaggy, upturned scales cover the yellow-brown cap and stem of this dense, "
                         "clustering wood-rotter. Once considered edible, it is now regarded as poisonous by many "
                         "authorities, especially in combination with alcohol, and causes gastrointestinal upset."),
@@ -2203,6 +2309,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Widespread in Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A small, delicate reddish-brown mushroom found in clusters on rotting hardwood logs. Named "
                         "for the dark red-purple latex ('blood') that oozes when the stem is cut or broken. Too "
                         "small and insubstantial to be worth eating."),
@@ -2227,6 +2334,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer", "autumn"],
         "distribution": "Worldwide, common in cities and gardens",
+        "regions": ["global"],
         "description": ("A common, tightly clustered mushroom that grows explosively from buried wood and stumps, "
                         "often right through pavement cracks. Named for the glistening mica-like granules that dust "
                         "the young cap. Edible when young and fresh, but like other inkcaps it dissolves into black "
@@ -2252,6 +2360,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Widespread in Europe and North America",
+        "regions": ["europe", "north-america"],
         "description": ("A slender mushroom with a wrinkled, greasy brown cap and a long, deeply rooting stem that "
                         "tapers underground to buried wood or roots -- the root can be as long as the visible "
                         "mushroom itself. Edible but thin-fleshed and not highly regarded."),
@@ -2276,6 +2385,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn"],
         "distribution": "Widespread in Europe and North America",
+        "regions": ["europe", "north-america"],
         "description": ("A large, robust Agaricus with a golden-brown, scaly cap and a pleasant almond-like smell. "
                         "One of the most prized wild Agaricus species for the table, with firm flesh and rich "
                         "flavor superior to the common button mushroom."),
@@ -2300,6 +2410,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, in both coniferous and broadleaf woodland",
+        "regions": ["europe"],
         "description": ("A stout bolete with an olive-brown cap, orange-red pores, and a yellow stem covered in "
                         "small red dots. All cut or bruised surfaces instantly turn dark blue. Edible and popular "
                         "once cooked, but must never be eaten raw -- it causes gastrointestinal upset uncooked."),
@@ -2324,6 +2435,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, temperate Asia",
+        "regions": ["asia", "europe"],
         "description": ("A brown-capped Amanita covered in small white warts, closely related to fly agaric and "
                         "sharing its ibotenic acid/muscimol toxin profile. Causes serious neurotoxic poisoning -- "
                         "confusion, delirium, and potential coma -- and has caused fatalities, especially when "
@@ -2349,6 +2461,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Northern Hemisphere conifer and birch forests",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A strikingly deep violet-purple mushroom covered in fine velvety scales, from cap to gills "
                         "to stem. Technically edible and non-toxic, but its beauty and slow growth mean it is rarely "
                         "collected for the table and is better appreciated in the woods."),
@@ -2373,6 +2486,7 @@ SPECIES = [
         "ecology": "mycorrhizal",
         "season": ["summer", "autumn"],
         "distribution": "Europe, North America, Asia",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A distinctive mottled green Russula with a cracked, quilted-looking cap surface, easy to "
                         "identify among the notoriously difficult Russula genus. One of the few Russulas widely "
                         "considered a choice, safe edible."),
@@ -2397,6 +2511,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["spring", "summer"],
         "distribution": "Widespread in Northern Hemisphere",
+        "regions": ["asia", "europe", "north-america"],
         "description": ("A large shelf-forming polypore with tan feather-like scales resembling a pheasant's back, "
                         "and a smell often compared to watermelon rind. Edible when young and tender, becoming "
                         "tough and woody with age; best sliced thin and cooked."),
@@ -2421,6 +2536,7 @@ SPECIES = [
         "ecology": "saprotrophic",
         "season": ["summer", "autumn", "winter"],
         "distribution": "Worldwide on rotting wood",
+        "regions": ["global"],
         "description": ("A small, pear-shaped puffball that grows in large clustered troops directly on decaying "
                         "logs and stumps -- the only common puffball that fruits on wood rather than soil. Edible "
                         "while the internal flesh is still pure white and firm throughout."),
@@ -2445,6 +2561,7 @@ SPECIES = [
         "ecology": "parasitic",
         "season": ["autumn", "winter", "spring"],
         "distribution": "Worldwide on hardwood branches",
+        "regions": ["global"],
         "description": ("A brain-like, gelatinous yellow-orange fungus that swells up plump and jelly-like after "
                         "rain and shrivels to a hard orange flake in dry weather. It is actually a mycoparasite, "
                         "feeding on other wood-decay fungi within the branch rather than the wood itself. Edible but "

@@ -282,6 +282,25 @@ body {
   50%      { box-shadow: 0 0 12px 1px rgba(224,90,90,.45); }
 }
 
+/* Potency badge: visually distinct from the edibility badge (square-ish
+   pill, purple/violet accent) so the two are never confused at a glance. */
+.badge-potency {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: .72rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;
+  border: 1px dashed transparent; white-space: nowrap; margin-left: 6px;
+  text-transform: uppercase; letter-spacing: .02em;
+}
+.badge-potency.pot-low      { background: rgba(150,130,220,.14); color: #c9bdf0; border-color: rgba(150,130,220,.35); }
+.badge-potency.pot-moderate { background: rgba(150,130,220,.20); color: #d6ccf5; border-color: rgba(150,130,220,.50); }
+.badge-potency.pot-high     { background: rgba(150,130,220,.28); color: #e6defa; border-color: rgba(150,130,220,.70); }
+
+.chip.pot-low  { border-color: rgba(150,130,220,.35); }
+.chip.pot-moderate { border-color: rgba(150,130,220,.50); }
+.chip.pot-high { border-color: rgba(150,130,220,.70); color: #d6ccf5; }
+.chip.pot-low.active, .chip.pot-moderate.active, .chip.pot-high.active {
+  background: rgba(150,130,220,.20); color: #e6defa; border-color: rgba(150,130,220,.75);
+}
+
 /* Trait tags: sized up for legibility + comfortable tap targets on mobile */
 .tag {
   font-size: .78rem; color: var(--ink); background: var(--panel-2);
