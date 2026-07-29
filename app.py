@@ -51,6 +51,121 @@ def _load_manifest():
 
 MANIFEST = _load_manifest()
 
+# --- AI-assisted identify via Gemini (optional, falls back to local) --------
+# If GEMINI_API_KEY is set (Railway env var, never committed), we ask a real
+# vision model to pick the closest matches from OUR dataset only -- it is
+# given the species list and told to answer strictly from it, so it can't
+# invent a species we don't carry. On any failure (no key, network error,
+# bad response, rate limit) we fall back to the local visual-similarity
+# matcher below so /api/identify never hard-fails.
+import base64 as _base64
+import urllib.request as _urlreq
+import urllib.error as _urlerr
+
+_GEMINI_MODEL = "gemini-3.1-flash-lite"
+_GEMINI_URL = (
+    "https://generativelanguage.googleapis.com/v1beta/models/"
+    + _GEMINI_MODEL + ":generateContent"
+)
+
+
+def _gemini_api_key():
+    return os.environ.get("GEMINI_API_KEY", "").strip()
+
+
+def _gemini_species_catalog():
+    """Compact 'id | common name | scientific name' catalog the model must
+    choose from, so it can only return species we actually have."""
+    return "\n".join(
+        "%s | %s | %s" % (s["id"], s["name"], s["scientific_name"]) for s in SPECIES
+    )
+
+
+def identify_by_photo_ai(upload_path, top_n=5, timeout=20):
+    """Ask Gemini to rank the closest matches from our species catalog.
+    Returns a list of dicts (id/name/scientific_name/edibility/confidence/
+    reasoning) or raises on any failure -- caller falls back to the local
+    matcher.
+    """
+    api_key = _gemini_api_key()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY not set")
+
+    with open(upload_path, "rb") as f:
+        img_b64 = _base64.b64encode(f.read()).decode("ascii")
+
+    prompt = (
+        "You are assisting an EDUCATIONAL mushroom reference app. You are NOT "
+        "identifying this mushroom for consumption safety -- never claim certainty "
+        "and never suggest it is safe to eat. Below is a catalog of species IDs "
+        "this app has entries for, one per line as 'id | common name | scientific "
+        "name'. Look at the uploaded photo and pick up to " + str(top_n) + " species "
+        "FROM THIS CATALOG ONLY that are the closest visual matches (cap shape/color, "
+        "gills/pores, stem, habitat cues visible in the photo). Do not invent a "
+        "species that is not in the catalog. If nothing in the catalog is a "
+        "plausible match, return an empty list.\n\n"
+        "Respond with ONLY compact JSON (no markdown fences, no prose) in this "
+        "exact shape:\n"
+        '{"matches": [{"id": "<catalog id>", "confidence": <0.0-1.0>, '
+        '"reasoning": "<one short phrase, visible traits only>"}]}\n\n'
+        "Catalog:\n" + _gemini_species_catalog()
+    )
+
+    body = json.dumps({
+        "contents": [{
+            "parts": [
+                {"text": prompt},
+                {"inline_data": {"mime_type": "image/jpeg", "data": img_b64}},
+            ]
+        }],
+        "generationConfig": {
+            "temperature": 0.1,
+            "responseMimeType": "application/json",
+        },
+    }).encode("utf-8")
+
+    req = _urlreq.Request(
+        _GEMINI_URL + "?key=" + api_key,
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with _urlreq.urlopen(req, timeout=timeout) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except _urlerr.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")[:500]
+        raise RuntimeError("Gemini HTTP %s: %s" % (e.code, detail))
+
+    try:
+        text = payload["candidates"][0]["content"]["parts"][0]["text"]
+        parsed = json.loads(text)
+        raw_matches = parsed.get("matches", [])
+    except (KeyError, IndexError, ValueError) as e:
+        raise RuntimeError("Unexpected Gemini response shape: %s" % e)
+
+    by_id = {s["id"]: s for s in SPECIES}
+    out = []
+    for m in raw_matches[:top_n]:
+        sid = m.get("id")
+        s = by_id.get(sid)
+        if not s:
+            continue  # ignore any id Gemini hallucinated outside the catalog
+        rec = {
+            "id": s["id"],
+            "name": s["name"],
+            "scientific_name": s["scientific_name"],
+            "edibility": s.get("edibility"),
+            "confidence": round(float(m.get("confidence", 0)), 3),
+            "reasoning": str(m.get("reasoning", ""))[:200],
+        }
+        img = with_image(s).get("image")
+        if img:
+            rec["image"] = img
+        out.append(rec)
+    return out
+
+
 # --- Photo-based "visual similarity" matcher (local, no external API) -------
 # Cheap, dependency-free features (Pillow only): an HSV colour histogram plus
 # an edge-density measure. This is NOT identification -- it ranks our indexed
@@ -468,11 +583,26 @@ class Handler(BaseHTTPRequestHandler):
                 except (UnidentifiedImageError, OSError):
                     os.remove(tmppath)
                     return self.send_error(400, "File is not a valid image")
-                results = identify_by_photo(tmppath, top_n=8)
+                method = "local"
+                try:
+                    results = identify_by_photo_ai(tmppath, top_n=5)
+                    method = "ai"
+                    if not results:
+                        # Empty AI result (no plausible catalog match) --
+                        # still useful to fall back to visual similarity
+                        # rather than showing nothing.
+                        results = identify_by_photo(tmppath, top_n=8)
+                        method = "local"
+                except Exception as ai_err:  # noqa: BLE001
+                    sys.stderr.write(
+                        "[mushroom-index] Gemini identify unavailable, "
+                        "falling back to local matcher: %s\n" % ai_err
+                    )
+                    results = identify_by_photo(tmppath, top_n=8)
             finally:
                 if os.path.exists(tmppath):
                     os.remove(tmppath)
-            self._send_json({"results": results})
+            self._send_json({"results": results, "method": method})
         except Exception as e:  # noqa: BLE001
             sys.stderr.write("[mushroom-index] identify error: %s\n" % e)
             self.send_error(500, "Identification failed")

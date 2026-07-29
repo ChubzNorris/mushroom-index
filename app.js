@@ -336,7 +336,7 @@ function initIdentify() {
     btn.disabled = true;
     btn.textContent = 'Matching…';
     note.hidden = false;
-    note.textContent = 'Finding visually similar species…';
+    note.textContent = 'Analyzing photo…';
     try {
       const fd = new FormData();
       fd.append('image', pendingFile);
@@ -344,11 +344,15 @@ function initIdentify() {
       if (!res.ok) throw new Error('Identify failed: ' + res.status);
       const data = await res.json();
       const list = data.results || [];
-      results.innerHTML = list.map(r => identifyCardHTML(r)).join('');
+      const method = data.method || 'local';
+      results.innerHTML = list.map(r => identifyCardHTML(r, method)).join('');
       results.hidden = false;
       note.hidden = false;
       if (!list.length) {
         note.textContent = 'No indexed photos to compare against.';
+      } else if (method === 'ai') {
+        note.innerHTML = 'Top matches from an <b>AI visual assessment</b> against our indexed species. ' +
+          'This is <b>not</b> an identification — confirm with an expert before touching anything.';
       } else {
         note.innerHTML = 'Top matches by <b>visual similarity</b> (colour/texture). ' +
           'This is <b>not</b> an identification — confirm with an expert.';
@@ -367,19 +371,29 @@ function initIdentify() {
   });
 }
 
-function identifyCardHTML(r) {
+function identifyCardHTML(r, method) {
   const emoji = EMOJI_FOR[r.edibility] || '🍄';
   const img = r.image
     ? `<img class="card-img" src="${r.image.url}" alt="${escapeHTML(r.name)}" loading="lazy" />`
     : `<div class="card-emoji">${emoji}</div>`;
-  const pct = Math.round((r.similarity || 0) * 100);
+  let tagHTML;
+  if (method === 'ai') {
+    const pct = Math.round((r.confidence || 0) * 100);
+    const reasonTag = r.reasoning
+      ? `<span class="tag" title="${escapeHTML(r.reasoning)}">${escapeHTML(r.reasoning)}</span>`
+      : '';
+    tagHTML = `<span class="tag">${pct}% confidence</span>${reasonTag}`;
+  } else {
+    const pct = Math.round((r.similarity || 0) * 100);
+    tagHTML = `<span class="tag">${pct}% similar</span>`;
+  }
   return `
     <article class="card" data-id="${r.id}" tabindex="0">
       <div class="card-media">${img}</div>
       <h3>${escapeHTML(r.name)}</h3>
       <p class="sci">${escapeHTML(r.scientific_name)}</p>
       <span class="badge ${r.edibility}">${r.edibility}</span>
-      <div class="traits"><span class="tag">${pct}% similar</span></div>
+      <div class="traits">${tagHTML}</div>
     </article>`;
 }
 
