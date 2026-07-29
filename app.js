@@ -50,6 +50,10 @@ function buildQueryString() {
   return p.toString();
 }
 
+/* Which filter-group titles the user has manually collapsed, so re-renders
+   (e.g. after clicking a chip) don't snap sections back open. */
+const collapsedGroups = new Set();
+
 /* ---- Render filters from facets ---- */
 function renderFilters(facets) {
   const wrap = el('filter-groups');
@@ -57,11 +61,25 @@ function renderFilters(facets) {
   for (const def of FILTER_DEFS) {
     const values = facets[def.key] || [];
     if (!values.length) continue;
+    const isCollapsed = collapsedGroups.has(def.key);
     const group = document.createElement('div');
-    group.className = 'filter-group';
-    const title = document.createElement('div');
+    group.className = 'filter-group' + (isCollapsed ? ' collapsed' : '');
+
+    const title = document.createElement('button');
+    title.type = 'button';
     title.className = 'fg-title';
-    title.textContent = def.title;
+    title.setAttribute('aria-expanded', String(!isCollapsed));
+    const activeVal = state.filters[def.key];
+    title.innerHTML =
+      `<span>${def.title}</span>` +
+      (activeVal ? `<span class="fg-count">1 selected</span>` : '') +
+      `<span class="fg-caret" aria-hidden="true">▾</span>`;
+    title.addEventListener('click', () => {
+      const nowCollapsed = group.classList.toggle('collapsed');
+      title.setAttribute('aria-expanded', String(!nowCollapsed));
+      if (nowCollapsed) collapsedGroups.add(def.key);
+      else collapsedGroups.delete(def.key);
+    });
     group.appendChild(title);
 
     const row = document.createElement('div');
@@ -115,25 +133,75 @@ function escapeHTML(str) {
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-/* ---- Render the results grid ---- */
+/* ---- Render the results grid, batched with a "Load more" control ---- */
+const PAGE_SIZE = 24;
+let currentResults = [];
+let shownCount = 0;
+
 function renderResults(list) {
-  const grid = el('results-grid');
+  currentResults = list;
+  shownCount = 0;
   const countEl = el('result-count');
   countEl.textContent = list.length;
   if (!list.length) {
-    grid.innerHTML = '';
+    el('results-grid').innerHTML = '';
     el('no-results').hidden = false;
+    removePager();
     return;
   }
   el('no-results').hidden = true;
-  grid.innerHTML = list.map(cardHTML).join('');
-  grid.querySelectorAll('.card').forEach(card => {
+  el('results-grid').innerHTML = '';
+  renderNextPage();
+}
+
+function renderNextPage() {
+  const grid = el('results-grid');
+  const nextSlice = currentResults.slice(shownCount, shownCount + PAGE_SIZE);
+  const frag = document.createElement('div');
+  frag.innerHTML = nextSlice.map(cardHTML).join('');
+  while (frag.firstChild) grid.appendChild(frag.firstChild);
+  shownCount += nextSlice.length;
+
+  grid.querySelectorAll('.card:not([data-bound])').forEach(card => {
+    card.dataset.bound = '1';
     const open = () => openDetail(card.dataset.id);
     card.addEventListener('click', open);
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
     });
   });
+
+  renderPager();
+}
+
+function removePager() {
+  const existing = el('load-more-wrap');
+  if (existing) existing.remove();
+}
+
+function renderPager() {
+  removePager();
+  const resultsSection = document.querySelector('.results');
+  const remaining = currentResults.length - shownCount;
+  const wrap = document.createElement('div');
+  wrap.id = 'load-more-wrap';
+  wrap.className = 'load-more-wrap';
+  if (remaining > 0) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'load-more-btn';
+    btn.textContent = `Load more (${remaining} more species)`;
+    btn.addEventListener('click', () => {
+      renderNextPage();
+    });
+    wrap.appendChild(btn);
+  } else if (currentResults.length > PAGE_SIZE) {
+    const status = document.createElement('p');
+    status.className = 'pagination-status';
+    status.textContent = `Showing all ${currentResults.length} species.`;
+    wrap.appendChild(status);
+  }
+  if (wrap.childNodes.length) resultsSection.appendChild(wrap);
 }
 
 /* ---- Detail modal ---- */

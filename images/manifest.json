@@ -281,7 +281,7 @@
   },
   "psilocybe-cubensis": {
     "file": "psilocybe-cubensis.jpg",
-    "credit": "Teodoro Chivat\u00e1 Bedoya",
+    "credit": "Teodoro Chivatá Bedoya",
     "license": "CC BY-NC",
     "source": "iNaturalist",
     "taxon_id": 328244,
@@ -297,7 +297,7 @@
   },
   "auricularia-auricula-judae": {
     "file": "auricularia-auricula-judae.jpg",
-    "credit": "Jurga Motiej\u016bnait\u0117",
+    "credit": "Jurga Motiejūnaitė",
     "license": "CC BY-NC",
     "source": "iNaturalist",
     "taxon_id": 1138427,
@@ -329,7 +329,7 @@
   },
   "ramaria-formosa": {
     "file": "ramaria-formosa.jpg",
-    "credit": "Ahmed Muj\u010dinovi\u0107",
+    "credit": "Ahmed Mujčinović",
     "license": "CC BY-NC-SA",
     "source": "iNaturalist",
     "taxon_id": 48770,
@@ -401,7 +401,7 @@
   },
   "mutinus-caninus": {
     "file": "mutinus-caninus.jpg",
-    "credit": "Antonio Ezquerro Anto\u00f1ana, all rights reserved, uploaded by Antonio Ezquerro Anto\u00f1ana",
+    "credit": "Antonio Ezquerro Antoñana, all rights reserved, uploaded by Antonio Ezquerro Antoñana",
     "license": "CC BY-SA",
     "source": "iNaturalist",
     "taxon_id": 63580,
@@ -505,7 +505,7 @@
   },
   "kuehneromyces-mutabilis": {
     "file": "kuehneromyces-mutabilis.jpg",
-    "credit": "Dr. Hans-G\u00fcnter Wagner",
+    "credit": "Dr. Hans-Günter Wagner",
     "license": "CC BY-SA",
     "source": "iNaturalist",
     "taxon_id": 153033,
@@ -593,7 +593,7 @@
   },
   "armillaria-tabescens": {
     "file": "armillaria-tabescens.jpg",
-    "credit": "Nicol\u00f2 Oppicelli",
+    "credit": "Nicolò Oppicelli",
     "license": "CC BY-NC",
     "source": "iNaturalist",
     "taxon_id": 895035,
@@ -673,7 +673,7 @@
   },
   "agrocybe-aegerita": {
     "file": "agrocybe-aegerita.jpg",
-    "credit": "In\u00e9s V\u00e1zquez Cabrillana",
+    "credit": "Inés Vázquez Cabrillana",
     "license": "CC BY-NC",
     "source": "iNaturalist",
     "taxon_id": 578456,
@@ -686,5 +686,181 @@
     "source": "iNaturalist",
     "taxon_id": 67594,
     "matched_name": "Flammulina velutipes"
+  },
+  "psilocybe-cyanescens": {
+    "file": "psilocybe-cyanescens.jpg",
+    "credit": "(c) Tim Sage, some rights reserved (CC BY-SA), uploaded by Tim Sage",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 179085,
+    "matched_name": "Psilocybe cyanescens"
+  },
+  "psilocybe-azurescens": {
+    "file": "psilocybe-azurescens.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 179652,
+    "matched_name": "Psilocybe azurescens"
+  },
+  "psilocybe-mexicana": {
+    "file": "psilocybe-mexicana.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 206138,
+    "matched_name": "Psilocybe mexicana"
+  },
+  "psilocybe-tampanensis": {
+    "file": "psilocybe-tampanensis.jpg",
+    "credit": "(c) Scott Ostuni, some rights reserved (CC BY-NC), uploaded by Scott Ostuni",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 518958,
+    "matched_name": "Psilocybe tampanensis"
+  },
+  "psilocybe-caerulescens": {
+    "file": "psilocybe-caerulescens.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 206124,
+    "matched_name": "Psilocybe caerulescens"
+  },
+  "psilocybe-baeocystis": {
+    "file": "psilocybe-baeocystis.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 499647,
+    "matched_name": "Psilocybe baeocystis"
+  },
+  "panaeolus-cyanescens": {
+    "file": "panaeolus-cyanescens.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 179100,
+    "matched_name": "Panaeolus cyanescens"
+  },
+  "gymnopilus-junonius": {
+    "file": "gymnopilus-junonius.jpg",
+    "credit": "(c) Davide Puddu, some rights reserved (CC BY), uploaded by Davide Puddu",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 83196,
+    "matched_name": "Gymnopilus junonius"
+  },
+  "inocybe-erubescens": {
+    "file": "inocybe-erubescens.jpg",
+    "credit": "(c) julian_alonso, some rights reserved (CC BY-NC), uploaded by julian_alonso",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 1112491,
+    "matched_name": "Inosperma erubescens"
+  },
+  "clitocybe-nuda": {
+    "file": "clitocybe-nuda.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 1525548,
+    "matched_name": "Collybia nuda"
+  },
+  "pholiota-squarrosa": {
+    "file": "pholiota-squarrosa.jpg",
+    "credit": "(c) Алексей Эбель, some rights reserved (CC BY-NC), uploaded by Алексей Эбель",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 153445,
+    "matched_name": "Pholiota squarrosa"
+  },
+  "mycena-haematopus": {
+    "file": "mycena-haematopus.jpg",
+    "credit": "(c) Jen, some rights reserved (CC BY-NC), uploaded by Jen",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 63460,
+    "matched_name": "Mycena haematopus"
+  },
+  "coprinellus-micaceus": {
+    "file": "coprinellus-micaceus.jpg",
+    "credit": "Gavin Slater",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 56318,
+    "matched_name": "Coprinellus micaceus"
+  },
+  "xerula-radicata": {
+    "file": "xerula-radicata.jpg",
+    "credit": "(c) Li Jianong, some rights reserved (CC BY-NC), uploaded by Li Jianong",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 383374,
+    "matched_name": "Oudemansiella radicata"
+  },
+  "agaricus-augustus": {
+    "file": "agaricus-augustus.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 49547,
+    "matched_name": "Agaricus augustus"
+  },
+  "boletus-luridiformis": {
+    "file": "boletus-luridiformis.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 553907,
+    "matched_name": "Neoboletus erythropus"
+  },
+  "amanita-pantherina": {
+    "file": "amanita-pantherina.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 48418,
+    "matched_name": "Amanita pantherina"
+  },
+  "cortinarius-violaceus": {
+    "file": "cortinarius-violaceus.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 124344,
+    "matched_name": "Cortinarius violaceus"
+  },
+  "russula-virescens": {
+    "file": "russula-virescens.jpg",
+    "credit": "(c) Ján Červenka, some rights reserved (CC BY-NC), uploaded by Ján Červenka",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 125720,
+    "matched_name": "Russula virescens"
+  },
+  "polyporus-squamosus": {
+    "file": "polyporus-squamosus.jpg",
+    "credit": "(c) Sarah DeLong-Duhon, some rights reserved (CC BY-NC-SA), uploaded by Sarah DeLong-Duhon",
+    "license": "CC BY-NC-SA",
+    "source": "iNaturalist",
+    "taxon_id": 940028,
+    "matched_name": "Cerioporus squamosus"
+  },
+  "lycoperdon-pyriforme": {
+    "file": "lycoperdon-pyriforme.jpg",
+    "credit": "(c) Lauren Hallden, some rights reserved (CC BY-NC), uploaded by Lauren Hallden",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 972793,
+    "matched_name": "Apioperdon pyriforme"
+  },
+  "tremella-mesenterica": {
+    "file": "tremella-mesenterica.jpg",
+    "credit": "Jon Sullivan",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 48529,
+    "matched_name": "Tremella mesenterica"
   }
 }

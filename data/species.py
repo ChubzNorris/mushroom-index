@@ -1914,4 +1914,545 @@ SPECIES = [
         ],
         "fun_fact": "It is one of the few wild mushrooms successfully farmed at scale outside the usual button/oyster/shiitake trio."
     },
+    {
+        "id": "psilocybe-cyanescens",
+        "name": "Wavy Cap",
+        "scientific_name": "Psilocybe cyanescens",
+        "aliases": ["cyans", "wavy cap"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "wavy"], "colors": ["brown", "caramel", "tan"], "diameter_cm": [1, 4]},
+        "gills": {"attachment": "attached", "spacing": "crowded", "colors": ["purple", "brown"]},
+        "stem": {"colors": ["white", "blue"], "ring": False, "volva": False},
+        "spore_print": "purple-brown",
+        "habitat": "urban",
+        "substrate": "woodchips",
+        "ecology": "saprotrophic",
+        "season": ["autumn", "winter"],
+        "distribution": "Pacific Northwest (native), introduced to Europe with wood mulch",
+        "description": ("Contains psilocybin and psilocin and is a controlled hallucinogen in most jurisdictions. "
+                        "Wavy caramel-brown caps with a distinctive wavy margin, growing in dense troops on wood "
+                        "chip mulch in parks and gardens. Bruises deep blue when handled. Listed here for education "
+                        "and harm reduction only -- not recommended or legal in many places."),
+        "lookalikes": [
+            {"name": "Galerina marginata", "distinguish": "DEADLY; also grows on wood/mulch but has rusty-brown spores and no blue bruising."},
+            {"name": "Psilocybe azurescens", "distinguish": "Even more potent relative with a more pointed cap; similar bluing reaction."}
+        ],
+        "fun_fact": "It has spread widely outside its native Pacific Northwest range by hitchhiking in commercial wood-chip mulch."
+    },
+    {
+        "id": "psilocybe-azurescens",
+        "name": "Flying Saucer Mushroom",
+        "scientific_name": "Psilocybe azurescens",
+        "aliases": ["azzies", "flying saucers"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "conical"], "colors": ["caramel", "brown", "gold"], "diameter_cm": [3, 10]},
+        "gills": {"attachment": "attached", "spacing": "crowded", "colors": ["purple", "brown"]},
+        "stem": {"colors": ["white", "blue"], "ring": False, "volva": False},
+        "spore_print": "purple-brown",
+        "habitat": "coastal dunes",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["autumn", "winter"],
+        "distribution": "Pacific coast of Oregon and Washington, USA",
+        "description": ("Contains one of the highest psilocybin concentrations of any known mushroom, making it a "
+                        "controlled and potent hallucinogen. Caramel-colored, caramel-to-chestnut caps growing in "
+                        "sandy soil among dune grasses and beach wood debris; bruises blue. Listed here for "
+                        "education and harm reduction only -- not recommended or legal in many places."),
+        "lookalikes": [
+            {"name": "Psilocybe cyanescens", "distinguish": "Close relative, less potent, prefers wood mulch inland rather than coastal dune sand."},
+            {"name": "Galerina marginata", "distinguish": "DEADLY amatoxin-containing lookalike; check for rusty-brown (not purple-brown) spores."}
+        ],
+        "fun_fact": "Its native range is a narrow strip of Pacific coastline, but its spores are so hardy the species has since established in parts of Europe."
+    },
+    {
+        "id": "psilocybe-mexicana",
+        "name": "Mexican Liberty Cap",
+        "scientific_name": "Psilocybe mexicana",
+        "aliases": ["teonanacatl", "pajaritos"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["conical", "bell"], "colors": ["brown", "tan", "cream"], "diameter_cm": [1, 3]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["purple", "brown"]},
+        "stem": {"colors": ["cream", "blue"], "ring": False, "volva": False},
+        "spore_print": "purple-brown",
+        "habitat": "grassland",
+        "substrate": "soil",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn"],
+        "distribution": "Mexico and Central America",
+        "description": ("Contains psilocybin and psilocin; the species used ceremonially by Mesoamerican cultures "
+                        "under the Nahuatl name teonanacatl (\"flesh of the gods\") and the mushroom Albert Hofmann "
+                        "first isolated psilocybin from. Small, slender, tan-brown caps growing in grassy, disturbed "
+                        "soil at higher elevations. Listed here for education and harm reduction only -- possession "
+                        "is illegal in most countries."),
+        "lookalikes": [
+            {"name": "Panaeolus species", "distinguish": "Similar size and habitat; mottled gill color and different spore surface texture under a scope."},
+            {"name": "Conocybe species", "distinguish": "Some are deadly amatoxin-containing lookalikes; rusty-brown spore print differs from purple-brown."}
+        ],
+        "fun_fact": "This is the species Swiss chemist Albert Hofmann used in 1958 to first isolate and name psilocybin and psilocin."
+    },
+    {
+        "id": "psilocybe-tampanensis",
+        "name": "Philosopher's Stone",
+        "scientific_name": "Psilocybe tampanensis",
+        "aliases": ["philosopher's stones", "magic truffle"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "bell"], "colors": ["brown", "caramel", "tan"], "diameter_cm": [1, 3]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["purple", "brown"]},
+        "stem": {"colors": ["cream", "blue"], "ring": False, "volva": False},
+        "spore_print": "purple-brown",
+        "habitat": "grassland",
+        "substrate": "sandy soil",
+        "ecology": "saprotrophic",
+        "season": ["autumn"],
+        "distribution": "Originally found near Tampa, Florida, USA; now cultivated worldwide",
+        "description": ("Contains psilocybin and psilocin; famous for producing 'magic truffles' (sclerotia) -- "
+                        "hardened underground masses of mycelium that store the same compounds as the mushroom and "
+                        "are sold legally as truffles in some countries (e.g. the Netherlands) even where the "
+                        "mushroom itself is controlled. Listed here for education and harm reduction only."),
+        "lookalikes": [
+            {"name": "Psilocybe mexicana", "distinguish": "Close relative and also produces sclerotia; near-identical mushroom stage, distinguished mainly by spore/genetic data."},
+        ],
+        "fun_fact": "Only one wild collection of this species has ever been documented -- nearly all specimens today descend from sclerotia cultivated from that single 1977 Florida find."
+    },
+    {
+        "id": "psilocybe-caerulescens",
+        "name": "Landslide Mushroom",
+        "scientific_name": "Psilocybe caerulescens",
+        "aliases": ["derrumbe", "landslide mushroom"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "flat"], "colors": ["brown", "caramel", "orange"], "diameter_cm": [2, 6]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["purple", "brown"]},
+        "stem": {"colors": ["cream", "blue"], "ring": False, "volva": False},
+        "spore_print": "purple-brown",
+        "habitat": "roadside embankments",
+        "substrate": "soil",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn"],
+        "distribution": "Mexico and Central America",
+        "description": ("Contains psilocybin and is another of the traditional 'teonanacatl' mushrooms used "
+                        "ceremonially in Mexico, notably by Mazatec curandera Maria Sabina. Grows on eroded soil of "
+                        "landslides, banks, and roadcuts, bruising blue when handled. Listed here for education and "
+                        "harm reduction only -- not recommended or legal in many places."),
+        "lookalikes": [
+            {"name": "Psilocybe mexicana", "distinguish": "Similar habitat and use; smaller stature and slightly different cap coloration."},
+            {"name": "Galerina species", "distinguish": "Some are deadly; check for the purple-brown (not rusty) spore print."}
+        ],
+        "fun_fact": "It was one of the sacred mushrooms shown to R. Gordon Wasson by Maria Sabina in the 1950s, sparking Western scientific interest in psilocybin mushrooms."
+    },
+    {
+        "id": "psilocybe-baeocystis",
+        "name": "Bottle Cap",
+        "scientific_name": "Psilocybe baeocystis",
+        "aliases": ["knobby tops", "bottle caps"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "bell"], "colors": ["brown", "olive", "chestnut"], "diameter_cm": [1, 4]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["purple", "brown"]},
+        "stem": {"colors": ["cream", "blue"], "ring": False, "volva": False},
+        "spore_print": "purple-brown",
+        "habitat": "forest edge",
+        "substrate": "woodchips",
+        "ecology": "saprotrophic",
+        "season": ["autumn"],
+        "distribution": "Pacific Northwest, USA",
+        "description": ("Contains psilocybin, psilocin, and baeocystin, an alkaloid first identified in this "
+                        "species and named after it. Olive-brown, umbonate caps that bruise blue, found on mulch "
+                        "and wood debris. Listed here for education and harm reduction only -- not recommended or "
+                        "legal in many places."),
+        "lookalikes": [
+            {"name": "Psilocybe cyanescens", "distinguish": "Overlapping range and habitat; P. cyanescens has a more strongly wavy cap margin."},
+            {"name": "Galerina marginata", "distinguish": "DEADLY; check for rusty-brown (not purple-brown) spore print before any ID."}
+        ],
+        "fun_fact": "The minor alkaloid baeocystin was first isolated from this species and takes its name from it."
+    },
+    {
+        "id": "panaeolus-cyanescens",
+        "name": "Blue Meanies",
+        "scientific_name": "Panaeolus cyanescens",
+        "aliases": ["blue meanies", "copelandia cyanescens"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "bell"], "colors": ["gray", "cream", "white"], "diameter_cm": [1, 4]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["gray", "black", "mottled"]},
+        "stem": {"colors": ["white", "blue"], "ring": False, "volva": False},
+        "spore_print": "black",
+        "habitat": "grassland",
+        "substrate": "dung",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn"],
+        "distribution": "Pantropical; also found in warm temperate regions",
+        "description": ("Contains high levels of psilocybin and psilocin, among the most potent of the "
+                        "dung-loving hallucinogenic mushrooms, sometimes classified in the genus Copelandia. "
+                        "Pale gray-white cap, mottled black gills, and a black spore print; stains blue readily "
+                        "when bruised. Listed here for education and harm reduction only -- not recommended or "
+                        "legal in many places."),
+        "lookalikes": [
+            {"name": "Panaeolus species (non-psychoactive)", "distinguish": "Several close Panaeolus relatives lack psilocybin; microscopy and bruising reaction are needed to tell them apart."},
+            {"name": "Psilocybe cubensis", "distinguish": "Also dung-loving and blues, but has a purple-brown spore print rather than black."}
+        ],
+        "fun_fact": "It is considered one of the most potent psilocybin mushrooms by weight, and has historically been classified under the separate genus Copelandia before molecular work folded it back into Panaeolus."
+    },
+    {
+        "id": "gymnopilus-junonius",
+        "name": "Laughing Gym",
+        "scientific_name": "Gymnopilus junonius",
+        "aliases": ["big laughing gym", "spectacular rustgill"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "flat"], "colors": ["orange", "gold", "rust"], "diameter_cm": [5, 20]},
+        "gills": {"attachment": "attached", "spacing": "crowded", "colors": ["orange", "rust", "yellow"]},
+        "stem": {"colors": ["yellow", "orange"], "ring": True, "volva": False},
+        "spore_print": "rusty-orange",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["autumn"],
+        "distribution": "Widespread in temperate regions worldwide",
+        "description": ("A large, showy, bright orange mushroom that grows in dense clusters at the base of trees "
+                        "and stumps. Some populations of Gymnopilus contain low, variable levels of psilocybin and "
+                        "have a folk reputation for causing giddy, 'laughing' intoxication if eaten, though potency "
+                        "is unreliable and it also causes gastrointestinal upset. Not recommended for consumption."),
+        "lookalikes": [
+            {"name": "Galerina marginata", "distinguish": "DEADLY; smaller and duller than Gymnopilus junonius but shares a rusty spore print and woody habitat."},
+            {"name": "Armillaria mellea (honey mushroom)", "distinguish": "Also grows in clusters at tree bases; honey mushroom has a white spore print, not rusty-orange."}
+        ],
+        "fun_fact": "Its common name, 'big laughing gym', comes from old reports of hilarity and altered mood after ingestion, though the psilocybin content varies wildly between collections."
+    },
+    {
+        "id": "inocybe-erubescens",
+        "name": "Deadly Fibrecap",
+        "scientific_name": "Inocybe erubescens",
+        "aliases": ["inosperma erubescens", "red-staining inocybe"],
+        "edibility": "deadly",
+        "cap": {"shape": ["conical", "bell"], "colors": ["cream", "pink", "red"], "diameter_cm": [3, 8]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["cream", "pink", "brown"]},
+        "stem": {"colors": ["white", "pink"], "ring": False, "volva": False},
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "soil",
+        "ecology": "mycorrhizal",
+        "season": ["spring", "summer"],
+        "distribution": "Europe, in calcareous beech and lime woodland",
+        "description": ("A pale, fibrous-capped mushroom that reddens or bruises pinkish-red with age and handling. "
+                        "Contains high levels of muscarine and is one of the most dangerous Inocybe species -- "
+                        "ingestion causes severe muscarinic poisoning (excessive sweating, salivation, blurred "
+                        "vision) that can be fatal without prompt atropine treatment."),
+        "lookalikes": [
+            {"name": "Calocybe gambosa (St. George's mushroom)", "distinguish": "Also fruits in spring in similar woodland but has a white spore print and no reddening/pinkish bruising."},
+            {"name": "Other Inocybe species", "distinguish": "Most Inocybe species are also toxic to some degree; the whole genus is best avoided entirely."}
+        ],
+        "fun_fact": "Its reddening flesh gives it the alternate name 'red-staining inocybe' and is one of the clues used to separate it from edible spring mushrooms it can be mistaken for."
+    },
+    {
+        "id": "clitocybe-nuda",
+        "name": "Wood Blewit",
+        "scientific_name": "Clitocybe nuda",
+        "aliases": ["blewit", "lepista nuda"],
+        "edibility": "edible",
+        "cap": {"shape": ["convex", "flat"], "colors": ["purple", "lilac", "brown"], "diameter_cm": [5, 15]},
+        "gills": {"attachment": "attached", "spacing": "crowded", "colors": ["purple", "lilac"]},
+        "stem": {"colors": ["purple", "lilac"], "ring": False, "volva": False},
+        "spore_print": "pinkish-cream",
+        "habitat": "forest",
+        "substrate": "leaf litter",
+        "ecology": "saprotrophic",
+        "season": ["autumn", "winter"],
+        "distribution": "Widespread in Europe and North America",
+        "description": ("A striking violet-to-lilac mushroom found in leaf litter and compost piles in autumn. "
+                        "Edible and popular in Europe, but must be well cooked (raw or undercooked specimens can "
+                        "cause gastrointestinal upset) and correctly distinguished from purple Cortinarius species."),
+        "lookalikes": [
+            {"name": "Cortinarius species", "distinguish": "Some purple Cortinarius are toxic; Cortinarius has a rusty-brown spore print and a cobweb-like partial veil, unlike the pinkish-cream spores of blewit."},
+            {"name": "Mycena pura", "distinguish": "Smaller, thinner, radish-scented purple mushroom, mildly toxic; blewit is much larger and meatier."}
+        ],
+        "fun_fact": "The name 'blewit' comes from its blue-violet coloring, and it was historically often sold in British markets alongside cultivated button mushrooms."
+    },
+    {
+        "id": "pholiota-squarrosa",
+        "name": "Shaggy Scalycap",
+        "scientific_name": "Pholiota squarrosa",
+        "aliases": ["shaggy pholiota"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "bell"], "colors": ["yellow", "tan", "brown"], "diameter_cm": [3, 12]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["yellow", "brown", "rust"]},
+        "stem": {"colors": ["yellow", "brown"], "ring": True, "volva": False},
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["autumn"],
+        "distribution": "Widespread in temperate Northern Hemisphere",
+        "description": ("Densely shaggy, upturned scales cover the yellow-brown cap and stem of this dense, "
+                        "clustering wood-rotter. Once considered edible, it is now regarded as poisonous by many "
+                        "authorities, especially in combination with alcohol, and causes gastrointestinal upset."),
+        "lookalikes": [
+            {"name": "Armillaria mellea (honey mushroom)", "distinguish": "Also grows in dense clusters at tree bases; honey mushroom lacks the shaggy upturned scales and has a white spore print."},
+            {"name": "Pholiota species (edible)", "distinguish": "Other Pholiota can be edible but require careful microscopy; best avoided as a genus for beginners."}
+        ],
+        "fun_fact": "Its rough, shaggy cap scales resemble roof shingles and give the whole genus the common name 'scalycap'."
+    },
+    {
+        "id": "mycena-haematopus",
+        "name": "Bleeding Fairy Helmet",
+        "scientific_name": "Mycena haematopus",
+        "aliases": ["bleeding mycena", "burgundydrop bonnet"],
+        "edibility": "inedible",
+        "cap": {"shape": ["conical", "bell"], "colors": ["red", "brown", "pink"], "diameter_cm": [1, 3]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["pink", "white"]},
+        "stem": {"colors": ["red", "brown"], "ring": False, "volva": False},
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn"],
+        "distribution": "Widespread in Northern Hemisphere",
+        "description": ("A small, delicate reddish-brown mushroom found in clusters on rotting hardwood logs. Named "
+                        "for the dark red-purple latex ('blood') that oozes when the stem is cut or broken. Too "
+                        "small and insubstantial to be worth eating."),
+        "lookalikes": [
+            {"name": "Mycena sanguinolenta", "distinguish": "Also bleeds red latex but is smaller and grows on needle litter rather than wood."},
+            {"name": "Other Mycena species", "distinguish": "Many small Mycena look similar; the bleeding reaction when cut is the key diagnostic feature."}
+        ],
+        "fun_fact": "The red 'blood' it exudes is a defining field character shared by only a handful of the hundreds of Mycena species."
+    },
+    {
+        "id": "coprinellus-micaceus",
+        "name": "Mica Cap",
+        "scientific_name": "Coprinellus micaceus",
+        "aliases": ["glistening inkcap", "mica inkcap"],
+        "edibility": "edible",
+        "cap": {"shape": ["conical", "bell"], "colors": ["tan", "brown", "orange"], "diameter_cm": [2, 5]},
+        "gills": {"attachment": "attached", "spacing": "crowded", "colors": ["cream", "brown", "black"]},
+        "stem": {"colors": ["white"], "ring": False, "volva": False},
+        "spore_print": "black",
+        "habitat": "urban",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["spring", "summer", "autumn"],
+        "distribution": "Worldwide, common in cities and gardens",
+        "description": ("A common, tightly clustered mushroom that grows explosively from buried wood and stumps, "
+                        "often right through pavement cracks. Named for the glistening mica-like granules that dust "
+                        "the young cap. Edible when young and fresh, but like other inkcaps it dissolves into black "
+                        "liquid ('deliquesces') within hours as it ages."),
+        "lookalikes": [
+            {"name": "Coprinus comatus (shaggy mane)", "distinguish": "Much larger, shaggy white cylindrical cap; mica cap is smaller and tan-brown."},
+            {"name": "Coprinopsis atramentaria (tippler's bane)", "distinguish": "Similar clustering habit but causes severe reaction with alcohol; mica cap does not have this effect."}
+        ],
+        "fun_fact": "Its glistening cap surface, caused by tiny mineral-like veil remnants, dissolves with the first rain or touch, giving the species its name."
+    },
+    {
+        "id": "xerula-radicata",
+        "name": "Rooting Shank",
+        "scientific_name": "Xerula radicata",
+        "aliases": ["oudemansiella radicata", "rooted collybia"],
+        "edibility": "edible",
+        "cap": {"shape": ["convex", "flat"], "colors": ["brown", "tan", "olive"], "diameter_cm": [3, 8]},
+        "gills": {"attachment": "attached", "spacing": "distant", "colors": ["white", "cream"]},
+        "stem": {"colors": ["white", "brown"], "ring": False, "volva": False},
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "buried wood",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn"],
+        "distribution": "Widespread in Europe and North America",
+        "description": ("A slender mushroom with a wrinkled, greasy brown cap and a long, deeply rooting stem that "
+                        "tapers underground to buried wood or roots -- the root can be as long as the visible "
+                        "mushroom itself. Edible but thin-fleshed and not highly regarded."),
+        "lookalikes": [
+            {"name": "Xerula furfuracea", "distinguish": "Very similar rooting species with a slightly scurfy stem; distinguishing them reliably needs microscopy."},
+            {"name": "Armillaria species", "distinguish": "Also wood-associated but grow in dense clusters without a single deep taproot-like base."}
+        ],
+        "fun_fact": "Digging up the entire rooting stem intact can require excavating 10+ cm of soil to reach the buried wood it's attached to."
+    },
+    {
+        "id": "agaricus-augustus",
+        "name": "The Prince",
+        "scientific_name": "Agaricus augustus",
+        "aliases": ["the prince"],
+        "edibility": "choice",
+        "cap": {"shape": ["convex", "flat"], "colors": ["brown", "gold", "tan"], "diameter_cm": [10, 25]},
+        "gills": {"attachment": "free", "spacing": "crowded", "colors": ["pink", "brown"]},
+        "stem": {"colors": ["white"], "ring": True, "volva": False},
+        "spore_print": "brown",
+        "habitat": "forest edge",
+        "substrate": "soil",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn"],
+        "distribution": "Widespread in Europe and North America",
+        "description": ("A large, robust Agaricus with a golden-brown, scaly cap and a pleasant almond-like smell. "
+                        "One of the most prized wild Agaricus species for the table, with firm flesh and rich "
+                        "flavor superior to the common button mushroom."),
+        "lookalikes": [
+            {"name": "Agaricus xanthodermus (yellow stainer)", "distinguish": "Toxic lookalike that stains bright chrome-yellow at the stem base and smells of ink/phenol rather than almond."},
+            {"name": "Amanita species", "distinguish": "Always check for free gills, a ring, and a brown spore print (not white) to rule out deadly Amanita."}
+        ],
+        "fun_fact": "Its pleasant almond or marzipan scent is one of the most reliable field clues that separate it from its poisonous, chemical-smelling relative the yellow stainer."
+    },
+    {
+        "id": "boletus-luridiformis",
+        "name": "Scarletina Bolete",
+        "scientific_name": "Boletus luridiformis",
+        "aliases": ["neoboletus erythropus", "dotted stem bolete"],
+        "edibility": "edible",
+        "cap": {"shape": ["convex"], "colors": ["brown", "olive", "orange"], "diameter_cm": [6, 20]},
+        "gills": {"attachment": "pores", "spacing": "close", "colors": ["orange", "red"]},
+        "stem": {"colors": ["yellow", "red"], "ring": False, "volva": False},
+        "spore_print": "olive-brown",
+        "habitat": "forest",
+        "substrate": "soil",
+        "ecology": "mycorrhizal",
+        "season": ["summer", "autumn"],
+        "distribution": "Europe, in both coniferous and broadleaf woodland",
+        "description": ("A stout bolete with an olive-brown cap, orange-red pores, and a yellow stem covered in "
+                        "small red dots. All cut or bruised surfaces instantly turn dark blue. Edible and popular "
+                        "once cooked, but must never be eaten raw -- it causes gastrointestinal upset uncooked."),
+        "lookalikes": [
+            {"name": "Boletus satanas (Satan's bolete)", "distinguish": "Also blues and has red pores but has a pale, whitish-gray cap rather than olive-brown, and is toxic."},
+            {"name": "Boletus edulis (porcini)", "distinguish": "Does not blue when cut and has white-to-yellow pores rather than orange-red."}
+        ],
+        "fun_fact": "The instant, dramatic blue-black bruising of its flesh is one of the fastest color-change reactions of any bolete."
+    },
+    {
+        "id": "amanita-pantherina",
+        "name": "Panther Cap",
+        "scientific_name": "Amanita pantherina",
+        "aliases": ["panther amanita"],
+        "edibility": "poisonous",
+        "cap": {"shape": ["convex", "flat"], "colors": ["brown", "tan"], "diameter_cm": [5, 12]},
+        "gills": {"attachment": "free", "spacing": "close", "colors": ["white"]},
+        "stem": {"colors": ["white"], "ring": True, "volva": True},
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "soil",
+        "ecology": "mycorrhizal",
+        "season": ["summer", "autumn"],
+        "distribution": "Europe, temperate Asia",
+        "description": ("A brown-capped Amanita covered in small white warts, closely related to fly agaric and "
+                        "sharing its ibotenic acid/muscimol toxin profile. Causes serious neurotoxic poisoning -- "
+                        "confusion, delirium, and potential coma -- and has caused fatalities, especially when "
+                        "confused with edible brown-capped mushrooms."),
+        "lookalikes": [
+            {"name": "Amanita muscaria (fly agaric)", "distinguish": "Usually red or orange-capped rather than brown, though pale forms overlap; both share ibotenic acid toxicity."},
+            {"name": "Amanita rubescens (blusher)", "distinguish": "Edible when cooked; flesh reddens/blushes when cut, unlike panther cap, and has a less prominent basal cup."}
+        ],
+        "fun_fact": "Despite the danger, its neurotoxins produce a distinctly different, more sedative intoxication than psilocybin mushrooms and it has a long history of recreational misuse in parts of Europe."
+    },
+    {
+        "id": "cortinarius-violaceus",
+        "name": "Violet Webcap",
+        "scientific_name": "Cortinarius violaceus",
+        "aliases": ["violet cort"],
+        "edibility": "edible",
+        "cap": {"shape": ["convex"], "colors": ["purple", "violet"], "diameter_cm": [5, 15]},
+        "gills": {"attachment": "attached", "spacing": "distant", "colors": ["purple", "rust"]},
+        "stem": {"colors": ["purple"], "ring": False, "volva": False},
+        "spore_print": "rusty-brown",
+        "habitat": "forest",
+        "substrate": "soil",
+        "ecology": "mycorrhizal",
+        "season": ["summer", "autumn"],
+        "distribution": "Northern Hemisphere conifer and birch forests",
+        "description": ("A strikingly deep violet-purple mushroom covered in fine velvety scales, from cap to gills "
+                        "to stem. Technically edible and non-toxic, but its beauty and slow growth mean it is rarely "
+                        "collected for the table and is better appreciated in the woods."),
+        "lookalikes": [
+            {"name": "Cortinarius rubellus (deadly webcap)", "distinguish": "DEADLY; orange-brown rather than violet, and causes fatal kidney failure -- always double-check any purple Cortinarius under this genus's broad toxic reputation."},
+            {"name": "Lepista nuda (wood blewit)", "distinguish": "Also purple but has a pinkish-cream (not rusty-brown) spore print and lacks the cobweb-like cortina veil."}
+        ],
+        "fun_fact": "Its intense violet color comes from pigments so striking that entire mushroom-hunting trips have been organized around finding it, even though it's rarely eaten."
+    },
+    {
+        "id": "russula-virescens",
+        "name": "Green-Cracking Russula",
+        "scientific_name": "Russula virescens",
+        "aliases": ["quilted green russula", "green brittlegill"],
+        "edibility": "choice",
+        "cap": {"shape": ["convex", "flat"], "colors": ["green"], "diameter_cm": [5, 15]},
+        "gills": {"attachment": "attached", "spacing": "close", "colors": ["white", "cream"]},
+        "stem": {"colors": ["white"], "ring": False, "volva": False},
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "soil",
+        "ecology": "mycorrhizal",
+        "season": ["summer", "autumn"],
+        "distribution": "Europe, North America, Asia",
+        "description": ("A distinctive mottled green Russula with a cracked, quilted-looking cap surface, easy to "
+                        "identify among the notoriously difficult Russula genus. One of the few Russulas widely "
+                        "considered a choice, safe edible."),
+        "lookalikes": [
+            {"name": "Amanita phalloides (death cap)", "distinguish": "DEADLY; can appear greenish but has free gills, a ring, and a volva at the base, none of which Russula virescens has."},
+            {"name": "Other green Russula species", "distinguish": "Some greenish Russulas are mildly toxic; the cracked, patchwork cap texture is the key ID feature for this species."}
+        ],
+        "fun_fact": "Its cracked, jigsaw-puzzle cap pattern is unique enough among green mushrooms that it helps rule out confusion with the deadly death cap, which has a smooth cap."
+    },
+    {
+        "id": "polyporus-squamosus",
+        "name": "Dryad's Saddle",
+        "scientific_name": "Polyporus squamosus",
+        "aliases": ["pheasant back mushroom", "cerioporus squamosus"],
+        "edibility": "edible",
+        "cap": {"shape": ["fan", "flat"], "colors": ["tan", "brown", "cream"], "diameter_cm": [10, 40]},
+        "gills": {"attachment": "pores", "spacing": "close", "colors": ["white", "cream"]},
+        "stem": {"colors": ["brown", "black"], "ring": False, "volva": False},
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["spring", "summer"],
+        "distribution": "Widespread in Northern Hemisphere",
+        "description": ("A large shelf-forming polypore with tan feather-like scales resembling a pheasant's back, "
+                        "and a smell often compared to watermelon rind. Edible when young and tender, becoming "
+                        "tough and woody with age; best sliced thin and cooked."),
+        "lookalikes": [
+            {"name": "Polyporus tuberaster", "distinguish": "Similar scaly bracket but smaller and grows from a hard underground sclerotium; overall much less common."},
+            {"name": "Cerioporus mori", "distinguish": "Similar honeycombed cap texture; typically smaller pore size distinguishes it under magnification."}
+        ],
+        "fun_fact": "Its common name 'pheasant back' comes from the feathered, scaly pattern on its cap, which closely resembles pheasant plumage."
+    },
+    {
+        "id": "lycoperdon-pyriforme",
+        "name": "Pear-Shaped Puffball",
+        "scientific_name": "Lycoperdon pyriforme",
+        "aliases": ["apioperdon pyriforme", "stump puffball"],
+        "edibility": "edible",
+        "cap": {"shape": ["round"], "colors": ["white", "tan", "brown"], "diameter_cm": [1, 4]},
+        "gills": {"attachment": "none", "spacing": "none", "colors": []},
+        "stem": {"colors": ["white", "tan"], "ring": False, "volva": False},
+        "spore_print": "olive-brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": ["summer", "autumn", "winter"],
+        "distribution": "Worldwide on rotting wood",
+        "description": ("A small, pear-shaped puffball that grows in large clustered troops directly on decaying "
+                        "logs and stumps -- the only common puffball that fruits on wood rather than soil. Edible "
+                        "while the internal flesh is still pure white and firm throughout."),
+        "lookalikes": [
+            {"name": "Scleroderma citrinum (common earthball)", "distinguish": "Toxic; earthball has a thick, tough rind and dark purple-black spore mass, unlike the thin skin and pale flesh of pear puffball."},
+            {"name": "Young Amanita eggs", "distinguish": "DEADLY if mistaken; always slice puffballs in half to confirm uniform white flesh with no mushroom outline inside."}
+        ],
+        "fun_fact": "It is the only widespread puffball species that grows specifically on wood rather than in soil, making substrate alone a useful first clue to its identity."
+    },
+    {
+        "id": "tremella-mesenterica",
+        "name": "Witch's Butter",
+        "scientific_name": "Tremella mesenterica",
+        "aliases": ["yellow brain", "golden jelly fungus"],
+        "edibility": "edible",
+        "cap": {"shape": ["irregular"], "colors": ["yellow", "orange"], "diameter_cm": [2, 8]},
+        "gills": {"attachment": "none", "spacing": "none", "colors": []},
+        "stem": {"colors": [], "ring": False, "volva": False},
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "parasitic",
+        "season": ["autumn", "winter", "spring"],
+        "distribution": "Worldwide on hardwood branches",
+        "description": ("A brain-like, gelatinous yellow-orange fungus that swells up plump and jelly-like after "
+                        "rain and shrivels to a hard orange flake in dry weather. It is actually a mycoparasite, "
+                        "feeding on other wood-decay fungi within the branch rather than the wood itself. Edible but "
+                        "flavorless, used mainly for texture in soups."),
+        "lookalikes": [
+            {"name": "Dacrymyces chrysospermus (orange jelly)", "distinguish": "Similar orange gelatinous blob on conifer wood rather than hardwood; smaller and firmer overall."},
+            {"name": "Tremella aurantia", "distinguish": "Nearly identical yellow jelly fungus that specifically parasitizes Stereum hirsutum rather than other Tremella hosts."}
+        ],
+        "fun_fact": "It isn't decomposing the wood it grows on at all -- it's actually parasitizing other crust fungi living inside the branch, making it a fungus that eats fungus."
+    },
 ]
