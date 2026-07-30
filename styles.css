@@ -349,8 +349,40 @@ body {
 }
 .detail-section p { margin: 0; }
 .spec-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
-.spec-table td { padding: 6px 8px; border-bottom: 1px dotted var(--line); vertical-align: top; }
+.spec-table td { padding: 6px 8px; border-bottom: 1px dotted var(--line); vertical-align: top; overflow-wrap: break-word; }
 .spec-table td:first-child { color: var(--ink-dim); width: 38%; }
+
+/* Below ~420px, a fixed 38%/62% split gets cramped once a value (distribution,
+   description-length lookalike text, etc.) runs long — a label column that
+   narrow forces a lot of line-wrapping in a thin value column. 420px sits
+   just under the "phablet-ish" 430px reference width and above the smallest
+   phones (360/375/390px), so this reliably kicks in for every target width
+   in the spec. Reusing the existing <tr><td>label</td><td>value</td></tr>
+   structure (no HTML/JS change needed): stack each row's two cells into a
+   label-over-value block instead of two side-by-side columns. */
+@media (max-width: 420px) {
+  .spec-table, .spec-table tbody, .spec-table tr, .spec-table td {
+    display: block;
+    width: 100%;
+  }
+  .spec-table tr {
+    margin-bottom: 8px;
+    border-bottom: 1px dotted var(--line);
+    padding-bottom: 4px;
+  }
+  .spec-table tr:last-child { margin-bottom: 0; border-bottom: none; }
+  .spec-table td {
+    border-bottom: none;
+    padding: 2px 0;
+  }
+  .spec-table td:first-child {
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .74rem;
+    letter-spacing: .04em;
+  }
+}
 .lookalike { border-left: 3px solid var(--warn); padding: 8px 12px; margin-bottom: 10px; background: rgba(224,166,75,.07); border-radius: 0 8px 8px 0; }
 .lookalike b { color: #f1c684; }
 .lookalike-link { color: #f1c684; text-decoration: none; font-weight: 700; cursor: pointer; }
@@ -376,7 +408,8 @@ html, body { max-width: 100%; overflow-x: hidden; }
 img { max-width: 100%; }
 
 /* Touch targets: iOS zooms the page if inputs are <16px */
-.search-bar input, .results-toolbar select, .filters-toggle { font-size: 16px; }
+.search-bar input, .results-toolbar select, .filters-toggle,
+.qf-region-label select { font-size: 16px; }
 
 /* Results grid collapses to a single comfortable column on phones */
 @media (max-width: 600px) {
@@ -413,6 +446,57 @@ img { max-width: 100%; }
   .chip { padding: 9px 14px; font-size: .88rem; min-height: 38px; }
   .tag { padding: 8px 13px; font-size: .82rem; min-height: 34px; }
   .load-more-btn { width: 100%; }
+}
+
+/* ---- Narrow-phone treatment for the quick-filter row + mode tabs ----
+   480px is chosen (rather than reusing 600/640/820) because the crowding
+   here isn't about the results grid or sidebar — it's three inline
+   controls (a "This season: X" button, a region <select>, and a "Show
+   what's fruiting" button) plus two mode-toggle tabs that only start
+   fighting each other for room once the viewport drops below roughly a
+   phone's full width. Checked against the common phone widths called out
+   in the task:
+     - 360px (narrowest common Android) and 375px (iPhone SE/8): container
+       width after the .quick-filter/.mode-toggle side margins
+       (clamp(16px,4vw,48px) each side ≈ 14-15px at these widths) is only
+       ~330-345px. The three quick-filter controls plus 12px gaps need
+       well over 400px combined at comfortable padding, so relying on
+       flex-wrap alone leaves an uneven 2-then-1 wrap with a lopsided
+       leftover row; the two mode-toggle tabs (one with much longer label
+       text, "☠️ Browse dangerous lookalikes") are close enough in
+       combined width to the container that they either just barely fit
+       looking squeezed, or wrap unevenly.
+     - 390px (iPhone 12/13/14) and 430px (iPhone 14/15 Pro Max): still
+       narrower than the ~480px the controls need to lay out side by side
+       without feeling cramped, so the same stacked treatment keeps them
+       comfortable there too.
+   480px gives headroom above all four target widths while staying below
+   real small-tablet/landscape-phone widths where the inline row fits fine. */
+@media (max-width: 480px) {
+  .quick-filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-filter-controls .ghost,
+  .quick-filter-controls .primary,
+  .qf-region-label {
+    width: 100%;
+  }
+  .qf-region-label {
+    justify-content: space-between;
+  }
+  .qf-region-label select {
+    flex: 1;
+    min-width: 0;
+  }
+  .mode-toggle {
+    flex-direction: column;
+  }
+  .mode-btn {
+    width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
+  }
 }
 
 /* ---- Photo identify panel ---- */
@@ -537,8 +621,8 @@ img { max-width: 100%; }
   border: 1px solid transparent; transition: all .14s ease;
 }
 .pair-side:hover { border-color: var(--accent); box-shadow: 0 0 14px var(--glow); }
-.pair-side h3 { margin: 6px 0 0; font-size: .98rem; }
-.pair-side .sci { margin: 2px 0 6px; }
+.pair-side h3 { margin: 6px 0 0; font-size: .98rem; overflow-wrap: break-word; }
+.pair-side .sci { margin: 2px 0 6px; overflow-wrap: break-word; }
 .pair-vs {
   color: var(--ink-dim); font-weight: 700; text-transform: uppercase;
   font-size: .8rem; letter-spacing: .08em; text-align: center;
@@ -546,7 +630,7 @@ img { max-width: 100%; }
 .pair-distinguish {
   margin: 14px 0 0; padding: 10px 14px; border-radius: 0 8px 8px 0;
   border-left: 3px solid var(--danger); background: rgba(224,90,90,.08);
-  color: var(--ink); font-size: .92rem;
+  color: var(--ink); font-size: .92rem; overflow-wrap: break-word;
 }
 
 
