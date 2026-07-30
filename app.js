@@ -591,7 +591,7 @@ async function init() {
   try {
     const all = await fetchJSON('/api/species');
     document.querySelector('.site-footer p').innerHTML =
-      `Spore Drop Index · ${all.length} species · A Hermes-built educational reference.`;
+      `The Spore Drop Index · ${all.length} species · Educational reference from the Spore Drop newsletter.`;
   } catch (e) {}
 
   try {
