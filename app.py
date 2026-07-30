@@ -621,7 +621,7 @@ class Handler(BaseHTTPRequestHandler):
         desc = species.get("description", "") or ""
         # Keep the meta description short and punchy.
         short_desc = (desc[:197] + "...") if len(desc) > 200 else desc
-        title = "%s (%s) — Spore Drop Index" % (name, sci) if sci else "%s — Spore Drop Index" % name
+        title = "%s (%s) — The Spore Drop" % (name, sci) if sci else "%s — The Spore Drop" % name
 
         origin = self._origin()
         img_url = origin + "/images/" + species["id"] + ".jpg"
