@@ -862,5 +862,245 @@
     "source": "iNaturalist",
     "taxon_id": 48529,
     "matched_name": "Tremella mesenterica"
+  },
+  "agaricus-silvicola": {
+    "file": "agaricus-silvicola.jpg",
+    "credit": "(c) Felipe Hidalgo, some rights reserved (CC BY-NC), uploaded by Felipe Hidalgo",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 154291,
+    "matched_name": "Agaricus sylvicola"
+  },
+  "agaricus-subrufescens": {
+    "file": "agaricus-subrufescens.jpg",
+    "credit": "(c) Denis Zabin, some rights reserved (CC BY), uploaded by Denis Zabin",
+    "license": "cc-by",
+    "source": "inaturalist",
+    "taxon_id": 179249,
+    "matched_name": "Agaricus subrufescens"
+  },
+  "bisporella-citrina": {
+    "file": "bisporella-citrina.jpg",
+    "credit": "(c) Heather Waterman, some rights reserved (CC BY-NC), uploaded by Heather Waterman",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 955949,
+    "matched_name": "Calycina citrina"
+  },
+  "calocybe-carnea": {
+    "file": "calocybe-carnea.jpg",
+    "credit": "(c) Marco Floriani, some rights reserved (CC BY-NC), uploaded by Marco Floriani",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 381454,
+    "matched_name": "Calocybe carnea"
+  },
+  "chlorophyllum-rhacodes": {
+    "file": "chlorophyllum-rhacodes.jpg",
+    "credit": "(c) Damon Tighe, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 56535,
+    "matched_name": "Chlorophyllum rhacodes"
+  },
+  "clitocybe-geotropa": {
+    "file": "clitocybe-geotropa.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 451026,
+    "matched_name": "Infundibulicybe geotropa"
+  },
+  "collybia-dryophila": {
+    "file": "collybia-dryophila.jpg",
+    "credit": "(c) Christian Schwarz, some rights reserved (CC BY-NC), uploaded by Christian Schwarz",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 130915,
+    "matched_name": "Gymnopus dryophilus"
+  },
+  "coprinopsis-atramentaria": {
+    "file": "coprinopsis-atramentaria.jpg",
+    "credit": "no rights reserved",
+    "license": "cc0",
+    "source": "inaturalist",
+    "taxon_id": 48521,
+    "matched_name": "Coprinopsis atramentaria"
+  },
+  "crepidotus-mollis": {
+    "file": "crepidotus-mollis.jpg",
+    "credit": "no rights reserved, uploaded by ÖkopatóPál",
+    "license": "cc0",
+    "source": "inaturalist",
+    "taxon_id": 118283,
+    "matched_name": "Crepidotus mollis"
+  },
+  "daedalea-quercina": {
+    "file": "daedalea-quercina.jpg",
+    "credit": "(c) Erlon Bailey, some rights reserved (CC BY-SA), uploaded by Erlon Bailey",
+    "license": "cc-by-sa",
+    "source": "inaturalist",
+    "taxon_id": 1536892,
+    "matched_name": "Fomitopsis quercina"
+  },
+  "dacryopinax-spathularia": {
+    "file": "dacryopinax-spathularia.jpg",
+    "credit": "(c) dmartin, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 1426765,
+    "matched_name": "Dacrymyces spathularia"
+  },
+  "exidia-glandulosa": {
+    "file": "exidia-glandulosa.jpg",
+    "credit": "(c) Denis Ivanov, some rights reserved (CC BY-NC), uploaded by Denis Ivanov",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 55568,
+    "matched_name": "Exidia glandulosa"
+  },
+  "hypholoma-capnoides": {
+    "file": "hypholoma-capnoides.jpg",
+    "credit": "(c) Иван Матершев, some rights reserved (CC BY-NC), uploaded by Иван Матершев",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 64071,
+    "matched_name": "Hypholoma capnoides"
+  },
+  "ischnoderma-resinosum": {
+    "file": "ischnoderma-resinosum.jpg",
+    "credit": "(c) sdifalco, some rights reserved (CC BY-NC), uploaded by sdifalco",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 130919,
+    "matched_name": "Ischnoderma resinosum"
+  },
+  "laccaria-amethystina": {
+    "file": "laccaria-amethystina.jpg",
+    "credit": "(c) Christian Berg, some rights reserved (CC BY), uploaded by Christian Berg",
+    "license": "cc-by",
+    "source": "inaturalist",
+    "taxon_id": 55899,
+    "matched_name": "Laccaria amethystina"
+  },
+  "laccaria-laccata": {
+    "file": "laccaria-laccata.jpg",
+    "credit": "(c) Christian Schwarz, some rights reserved (CC BY-NC), uploaded by Christian Schwarz",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 63236,
+    "matched_name": "Laccaria laccata"
+  },
+  "lactarius-quietus": {
+    "file": "lactarius-quietus.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 155080,
+    "matched_name": "Lactarius quietus"
+  },
+  "leucoagaricus-leucothites": {
+    "file": "leucoagaricus-leucothites.jpg",
+    "credit": "(c) Marco Floriani, some rights reserved (CC BY-NC), uploaded by Marco Floriani",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 1558279,
+    "matched_name": "Leucocoprinus leucothites"
+  },
+  "macrolepiota-excoriata": {
+    "file": "macrolepiota-excoriata.jpg",
+    "credit": "(c) Marjan Kustera, some rights reserved (CC BY-NC-ND)",
+    "license": "cc-by-nc-nd",
+    "source": "inaturalist",
+    "taxon_id": 334321,
+    "matched_name": "Macrolepiota excoriata"
+  },
+  "marasmius-scorodonius": {
+    "file": "marasmius-scorodonius.jpg",
+    "credit": "(c) lastovka, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 203669,
+    "matched_name": "Mycetinis scorodonius"
+  },
+  "meripilus-giganteus": {
+    "file": "meripilus-giganteus.jpg",
+    "credit": "(c) Ivan Teage, some rights reserved (CC BY-NC-SA)",
+    "license": "cc-by-nc-sa",
+    "source": "inaturalist",
+    "taxon_id": 157989,
+    "matched_name": "Meripilus giganteus"
+  },
+  "mycena-galericulata": {
+    "file": "mycena-galericulata.jpg",
+    "credit": "(c) 2011-12-03_Mycena_galericulata_(Scop.)_Gray_188645.jpg, some rights reserved (CC BY-SA)",
+    "license": "cc-by-sa",
+    "source": "inaturalist",
+    "taxon_id": 63446,
+    "matched_name": "Mycena galericulata"
+  },
+  "neolentinus-lepideus": {
+    "file": "neolentinus-lepideus.jpg",
+    "credit": "(c) Cindi Fitzgerald, some rights reserved (CC BY-NC), uploaded by Cindi Fitzgerald",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 351629,
+    "matched_name": "Neolentinus lepideus"
+  },
+  "panus-neostrigosus": {
+    "file": "panus-neostrigosus.jpg",
+    "credit": "(c) dogbowlbookpile, some rights reserved (CC BY-NC), uploaded by dogbowlbookpile",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 536019,
+    "matched_name": "Panus lecomtei"
+  },
+  "pholiota-aurivella": {
+    "file": "pholiota-aurivella.jpg",
+    "credit": "(c) Fluff Berger, some rights reserved (CC BY-SA), uploaded by Fluff Berger",
+    "license": "cc-by-sa",
+    "source": "inaturalist",
+    "taxon_id": 124705,
+    "matched_name": "Pholiota aurivella"
+  },
+  "pleurotus-cornucopiae": {
+    "file": "pleurotus-cornucopiae.jpg",
+    "credit": "(c) Joseph Pallante, some rights reserved (CC BY-NC), uploaded by Joseph Pallante",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 351875,
+    "matched_name": "Pleurotus cornucopiae"
+  },
+  "pseudohydnum-gelatinosum": {
+    "file": "pseudohydnum-gelatinosum.jpg",
+    "credit": "(c) Reiner Richter, some rights reserved (CC BY-NC-SA), uploaded by Reiner Richter",
+    "license": "cc-by-nc-sa",
+    "source": "inaturalist",
+    "taxon_id": 54164,
+    "matched_name": "Pseudohydnum gelatinosum"
+  },
+  "ramaria-botrytis": {
+    "file": "ramaria-botrytis.jpg",
+    "credit": "(c) Eitel Carlos Thielemann Pinto, some rights reserved (CC BY-NC), uploaded by Eitel Carlos Thielemann Pinto",
+    "license": "cc-by-nc",
+    "source": "inaturalist",
+    "taxon_id": 48800,
+    "matched_name": "Ramaria botrytis"
+  },
+  "tremiscus-helvelloides": {
+    "file": "tremiscus-helvelloides.jpg",
+    "credit": "(c) Philippe Chabbert, some rights reserved (CC BY-SA)",
+    "license": "cc-by-sa",
+    "source": "inaturalist",
+    "taxon_id": 348814,
+    "matched_name": "Guepinia helvelloides"
+  },
+  "auricularia-cornea": {
+    "file": "auricularia-cornea.jpg",
+    "credit": "(c) Sunčana Bradley, some rights reserved (CC BY), uploaded by Sunčana Bradley",
+    "license": "cc-by",
+    "source": "inaturalist",
+    "taxon_id": 179230,
+    "matched_name": "Auricularia cornea"
   }
 }
