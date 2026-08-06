@@ -1,11 +1,11 @@
 # 🍄 Spore Drop Index  ·  v1 — live
 
 > **Status: v1 — public, usable, and evolving.** The index is live and good
-> enough to share. Trait filters, full-text search, **85 species** with real
+> enough to share. Trait filters, full-text search, **137 species** with real
 > photos, edibility colour-coding, a local photo **"identify"** matcher, and
 > clickable look-alikes for every *named* dangerous confusion are all in.
 >
-> **v2 progress:** the species set has grown from 58 → 85 and look-alike
+> the species set has grown from 58 → 137 and look-alike
 > coverage is now fully named — no generic "other genus" placeholders remain.
 > The remaining v2 item is *real* image identification (species-level) via an
 > external API; parked until an iNaturalist token is provisioned.
@@ -136,7 +136,7 @@ with no gills or pores use `"attachment": "n/a"`.
 
 The app already binds to `$PORT` and `0.0.0.0` (Railway/Render/Heroku convention),
 and ships `requirements.txt` + `Procfile`, so hosting is near-zero-config. The
-The `images/` folder (~14 MB of CC photos across 85 species) is part of the
+The `images/` folder (~14 MB of CC photos across 137 species) is part of the
 repo, so photos work on deploy.
 
 ### Option A — Railway (easiest)
