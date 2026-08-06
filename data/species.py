@@ -8700,5 +8700,1097 @@ SPECIES = [
             }
         ],
         "fun_fact": "It's sold dried by the kilo and rehydrates to a crunchy, flavour-soaking ear."
+    },
+    {
+  "id": "psilocybe-ovoideocystidiata",
+  "name": "Woodlover",
+  "scientific_name": "Psilocybe ovoideocystidiata",
+  "aliases": [
+    "ovo"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "bell"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "olive"
+    ],
+    "diameter_cm": [
+      1,
+      5
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "crowded",
+    "colors": [
+      "purple-brown",
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "brown"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "purple-brown",
+  "habitat": "forest",
+  "substrate": "deadwood",
+  "ecology": "saprotrophic",
+  "season": [
+    "spring",
+    "summer"
+  ],
+  "distribution": "eastern North America",
+  "regions": [
+    "na"
+  ],
+  "potency": "moderate",
+  "description": "A wood-loving psilocybin species that bruises blue and fruits on wood chips and decaying hardwood, often along rivers. Psychoactive and controlled; listed for education and harm reduction.",
+  "lookalikes": [
+    {
+      "name": "Galerina marginata",
+      "distinguish": "DEADLY; rusty-brown spores and no blue bruising."
+    },
+    {
+      "name": "Psilocybe cynescens (wavy cap)",
+      "distinguish": "Also bluing, wood-loving, but wavy cap margin and larger."
     }
+  ],
+  "fun_fact": "One of the few psilocybes that fruits in spring rather than autumn, and is notorious for appearing in landscaped wood-chip beds."
+},
+    {
+  "id": "psilocybe-stuntzii",
+  "name": "Stuntz's Blue Legs",
+  "scientific_name": "Psilocybe stuntzii",
+  "aliases": [
+    "blue legs",
+    "stuntzii"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "bell"
+    ],
+    "colors": [
+      "brown",
+      "olive",
+      "yellow-brown"
+    ],
+    "diameter_cm": [
+      1,
+      5
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "crowded",
+    "colors": [
+      "purple-brown",
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "blue",
+      "brown",
+      "white"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "purple-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "saprotrophic",
+  "season": [
+    "autumn"
+  ],
+  "distribution": "Pacific Northwest (USA/Canada)",
+  "regions": [
+    "na"
+  ],
+  "potency": "moderate",
+  "description": "A bluing, psilocybin-containing species of the PNW that grows in lawns, wood chips and moss. Psychoactive and controlled; education/harm reduction only.",
+  "lookalikes": [
+    {
+      "name": "Galerina marginata",
+      "distinguish": "DEADLY; no blue bruising, rusty-brown spores."
+    },
+    {
+      "name": "Psilocybe cyanescens",
+      "distinguish": "Also bluing but wavy cap, stronger potency, no persistent ring."
+    }
+  ],
+  "fun_fact": "Named after mycologist Daniel Stuntz; the blue-staining stem is the giveaway that earned it the nickname 'blue legs'."
+},
+    {
+  "id": "psilocybe-allenii",
+  "name": "Allen's",
+  "scientific_name": "Psilocybe allenii",
+  "aliases": [
+    "allenii"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "hemispheric"
+    ],
+    "colors": [
+      "brown",
+      "tan"
+    ],
+    "diameter_cm": [
+      1,
+      5
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "crowded",
+    "colors": [
+      "purple-brown",
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "brown"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "purple-brown",
+  "habitat": "forest",
+  "substrate": "deadwood",
+  "ecology": "saprotrophic",
+  "season": [
+    "autumn",
+    "winter"
+  ],
+  "distribution": "Pacific Coast USA (urban WA/OR)",
+  "regions": [
+    "na"
+  ],
+  "potency": "moderate",
+  "description": "A recently described (2009) wood-rotting psilocybe of the PNW that bruises blue on all parts. Psychoactive and controlled; listed for education/harm reduction.",
+  "lookalikes": [
+    {
+      "name": "Psilocybe cyanescens",
+      "distinguish": "Both bluing woodlovers; cyanescens has a wavy cap and stronger potency."
+    },
+    {
+      "name": "Galerina marginata",
+      "distinguish": "DEADLY; rusty spores, no blue stain."
+    }
+  ],
+  "fun_fact": "Discovered in Seattle's mulch beds and named for ethnomycologist John Allen; it's one of the few psilocybes described in the 21st century."
+},
+    {
+  "id": "psilocybe-weraroa",
+  "name": "Weraroa",
+  "scientific_name": "Psilocybe weraroa",
+  "aliases": [
+    "blue meanies (NZ)",
+    "weraroa"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "rounded"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "olive"
+    ],
+    "diameter_cm": [
+      1,
+      4
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "crowded",
+    "colors": [
+      "purple-brown",
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "yellow-brown",
+      "blue"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "purple-brown",
+  "habitat": "forest",
+  "substrate": "deadwood",
+  "ecology": "saprotrophic",
+  "season": [
+    "autumn",
+    "winter"
+  ],
+  "distribution": "New Zealand",
+  "regions": [
+    "oceania"
+  ],
+  "potency": "moderate",
+  "description": "New Zealand's endemic psilocybin species, slow to bruise blue-green when injured. Psychoactive and controlled; education/harm reduction only.",
+  "lookalikes": [
+    {
+      "name": "Psilocybe subaeruginosa",
+      "distinguish": "The other NZ 'gold top'; also bluing but more robust."
+    },
+    {
+      "name": "Galerina species",
+      "distinguish": "DEADLY; no blue bruising, rusty spores."
+    }
+  ],
+  "fun_fact": "Often called 'blue meanies' in NZ, though that nickname also refers to Panaeolus cyanescens elsewhere - a naming clash that trips up travelers."
+},
+    {
+  "id": "panaeolus-cinctulus",
+  "name": "Weed Panaeolus",
+  "scientific_name": "Panaeolus cinctulus",
+  "aliases": [
+    "banded mottlegill",
+    "subbs",
+    "weed panaeolus"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "bell"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "gray"
+    ],
+    "diameter_cm": [
+      1,
+      4
+    ]
+  },
+  "gills": {
+    "attachment": "free",
+    "spacing": "crowded",
+    "colors": [
+      "gray",
+      "black",
+      "mottled"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "gray"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "black",
+  "habitat": "grassland",
+  "substrate": "dung",
+  "ecology": "saprotrophic",
+  "season": [
+    "spring",
+    "summer",
+    "autumn"
+  ],
+  "distribution": "cosmopolitan (lawns, gardens, dung)",
+  "regions": [
+    "global"
+  ],
+  "potency": "low",
+  "description": "A very common psilocybin-containing lawn and dung mushroom; contains psilocybin unlike its harmless lookalike P. foenisecii. Psychoactive and controlled; education/harm reduction only.",
+  "lookalikes": [
+    {
+      "name": "Panaeolus foenisecii",
+      "distinguish": "Looks near-identical but contains NO psilocybin - the key safety difference."
+    },
+    {
+      "name": "Panaeolus species (non-active)",
+      "distinguish": "Many lack psilocybin; spore print and chemistry differ."
+    }
+  ],
+  "fun_fact": "The 'weed' in its name is literal: it turns up in flowerbeds and mown grass worldwide, one of the most widespread psychoactive mushrooms."
+},
+    {
+  "id": "panaeolus-cinctulus-foenisecii",
+  "name": "Hay Mushroom",
+  "scientific_name": "Panaeolus foenisecii",
+  "aliases": [
+    "haymaker's mushroom",
+    "lawnmower's mushroom",
+    "mower's mushroom"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "convex",
+      "bell"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "gray"
+    ],
+    "diameter_cm": [
+      1,
+      3
+    ]
+  },
+  "gills": {
+    "attachment": "free",
+    "spacing": "crowded",
+    "colors": [
+      "gray",
+      "black",
+      "mottled"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "gray"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "black",
+  "habitat": "grassland",
+  "substrate": "dung",
+  "ecology": "saprotrophic",
+  "season": [
+    "spring",
+    "summer",
+    "autumn"
+  ],
+  "distribution": "cosmopolitan (lawns worldwide)",
+  "regions": [
+    "global"
+  ],
+  "potency": "none",
+  "description": "One of the most common lawn mushrooms on earth. Long listed as psychoactive, but it contains only trace psilocybin and produces no noticeable effects. Not edible.",
+  "lookalikes": [
+    {
+      "name": "Panaeolus cinctulus",
+      "distinguish": "Near-identical but DOES contain psilocybin - the dangerous confusion is assuming this one is active."
+    },
+    {
+      "name": "Panaeolina species",
+      "distinguish": "Similar mottled gills; not considered edible."
+    }
+  ],
+  "fun_fact": "The classic 'is this a magic mushroom?' lawn species - almost always a False alarm, since it carries no real psychoactivity despite the old field-guide myth."
+},
+    {
+  "id": "cordyceps-militaris",
+  "name": "Cordyceps",
+  "scientific_name": "Cordyceps militaris",
+  "aliases": [
+    "orange cordyceps",
+    "caterpillar fungus (cultivated)"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "clavate",
+      "club"
+    ],
+    "colors": [
+      "orange",
+      "yellow"
+    ],
+    "diameter_cm": [
+      1,
+      6
+    ]
+  },
+  "gills": {
+    "attachment": "n/a",
+    "spacing": "n/a",
+    "colors": []
+  },
+  "stem": {
+    "colors": [
+      "orange"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "n/a",
+  "habitat": "forest",
+  "substrate": "deadwood",
+  "ecology": "parasitic",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "temperate worldwide (cultivated commercially)",
+  "regions": [
+    "global"
+  ],
+  "description": "A bright orange, club-shaped fungus that parasitizes insect pupae. Widely cultivated and used as a functional food / supplement (cordycepin); edible when cooked.",
+  "lookalikes": [
+    {
+      "name": "Ophiocordyceps sinensis",
+      "distinguish": "The wild 'caterpillar fungus' - endangered, not club-shaped, far more expensive."
+    },
+    {
+      "name": "Clavaria / Ramaria corals",
+      "distinguish": "Branched, not single clubs; not parasitic."
+    }
+  ],
+  "fun_fact": "The 'zombie-ant' fungus's edible cousin - same genus strategy, but C. militaris is farmed by the ton for its cordycepin, not for drama."
+},
+    {
+  "id": "ophiocordyceps-sinensis",
+  "name": "Caterpillar Fungus",
+  "scientific_name": "Ophiocordyceps sinensis",
+  "aliases": [
+    "yartsa gunbu",
+    "keera jhar",
+    "dong chong xia cao"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "clavate",
+      "club"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "olive"
+    ],
+    "diameter_cm": [
+      4,
+      12
+    ]
+  },
+  "gills": {
+    "attachment": "n/a",
+    "spacing": "n/a",
+    "colors": []
+  },
+  "stem": {
+    "colors": [
+      "brown",
+      "olive"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "n/a",
+  "habitat": "alpine",
+  "substrate": "insect",
+  "ecology": "parasitic",
+  "season": [
+    "spring",
+    "summer"
+  ],
+  "distribution": "Tibetan Plateau / Himalaya",
+  "regions": [
+    "asia"
+  ],
+  "description": "The famous parasitic fungus that mummifies ghost moth caterpillars, leaving a twisted 'worm with a grass-like stalk.' Revered in traditional medicine and among the world's most valuable biological commodities. Edible / medicinal; wild harvest is endangered.",
+  "lookalikes": [
+    {
+      "name": "Cordyceps militaris",
+      "distinguish": "Cultivated orange club; same family, far cheaper, not caterpillar-based."
+    },
+    {
+      "name": "Other Cordyceps spp.",
+      "distinguish": "Many parasitize different insects; only O. sinensis is 'yartsa gunbu'."
+    }
+  ],
+  "fun_fact": "By weight it has out-sold gold in parts of Asia; a single mummified caterpillar can fetch more than the labourer who dug it up earns in a week."
+},
+    {
+  "id": "inonotus-obliquus",
+  "name": "Chaga",
+  "scientific_name": "Inonotus obliquus",
+  "aliases": [
+    "birch conk",
+    "black mass",
+    "clinker polypore"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "irregular",
+      "encrusting"
+    ],
+    "colors": [
+      "black",
+      "charcoal"
+    ],
+    "diameter_cm": [
+      5,
+      40
+    ]
+  },
+  "gills": {
+    "attachment": "pores",
+    "spacing": "n/a",
+    "colors": [
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "brown",
+  "habitat": "forest",
+  "substrate": "deadwood",
+  "ecology": "parasitic",
+  "season": [
+    "all"
+  ],
+  "distribution": "boreal (birch forests, N. hemisphere)",
+  "regions": [
+    "na",
+    "europe",
+    "asia"
+  ],
+  "description": "A charcoal-black sterile conk on living birch, prized in traditional medicine for antioxidants and beta-glucans. Not eaten as food (wooden, indigestible) - used as a tea / extract.",
+  "lookalikes": [
+    {
+      "name": "Other birch conks (Fomitopsis, Piptoporus)",
+      "distinguish": "Chaga's cracked charcoal exterior over rusty-orange interior is distinctive."
+    }
+  ],
+  "fun_fact": "The 'rusty' interior revealed when you break a chunk is the part people simmer for 'chaga tea' - the black crust is basically fossilized mycelium."
+},
+    {
+  "id": "wolfiporia-cocos",
+  "name": "Tuckahoe",
+  "scientific_name": "Wolfiporia cocos",
+  "aliases": [
+    "fuling",
+    "poria",
+    "hoelen",
+    "China root"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "sclerotium",
+      "rounded"
+    ],
+    "colors": [
+      "white",
+      "tan",
+      "brown"
+    ],
+    "diameter_cm": [
+      5,
+      30
+    ]
+  },
+  "gills": {
+    "attachment": "n/a",
+    "spacing": "n/a",
+    "colors": []
+  },
+  "stem": {
+    "colors": [],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "white",
+  "habitat": "forest",
+  "substrate": "deadwood",
+  "ecology": "saprotrophic",
+  "season": [
+    "all"
+  ],
+  "distribution": "East Asia (pine forests)",
+  "regions": [
+    "asia"
+  ],
+  "description": "A subterranean sclerotium (not a typical mushroom) growing on pine roots, used in Chinese medicine for 2,000+ years as 'fuling.' Edible as a mild, starchy medicinal ingredient.",
+  "lookalikes": [
+    {
+      "name": "Truffles (Tuber spp.)",
+      "distinguish": "Also underground; truffles are ascocarps with different texture and aroma."
+    },
+    {
+      "name": "Other subterranean sclerotia",
+      "distinguish": "Few are edible/medicinal; ID by host (pine) and white interior."
+    }
+  ],
+  "fun_fact": "It's so un-mushroom-like that for centuries people argued whether fuling was a root, a stone, or a fungus - it's a buried ball of mycelium."
+},
+    {
+  "id": "claviceps-purpurea",
+  "name": "Ergot",
+  "scientific_name": "Claviceps purpurea",
+  "aliases": [
+    "ergot of rye",
+    "corn smut (old)",
+    "mother of rye"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "sclerotium",
+      "horn"
+    ],
+    "colors": [
+      "purple",
+      "black",
+      "violet"
+    ],
+    "diameter_cm": [
+      1,
+      5
+    ]
+  },
+  "gills": {
+    "attachment": "n/a",
+    "spacing": "n/a",
+    "colors": []
+  },
+  "stem": {
+    "colors": [],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "n/a",
+  "habitat": "grassland",
+  "substrate": "grass",
+  "ecology": "parasitic",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "temperate worldwide (cereals & grasses)",
+  "regions": [
+    "global"
+  ],
+  "description": "A fungus that replaces rye/grass kernels with hard purple-black sclerotia full of ergot alkaloids. Causes ergotism (St. Anthony's Fire) and is the natural source of LSD. Highly toxic - never consume.",
+  "lookalikes": [
+    {
+      "name": "Grain kernels",
+      "distinguish": "Ergot sclerotia look like dark, swollen, curved 'seeds' mixed into grain - must be sieved out."
+    },
+    {
+      "name": "Ustilago smut",
+      "distinguish": "Also a cereal pathogen but sooty black powder, not solid purple horns."
+    }
+  ],
+  "fun_fact": "Ergot alkaloids gave us both medieval poisonings AND modern migraine and labour-inducing drugs - and Albert Hofmann's first LSD came from its chemistry."
+},
+    {
+  "id": "amanita-jacksonii",
+  "name": "American Caesar's Mushroom",
+  "scientific_name": "Amanita jacksonii",
+  "aliases": [
+    "Jackson's slender amanita",
+    "eastern Caesar's"
+  ],
+  "edibility": "choice",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "red",
+      "orange",
+      "scarlet"
+    ],
+    "diameter_cm": [
+      5,
+      15
+    ]
+  },
+  "gills": {
+    "attachment": "free",
+    "spacing": "crowded",
+    "colors": [
+      "yellow",
+      "cream"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "yellow",
+      "orange"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "white",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "eastern North America",
+  "regions": [
+    "na"
+  ],
+  "description": "One of the few Amanita that is a celebrated choice edible - the North American counterpart to Caesar's mushroom, with a red cap and all-yellow stem. Still: only for experts.",
+  "lookalikes": [
+    {
+      "name": "Amanita muscaria (fly agaric)",
+      "distinguish": "POISONOUS; has white warts on the cap and a volva, not an all-yellow stem."
+    },
+    {
+      "name": "Amanita caesarea (European Caesar's)",
+      "distinguish": "The Old-World original; jacksonii is the NA version."
+    }
+  ],
+  "fun_fact": "In a genus where most relatives can kill you, jacksonii is the rare Amanita that gourmets actively seek - and it still demands an expert ID."
+},
+    {
+  "id": "cantharellus-lateritius",
+  "name": "Smooth Chanterelle",
+  "scientific_name": "Cantharellus lateritius",
+  "aliases": [
+    "smooth chanterelle",
+    "egg-yolk chanterelle"
+  ],
+  "edibility": "choice",
+  "cap": {
+    "shape": [
+      "convex",
+      "vase"
+    ],
+    "colors": [
+      "orange",
+      "yellow"
+    ],
+    "diameter_cm": [
+      3,
+      10
+    ]
+  },
+  "gills": {
+    "attachment": "decurrent",
+    "spacing": "crowded",
+    "colors": [
+      "orange",
+      "yellow"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "orange",
+      "yellow"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "pale yellow",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "eastern North America (oaks)",
+  "regions": [
+    "na"
+  ],
+  "description": "A choice edible chanterelle with a smooth to shallowly wrinkled undersurface (no True gills) and a strong apricot odour. Prized like its golden cousin.",
+  "lookalikes": [
+    {
+      "name": "Cantharellus cibarius (golden chanterelle)",
+      "distinguish": "Very similar; lateritius has smoother undersurface and pinkish hue."
+    },
+    {
+      "name": "Omphalotus olearius (jack-o'-lantern)",
+      "distinguish": "POISONOUS; True gills (not wrinkles) and grows in clusters on wood."
+    }
+  ],
+  "fun_fact": "Smell is the shortcut: a chanterelle smells like apricots, while its poisonous 'False chanterelle' impostors smell of nothing or decay."
+},
+    {
+  "id": "lepiota-cristata",
+  "name": "Stinking Dapperling",
+  "scientific_name": "Lepiota cristata",
+  "aliases": [
+    "stinking parasol"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "umbonate"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "white"
+    ],
+    "diameter_cm": [
+      2,
+      6
+    ]
+  },
+  "gills": {
+    "attachment": "free",
+    "spacing": "crowded",
+    "colors": [
+      "white",
+      "cream"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "brown"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "white",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "saprotrophic",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "cosmopolitan",
+  "regions": [
+    "global"
+  ],
+  "description": "A small, common toadstool with a coal-gas/rubber smell. Suspected poisonous (many small Lepiota are toxic, some amatoxin); not edible.",
+  "lookalikes": [
+    {
+      "name": "Lepiota brunneoincarnata (deadly parasol)",
+      "distinguish": "DEADLY; similar small parasol - another reason not to eat mini Lepiotas."
+    },
+    {
+      "name": "Lepiota lilacea",
+      "distinguish": "Toxic; purple-brown tones vs cristata's brown."
+    }
+  ],
+  "fun_fact": "Its stink is the warning label: the rubber/coal-gas odour is why foragers call it the 'stinking dapperling' and leave it alone."
+},
+    {
+  "id": "clitocybe-nebularis",
+  "name": "Clouded Funnel",
+  "scientific_name": "Clitocybe nebularis",
+  "aliases": [
+    "clouded agaric",
+    "trooping funnel"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "gray",
+      "brown",
+      "tan"
+    ],
+    "diameter_cm": [
+      5,
+      20
+    ]
+  },
+  "gills": {
+    "attachment": "decurrent",
+    "spacing": "crowded",
+    "colors": [
+      "white",
+      "cream"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "gray"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "white",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "autumn"
+  ],
+  "distribution": "temperate northern hemisphere",
+  "regions": [
+    "na",
+    "europe",
+    "asia"
+  ],
+  "description": "A large gray funnel that fruits in troops. Technically reported as edible but causes gastric upset in many people; treated as inedible here for safety.",
+  "lookalikes": [
+    {
+      "name": "Clitocybe gibba / other funnels",
+      "distinguish": "Similar shape; most are edible/inedible, none should be eaten casually."
+    },
+    {
+      "name": "Infundibulicybe / Lepista species",
+      "distinguish": "Some edible (e.g. wood blewit) - careful ID needed."
+    }
+  ],
+  "fun_fact": "Big enough to fill a pan, but the 'edible for some, havoc for others' record is why cautious guides file it under 'not worth the risk'."
+},
+    {
+  "id": "hygrophorus-russula",
+  "name": "Pinkmottle Woodwax",
+  "scientific_name": "Hygrophorus russula",
+  "aliases": [
+    "False russula",
+    "russula-like waxy cap"
+  ],
+  "edibility": "choice",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "red",
+      "pink",
+      "purple"
+    ],
+    "diameter_cm": [
+      4,
+      12
+    ]
+  },
+  "gills": {
+    "attachment": "decurrent",
+    "spacing": "distant",
+    "colors": [
+      "white",
+      "pink"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "pink"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "white",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "temperate northern hemisphere (oaks)",
+  "regions": [
+    "na",
+    "europe",
+    "asia"
+  ],
+  "description": "A striking pink-mottled waxy cap with thick, widely spaced gills. Considered a choice or good edible where it occurs.",
+  "lookalikes": [
+    {
+      "name": "Russula species",
+      "distinguish": "Looks russula-like but has waxy (not brittle) gills; many Russula are edible, some not."
+    },
+    {
+      "name": "Hygrophorus pudorinus",
+      "distinguish": "Similar pink woodwax; both edible."
+    }
+  ],
+  "fun_fact": "Despite the 'False russula' nickname, its gills are waxy and flexible - the real tell that it's a Hygrophorus, not a brittle-gilled Russula."
+},
+    {
+  "id": "boletus-variipes",
+  "name": "Variable Bolete",
+  "scientific_name": "Boletus variipes",
+  "aliases": [
+    "variipes bolete"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "tan",
+      "brown",
+      "gray"
+    ],
+    "diameter_cm": [
+      5,
+      15
+    ]
+  },
+  "gills": {
+    "attachment": "pores",
+    "spacing": "n/a",
+    "colors": [
+      "white",
+      "yellow",
+      "olive"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "brown"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "olive-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "eastern North America (oaks)",
+  "regions": [
+    "na"
+  ],
+  "description": "A mild, edible bolete with a netted stem and whitish pores that don't stain blue. Good eating; confirm ID and avoid lookalikes.",
+  "lookalikes": [
+    {
+      "name": "Boletus edulis (king bolete)",
+      "distinguish": "Edible relative; variipes is smaller with a more netted stem."
+    },
+    {
+      "name": "Tylopilus / bitter boletes",
+      "distinguish": "Some are inedible-bitter; check taste cautiously and spore colour."
+    }
+  ],
+  "fun_fact": "The name 'variipes' (variable foot) nods to its stem, which ranges from smooth to strongly netted across individuals."
+}
 ]

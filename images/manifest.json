@@ -1086,5 +1086,141 @@
     "source": "iNaturalist",
     "taxon_id": 1529948,
     "matched_name": "Auricularia cornea"
+  },
+  "psilocybe-ovoideocystidiata": {
+    "file": "psilocybe-ovoideocystidiata.jpg",
+    "credit": "Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 348835,
+    "matched_name": "Psilocybe ovoideocystidiata"
+  },
+  "psilocybe-stuntzii": {
+    "file": "psilocybe-stuntzii.jpg",
+    "credit": "Damon Tighe, all rights reserved",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 320923,
+    "matched_name": "Psilocybe stuntzii"
+  },
+  "psilocybe-allenii": {
+    "file": "psilocybe-allenii.jpg",
+    "credit": "Damon Tighe, all rights reserved",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 348831,
+    "matched_name": "Psilocybe allenii"
+  },
+  "psilocybe-weraroa": {
+    "file": "psilocybe-weraroa.jpg",
+    "credit": "Dougal Townsend",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 126163,
+    "matched_name": "Psilocybe weraroa"
+  },
+  "panaeolus-cinctulus": {
+    "file": "panaeolus-cinctulus.jpg",
+    "credit": "Christian Schwarz",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 418443,
+    "matched_name": "Panaeolus cinctulus"
+  },
+  "panaeolus-cinctulus-foenisecii": {
+    "file": "panaeolus-cinctulus-foenisecii.jpg",
+    "credit": "Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 902551,
+    "matched_name": "Panaeolus foenisecii"
+  },
+  "cordyceps-militaris": {
+    "file": "cordyceps-militaris.jpg",
+    "credit": "Ashley Morris",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 119118,
+    "matched_name": "Cordyceps militaris"
+  },
+  "ophiocordyceps-sinensis": {
+    "file": "ophiocordyceps-sinensis.jpg",
+    "credit": "Samten Dema, all rights reserved, uploaded by Samten Dema",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 179202,
+    "matched_name": "Ophiocordyceps sinensis"
+  },
+  "inonotus-obliquus": {
+    "file": "inonotus-obliquus.jpg",
+    "credit": "Chris Wetherbee, all rights reserved, uploaded by Chris Wetherbee",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 127021,
+    "matched_name": "Inonotus obliquus"
+  },
+  "wolfiporia-cocos": {
+    "file": "wolfiporia-cocos.jpg",
+    "credit": "Alan Rockefeller",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 1169836,
+    "matched_name": "Wolfiporia cocos"
+  },
+  "claviceps-purpurea": {
+    "file": "claviceps-purpurea.jpg",
+    "credit": "Grzegorz Grzejszczak",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 360212,
+    "matched_name": "Claviceps purpurea"
+  },
+  "amanita-jacksonii": {
+    "file": "amanita-jacksonii.jpg",
+    "credit": "Isabel Herrera",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 204589,
+    "matched_name": "Amanita jacksonii"
+  },
+  "cantharellus-lateritius": {
+    "file": "cantharellus-lateritius.jpg",
+    "credit": "whitetail, all rights reserved",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 143270,
+    "matched_name": "Cantharellus lateritius"
+  },
+  "lepiota-cristata": {
+    "file": "lepiota-cristata.jpg",
+    "credit": "Antonio Ezquerro Antoñana, all rights reserved, uploaded by Antonio Ezquerro Antoñana",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 58694,
+    "matched_name": "Lepiota cristata"
+  },
+  "clitocybe-nebularis": {
+    "file": "clitocybe-nebularis.jpg",
+    "credit": "Susana C. Gonçalves",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 63255,
+    "matched_name": "Clitocybe nebularis"
+  },
+  "hygrophorus-russula": {
+    "file": "hygrophorus-russula.jpg",
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 206118,
+    "matched_name": "Hygrophorus russula"
+  },
+  "boletus-variipes": {
+    "file": "boletus-variipes.jpg",
+    "credit": "mycowalt",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 194218,
+    "matched_name": "Boletus variipes"
   }
 }
