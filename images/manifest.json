@@ -1222,5 +1222,13 @@
     "source": "iNaturalist",
     "taxon_id": 194218,
     "matched_name": "Boletus variipes"
+  },
+  "exidia-glandulosa": {
+    "file": "exidia-glandulosa.jpg",
+    "credit": "iNaturalist contributor",
+    "license": "CC BY-SA",
+    "source": "iNaturalist",
+    "taxon_id": 1697198,
+    "matched_name": "Exidia glandulosa"
   }
 }
