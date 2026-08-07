@@ -209,6 +209,9 @@ function buildQueryString() {
    (e.g. after clicking a chip) don't snap sections back open. */
 const collapsedGroups = new Set();
 
+// Start with all filter groups collapsed by default
+FILTER_DEFS.forEach(def => collapsedGroups.add(def.key));
+
 /* ---- Render filters from facets ---- */
 function renderFilters(facets) {
   const wrap = el('filter-groups');
