@@ -1230,5 +1230,189 @@
     "source": "iNaturalist",
     "taxon_id": 1697198,
     "matched_name": "Exidia glandulosa"
+  },
+  "hypomyces-lactifluorum": {
+    "file": "hypomyces-lactifluorum.jpg",
+    "credit": "(c) tombigelow, some rights reserved (CC BY-NC), uploaded by tombigelow",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 48215,
+    "matched_name": "Hypomyces lactifluorum"
+  },
+  "hericium-americanum": {
+    "file": "hericium-americanum.jpg",
+    "credit": "(c) charlesvc, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 124335,
+    "matched_name": "Hericium americanum"
+  },
+  "lactarius-rubidus": {
+    "file": "lactarius-rubidus.jpg",
+    "credit": "(c) Christian Schwarz, some rights reserved (CC BY-NC), uploaded by Christian Schwarz",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 55276,
+    "matched_name": "Lactarius rubidus"
+  },
+  "hydnum-repandum": {
+    "file": "hydnum-repandum.jpg",
+    "credit": "(c) Piotr Lukasik, some rights reserved (CC BY), uploaded by Piotr Lukasik",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 48641,
+    "matched_name": "Hydnum repandum"
+  },
+  "lactarius-indigo": {
+    "file": "lactarius-indigo.jpg",
+    "credit": "(c) Dan Molter, some rights reserved (CC BY-SA)",
+    "license": "cc-by-sa",
+    "source": "iNaturalist",
+    "taxon_id": 120951,
+    "matched_name": "Lactarius indigo"
+  },
+  "entoloma-abortivum": {
+    "file": "entoloma-abortivum.jpg",
+    "credit": "(c) Mixman_Saga, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 70222,
+    "matched_name": "Entoloma abortivum"
+  },
+  "pluteus-cervinus": {
+    "file": "pluteus-cervinus.jpg",
+    "credit": "(c) huafang, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 60782,
+    "matched_name": "Pluteus cervinus"
+  },
+  "cantharellus-cinnabarinus": {
+    "file": "cantharellus-cinnabarinus.jpg",
+    "credit": "(c) Greg Hanisek, some rights reserved (CC BY-NC), uploaded by Greg Hanisek",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 143393,
+    "matched_name": "Cantharellus cinnabarinus"
+  },
+  "pleurotus-citrinopileatus": {
+    "file": "pleurotus-citrinopileatus.jpg",
+    "credit": "(c) cuevo, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 504060,
+    "matched_name": "Pleurotus citrinopileatus"
+  },
+  "stereum-ostrea": {
+    "file": "stereum-ostrea.jpg",
+    "credit": "(c) Arthur Chapman, some rights reserved (CC BY-NC-SA)",
+    "license": "cc-by-nc-sa",
+    "source": "iNaturalist",
+    "taxon_id": 55496,
+    "matched_name": "Stereum ostrea"
+  },
+  "ganoderma-applanatum": {
+    "file": "ganoderma-applanatum.jpg",
+    "credit": "(c) eventupa, some rights reserved (CC BY-NC), uploaded by eventupa",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 48473,
+    "matched_name": "Ganoderma applanatum"
+  },
+  "ganoderma-tsugae": {
+    "file": "ganoderma-tsugae.jpg",
+    "credit": "(c) smoore13, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 63274,
+    "matched_name": "Ganoderma tsugae"
+  },
+  "fomitopsis-betulina": {
+    "file": "fomitopsis-betulina.jpg",
+    "credit": "(c) Bill MacIndewar, some rights reserved (CC BY-NC), uploaded by Bill MacIndewar",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 775410,
+    "matched_name": "Fomitopsis betulina"
+  },
+  "xylaria-polymorpha": {
+    "file": "xylaria-polymorpha.jpg",
+    "credit": "(c) jonathan_mack, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 58698,
+    "matched_name": "Xylaria polymorpha"
+  },
+  "morchella-importuna": {
+    "file": "morchella-importuna.jpg",
+    "credit": "(c) Tim Hillebrant, some rights reserved (CC BY-NC), uploaded by Tim Hillebrant",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 487375,
+    "matched_name": "Morchella importuna"
+  },
+  "lactarius-volemus": {
+    "file": "lactarius-volemus.jpg",
+    "credit": "(c) Felipe Hidalgo, some rights reserved (CC BY-NC), uploaded by Felipe Hidalgo",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 503241,
+    "matched_name": "Lactifluus volemus"
+  },
+  "cortinarius-caperatus": {
+    "file": "cortinarius-caperatus.jpg",
+    "credit": "(c) Dean Lyons, some rights reserved (CC BY-NC), uploaded by Dean Lyons",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 125364,
+    "matched_name": "Cortinarius caperatus"
+  },
+  "pholiota-nameko": {
+    "file": "pholiota-nameko.jpg",
+    "credit": "(c) eordeman, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 383579,
+    "matched_name": "Pholiota nameko"
+  },
+  "agaricus-bitorquis": {
+    "file": "agaricus-bitorquis.jpg",
+    "credit": "(c) Vasco Henrique Oliveira Fonseca, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 58696,
+    "matched_name": "Agaricus bitorquis"
+  },
+  "mutinus-elegans": {
+    "file": "mutinus-elegans.jpg",
+    "credit": "(c) anhe, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 84271,
+    "matched_name": "Mutinus elegans"
+  },
+  "bondarzewia-berkeleyi": {
+    "file": "bondarzewia-berkeleyi.jpg",
+    "credit": "(c) Jack Steven Smith, some rights reserved (CC BY-NC), uploaded by Jack Steven Smith",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 84224,
+    "matched_name": "Bondarzewia berkeleyi"
+  },
+  "calvatia-cyathiformis": {
+    "file": "calvatia-cyathiformis.jpg",
+    "credit": "(c) Randy Bodkins, some rights reserved (CC BY-NC), uploaded by Randy Bodkins",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 153296,
+    "matched_name": "Calvatia cyathiformis"
+  },
+  "geastrum-triplex": {
+    "file": "geastrum-triplex.jpg",
+    "credit": "(c) crocusandpine, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 63076,
+    "matched_name": "Geastrum triplex"
   }
 }
