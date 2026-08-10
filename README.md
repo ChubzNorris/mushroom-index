@@ -1,14 +1,14 @@
 # 🍄 Spore Drop Index  ·  v1 — live
 
-> **Status: v1 — public, usable, and evolving.** The index is live and good
-> enough to share. Trait filters, full-text search, **177 species** with real
-> photos, edibility colour-coding, a local photo **"identify"** matcher, and
-> clickable look-alikes for every *named* dangerous confusion are all in.
->
-> the species set has grown from 58 → 177 and look-alike
-> coverage is now fully named — no generic "other genus" placeholders remain.
-> The remaining v2 item is *real* image identification (species-level) via an
-> external API; parked until an iNaturalist token is provisioned.
+**Live:** [sporedropindex.com](https://sporedropindex.com) · [www](https://www.sporedropindex.com)  
+**Fallback:** [sporedropindex.up.railway.app](https://sporedropindex.up.railway.app)
+
+> **Status: v1 — public, usable, and evolving.** Trait filters, full-text search,
+> **177 species** with real photos, edibility colour-coding, dangerous look-alike
+> browsing, region/season quick filters, per-species permalinks with OG previews,
+> and photo identify (Gemini when `GEMINI_API_KEY` is set; local visual fallback
+> otherwise) are all in. Species set grew 58 → 177; look-alike coverage is fully
+> named (no generic "other genus" placeholders).
 
 > ⚠️ **Educational use only.** Many mushrooms are deadly and closely resemble
 > edible ones. Never eat a wild mushroom based on an app. Always confirm with an
@@ -16,26 +16,22 @@
 
 A small, fast, dependency-free web app for **searching and identifying mushrooms
 by their traits** — cap color, gills vs. pores, habitat, ecology, spore print,
-season, and edibility. It's an educational reference, not a foraging guide.
-
-> ⚠️ **Educational use only.** Many mushrooms are deadly and closely resemble
-> edible ones. Never eat a wild mushroom based on an app. Always confirm with an
-> expert and a spore print before consumption.
+season, region, and edibility. It's an educational reference, not a foraging guide.
 
 ## Features
 
 - **Trait filters** generated dynamically from the dataset (edibility, habitat,
-  substrate, ecology, spore print, cap color, gill type, season).
+  substrate, ecology, spore print, cap color, gill type, season, regions, potency).
 - **Full-text search** across common name, scientific name, aliases, and description.
 - **Detail view** for each species: traits table, description, look-alikes with
-  how to tell them apart, and a fun fact.
+  how to tell them apart, and a fun fact. Deep links at `/species/<id>`.
 - **Edibility badges** with a conservative vocabulary (choice → deadly).
-- **Photo "identify" matcher** — upload a photo and get a ranked list of the
-  indexed species it is *visually similar* to (colour/texture, computed
-  locally). This is **not** species identification — it flags likely look-alikes
-  so you know what to rule out, never asserts "this is species X." No external
-  API, no token required.
-- **Zero dependencies** — pure Python standard library backend + vanilla
+- **Dangerous look-alikes mode** — browse confusable pairs where edibility differs.
+- **Photo identify** — upload a photo; when `GEMINI_API_KEY` is set on the host,
+  matches are constrained to this catalog (with confidence + short reasoning).
+  Otherwise falls back to a local colour/texture similarity ranker. Educational
+  only — never asserts a field ID and never invents species outside the index.
+- **Zero runtime dependencies** — pure Python standard library backend + vanilla
   HTML/CSS/JS frontend. Runs anywhere `python` does.
 
 ## Run it
@@ -139,11 +135,14 @@ and ships `requirements.txt` + `Procfile`, so hosting is near-zero-config.
 The `images/` folder (~16 MB of CC photos across 177 species) is part of the
 repo, so photos work on deploy.
 
-### Option A — Railway (easiest)
+### Option A — Railway (easiest) — **this is how production is hosted**
 1. Put this folder in a GitHub repo.
 2. Go to [railway.app](https://railway.app) → "New Project" → "Deploy from GitHub repo".
-3. It auto-detects Python, installs nothing, and runs `python app.py`.
-4. You get a public `*.up.railway.app` URL — share it.
+3. It auto-detects Python, installs nothing, and runs `python app.py` (see `Procfile`).
+4. Generate a Railway domain, then attach a custom domain if you want.
+5. **Production today:** custom domain on Cloudflare → Railway service
+   (`cgwf6h27.up.railway.app`), public site at **https://sporedropindex.com**
+   (and `www`). Optional env var: `GEMINI_API_KEY` for AI photo identify.
 
 ### Option B — Render
 1. GitHub repo → [render.com](https://render.com) → "New" → "Web Service".
