@@ -1160,7 +1160,7 @@ function removePager() {
 
 function renderPager() {
   removePager();
-  const resultsSection = document.querySelector('.results');
+  const scrollHost = document.querySelector('.results-scroll') || document.querySelector('.results');
   const remaining = currentResults.length - shownCount;
   const wrap = document.createElement('div');
   wrap.id = 'load-more-wrap';
@@ -1180,7 +1180,7 @@ function renderPager() {
     status.textContent = `Showing all ${currentResults.length} species.`;
     wrap.appendChild(status);
   }
-  if (wrap.childNodes.length) resultsSection.appendChild(wrap);
+  if (wrap.childNodes.length) scrollHost.appendChild(wrap);
 }
 
 /* ---- Detail modal ---- */
