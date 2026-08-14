@@ -677,6 +677,82 @@ a.mode-btn.mode-link:focus-visible {
   outline-offset: 2px;
 }
 
+/* ---- Collab section (external partner sites) ---- */
+.collab {
+  margin: 28px clamp(16px, 4vw, 48px) 8px;
+  padding: 18px 20px;
+  border: 1px solid rgba(196,140,255,.28);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(18,16,34,.88), rgba(10,12,22,.92));
+  box-shadow: inset 0 0 0 1px rgba(196,140,255,.06), 0 8px 28px rgba(0,0,0,.28);
+}
+.collab-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.collab-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--ink);
+  letter-spacing: .02em;
+}
+.collab-sub {
+  margin: 4px 0 0;
+  color: var(--ink-dim);
+  font-size: .9rem;
+  max-width: 70ch;
+}
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+a.collab-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(125,255,154,.22);
+  background: rgba(8,12,20,.72);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .12s ease;
+}
+a.collab-card:hover {
+  border-color: rgba(125,255,154,.6);
+  box-shadow: 0 0 18px rgba(125,255,154,.18);
+  transform: translateY(-1px);
+}
+a.collab-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.collab-emoji {
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(125,255,154,.35));
+}
+.collab-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.collab-name {
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: .02em;
+}
+.collab-ext { color: var(--ink-dim); font-weight: 700; }
+.collab-desc {
+  color: var(--ink-dim);
+  font-size: .86rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .collab { margin-left: 12px; margin-right: 12px; padding: 14px; }
+  .collab-grid { grid-template-columns: 1fr; }
+}
+
 /* ---- Dangerous lookalike pairs browsing mode ---- */
 .lookalikes-mode { margin: 18px clamp(16px, 4vw, 48px) 40px; }
 .lookalikes-intro { color: var(--ink-dim); max-width: 80ch; margin: 0 0 6px; }
