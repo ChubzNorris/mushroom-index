@@ -670,7 +670,7 @@ img { max-width: 100%; }
 }
 .map-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 1.15fr) minmax(260px, 1fr);
+  grid-template-columns: minmax(300px, 1.25fr) minmax(260px, 1fr);
   gap: 22px;
   align-items: start;
 }
@@ -686,92 +686,57 @@ img { max-width: 100%; }
 .region-globe {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 720px;
   margin: 0 auto;
-}
-.globe-frame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
 }
 .region-globe-svg {
   width: 100%;
   height: auto;
   display: block;
   overflow: visible;
-  cursor: grab;
-  user-select: none;
 }
-.region-globe-svg:active { cursor: grabbing; }
-.globe-controls {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-}
-.globe-rot-btn {
-  width: 40px;
-  height: 36px;
-  border-radius: 10px;
-  border: 1px solid rgba(125,255,154,.28);
-  background: rgba(12, 20, 32, 0.9);
-  color: var(--accent);
-  font-size: 1.05rem;
-  cursor: pointer;
-  transition: all .14s ease;
-}
-.globe-rot-btn:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 12px rgba(125,255,154,.25);
-  background: rgba(125,255,154,.08);
-}
-.globe-hint {
-  margin: 0;
-  color: var(--ink-dim);
-  font-size: .78rem;
-  text-align: center;
-}
-.globe-halo {
-  fill: none;
-  stroke: rgba(125, 255, 154, 0.12);
-  stroke-width: 14;
-  filter: blur(1px);
+.globe-disc {
+  /* ocean fill is gradient via SVG */
 }
 .globe-rim {
   fill: none;
-  stroke: rgba(125, 255, 154, 0.55);
-  stroke-width: 2.8;
-  filter: drop-shadow(0 0 14px rgba(125, 255, 154, 0.35));
-}
-.globe-terminator {
-  stroke: rgba(180, 220, 255, 0.12);
-  stroke-width: 10;
-  stroke-linecap: round;
-}
-.globe-graticule-line {
-  stroke: rgba(110, 231, 255, 0.35);
-  stroke-width: 1;
+  stroke: rgba(230, 245, 255, 0.35);
+  stroke-width: 2.2;
+  filter: drop-shadow(0 0 10px rgba(80, 180, 255, 0.25));
 }
 .region-path {
-  fill: rgba(125, 255, 154, var(--region-fill-opacity, 0.28));
-  stroke: rgba(180, 255, 210, 0.45);
-  stroke-width: 1.4;
+  fill: color-mix(in srgb, var(--region-color, #7dff9a) calc(var(--region-fill-opacity, 0.55) * 100%), transparent);
+  stroke: rgba(8, 16, 28, 0.55);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
   cursor: pointer;
-  transition: fill .15s ease, stroke .15s ease, filter .15s ease;
+  transition: fill .14s ease, stroke .14s ease, filter .14s ease;
   outline: none;
 }
 .region-path:hover,
 .region-path:focus-visible {
-  fill: rgba(125, 255, 154, 0.9);
-  stroke: #7dff9a;
-  stroke-width: 2.2;
-  filter: drop-shadow(0 0 10px rgba(125, 255, 154, .65));
+  fill: var(--region-color, #7dff9a);
+  stroke: #ffffff;
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--region-color, #7dff9a) 70%, transparent));
 }
 .region-path.active {
-  fill: rgba(125, 255, 154, 0.96);
-  stroke: #eef6ff;
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 14px rgba(125, 255, 154, .8));
+  fill: var(--region-color, #7dff9a);
+  stroke: #ffffff;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--region-color, #7dff9a) 85%, transparent));
+}
+/* Fallback when color-mix unsupported */
+@supports not (fill: color-mix(in srgb, red 50%, blue)) {
+  .region-path {
+    fill: var(--region-color, #7dff9a);
+    opacity: var(--region-fill-opacity, 0.7);
+  }
+  .region-path:hover,
+  .region-path:focus-visible,
+  .region-path.active {
+    opacity: 1;
+  }
 }
 .global-chip {
   display: inline-flex;
@@ -827,6 +792,9 @@ img { max-width: 100%; }
   margin-top: 14px;
 }
 .map-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 7px 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -837,6 +805,13 @@ img { max-width: 100%; }
   cursor: pointer;
   transition: all .14s ease;
 }
+.map-chip-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.35);
+  flex: 0 0 auto;
+}
 .map-chip:hover { border-color: var(--accent-2); color: var(--ink); }
 .map-chip.active {
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
@@ -846,7 +821,7 @@ img { max-width: 100%; }
 }
 .map-chip-count {
   opacity: .8;
-  margin-left: 4px;
+  margin-left: 2px;
   font-variant-numeric: tabular-nums;
 }
 .map-side {
@@ -873,7 +848,6 @@ img { max-width: 100%; }
   font-weight: 700;
 }
 .map-species-grid {
-  /* reuse .grid; slightly denser in the side panel */
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 12px;
 }
@@ -891,31 +865,35 @@ img { max-width: 100%; }
   margin-top: 8px;
   border-radius: 14px;
   border: 1px solid rgba(125,255,154,.18);
-  background:
-    radial-gradient(ellipse at 50% 55%, rgba(12, 26, 46, 0.9) 0%, rgba(5, 7, 12, 0.98) 70%);
+  background: radial-gradient(ellipse at 50% 50%, #163a66 0%, #081422 75%);
   overflow: hidden;
   padding: 10px 12px;
-  max-width: 360px;
+  max-width: 420px;
 }
 .detail-region-map svg { width: 100%; height: auto; display: block; }
 .detail-globe-disc {
-  stroke: rgba(125,255,154,.22);
-  stroke-width: 2;
+  stroke: rgba(200, 230, 255, .2);
+  stroke-width: 1.5;
 }
 .detail-globe-rim {
-  stroke: rgba(125,255,154,.45);
-  stroke-width: 2.4;
+  stroke: rgba(200, 230, 255, .4);
+  stroke-width: 2;
 }
 .detail-region-path {
-  fill: rgba(125,255,154,.10);
-  stroke: rgba(110,231,255,.16);
-  stroke-width: 1.1;
+  fill: color-mix(in srgb, var(--region-color, #7dff9a) 18%, transparent);
+  stroke: rgba(8, 16, 28, 0.35);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
 }
 .detail-region-path.on {
-  fill: rgba(125,255,154,.82);
-  stroke: #7dff9a;
-  stroke-width: 2;
-  filter: drop-shadow(0 0 6px rgba(125,255,154,.45));
+  fill: var(--region-color, #7dff9a);
+  stroke: rgba(255,255,255,.75);
+  stroke-width: 1.2;
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--region-color, #7dff9a) 60%, transparent));
+}
+@supports not (fill: color-mix(in srgb, red 50%, blue)) {
+  .detail-region-path { fill: var(--region-color, #7dff9a); opacity: 0.2; }
+  .detail-region-path.on { opacity: 1; }
 }
 .detail-map-note {
   margin: 8px 0 0;
@@ -934,6 +912,7 @@ img { max-width: 100%; }
   }
   .map-chip { font-size: .8rem; }
 }
+
 
 
 

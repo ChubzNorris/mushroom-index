@@ -5,3 +5,9 @@ __pycache__/
 # Local images are committed (they're part of the app), but ignore editor/OS cruft.
 .DS_Store
 *.swp
+
+# Region-map rebuild scratch (Natural Earth downloads + intermediates)
+scripts/_geo_build/ne_*.geojson
+scripts/_geo_build/preview_continents.svg
+scripts/_geo_build/region_paths.json
+scripts/_geo_build/region_paths_generated.js
