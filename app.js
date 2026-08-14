@@ -906,24 +906,39 @@ function initQuickFilter(facets) {
   // Populate the region dropdown from the same vocabulary as the sidebar's
   // regions facet (array of {value, label}).
   const regions = facets.regions || [];
-  for (const r of regions) {
-    const opt = document.createElement('option');
-    opt.value = r.value;
-    opt.textContent = r.label;
-    regionSelect.appendChild(opt);
+  // Avoid duplicating options if init runs twice.
+  if (regionSelect && regionSelect.options.length <= 1) {
+    for (const r of regions) {
+      const opt = document.createElement('option');
+      opt.value = r.value;
+      opt.textContent = r.label;
+      regionSelect.appendChild(opt);
+    }
   }
 
-  function refreshGlowBtn() {
-    if (!glowBtn) return;
-    glowBtn.classList.toggle('active', state.filters.bioluminescent === 'true');
-  }
-  refreshGlowBtn();
-  if (glowBtn) {
+  syncGlowControls();
+  if (glowBtn && !glowBtn.dataset.bound) {
+    glowBtn.dataset.bound = '1';
+    glowBtn.setAttribute('aria-pressed', 'false');
     glowBtn.addEventListener('click', () => {
       setMode('search');
       if (state.filters.bioluminescent === 'true') delete state.filters.bioluminescent;
       else state.filters.bioluminescent = 'true';
-      refreshGlowBtn();
+      // Drop other trait filters so "Glow only" actually means only glow —
+      // season/region left from the fruiting widget were a common footgun.
+      delete state.filters.season;
+      delete state.filters.regions;
+      delete state.filters.edibility;
+      delete state.filters.habitat;
+      delete state.filters.substrate;
+      delete state.filters.ecology;
+      delete state.filters.spore_print;
+      delete state.filters.cap_color;
+      delete state.filters.gill_attachment;
+      delete state.filters.potency;
+      state.q = '';
+      const searchInput = el('search-input');
+      if (searchInput) searchInput.value = '';
       renderFilters(facets);
       refresh();
     });
@@ -944,8 +959,9 @@ function initQuickFilter(facets) {
     } else {
       delete state.filters.regions;
     }
+    // Fruiting widget shouldn't silently keep a stale glow filter unless
+    // the user still wants it — leave glow as-is, just resync UI.
     renderFilters(facets);
-    refreshGlowBtn();
     refresh();
   });
 }
@@ -975,13 +991,27 @@ function buildQueryString() {
    (e.g. after clicking a chip) don't snap sections back open. */
 const collapsedGroups = new Set();
 
-// Start with all filter groups collapsed by default
-FILTER_DEFS.forEach(def => collapsedGroups.add(def.key));
+// Start with filter groups collapsed by default, except Bioluminescent —
+// keep that one open so the new glow filter is obvious.
+FILTER_DEFS.forEach(def => {
+  if (def.key !== 'bioluminescent') collapsedGroups.add(def.key);
+});
+
+/** Keep the top "Glow only" button in sync with state.filters. */
+function syncGlowControls() {
+  const glowBtn = el('qf-glow-btn');
+  if (!glowBtn) return;
+  const on = state.filters.bioluminescent === 'true';
+  glowBtn.classList.toggle('active', on);
+  glowBtn.setAttribute('aria-pressed', String(on));
+}
 
 /* ---- Render filters from facets ---- */
 function renderFilters(facets) {
   const wrap = el('filter-groups');
   wrap.innerHTML = '';
+  // If glow filter is on, force that group open so the active chip is visible.
+  if (state.filters.bioluminescent === 'true') collapsedGroups.delete('bioluminescent');
   for (const def of FILTER_DEFS) {
     const values = facets[def.key] || [];
     if (!values.length) continue;
@@ -1012,19 +1042,21 @@ function renderFilters(facets) {
     row.className = 'chip-row';
     for (const v of values) {
       // Facet values are strings, except `edibility`/`potency`/`regions`/
-            // `bioluminescent` which are {value, label}.
-            const isObj = v && typeof v === 'object';
-            const val = isObj ? v.value : v;
-            const label = isObj ? v.label
-              : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
-            const chip = document.createElement('span');
-            const edClass = def.key === 'edibility' ? ' ed-' + val : '';
-            const potClass = def.key === 'potency' ? ' pot-' + val : '';
-            const glowClass = def.key === 'bioluminescent' ? ' glow-chip' : '';
-            const isActive = isMulti
-              ? (state.filters[def.key] || []).includes(val)
-              : state.filters[def.key] === val;
-            chip.className = 'chip' + edClass + potClass + glowClass + (isActive ? ' active' : '');
+      // `bioluminescent` which are {value, label}.
+      const isObj = v && typeof v === 'object';
+      const val = isObj ? v.value : v;
+      const label = isObj ? v.label
+        : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      const edClass = def.key === 'edibility' ? ' ed-' + val : '';
+      const potClass = def.key === 'potency' ? ' pot-' + val : '';
+      const glowClass = def.key === 'bioluminescent' ? ' glow-chip' : '';
+      const isActive = isMulti
+        ? (state.filters[def.key] || []).includes(val)
+        : state.filters[def.key] === val;
+      chip.className = 'chip' + edClass + potClass + glowClass + (isActive ? ' active' : '');
+      chip.setAttribute('aria-pressed', String(!!isActive));
       chip.textContent = label;
       chip.addEventListener('click', () => {
         if (isMulti) {
@@ -1038,7 +1070,7 @@ function renderFilters(facets) {
           if (state.filters[def.key] === val) delete state.filters[def.key];
           else state.filters[def.key] = val;
         }
-        renderFilters(facets); // refresh active states
+        renderFilters(facets); // refresh active states + glow button
         refresh();
       });
       row.appendChild(chip);
@@ -1046,6 +1078,7 @@ function renderFilters(facets) {
     group.appendChild(row);
     wrap.appendChild(group);
   }
+  syncGlowControls();
 }
 
 /* ---- Render a single result card ---- */
@@ -1359,6 +1392,8 @@ async function refresh() {
   try {
     const list = await fetchJSON('/api/species' + (qs ? '?' + qs : ''));
     renderResults(list);
+    // Keep glow control honest even if filters changed outside renderFilters.
+    syncGlowControls();
   } catch (e) {
     console.error('refresh failed', e);
   }
@@ -1394,17 +1429,18 @@ async function init() {
     }, 250);
   });
   el('clear-btn').addEventListener('click', async () => {
-    state.q = '';
-    state.filters = {};
-    state.sort = 'name';
-    el('search-input').value = '';
-    el('sort-select').value = 'name';
-    try {
-      const facets = await fetchJSON('/api/facets');
-      renderFilters(facets);
-    } catch (e) {}
-    refresh();
-  });
+      state.q = '';
+      state.filters = {};
+      state.sort = 'name';
+      el('search-input').value = '';
+      el('sort-select').value = 'name';
+      try {
+        const facets = await fetchJSON('/api/facets');
+        renderFilters(facets);
+      } catch (e) {}
+      syncGlowControls();
+      refresh();
+    });
   el('sort-select').addEventListener('change', e => {
     state.sort = e.target.value;
     refresh();

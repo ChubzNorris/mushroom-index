@@ -195,7 +195,10 @@ html { background: var(--bg); }
   color: var(--ink-dim); padding: 7px 13px; border-radius: 999px;
   font-size: .85rem; transition: all .12s ease;
   min-height: 32px; display: inline-flex; align-items: center;
+  /* chips may be <button> or <span> — kill default button chrome */
+  font-family: inherit; line-height: 1.2; appearance: none; -webkit-appearance: none;
 }
+button.chip { margin: 0; }
 .chip:hover { color: var(--ink); border-color: var(--accent-2); box-shadow: 0 0 10px var(--glow); }
 .chip.active {
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
