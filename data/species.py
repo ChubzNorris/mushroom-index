@@ -8702,2570 +8702,4485 @@ SPECIES = [
         "fun_fact": "It's sold dried by the kilo and rehydrates to a crunchy, flavour-soaking ear."
     },
     {
-  "id": "psilocybe-ovoideocystidiata",
-  "name": "Woodlover",
-  "scientific_name": "Psilocybe ovoideocystidiata",
-  "aliases": [
-    "ovo"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "convex",
-      "bell"
-    ],
-    "colors": [
-      "brown",
-      "tan",
-      "olive"
-    ],
-    "diameter_cm": [
-      1,
-      5
-    ]
-  },
-  "gills": {
-    "attachment": "attached",
-    "spacing": "crowded",
-    "colors": [
-      "purple-brown",
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "brown"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "purple-brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring",
-    "summer"
-  ],
-  "distribution": "eastern North America",
-  "regions": [
-    "na"
-  ],
-  "potency": "moderate",
-  "description": "A wood-loving psilocybin species that bruises blue and fruits on wood chips and decaying hardwood, often along rivers. Psychoactive and controlled; listed for education and harm reduction.",
-  "lookalikes": [
-    {
-      "name": "Galerina marginata",
-      "distinguish": "DEADLY; rusty-brown spores and no blue bruising."
+        "id": "psilocybe-ovoideocystidiata",
+        "name": "Woodlover",
+        "scientific_name": "Psilocybe ovoideocystidiata",
+        "aliases": [
+            "ovo"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "bell"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "olive"
+            ],
+            "diameter_cm": [
+                1,
+                5
+            ]
+        },
+        "gills": {
+            "attachment": "attached",
+            "spacing": "crowded",
+            "colors": [
+                "purple-brown",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "purple-brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer"
+        ],
+        "distribution": "eastern North America",
+        "regions": [
+            "na"
+        ],
+        "potency": "moderate",
+        "description": "A wood-loving psilocybin species that bruises blue and fruits on wood chips and decaying hardwood, often along rivers. Psychoactive and controlled; listed for education and harm reduction.",
+        "lookalikes": [
+            {
+                "name": "Galerina marginata",
+                "distinguish": "DEADLY; rusty-brown spores and no blue bruising."
+            },
+            {
+                "name": "Psilocybe cynescens (wavy cap)",
+                "distinguish": "Also bluing, wood-loving, but wavy cap margin and larger."
+            }
+        ],
+        "fun_fact": "One of the few psilocybes that fruits in spring rather than autumn, and is notorious for appearing in landscaped wood-chip beds."
     },
     {
-      "name": "Psilocybe cynescens (wavy cap)",
-      "distinguish": "Also bluing, wood-loving, but wavy cap margin and larger."
-    }
-  ],
-  "fun_fact": "One of the few psilocybes that fruits in spring rather than autumn, and is notorious for appearing in landscaped wood-chip beds."
-},
-    {
-  "id": "psilocybe-stuntzii",
-  "name": "Stuntz's Blue Legs",
-  "scientific_name": "Psilocybe stuntzii",
-  "aliases": [
-    "blue legs",
-    "stuntzii"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "convex",
-      "bell"
-    ],
-    "colors": [
-      "brown",
-      "olive",
-      "yellow-brown"
-    ],
-    "diameter_cm": [
-      1,
-      5
-    ]
-  },
-  "gills": {
-    "attachment": "attached",
-    "spacing": "crowded",
-    "colors": [
-      "purple-brown",
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "blue",
-      "brown",
-      "white"
-    ],
-    "ring": True,
-    "volva": False
-  },
-  "spore_print": "purple-brown",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "saprotrophic",
-  "season": [
-    "autumn"
-  ],
-  "distribution": "Pacific Northwest (USA/Canada)",
-  "regions": [
-    "na"
-  ],
-  "potency": "moderate",
-  "description": "A bluing, psilocybin-containing species of the PNW that grows in lawns, wood chips and moss. Psychoactive and controlled; education/harm reduction only.",
-  "lookalikes": [
-    {
-      "name": "Galerina marginata",
-      "distinguish": "DEADLY; no blue bruising, rusty-brown spores."
+        "id": "psilocybe-stuntzii",
+        "name": "Stuntz's Blue Legs",
+        "scientific_name": "Psilocybe stuntzii",
+        "aliases": [
+            "blue legs",
+            "stuntzii"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "bell"
+            ],
+            "colors": [
+                "brown",
+                "olive",
+                "yellow-brown"
+            ],
+            "diameter_cm": [
+                1,
+                5
+            ]
+        },
+        "gills": {
+            "attachment": "attached",
+            "spacing": "crowded",
+            "colors": [
+                "purple-brown",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "blue",
+                "brown",
+                "white"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "purple-brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn"
+        ],
+        "distribution": "Pacific Northwest (USA/Canada)",
+        "regions": [
+            "na"
+        ],
+        "potency": "moderate",
+        "description": "A bluing, psilocybin-containing species of the PNW that grows in lawns, wood chips and moss. Psychoactive and controlled; education/harm reduction only.",
+        "lookalikes": [
+            {
+                "name": "Galerina marginata",
+                "distinguish": "DEADLY; no blue bruising, rusty-brown spores."
+            },
+            {
+                "name": "Psilocybe cyanescens",
+                "distinguish": "Also bluing but wavy cap, stronger potency, no persistent ring."
+            }
+        ],
+        "fun_fact": "Named after mycologist Daniel Stuntz; the blue-staining stem is the giveaway that earned it the nickname 'blue legs'."
     },
     {
-      "name": "Psilocybe cyanescens",
-      "distinguish": "Also bluing but wavy cap, stronger potency, no persistent ring."
-    }
-  ],
-  "fun_fact": "Named after mycologist Daniel Stuntz; the blue-staining stem is the giveaway that earned it the nickname 'blue legs'."
-},
-    {
-  "id": "psilocybe-allenii",
-  "name": "Allen's",
-  "scientific_name": "Psilocybe allenii",
-  "aliases": [
-    "allenii"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "convex",
-      "hemispheric"
-    ],
-    "colors": [
-      "brown",
-      "tan"
-    ],
-    "diameter_cm": [
-      1,
-      5
-    ]
-  },
-  "gills": {
-    "attachment": "attached",
-    "spacing": "crowded",
-    "colors": [
-      "purple-brown",
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "brown"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "purple-brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "autumn",
-    "winter"
-  ],
-  "distribution": "Pacific Coast USA (urban WA/OR)",
-  "regions": [
-    "na"
-  ],
-  "potency": "moderate",
-  "description": "A recently described (2009) wood-rotting psilocybe of the PNW that bruises blue on all parts. Psychoactive and controlled; listed for education/harm reduction.",
-  "lookalikes": [
-    {
-      "name": "Psilocybe cyanescens",
-      "distinguish": "Both bluing woodlovers; cyanescens has a wavy cap and stronger potency."
+        "id": "psilocybe-allenii",
+        "name": "Allen's",
+        "scientific_name": "Psilocybe allenii",
+        "aliases": [
+            "allenii"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "hemispheric"
+            ],
+            "colors": [
+                "brown",
+                "tan"
+            ],
+            "diameter_cm": [
+                1,
+                5
+            ]
+        },
+        "gills": {
+            "attachment": "attached",
+            "spacing": "crowded",
+            "colors": [
+                "purple-brown",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "purple-brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn",
+            "winter"
+        ],
+        "distribution": "Pacific Coast USA (urban WA/OR)",
+        "regions": [
+            "na"
+        ],
+        "potency": "moderate",
+        "description": "A recently described (2009) wood-rotting psilocybe of the PNW that bruises blue on all parts. Psychoactive and controlled; listed for education/harm reduction.",
+        "lookalikes": [
+            {
+                "name": "Psilocybe cyanescens",
+                "distinguish": "Both bluing woodlovers; cyanescens has a wavy cap and stronger potency."
+            },
+            {
+                "name": "Galerina marginata",
+                "distinguish": "DEADLY; rusty spores, no blue stain."
+            }
+        ],
+        "fun_fact": "Discovered in Seattle's mulch beds and named for ethnomycologist John Allen; it's one of the few psilocybes described in the 21st century."
     },
     {
-      "name": "Galerina marginata",
-      "distinguish": "DEADLY; rusty spores, no blue stain."
-    }
-  ],
-  "fun_fact": "Discovered in Seattle's mulch beds and named for ethnomycologist John Allen; it's one of the few psilocybes described in the 21st century."
-},
-    {
-  "id": "psilocybe-weraroa",
-  "name": "Weraroa",
-  "scientific_name": "Psilocybe weraroa",
-  "aliases": [
-    "blue meanies (NZ)",
-    "weraroa"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "convex",
-      "rounded"
-    ],
-    "colors": [
-      "brown",
-      "tan",
-      "olive"
-    ],
-    "diameter_cm": [
-      1,
-      4
-    ]
-  },
-  "gills": {
-    "attachment": "attached",
-    "spacing": "crowded",
-    "colors": [
-      "purple-brown",
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "yellow-brown",
-      "blue"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "purple-brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "autumn",
-    "winter"
-  ],
-  "distribution": "New Zealand",
-  "regions": [
-    "oceania"
-  ],
-  "potency": "moderate",
-  "description": "New Zealand's endemic psilocybin species, slow to bruise blue-green when injured. Psychoactive and controlled; education/harm reduction only.",
-  "lookalikes": [
-    {
-      "name": "Psilocybe subaeruginosa",
-      "distinguish": "The other NZ 'gold top'; also bluing but more robust."
+        "id": "psilocybe-weraroa",
+        "name": "Weraroa",
+        "scientific_name": "Psilocybe weraroa",
+        "aliases": [
+            "blue meanies (NZ)",
+            "weraroa"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "rounded"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "olive"
+            ],
+            "diameter_cm": [
+                1,
+                4
+            ]
+        },
+        "gills": {
+            "attachment": "attached",
+            "spacing": "crowded",
+            "colors": [
+                "purple-brown",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "yellow-brown",
+                "blue"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "purple-brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn",
+            "winter"
+        ],
+        "distribution": "New Zealand",
+        "regions": [
+            "oceania"
+        ],
+        "potency": "moderate",
+        "description": "New Zealand's endemic psilocybin species, slow to bruise blue-green when injured. Psychoactive and controlled; education/harm reduction only.",
+        "lookalikes": [
+            {
+                "name": "Psilocybe subaeruginosa",
+                "distinguish": "The other NZ 'gold top'; also bluing but more robust."
+            },
+            {
+                "name": "Galerina species",
+                "distinguish": "DEADLY; no blue bruising, rusty spores."
+            }
+        ],
+        "fun_fact": "Often called 'blue meanies' in NZ, though that nickname also refers to Panaeolus cyanescens elsewhere - a naming clash that trips up travelers."
     },
     {
-      "name": "Galerina species",
-      "distinguish": "DEADLY; no blue bruising, rusty spores."
-    }
-  ],
-  "fun_fact": "Often called 'blue meanies' in NZ, though that nickname also refers to Panaeolus cyanescens elsewhere - a naming clash that trips up travelers."
-},
-    {
-  "id": "panaeolus-cinctulus",
-  "name": "Weed Panaeolus",
-  "scientific_name": "Panaeolus cinctulus",
-  "aliases": [
-    "banded mottlegill",
-    "subbs",
-    "weed panaeolus"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "convex",
-      "bell"
-    ],
-    "colors": [
-      "brown",
-      "tan",
-      "gray"
-    ],
-    "diameter_cm": [
-      1,
-      4
-    ]
-  },
-  "gills": {
-    "attachment": "free",
-    "spacing": "crowded",
-    "colors": [
-      "gray",
-      "black",
-      "mottled"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "gray"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "black",
-  "habitat": "grassland",
-  "substrate": "dung",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring",
-    "summer",
-    "autumn"
-  ],
-  "distribution": "cosmopolitan (lawns, gardens, dung)",
-  "regions": [
-    "global"
-  ],
-  "potency": "low",
-  "description": "A very common psilocybin-containing lawn and dung mushroom; contains psilocybin unlike its harmless lookalike P. foenisecii. Psychoactive and controlled; education/harm reduction only.",
-  "lookalikes": [
-    {
-      "name": "Panaeolus foenisecii",
-      "distinguish": "Looks near-identical but contains NO psilocybin - the key safety difference."
+        "id": "panaeolus-cinctulus",
+        "name": "Weed Panaeolus",
+        "scientific_name": "Panaeolus cinctulus",
+        "aliases": [
+            "banded mottlegill",
+            "subbs",
+            "weed panaeolus"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "bell"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "gray"
+            ],
+            "diameter_cm": [
+                1,
+                4
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "crowded",
+            "colors": [
+                "gray",
+                "black",
+                "mottled"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "gray"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "black",
+        "habitat": "grassland",
+        "substrate": "dung",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "distribution": "cosmopolitan (lawns, gardens, dung)",
+        "regions": [
+            "global"
+        ],
+        "potency": "low",
+        "description": "A very common psilocybin-containing lawn and dung mushroom; contains psilocybin unlike its harmless lookalike P. foenisecii. Psychoactive and controlled; education/harm reduction only.",
+        "lookalikes": [
+            {
+                "name": "Panaeolus foenisecii",
+                "distinguish": "Looks near-identical but contains NO psilocybin - the key safety difference."
+            },
+            {
+                "name": "Panaeolus species (non-active)",
+                "distinguish": "Many lack psilocybin; spore print and chemistry differ."
+            }
+        ],
+        "fun_fact": "The 'weed' in its name is literal: it turns up in flowerbeds and mown grass worldwide, one of the most widespread psychoactive mushrooms."
     },
     {
-      "name": "Panaeolus species (non-active)",
-      "distinguish": "Many lack psilocybin; spore print and chemistry differ."
-    }
-  ],
-  "fun_fact": "The 'weed' in its name is literal: it turns up in flowerbeds and mown grass worldwide, one of the most widespread psychoactive mushrooms."
-},
-    {
-  "id": "panaeolus-cinctulus-foenisecii",
-  "name": "Hay Mushroom",
-  "scientific_name": "Panaeolus foenisecii",
-  "aliases": [
-    "haymaker's mushroom",
-    "lawnmower's mushroom",
-    "mower's mushroom"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "convex",
-      "bell"
-    ],
-    "colors": [
-      "brown",
-      "tan",
-      "gray"
-    ],
-    "diameter_cm": [
-      1,
-      3
-    ]
-  },
-  "gills": {
-    "attachment": "free",
-    "spacing": "crowded",
-    "colors": [
-      "gray",
-      "black",
-      "mottled"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "gray"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "black",
-  "habitat": "grassland",
-  "substrate": "dung",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring",
-    "summer",
-    "autumn"
-  ],
-  "distribution": "cosmopolitan (lawns worldwide)",
-  "regions": [
-    "global"
-  ],
-  "potency": "none",
-  "description": "One of the most common lawn mushrooms on earth. Long listed as psychoactive, but it contains only trace psilocybin and produces no noticeable effects. Not edible.",
-  "lookalikes": [
-    {
-      "name": "Panaeolus cinctulus",
-      "distinguish": "Near-identical but DOES contain psilocybin - the dangerous confusion is assuming this one is active."
+        "id": "panaeolus-cinctulus-foenisecii",
+        "name": "Hay Mushroom",
+        "scientific_name": "Panaeolus foenisecii",
+        "aliases": [
+            "haymaker's mushroom",
+            "lawnmower's mushroom",
+            "mower's mushroom"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "convex",
+                "bell"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "gray"
+            ],
+            "diameter_cm": [
+                1,
+                3
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "crowded",
+            "colors": [
+                "gray",
+                "black",
+                "mottled"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "gray"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "black",
+        "habitat": "grassland",
+        "substrate": "dung",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "distribution": "cosmopolitan (lawns worldwide)",
+        "regions": [
+            "global"
+        ],
+        "potency": "none",
+        "description": "One of the most common lawn mushrooms on earth. Long listed as psychoactive, but it contains only trace psilocybin and produces no noticeable effects. Not edible.",
+        "lookalikes": [
+            {
+                "name": "Panaeolus cinctulus",
+                "distinguish": "Near-identical but DOES contain psilocybin - the dangerous confusion is assuming this one is active."
+            },
+            {
+                "name": "Panaeolina species",
+                "distinguish": "Similar mottled gills; not considered edible."
+            }
+        ],
+        "fun_fact": "The classic 'is this a magic mushroom?' lawn species - almost always a False alarm, since it carries no real psychoactivity despite the old field-guide myth."
     },
     {
-      "name": "Panaeolina species",
-      "distinguish": "Similar mottled gills; not considered edible."
-    }
-  ],
-  "fun_fact": "The classic 'is this a magic mushroom?' lawn species - almost always a False alarm, since it carries no real psychoactivity despite the old field-guide myth."
-},
-    {
-  "id": "cordyceps-militaris",
-  "name": "Cordyceps",
-  "scientific_name": "Cordyceps militaris",
-  "aliases": [
-    "orange cordyceps",
-    "caterpillar fungus (cultivated)"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "clavate",
-      "club"
-    ],
-    "colors": [
-      "orange",
-      "yellow"
-    ],
-    "diameter_cm": [
-      1,
-      6
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "orange"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "n/a",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "parasitic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "temperate worldwide (cultivated commercially)",
-  "regions": [
-    "global"
-  ],
-  "description": "A bright orange, club-shaped fungus that parasitizes insect pupae. Widely cultivated and used as a functional food / supplement (cordycepin); edible when cooked.",
-  "lookalikes": [
-    {
-      "name": "Ophiocordyceps sinensis",
-      "distinguish": "The wild 'caterpillar fungus' - endangered, not club-shaped, far more expensive."
+        "id": "cordyceps-militaris",
+        "name": "Cordyceps",
+        "scientific_name": "Cordyceps militaris",
+        "aliases": [
+            "orange cordyceps",
+            "caterpillar fungus (cultivated)"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "clavate",
+                "club"
+            ],
+            "colors": [
+                "orange",
+                "yellow"
+            ],
+            "diameter_cm": [
+                1,
+                6
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "orange"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "n/a",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "parasitic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "temperate worldwide (cultivated commercially)",
+        "regions": [
+            "global"
+        ],
+        "description": "A bright orange, club-shaped fungus that parasitizes insect pupae. Widely cultivated and used as a functional food / supplement (cordycepin); edible when cooked.",
+        "lookalikes": [
+            {
+                "name": "Ophiocordyceps sinensis",
+                "distinguish": "The wild 'caterpillar fungus' - endangered, not club-shaped, far more expensive."
+            },
+            {
+                "name": "Clavaria / Ramaria corals",
+                "distinguish": "Branched, not single clubs; not parasitic."
+            }
+        ],
+        "fun_fact": "The 'zombie-ant' fungus's edible cousin - same genus strategy, but C. militaris is farmed by the ton for its cordycepin, not for drama."
     },
     {
-      "name": "Clavaria / Ramaria corals",
-      "distinguish": "Branched, not single clubs; not parasitic."
-    }
-  ],
-  "fun_fact": "The 'zombie-ant' fungus's edible cousin - same genus strategy, but C. militaris is farmed by the ton for its cordycepin, not for drama."
-},
-    {
-  "id": "ophiocordyceps-sinensis",
-  "name": "Caterpillar Fungus",
-  "scientific_name": "Ophiocordyceps sinensis",
-  "aliases": [
-    "yartsa gunbu",
-    "keera jhar",
-    "dong chong xia cao"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "clavate",
-      "club"
-    ],
-    "colors": [
-      "brown",
-      "tan",
-      "olive"
-    ],
-    "diameter_cm": [
-      4,
-      12
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "brown",
-      "olive"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "n/a",
-  "habitat": "alpine",
-  "substrate": "insect",
-  "ecology": "parasitic",
-  "season": [
-    "spring",
-    "summer"
-  ],
-  "distribution": "Tibetan Plateau / Himalaya",
-  "regions": [
-    "asia"
-  ],
-  "description": "The famous parasitic fungus that mummifies ghost moth caterpillars, leaving a twisted 'worm with a grass-like stalk.' Revered in traditional medicine and among the world's most valuable biological commodities. Edible / medicinal; wild harvest is endangered.",
-  "lookalikes": [
-    {
-      "name": "Cordyceps militaris",
-      "distinguish": "Cultivated orange club; same family, far cheaper, not caterpillar-based."
+        "id": "ophiocordyceps-sinensis",
+        "name": "Caterpillar Fungus",
+        "scientific_name": "Ophiocordyceps sinensis",
+        "aliases": [
+            "yartsa gunbu",
+            "keera jhar",
+            "dong chong xia cao"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "clavate",
+                "club"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "olive"
+            ],
+            "diameter_cm": [
+                4,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "olive"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "n/a",
+        "habitat": "alpine",
+        "substrate": "insect",
+        "ecology": "parasitic",
+        "season": [
+            "spring",
+            "summer"
+        ],
+        "distribution": "Tibetan Plateau / Himalaya",
+        "regions": [
+            "asia"
+        ],
+        "description": "The famous parasitic fungus that mummifies ghost moth caterpillars, leaving a twisted 'worm with a grass-like stalk.' Revered in traditional medicine and among the world's most valuable biological commodities. Edible / medicinal; wild harvest is endangered.",
+        "lookalikes": [
+            {
+                "name": "Cordyceps militaris",
+                "distinguish": "Cultivated orange club; same family, far cheaper, not caterpillar-based."
+            },
+            {
+                "name": "Other Cordyceps spp.",
+                "distinguish": "Many parasitize different insects; only O. sinensis is 'yartsa gunbu'."
+            }
+        ],
+        "fun_fact": "By weight it has out-sold gold in parts of Asia; a single mummified caterpillar can fetch more than the labourer who dug it up earns in a week."
     },
     {
-      "name": "Other Cordyceps spp.",
-      "distinguish": "Many parasitize different insects; only O. sinensis is 'yartsa gunbu'."
-    }
-  ],
-  "fun_fact": "By weight it has out-sold gold in parts of Asia; a single mummified caterpillar can fetch more than the labourer who dug it up earns in a week."
-},
-    {
-  "id": "inonotus-obliquus",
-  "name": "Chaga",
-  "scientific_name": "Inonotus obliquus",
-  "aliases": [
-    "birch conk",
-    "black mass",
-    "clinker polypore"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "irregular",
-      "encrusting"
-    ],
-    "colors": [
-      "black",
-      "charcoal"
-    ],
-    "diameter_cm": [
-      5,
-      40
-    ]
-  },
-  "gills": {
-    "attachment": "pores",
-    "spacing": "n/a",
-    "colors": [
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "parasitic",
-  "season": [
-    "all"
-  ],
-  "distribution": "boreal (birch forests, N. hemisphere)",
-  "regions": [
-    "na",
-    "europe",
-    "asia"
-  ],
-  "description": "A charcoal-black sterile conk on living birch, prized in traditional medicine for antioxidants and beta-glucans. Not eaten as food (wooden, indigestible) - used as a tea / extract.",
-  "lookalikes": [
-    {
-      "name": "Other birch conks (Fomitopsis, Piptoporus)",
-      "distinguish": "Chaga's cracked charcoal exterior over rusty-orange interior is distinctive."
-    }
-  ],
-  "fun_fact": "The 'rusty' interior revealed when you break a chunk is the part people simmer for 'chaga tea' - the black crust is basically fossilized mycelium."
-},
-    {
-  "id": "wolfiporia-cocos",
-  "name": "Tuckahoe",
-  "scientific_name": "Wolfiporia cocos",
-  "aliases": [
-    "fuling",
-    "poria",
-    "hoelen",
-    "China root"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "sclerotium",
-      "rounded"
-    ],
-    "colors": [
-      "white",
-      "tan",
-      "brown"
-    ],
-    "diameter_cm": [
-      5,
-      30
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "all"
-  ],
-  "distribution": "East Asia (pine forests)",
-  "regions": [
-    "asia"
-  ],
-  "description": "A subterranean sclerotium (not a typical mushroom) growing on pine roots, used in Chinese medicine for 2,000+ years as 'fuling.' Edible as a mild, starchy medicinal ingredient.",
-  "lookalikes": [
-    {
-      "name": "Truffles (Tuber spp.)",
-      "distinguish": "Also underground; truffles are ascocarps with different texture and aroma."
+        "id": "inonotus-obliquus",
+        "name": "Chaga",
+        "scientific_name": "Inonotus obliquus",
+        "aliases": [
+            "birch conk",
+            "black mass",
+            "clinker polypore"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "irregular",
+                "encrusting"
+            ],
+            "colors": [
+                "black",
+                "charcoal"
+            ],
+            "diameter_cm": [
+                5,
+                40
+            ]
+        },
+        "gills": {
+            "attachment": "pores",
+            "spacing": "n/a",
+            "colors": [
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "parasitic",
+        "season": [
+            "all"
+        ],
+        "distribution": "boreal (birch forests, N. hemisphere)",
+        "regions": [
+            "na",
+            "europe",
+            "asia"
+        ],
+        "description": "A charcoal-black sterile conk on living birch, prized in traditional medicine for antioxidants and beta-glucans. Not eaten as food (wooden, indigestible) - used as a tea / extract.",
+        "lookalikes": [
+            {
+                "name": "Other birch conks (Fomitopsis, Piptoporus)",
+                "distinguish": "Chaga's cracked charcoal exterior over rusty-orange interior is distinctive."
+            }
+        ],
+        "fun_fact": "The 'rusty' interior revealed when you break a chunk is the part people simmer for 'chaga tea' - the black crust is basically fossilized mycelium."
     },
     {
-      "name": "Other subterranean sclerotia",
-      "distinguish": "Few are edible/medicinal; ID by host (pine) and white interior."
-    }
-  ],
-  "fun_fact": "It's so un-mushroom-like that for centuries people argued whether fuling was a root, a stone, or a fungus - it's a buried ball of mycelium."
-},
-    {
-  "id": "claviceps-purpurea",
-  "name": "Ergot",
-  "scientific_name": "Claviceps purpurea",
-  "aliases": [
-    "ergot of rye",
-    "corn smut (old)",
-    "mother of rye"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "sclerotium",
-      "horn"
-    ],
-    "colors": [
-      "purple",
-      "black",
-      "violet"
-    ],
-    "diameter_cm": [
-      1,
-      5
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "n/a",
-  "habitat": "grassland",
-  "substrate": "grass",
-  "ecology": "parasitic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "temperate worldwide (cereals & grasses)",
-  "regions": [
-    "global"
-  ],
-  "description": "A fungus that replaces rye/grass kernels with hard purple-black sclerotia full of ergot alkaloids. Causes ergotism (St. Anthony's Fire) and is the natural source of LSD. Highly toxic - never consume.",
-  "lookalikes": [
-    {
-      "name": "Grain kernels",
-      "distinguish": "Ergot sclerotia look like dark, swollen, curved 'seeds' mixed into grain - must be sieved out."
+        "id": "wolfiporia-cocos",
+        "name": "Tuckahoe",
+        "scientific_name": "Wolfiporia cocos",
+        "aliases": [
+            "fuling",
+            "poria",
+            "hoelen",
+            "China root"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "sclerotium",
+                "rounded"
+            ],
+            "colors": [
+                "white",
+                "tan",
+                "brown"
+            ],
+            "diameter_cm": [
+                5,
+                30
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "all"
+        ],
+        "distribution": "East Asia (pine forests)",
+        "regions": [
+            "asia"
+        ],
+        "description": "A subterranean sclerotium (not a typical mushroom) growing on pine roots, used in Chinese medicine for 2,000+ years as 'fuling.' Edible as a mild, starchy medicinal ingredient.",
+        "lookalikes": [
+            {
+                "name": "Truffles (Tuber spp.)",
+                "distinguish": "Also underground; truffles are ascocarps with different texture and aroma."
+            },
+            {
+                "name": "Other subterranean sclerotia",
+                "distinguish": "Few are edible/medicinal; ID by host (pine) and white interior."
+            }
+        ],
+        "fun_fact": "It's so un-mushroom-like that for centuries people argued whether fuling was a root, a stone, or a fungus - it's a buried ball of mycelium."
     },
     {
-      "name": "Ustilago smut",
-      "distinguish": "Also a cereal pathogen but sooty black powder, not solid purple horns."
-    }
-  ],
-  "fun_fact": "Ergot alkaloids gave us both medieval poisonings AND modern migraine and labour-inducing drugs - and Albert Hofmann's first LSD came from its chemistry."
-},
-    {
-  "id": "amanita-jacksonii",
-  "name": "American Caesar's Mushroom",
-  "scientific_name": "Amanita jacksonii",
-  "aliases": [
-    "Jackson's slender amanita",
-    "eastern Caesar's"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "red",
-      "orange",
-      "scarlet"
-    ],
-    "diameter_cm": [
-      5,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "free",
-    "spacing": "crowded",
-    "colors": [
-      "yellow",
-      "cream"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "yellow",
-      "orange"
-    ],
-    "ring": True,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "eastern North America",
-  "regions": [
-    "na"
-  ],
-  "description": "One of the few Amanita that is a celebrated choice edible - the North American counterpart to Caesar's mushroom, with a red cap and all-yellow stem. Still: only for experts.",
-  "lookalikes": [
-    {
-      "name": "Amanita muscaria (fly agaric)",
-      "distinguish": "POISONOUS; has white warts on the cap and a volva, not an all-yellow stem."
+        "id": "claviceps-purpurea",
+        "name": "Ergot",
+        "scientific_name": "Claviceps purpurea",
+        "aliases": [
+            "ergot of rye",
+            "corn smut (old)",
+            "mother of rye"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "sclerotium",
+                "horn"
+            ],
+            "colors": [
+                "purple",
+                "black",
+                "violet"
+            ],
+            "diameter_cm": [
+                1,
+                5
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "n/a",
+        "habitat": "grassland",
+        "substrate": "grass",
+        "ecology": "parasitic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "temperate worldwide (cereals & grasses)",
+        "regions": [
+            "global"
+        ],
+        "description": "A fungus that replaces rye/grass kernels with hard purple-black sclerotia full of ergot alkaloids. Causes ergotism (St. Anthony's Fire) and is the natural source of LSD. Highly toxic - never consume.",
+        "lookalikes": [
+            {
+                "name": "Grain kernels",
+                "distinguish": "Ergot sclerotia look like dark, swollen, curved 'seeds' mixed into grain - must be sieved out."
+            },
+            {
+                "name": "Ustilago smut",
+                "distinguish": "Also a cereal pathogen but sooty black powder, not solid purple horns."
+            }
+        ],
+        "fun_fact": "Ergot alkaloids gave us both medieval poisonings AND modern migraine and labour-inducing drugs - and Albert Hofmann's first LSD came from its chemistry."
     },
     {
-      "name": "Amanita caesarea (European Caesar's)",
-      "distinguish": "The Old-World original; jacksonii is the NA version."
-    }
-  ],
-  "fun_fact": "In a genus where most relatives can kill you, jacksonii is the rare Amanita that gourmets actively seek - and it still demands an expert ID."
-},
-    {
-  "id": "cantharellus-lateritius",
-  "name": "Smooth Chanterelle",
-  "scientific_name": "Cantharellus lateritius",
-  "aliases": [
-    "smooth chanterelle",
-    "egg-yolk chanterelle"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "vase"
-    ],
-    "colors": [
-      "orange",
-      "yellow"
-    ],
-    "diameter_cm": [
-      3,
-      10
-    ]
-  },
-  "gills": {
-    "attachment": "decurrent",
-    "spacing": "crowded",
-    "colors": [
-      "orange",
-      "yellow"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "orange",
-      "yellow"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "pale yellow",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "eastern North America (oaks)",
-  "regions": [
-    "na"
-  ],
-  "description": "A choice edible chanterelle with a smooth to shallowly wrinkled undersurface (no True gills) and a strong apricot odour. Prized like its golden cousin.",
-  "lookalikes": [
-    {
-      "name": "Cantharellus cibarius (golden chanterelle)",
-      "distinguish": "Very similar; lateritius has smoother undersurface and pinkish hue."
+        "id": "amanita-jacksonii",
+        "name": "American Caesar's Mushroom",
+        "scientific_name": "Amanita jacksonii",
+        "aliases": [
+            "Jackson's slender amanita",
+            "eastern Caesar's"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "red",
+                "orange",
+                "scarlet"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "crowded",
+            "colors": [
+                "yellow",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "yellow",
+                "orange"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "eastern North America",
+        "regions": [
+            "na"
+        ],
+        "description": "One of the few Amanita that is a celebrated choice edible - the North American counterpart to Caesar's mushroom, with a red cap and all-yellow stem. Still: only for experts.",
+        "lookalikes": [
+            {
+                "name": "Amanita muscaria (fly agaric)",
+                "distinguish": "POISONOUS; has white warts on the cap and a volva, not an all-yellow stem."
+            },
+            {
+                "name": "Amanita caesarea (European Caesar's)",
+                "distinguish": "The Old-World original; jacksonii is the NA version."
+            }
+        ],
+        "fun_fact": "In a genus where most relatives can kill you, jacksonii is the rare Amanita that gourmets actively seek - and it still demands an expert ID."
     },
     {
-      "name": "Omphalotus olearius (jack-o'-lantern)",
-      "distinguish": "POISONOUS; True gills (not wrinkles) and grows in clusters on wood."
-    }
-  ],
-  "fun_fact": "Smell is the shortcut: a chanterelle smells like apricots, while its poisonous 'False chanterelle' impostors smell of nothing or decay."
-},
-    {
-  "id": "lepiota-cristata",
-  "name": "Stinking Dapperling",
-  "scientific_name": "Lepiota cristata",
-  "aliases": [
-    "stinking parasol"
-  ],
-  "edibility": "poisonous",
-  "cap": {
-    "shape": [
-      "convex",
-      "umbonate"
-    ],
-    "colors": [
-      "brown",
-      "tan",
-      "white"
-    ],
-    "diameter_cm": [
-      2,
-      6
-    ]
-  },
-  "gills": {
-    "attachment": "free",
-    "spacing": "crowded",
-    "colors": [
-      "white",
-      "cream"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "brown"
-    ],
-    "ring": True,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "saprotrophic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "cosmopolitan",
-  "regions": [
-    "global"
-  ],
-  "description": "A small, common toadstool with a coal-gas/rubber smell. Suspected poisonous (many small Lepiota are toxic, some amatoxin); not edible.",
-  "lookalikes": [
-    {
-      "name": "Lepiota brunneoincarnata (deadly parasol)",
-      "distinguish": "DEADLY; similar small parasol - another reason not to eat mini Lepiotas."
+        "id": "cantharellus-lateritius",
+        "name": "Smooth Chanterelle",
+        "scientific_name": "Cantharellus lateritius",
+        "aliases": [
+            "smooth chanterelle",
+            "egg-yolk chanterelle"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "vase"
+            ],
+            "colors": [
+                "orange",
+                "yellow"
+            ],
+            "diameter_cm": [
+                3,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "crowded",
+            "colors": [
+                "orange",
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange",
+                "yellow"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pale yellow",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "eastern North America (oaks)",
+        "regions": [
+            "na"
+        ],
+        "description": "A choice edible chanterelle with a smooth to shallowly wrinkled undersurface (no True gills) and a strong apricot odour. Prized like its golden cousin.",
+        "lookalikes": [
+            {
+                "name": "Cantharellus cibarius (golden chanterelle)",
+                "distinguish": "Very similar; lateritius has smoother undersurface and pinkish hue."
+            },
+            {
+                "name": "Omphalotus olearius (jack-o'-lantern)",
+                "distinguish": "POISONOUS; True gills (not wrinkles) and grows in clusters on wood."
+            }
+        ],
+        "fun_fact": "Smell is the shortcut: a chanterelle smells like apricots, while its poisonous 'False chanterelle' impostors smell of nothing or decay."
     },
     {
-      "name": "Lepiota lilacea",
-      "distinguish": "Toxic; purple-brown tones vs cristata's brown."
-    }
-  ],
-  "fun_fact": "Its stink is the warning label: the rubber/coal-gas odour is why foragers call it the 'stinking dapperling' and leave it alone."
-},
-    {
-  "id": "clitocybe-nebularis",
-  "name": "Clouded Funnel",
-  "scientific_name": "Clitocybe nebularis",
-  "aliases": [
-    "clouded agaric",
-    "trooping funnel"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "gray",
-      "brown",
-      "tan"
-    ],
-    "diameter_cm": [
-      5,
-      20
-    ]
-  },
-  "gills": {
-    "attachment": "decurrent",
-    "spacing": "crowded",
-    "colors": [
-      "white",
-      "cream"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "gray"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "autumn"
-  ],
-  "distribution": "temperate northern hemisphere",
-  "regions": [
-    "na",
-    "europe",
-    "asia"
-  ],
-  "description": "A large gray funnel that fruits in troops. Technically reported as edible but causes gastric upset in many people; treated as inedible here for safety.",
-  "lookalikes": [
-    {
-      "name": "Clitocybe gibba / other funnels",
-      "distinguish": "Similar shape; most are edible/inedible, none should be eaten casually."
+        "id": "lepiota-cristata",
+        "name": "Stinking Dapperling",
+        "scientific_name": "Lepiota cristata",
+        "aliases": [
+            "stinking parasol"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "umbonate"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "white"
+            ],
+            "diameter_cm": [
+                2,
+                6
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "crowded",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "brown"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "cosmopolitan",
+        "regions": [
+            "global"
+        ],
+        "description": "A small, common toadstool with a coal-gas/rubber smell. Suspected poisonous (many small Lepiota are toxic, some amatoxin); not edible.",
+        "lookalikes": [
+            {
+                "name": "Lepiota brunneoincarnata (deadly parasol)",
+                "distinguish": "DEADLY; similar small parasol - another reason not to eat mini Lepiotas."
+            },
+            {
+                "name": "Lepiota lilacea",
+                "distinguish": "Toxic; purple-brown tones vs cristata's brown."
+            }
+        ],
+        "fun_fact": "Its stink is the warning label: the rubber/coal-gas odour is why foragers call it the 'stinking dapperling' and leave it alone."
     },
     {
-      "name": "Infundibulicybe / Lepista species",
-      "distinguish": "Some edible (e.g. wood blewit) - careful ID needed."
-    }
-  ],
-  "fun_fact": "Big enough to fill a pan, but the 'edible for some, havoc for others' record is why cautious guides file it under 'not worth the risk'."
-},
-    {
-  "id": "hygrophorus-russula",
-  "name": "Pinkmottle Woodwax",
-  "scientific_name": "Hygrophorus russula",
-  "aliases": [
-    "False russula",
-    "russula-like waxy cap"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "red",
-      "pink",
-      "purple"
-    ],
-    "diameter_cm": [
-      4,
-      12
-    ]
-  },
-  "gills": {
-    "attachment": "decurrent",
-    "spacing": "distant",
-    "colors": [
-      "white",
-      "pink"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "pink"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "temperate northern hemisphere (oaks)",
-  "regions": [
-    "na",
-    "europe",
-    "asia"
-  ],
-  "description": "A striking pink-mottled waxy cap with thick, widely spaced gills. Considered a choice or good edible where it occurs.",
-  "lookalikes": [
-    {
-      "name": "Russula species",
-      "distinguish": "Looks russula-like but has waxy (not brittle) gills; many Russula are edible, some not."
+        "id": "clitocybe-nebularis",
+        "name": "Clouded Funnel",
+        "scientific_name": "Clitocybe nebularis",
+        "aliases": [
+            "clouded agaric",
+            "trooping funnel"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "gray",
+                "brown",
+                "tan"
+            ],
+            "diameter_cm": [
+                5,
+                20
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "crowded",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "gray"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "autumn"
+        ],
+        "distribution": "temperate northern hemisphere",
+        "regions": [
+            "na",
+            "europe",
+            "asia"
+        ],
+        "description": "A large gray funnel that fruits in troops. Technically reported as edible but causes gastric upset in many people; treated as inedible here for safety.",
+        "lookalikes": [
+            {
+                "name": "Clitocybe gibba / other funnels",
+                "distinguish": "Similar shape; most are edible/inedible, none should be eaten casually."
+            },
+            {
+                "name": "Infundibulicybe / Lepista species",
+                "distinguish": "Some edible (e.g. wood blewit) - careful ID needed."
+            }
+        ],
+        "fun_fact": "Big enough to fill a pan, but the 'edible for some, havoc for others' record is why cautious guides file it under 'not worth the risk'."
     },
     {
-      "name": "Hygrophorus pudorinus",
-      "distinguish": "Similar pink woodwax; both edible."
-    }
-  ],
-  "fun_fact": "Despite the 'False russula' nickname, its gills are waxy and flexible - the real tell that it's a Hygrophorus, not a brittle-gilled Russula."
-},
-    {
-  "id": "boletus-variipes",
-  "name": "Variable Bolete",
-  "scientific_name": "Boletus variipes",
-  "aliases": [
-    "variipes bolete"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "tan",
-      "brown",
-      "gray"
-    ],
-    "diameter_cm": [
-      5,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "pores",
-    "spacing": "n/a",
-    "colors": [
-      "white",
-      "yellow",
-      "olive"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "brown"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "olive-brown",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "eastern North America (oaks)",
-  "regions": [
-    "na"
-  ],
-  "description": "A mild, edible bolete with a netted stem and whitish pores that don't stain blue. Good eating; confirm ID and avoid lookalikes.",
-  "lookalikes": [
-    {
-      "name": "Boletus edulis (king bolete)",
-      "distinguish": "Edible relative; variipes is smaller with a more netted stem."
+        "id": "hygrophorus-russula",
+        "name": "Pinkmottle Woodwax",
+        "scientific_name": "Hygrophorus russula",
+        "aliases": [
+            "False russula",
+            "russula-like waxy cap"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "red",
+                "pink",
+                "purple"
+            ],
+            "diameter_cm": [
+                4,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "distant",
+            "colors": [
+                "white",
+                "pink"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "pink"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "temperate northern hemisphere (oaks)",
+        "regions": [
+            "na",
+            "europe",
+            "asia"
+        ],
+        "description": "A striking pink-mottled waxy cap with thick, widely spaced gills. Considered a choice or good edible where it occurs.",
+        "lookalikes": [
+            {
+                "name": "Russula species",
+                "distinguish": "Looks russula-like but has waxy (not brittle) gills; many Russula are edible, some not."
+            },
+            {
+                "name": "Hygrophorus pudorinus",
+                "distinguish": "Similar pink woodwax; both edible."
+            }
+        ],
+        "fun_fact": "Despite the 'False russula' nickname, its gills are waxy and flexible - the real tell that it's a Hygrophorus, not a brittle-gilled Russula."
     },
     {
-      "name": "Tylopilus / bitter boletes",
-      "distinguish": "Some are inedible-bitter; check taste cautiously and spore colour."
-    }
-  ],
-  "fun_fact": "The name 'variipes' (variable foot) nods to its stem, which ranges from smooth to strongly netted across individuals."
-},
-    {
-  "id": "hypomyces-lactifluorum",
-  "name": "Lobster Mushroom",
-  "scientific_name": "Hypomyces lactifluorum",
-  "aliases": [
-    "lobster fungus"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "irregular",
-      "contorted"
-    ],
-    "colors": [
-      "orange",
-      "red-orange",
-      "lobster-red"
-    ],
-    "diameter_cm": [
-      5,
-      20
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "orange"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "orange",
-      "red-orange"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "parasitic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "North America",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Not a freestanding mushroom — a bright orange-red parasitic mold that hijacks Russula and Lactarius hosts and turns them into firm, seafood-scented 'lobster' flesh. White interior, pimpled orange exterior, no free gills. Choice edible when the host is fully colonized and firm; avoid soft or foul-smelling specimens. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Chanterelle",
-      "distinguish": "Chanterelles grow free from soil with False gills; lobster is a contorted orange parasite on another mushroom."
+        "id": "boletus-variipes",
+        "name": "Variable Bolete",
+        "scientific_name": "Boletus variipes",
+        "aliases": [
+            "variipes bolete"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "tan",
+                "brown",
+                "gray"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "pores",
+            "spacing": "n/a",
+            "colors": [
+                "white",
+                "yellow",
+                "olive"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "olive-brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "eastern North America (oaks)",
+        "regions": [
+            "na"
+        ],
+        "description": "A mild, edible bolete with a netted stem and whitish pores that don't stain blue. Good eating; confirm ID and avoid lookalikes.",
+        "lookalikes": [
+            {
+                "name": "Boletus edulis (king bolete)",
+                "distinguish": "Edible relative; variipes is smaller with a more netted stem."
+            },
+            {
+                "name": "Tylopilus / bitter boletes",
+                "distinguish": "Some are inedible-bitter; check taste cautiously and spore colour."
+            }
+        ],
+        "fun_fact": "The name 'variipes' (variable foot) nods to its stem, which ranges from smooth to strongly netted across individuals."
     },
     {
-      "name": "Other Hypomyces species",
-      "distinguish": "Other Hypomyces colors differ (white, yellow, green); H. lactifluorum is distinctly lobster-orange/red."
-    }
-  ],
-  "fun_fact": "The 'mushroom' is two fungi at once — a host plus a parasitic ascomycete that paints it lobster-red and gives it a seafood aroma."
-},
-    {
-  "id": "hericium-americanum",
-  "name": "Bear's Head Tooth",
-  "scientific_name": "Hericium americanum",
-  "aliases": [
-    "bear's head",
-    "bear's-head tooth"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "branched",
-      "tooth"
-    ],
-    "colors": [
-      "white",
-      "cream"
-    ],
-    "diameter_cm": [
-      10,
-      30
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "white"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "late summer",
-    "autumn"
-  ],
-  "distribution": "Eastern North America hardwoods",
-  "regions": [
-    "north-america"
-  ],
-  "description": "A cascading white mass of long spines hanging from branched arms — more open and 'beard-like' than Lion's Mane. Grows on dead or wounded hardwood. Choice edible with a mild seafood-like flavor when young and pure white; no poisonous lookalikes share this tooth-fungus form. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Hericium erinaceus (Lion's Mane)",
-      "distinguish": "Lion's Mane is a single compact pom-pom of spines; Bear's Head is branched and cascading."
+        "id": "hypomyces-lactifluorum",
+        "name": "Lobster Mushroom",
+        "scientific_name": "Hypomyces lactifluorum",
+        "aliases": [
+            "lobster fungus"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "irregular",
+                "contorted"
+            ],
+            "colors": [
+                "orange",
+                "red-orange",
+                "lobster-red"
+            ],
+            "diameter_cm": [
+                5,
+                20
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "orange"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange",
+                "red-orange"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "parasitic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "North America",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Not a freestanding mushroom — a bright orange-red parasitic mold that hijacks Russula and Lactarius hosts and turns them into firm, seafood-scented 'lobster' flesh. White interior, pimpled orange exterior, no free gills. Choice edible when the host is fully colonized and firm; avoid soft or foul-smelling specimens. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Chanterelle",
+                "distinguish": "Chanterelles grow free from soil with False gills; lobster is a contorted orange parasite on another mushroom."
+            },
+            {
+                "name": "Other Hypomyces species",
+                "distinguish": "Other Hypomyces colors differ (white, yellow, green); H. lactifluorum is distinctly lobster-orange/red."
+            }
+        ],
+        "fun_fact": "The 'mushroom' is two fungi at once — a host plus a parasitic ascomycete that paints it lobster-red and gives it a seafood aroma."
     },
     {
-      "name": "Hericium coralloides",
-      "distinguish": "More finely coral-branched with shorter spines; also edible."
-    }
-  ],
-  "fun_fact": "Described as new to science only in 1984 — one of the 'newer' common edibles in North American field guides."
-},
-    {
-  "id": "lactarius-rubidus",
-  "name": "Candy Cap",
-  "scientific_name": "Lactarius rubidus",
-  "aliases": [
-    "candy cap milkcap"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "depressed"
-    ],
-    "colors": [
-      "orange-brown",
-      "rusty-brown",
-      "reddish-brown"
-    ],
-    "diameter_cm": [
-      2,
-      8
-    ]
-  },
-  "gills": {
-    "attachment": "adnate",
-    "spacing": "close",
-    "colors": [
-      "pale orange",
-      "cream"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "orange-brown",
-      "brown"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "cream",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "autumn",
-    "winter"
-  ],
-  "distribution": "Western North America (esp. California coastal forests)",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Small rusty-brown milkcap famous for a maple-syrup / fenugreek scent that intensifies when dried. Latex is watery-white. Used almost exclusively as a dessert flavoring (cookies, ice cream, custards), not a savory saute. Confirm the dried maple aroma — lookalikes lack it. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Other small brown Lactarius",
-      "distinguish": "Only True candy caps develop a strong maple/fenugreek smell when dried; do not rely on color alone."
+        "id": "hericium-americanum",
+        "name": "Bear's Head Tooth",
+        "scientific_name": "Hericium americanum",
+        "aliases": [
+            "bear's head",
+            "bear's-head tooth"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "branched",
+                "tooth"
+            ],
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "diameter_cm": [
+                10,
+                30
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "white"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "late summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America hardwoods",
+        "regions": [
+            "north-america"
+        ],
+        "description": "A cascading white mass of long spines hanging from branched arms — more open and 'beard-like' than Lion's Mane. Grows on dead or wounded hardwood. Choice edible with a mild seafood-like flavor when young and pure white; no poisonous lookalikes share this tooth-fungus form. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Hericium erinaceus (Lion's Mane)",
+                "distinguish": "Lion's Mane is a single compact pom-pom of spines; Bear's Head is branched and cascading."
+            },
+            {
+                "name": "Hericium coralloides",
+                "distinguish": "More finely coral-branched with shorter spines; also edible."
+            }
+        ],
+        "fun_fact": "Described as new to science only in 1984 — one of the 'newer' common edibles in North American field guides."
     },
     {
-      "name": "Lactarius camphoratus",
-      "distinguish": "Related 'curry milkcap' of Europe/elsewhere; similar scent chemistry but different range."
-    }
-  ],
-  "fun_fact": "The maple-syrup smell comes from sotolon — the same compound behind fenugreek and artificial maple flavoring."
-},
-    {
-  "id": "hydnum-repandum",
-  "name": "Hedgehog Mushroom",
-  "scientific_name": "Hydnum repandum",
-  "aliases": [
-    "sweet tooth",
-    "wood hedgehog",
-    "pig's trotter"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "irregular"
-    ],
-    "colors": [
-      "cream",
-      "pale orange",
-      "buff"
-    ],
-    "diameter_cm": [
-      3,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "cream",
-      "pale orange"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "cream"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Northern Hemisphere",
-  "regions": [
-    "north-america",
-    "europe",
-    "asia"
-  ],
-  "description": "Cream to pale-orange mushroom with soft spines (teeth) under the cap instead of gills or pores — the key ID feature. Firm, slightly peppery when raw, excellent sauteed. Essentially no dangerous lookalikes share the tooth underside + pale cap combo, which is why beginners love it. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Hydnum rufescens / other Hydnum",
-      "distinguish": "Smaller or more orange relatives; also edible."
+        "id": "lactarius-rubidus",
+        "name": "Candy Cap",
+        "scientific_name": "Lactarius rubidus",
+        "aliases": [
+            "candy cap milkcap"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "depressed"
+            ],
+            "colors": [
+                "orange-brown",
+                "rusty-brown",
+                "reddish-brown"
+            ],
+            "diameter_cm": [
+                2,
+                8
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "pale orange",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange-brown",
+                "brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "cream",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "autumn",
+            "winter"
+        ],
+        "distribution": "Western North America (esp. California coastal forests)",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Small rusty-brown milkcap famous for a maple-syrup / fenugreek scent that intensifies when dried. Latex is watery-white. Used almost exclusively as a dessert flavoring (cookies, ice cream, custards), not a savory saute. Confirm the dried maple aroma — lookalikes lack it. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Other small brown Lactarius",
+                "distinguish": "Only True candy caps develop a strong maple/fenugreek smell when dried; do not rely on color alone."
+            },
+            {
+                "name": "Lactarius camphoratus",
+                "distinguish": "Related 'curry milkcap' of Europe/elsewhere; similar scent chemistry but different range."
+            }
+        ],
+        "fun_fact": "The maple-syrup smell comes from sotolon — the same compound behind fenugreek and artificial maple flavoring."
     },
     {
-      "name": "Chanterelle",
-      "distinguish": "Chanterelles have False gills (ridges), not soft downward spines."
-    }
-  ],
-  "fun_fact": "One of the few choice edibles that almost never gets confused with anything deadly — a classic 'safe beginner' species."
-},
-    {
-  "id": "lactarius-indigo",
-  "name": "Indigo Milk Cap",
-  "scientific_name": "Lactarius indigo",
-  "aliases": [
-    "blue milk mushroom",
-    "indigo milky",
-    "blue lactarius"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "convex",
-      "depressed",
-      "funnel"
-    ],
-    "colors": [
-      "blue",
-      "indigo",
-      "silvery-blue"
-    ],
-    "diameter_cm": [
-      5,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "adnate",
-    "spacing": "close",
-    "colors": [
-      "blue",
-      "indigo"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "blue",
-      "indigo"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "cream",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Eastern and southern North America, Central America, East Asia",
-  "regions": [
-    "north-america",
-    "asia"
-  ],
-  "description": "Unmistakable solid-blue milkcap that bleeds deep indigo latex when cut. Cap often zoned and funneling with age. Edible and mild; latex can stain food blue-green. Color alone makes confusion with deadly species unlikely, but always confirm milkcap traits (brittle flesh, latex). Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Lactarius chelidonium / other blue-staining milkcaps",
-      "distinguish": "Usually only partly blue or stain blue rather than being solid indigo throughout."
+        "id": "hydnum-repandum",
+        "name": "Hedgehog Mushroom",
+        "scientific_name": "Hydnum repandum",
+        "aliases": [
+            "sweet tooth",
+            "wood hedgehog",
+            "pig's trotter"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "irregular"
+            ],
+            "colors": [
+                "cream",
+                "pale orange",
+                "buff"
+            ],
+            "diameter_cm": [
+                3,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "cream",
+                "pale orange"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Cream to pale-orange mushroom with soft spines (teeth) under the cap instead of gills or pores — the key ID feature. Firm, slightly peppery when raw, excellent sauteed. Essentially no dangerous lookalikes share the tooth underside + pale cap combo, which is why beginners love it. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Hydnum rufescens / other Hydnum",
+                "distinguish": "Smaller or more orange relatives; also edible."
+            },
+            {
+                "name": "Chanterelle",
+                "distinguish": "Chanterelles have False gills (ridges), not soft downward spines."
+            }
+        ],
+        "fun_fact": "One of the few choice edibles that almost never gets confused with anything deadly — a classic 'safe beginner' species."
     },
     {
-      "name": "Cortinarius species with blue tones",
-      "distinguish": "Cortinarius has a cobweb veil and rusty-brown spores; no blue milk."
-    }
-  ],
-  "fun_fact": "One of the only mushrooms that is truly blue in the field — the pigment is a azulene compound rare in fungi."
-},
-    {
-  "id": "entoloma-abortivum",
-  "name": "Shrimp of the Woods",
-  "scientific_name": "Entoloma abortivum",
-  "aliases": [
-    "aborted entoloma",
-    "shrimp mushroom"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "convex",
-      "irregular",
-      "aborted lump"
-    ],
-    "colors": [
-      "gray",
-      "gray-brown",
-      "white",
-      "pinkish"
-    ],
-    "diameter_cm": [
-      2,
-      10
-    ]
-  },
-  "gills": {
-    "attachment": "adnate",
-    "spacing": "close",
-    "colors": [
-      "gray",
-      "pink"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "gray"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "pink",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "parasitic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Eastern North America",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Two forms: a normal gray gilled Entoloma, and the prized 'aborted' white-pink lumpy form created when it parasitizes Armillaria (honey fungus). Aborted blobs have a firm, shrimp-like texture and mild flavor when cooked thoroughly. Pink spore print on the gilled form. Only eat clearly aborted, firm specimens from known grounds. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Puffballs",
-      "distinguish": "Puffballs are pure white inside with no chambered/mottled tissue; aborted Entoloma shows marbled pink-white interior."
+        "id": "lactarius-indigo",
+        "name": "Indigo Milk Cap",
+        "scientific_name": "Lactarius indigo",
+        "aliases": [
+            "blue milk mushroom",
+            "indigo milky",
+            "blue lactarius"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "depressed",
+                "funnel"
+            ],
+            "colors": [
+                "blue",
+                "indigo",
+                "silvery-blue"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "blue",
+                "indigo"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "blue",
+                "indigo"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "cream",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern and southern North America, Central America, East Asia",
+        "regions": [
+            "north-america",
+            "asia"
+        ],
+        "description": "Unmistakable solid-blue milkcap that bleeds deep indigo latex when cut. Cap often zoned and funneling with age. Edible and mild; latex can stain food blue-green. Color alone makes confusion with deadly species unlikely, but always confirm milkcap traits (brittle flesh, latex). Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Lactarius chelidonium / other blue-staining milkcaps",
+                "distinguish": "Usually only partly blue or stain blue rather than being solid indigo throughout."
+            },
+            {
+                "name": "Cortinarius species with blue tones",
+                "distinguish": "Cortinarius has a cobweb veil and rusty-brown spores; no blue milk."
+            }
+        ],
+        "fun_fact": "One of the only mushrooms that is truly blue in the field — the pigment is a azulene compound rare in fungi."
     },
     {
-      "name": "Other Entoloma species",
-      "distinguish": "Many Entoloma are poisonous; do not eat the normal gilled form unless expertly ID'd — the aborted form is the usual culinary target."
-    }
-  ],
-  "fun_fact": "The 'shrimp' lumps are a three-way drama: honey fungus vs. Entoloma vs. you with a frying pan."
-},
-    {
-  "id": "pluteus-cervinus",
-  "name": "Deer Mushroom",
-  "scientific_name": "Pluteus cervinus",
-  "aliases": [
-    "deer shield",
-    "fawn mushroom"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "brown",
-      "gray-brown",
-      "fawn"
-    ],
-    "diameter_cm": [
-      4,
-      12
-    ]
-  },
-  "gills": {
-    "attachment": "free",
-    "spacing": "close",
-    "colors": [
-      "white",
-      "pink"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "fibrous brown"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "pink",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring",
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Widespread Northern Hemisphere",
-  "regions": [
-    "north-america",
-    "europe",
-    "asia"
-  ],
-  "description": "Common brown wood-rotting mushroom with free gills that start white and turn pink, and a pink spore print. Cap is smooth to faintly radially streaked; stem lacks a ring and volva. Edible when cooked but mediocre and easy to confuse with less desirable Pluteus and Entoloma — not a beginner target. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Entoloma species",
-      "distinguish": "Entoloma gills are attached (not free) and many are poisonous; check attachment carefully."
+        "id": "entoloma-abortivum",
+        "name": "Shrimp of the Woods",
+        "scientific_name": "Entoloma abortivum",
+        "aliases": [
+            "aborted entoloma",
+            "shrimp mushroom"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "irregular",
+                "aborted lump"
+            ],
+            "colors": [
+                "gray",
+                "gray-brown",
+                "white",
+                "pinkish"
+            ],
+            "diameter_cm": [
+                2,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "gray",
+                "pink"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "gray"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pink",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "parasitic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Two forms: a normal gray gilled Entoloma, and the prized 'aborted' white-pink lumpy form created when it parasitizes Armillaria (honey fungus). Aborted blobs have a firm, shrimp-like texture and mild flavor when cooked thoroughly. Pink spore print on the gilled form. Only eat clearly aborted, firm specimens from known grounds. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Puffballs",
+                "distinguish": "Puffballs are pure white inside with no chambered/mottled tissue; aborted Entoloma shows marbled pink-white interior."
+            },
+            {
+                "name": "Other Entoloma species",
+                "distinguish": "Many Entoloma are poisonous; do not eat the normal gilled form unless expertly ID'd — the aborted form is the usual culinary target."
+            }
+        ],
+        "fun_fact": "The 'shrimp' lumps are a three-way drama: honey fungus vs. Entoloma vs. you with a frying pan."
     },
     {
-      "name": "Amanita species (young)",
-      "distinguish": "Amanitas have a volva and often a ring; Pluteus has neither."
-    }
-  ],
-  "fun_fact": "Named 'cervinus' for the fawn-brown cap — one of the most frequently photographed 'mystery browns' on dead logs."
-},
-    {
-  "id": "cantharellus-cinnabarinus",
-  "name": "Cinnabar Chanterelle",
-  "scientific_name": "Cantharellus cinnabarinus",
-  "aliases": [
-    "red chanterelle",
-    "cinnabar red chanterelle"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "funnel",
-      "wavy"
-    ],
-    "colors": [
-      "cinnabar-red",
-      "pink-red",
-      "orange-red"
-    ],
-    "diameter_cm": [
-      1,
-      5
-    ]
-  },
-  "gills": {
-    "attachment": "decurrent",
-    "spacing": "distant",
-    "colors": [
-      "pink-red",
-      "cinnabar"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "cinnabar-red",
-      "pink-red"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "pinkish-cream",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Eastern North America",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Small, vivid cinnabar-red chanterelle with False gills (ridges) running down a matching red stem. Smaller and redder than golden chanterelles. Choice edible with classic fruity chanterelle aroma. Color + False gills separate it from most lookalikes. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Hygrocybe / waxcaps",
-      "distinguish": "Waxcaps have True thin gills and a waxy texture, not blunt False-gill ridges."
+        "id": "pluteus-cervinus",
+        "name": "Deer Mushroom",
+        "scientific_name": "Pluteus cervinus",
+        "aliases": [
+            "deer shield",
+            "fawn mushroom"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "gray-brown",
+                "fawn"
+            ],
+            "diameter_cm": [
+                4,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "pink"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "fibrous brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pink",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Widespread Northern Hemisphere",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Common brown wood-rotting mushroom with free gills that start white and turn pink, and a pink spore print. Cap is smooth to faintly radially streaked; stem lacks a ring and volva. Edible when cooked but mediocre and easy to confuse with less desirable Pluteus and Entoloma — not a beginner target. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Entoloma species",
+                "distinguish": "Entoloma gills are attached (not free) and many are poisonous; check attachment carefully."
+            },
+            {
+                "name": "Amanita species (young)",
+                "distinguish": "Amanitas have a volva and often a ring; Pluteus has neither."
+            }
+        ],
+        "fun_fact": "Named 'cervinus' for the fawn-brown cap — one of the most frequently photographed 'mystery browns' on dead logs."
     },
     {
-      "name": "Cantharellus texensis / other red chanterelles",
-      "distinguish": "Regional red chanterelles; treat similarly but confirm local species."
-    }
-  ],
-  "fun_fact": "Its pigment is a carotenoid — the same chemical family that makes carrots orange and flamingos pink."
-},
-    {
-  "id": "pleurotus-citrinopileatus",
-  "name": "Golden Oyster",
-  "scientific_name": "Pleurotus citrinopileatus",
-  "aliases": [
-    "yellow oyster",
-    "tamogitake"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "funnel",
-      "fan"
-    ],
-    "colors": [
-      "bright yellow",
-      "golden"
-    ],
-    "diameter_cm": [
-      2,
-      8
-    ]
-  },
-  "gills": {
-    "attachment": "decurrent",
-    "spacing": "crowded",
-    "colors": [
-      "white",
-      "pale yellow"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "pale yellow"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "lilac-gray",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring",
-    "summer",
-    "autumn"
-  ],
-  "distribution": "East Asia (native); widely cultivated and naturalizing elsewhere",
-  "regions": [
-    "asia",
-    "north-america",
-    "europe"
-  ],
-  "description": "Brilliant yellow oyster that fruits in dense clusters on hardwood. Caps are thin, often funneling; flavor is nutty and more fragile than gray oysters. Extremely common in grow kits and farmers markets. Same free/no-volva oyster anatomy as P. ostreatus. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Omphalotus (jack-o'-lantern)",
-      "distinguish": "Jack-o'-lantern is orange (not pure yellow), has True gills to a central/eccentric stem cluster on wood, and is poisonous."
+        "id": "cantharellus-cinnabarinus",
+        "name": "Cinnabar Chanterelle",
+        "scientific_name": "Cantharellus cinnabarinus",
+        "aliases": [
+            "red chanterelle",
+            "cinnabar red chanterelle"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "funnel",
+                "wavy"
+            ],
+            "colors": [
+                "cinnabar-red",
+                "pink-red",
+                "orange-red"
+            ],
+            "diameter_cm": [
+                1,
+                5
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "distant",
+            "colors": [
+                "pink-red",
+                "cinnabar"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "cinnabar-red",
+                "pink-red"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pinkish-cream",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Small, vivid cinnabar-red chanterelle with False gills (ridges) running down a matching red stem. Smaller and redder than golden chanterelles. Choice edible with classic fruity chanterelle aroma. Color + False gills separate it from most lookalikes. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Hygrocybe / waxcaps",
+                "distinguish": "Waxcaps have True thin gills and a waxy texture, not blunt False-gill ridges."
+            },
+            {
+                "name": "Cantharellus texensis / other red chanterelles",
+                "distinguish": "Regional red chanterelles; treat similarly but confirm local species."
+            }
+        ],
+        "fun_fact": "Its pigment is a carotenoid — the same chemical family that makes carrots orange and flamingos pink."
     },
     {
-      "name": "Other Pleurotus",
-      "distinguish": "Color is the giveaway — golden oysters are neon yellow when fresh."
-    }
-  ],
-  "fun_fact": "Native to East Asia but now pops up wild near cities from spore escapes off grow kits — a culinary invasive of sorts."
-},
-    {
-  "id": "stereum-ostrea",
-  "name": "False Turkey Tail",
-  "scientific_name": "Stereum ostrea",
-  "aliases": [
-    "golden curtain crust",
-    "False turkey-tail"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "shelf",
-      "fan"
-    ],
-    "colors": [
-      "orange",
-      "brown",
-      "buff",
-      "zoned"
-    ],
-    "diameter_cm": [
-      1,
-      7
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "smooth orange-buff"
-    ]
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "year-round"
-  ],
-  "distribution": "Widespread",
-  "regions": [
-    "global"
-  ],
-  "description": "Thin, zoned, multicolored crust fungus often mistaken for turkey tail. Underside is smooth (no pores) — the critical tell versus True turkey tail (Trametes versicolor), which has visible pores. Tough and inedible; sometimes used in natural dyeing. Educational reference only.",
-  "lookalikes": [
-    {
-      "name": "Trametes versicolor (Turkey Tail)",
-      "distinguish": "True turkey tail has a white pore surface with tiny visible pores; Stereum is smooth underneath."
+        "id": "pleurotus-citrinopileatus",
+        "name": "Golden Oyster",
+        "scientific_name": "Pleurotus citrinopileatus",
+        "aliases": [
+            "yellow oyster",
+            "tamogitake"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "funnel",
+                "fan"
+            ],
+            "colors": [
+                "bright yellow",
+                "golden"
+            ],
+            "diameter_cm": [
+                2,
+                8
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "crowded",
+            "colors": [
+                "white",
+                "pale yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "pale yellow"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "lilac-gray",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "distribution": "East Asia (native); widely cultivated and naturalizing elsewhere",
+        "regions": [
+            "asia",
+            "north-america",
+            "europe"
+        ],
+        "description": "Brilliant yellow oyster that fruits in dense clusters on hardwood. Caps are thin, often funneling; flavor is nutty and more fragile than gray oysters. Extremely common in grow kits and farmers markets. Same free/no-volva oyster anatomy as P. ostreatus. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Omphalotus (jack-o'-lantern)",
+                "distinguish": "Jack-o'-lantern is orange (not pure yellow), has True gills to a central/eccentric stem cluster on wood, and is poisonous."
+            },
+            {
+                "name": "Other Pleurotus",
+                "distinguish": "Color is the giveaway — golden oysters are neon yellow when fresh."
+            }
+        ],
+        "fun_fact": "Native to East Asia but now pops up wild near cities from spore escapes off grow kits — a culinary invasive of sorts."
     },
     {
-      "name": "Other Stereum species",
-      "distinguish": "Similar smooth undersides; field separation often needs close look at zones and substrate."
-    }
-  ],
-  "fun_fact": "If you flip a 'turkey tail' and see no pores, you've found the classic beginner trap — False turkey tail."
-},
-    {
-  "id": "ganoderma-applanatum",
-  "name": "Artist's Conk",
-  "scientific_name": "Ganoderma applanatum",
-  "aliases": [
-    "artist's bracket",
-    "artist conk"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "shelf",
-      "hoof"
-    ],
-    "colors": [
-      "brown",
-      "gray-brown",
-      "zoned"
-    ],
-    "diameter_cm": [
-      10,
-      60
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "white pores"
-    ]
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "year-round"
-  ],
-  "distribution": "Cosmopolitan",
-  "regions": [
-    "global"
-  ],
-  "description": "Large perennial woody bracket with a brown top and white pore surface that bruises brown when scratched — people literally draw on it, hence 'artist's conk'. Inedible (woody). Related to reishi but dull-surfaced, not lacquered. Educational reference only.",
-  "lookalikes": [
-    {
-      "name": "Ganoderma lucidum / tsugae (reishi group)",
-      "distinguish": "Reishi have a shiny lacquered cap; artist's conk is matte and dusty-brown."
+        "id": "stereum-ostrea",
+        "name": "False Turkey Tail",
+        "scientific_name": "Stereum ostrea",
+        "aliases": [
+            "golden curtain crust",
+            "False turkey-tail"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "shelf",
+                "fan"
+            ],
+            "colors": [
+                "orange",
+                "brown",
+                "buff",
+                "zoned"
+            ],
+            "diameter_cm": [
+                1,
+                7
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "smooth orange-buff"
+            ]
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "year-round"
+        ],
+        "distribution": "Widespread",
+        "regions": [
+            "global"
+        ],
+        "description": "Thin, zoned, multicolored crust fungus often mistaken for turkey tail. Underside is smooth (no pores) — the critical tell versus True turkey tail (Trametes versicolor), which has visible pores. Tough and inedible; sometimes used in natural dyeing. Educational reference only.",
+        "lookalikes": [
+            {
+                "name": "Trametes versicolor (Turkey Tail)",
+                "distinguish": "True turkey tail has a white pore surface with tiny visible pores; Stereum is smooth underneath."
+            },
+            {
+                "name": "Other Stereum species",
+                "distinguish": "Similar smooth undersides; field separation often needs close look at zones and substrate."
+            }
+        ],
+        "fun_fact": "If you flip a 'turkey tail' and see no pores, you've found the classic beginner trap — False turkey tail."
     },
     {
-      "name": "Fomes fomentarius",
-      "distinguish": "Hoof-shaped tinder fungus with gray zones; pore surface does not draw as cleanly."
-    }
-  ],
-  "fun_fact": "The white pore surface is a natural sketchpad — scratches oxidize brown and become permanent 'ink'."
-},
-    {
-  "id": "ganoderma-tsugae",
-  "name": "Hemlock Reishi",
-  "scientific_name": "Ganoderma tsugae",
-  "aliases": [
-    "hemlock varnish shelf"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "shelf",
-      "kidney"
-    ],
-    "colors": [
-      "red",
-      "reddish-brown",
-      "orange",
-      "varnished"
-    ],
-    "diameter_cm": [
-      5,
-      30
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "white pores"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "red",
-      "reddish-brown"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Northern North America on hemlock and other conifers",
-  "regions": [
-    "north-america"
-  ],
-  "description": "North America's lacquered red reishi-like polypore, typically on hemlock. Shiny varnish, white pores, woody flesh — used in teas/extracts traditionally but not eaten as food (too tough). Distinct from True Asian G. lucidum / G. lingzhi by host and genetics. Educational reference only — never consume wild medicinals based on an app.",
-  "lookalikes": [
-    {
-      "name": "Ganoderma lucidum / sessile / curtisii",
-      "distinguish": "Host tree and geography matter; G. tsugae prefers hemlock/conifer in the north."
+        "id": "ganoderma-applanatum",
+        "name": "Artist's Conk",
+        "scientific_name": "Ganoderma applanatum",
+        "aliases": [
+            "artist's bracket",
+            "artist conk"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "shelf",
+                "hoof"
+            ],
+            "colors": [
+                "brown",
+                "gray-brown",
+                "zoned"
+            ],
+            "diameter_cm": [
+                10,
+                60
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "white pores"
+            ]
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "year-round"
+        ],
+        "distribution": "Cosmopolitan",
+        "regions": [
+            "global"
+        ],
+        "description": "Large perennial woody bracket with a brown top and white pore surface that bruises brown when scratched — people literally draw on it, hence 'artist's conk'. Inedible (woody). Related to reishi but dull-surfaced, not lacquered. Educational reference only.",
+        "lookalikes": [
+            {
+                "name": "Ganoderma lucidum / tsugae (reishi group)",
+                "distinguish": "Reishi have a shiny lacquered cap; artist's conk is matte and dusty-brown."
+            },
+            {
+                "name": "Fomes fomentarius",
+                "distinguish": "Hoof-shaped tinder fungus with gray zones; pore surface does not draw as cleanly."
+            }
+        ],
+        "fun_fact": "The white pore surface is a natural sketchpad — scratches oxidize brown and become permanent 'ink'."
     },
     {
-      "name": "Ganoderma applanatum",
-      "distinguish": "Artist's conk is dull brown, not lacquered red."
-    }
-  ],
-  "fun_fact": "If you find a shiny red shelf on a hemlock stump in the Northeast or Great Lakes, this is usually the one — not imported Asian reishi."
-},
-    {
-  "id": "fomitopsis-betulina",
-  "name": "Birch Polypore",
-  "scientific_name": "Fomitopsis betulina",
-  "aliases": [
-    "birch bracket",
-    "razor strop",
-    "Piptoporus betulinus"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "hoof",
-      "kidney"
-    ],
-    "colors": [
-      "white",
-      "pale brown",
-      "grayish"
-    ],
-    "diameter_cm": [
-      5,
-      25
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "white pores"
-    ]
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "year-round"
-  ],
-  "distribution": "Northern Hemisphere on birch",
-  "regions": [
-    "north-america",
-    "europe",
-    "asia"
-  ],
-  "description": "Common pale hoof-shaped bracket almost exclusive to birch. Soft when young, corky later; historically used as a razor strop and folk medicine. Inedible as food. Famous from Otzi the Iceman's kit. Educational reference only.",
-  "lookalikes": [
-    {
-      "name": "Other white brackets on birch",
-      "distinguish": "Birch polypore's smooth pale cap + exclusive birch host is distinctive."
+        "id": "ganoderma-tsugae",
+        "name": "Hemlock Reishi",
+        "scientific_name": "Ganoderma tsugae",
+        "aliases": [
+            "hemlock varnish shelf"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "shelf",
+                "kidney"
+            ],
+            "colors": [
+                "red",
+                "reddish-brown",
+                "orange",
+                "varnished"
+            ],
+            "diameter_cm": [
+                5,
+                30
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "white pores"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "red",
+                "reddish-brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern North America on hemlock and other conifers",
+        "regions": [
+            "north-america"
+        ],
+        "description": "North America's lacquered red reishi-like polypore, typically on hemlock. Shiny varnish, white pores, woody flesh — used in teas/extracts traditionally but not eaten as food (too tough). Distinct from True Asian G. lucidum / G. lingzhi by host and genetics. Educational reference only — never consume wild medicinals based on an app.",
+        "lookalikes": [
+            {
+                "name": "Ganoderma lucidum / sessile / curtisii",
+                "distinguish": "Host tree and geography matter; G. tsugae prefers hemlock/conifer in the north."
+            },
+            {
+                "name": "Ganoderma applanatum",
+                "distinguish": "Artist's conk is dull brown, not lacquered red."
+            }
+        ],
+        "fun_fact": "If you find a shiny red shelf on a hemlock stump in the Northeast or Great Lakes, this is usually the one — not imported Asian reishi."
     },
     {
-      "name": "Fomes fomentarius",
-      "distinguish": "Harder, gray-zoned hoof; not soft/pale like young birch polypore."
-    }
-  ],
-  "fun_fact": "Otzi the Iceman carried birch polypore 5,000+ years ago — likely as tinder or medicine."
-},
-    {
-  "id": "xylaria-polymorpha",
-  "name": "Dead Man's Fingers",
-  "scientific_name": "Xylaria polymorpha",
-  "aliases": [
-    "dead mans fingers"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "club",
-      "finger"
-    ],
-    "colors": [
-      "black",
-      "dark brown",
-      "white-tipped when young"
-    ],
-    "diameter_cm": [
-      1,
-      8
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "black"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "black",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "year-round"
-  ],
-  "distribution": "Cosmopolitan",
-  "regions": [
-    "global"
-  ],
-  "description": "Eerie black club-shaped fruitbodies rising in clusters from buried hardwood — looking uncannily like charred fingers. Interior is white with a black outer crust. Inedible. A favorite of photographers and Halloween hike leaders. Educational reference only.",
-  "lookalikes": [
-    {
-      "name": "Xylaria hypoxylon (candlesnuff)",
-      "distinguish": "Thinner, antler-like, often powdery white at tips."
+        "id": "fomitopsis-betulina",
+        "name": "Birch Polypore",
+        "scientific_name": "Fomitopsis betulina",
+        "aliases": [
+            "birch bracket",
+            "razor strop",
+            "Piptoporus betulinus"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "hoof",
+                "kidney"
+            ],
+            "colors": [
+                "white",
+                "pale brown",
+                "grayish"
+            ],
+            "diameter_cm": [
+                5,
+                25
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "white pores"
+            ]
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "year-round"
+        ],
+        "distribution": "Northern Hemisphere on birch",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Common pale hoof-shaped bracket almost exclusive to birch. Soft when young, corky later; historically used as a razor strop and folk medicine. Inedible as food. Famous from Otzi the Iceman's kit. Educational reference only.",
+        "lookalikes": [
+            {
+                "name": "Other white brackets on birch",
+                "distinguish": "Birch polypore's smooth pale cap + exclusive birch host is distinctive."
+            },
+            {
+                "name": "Fomes fomentarius",
+                "distinguish": "Harder, gray-zoned hoof; not soft/pale like young birch polypore."
+            }
+        ],
+        "fun_fact": "Otzi the Iceman carried birch polypore 5,000+ years ago — likely as tinder or medicine."
     },
     {
-      "name": "Dead man's foot (Pisolithus)",
-      "distinguish": "A powdery earthball mass, not upright black clubs."
-    }
-  ],
-  "fun_fact": "Young 'fingers' are pale and powdery with asexual spores before they blacken into the classic corpse-hand look."
-},
-    {
-  "id": "morchella-importuna",
-  "name": "Landscape Morel",
-  "scientific_name": "Morchella importuna",
-  "aliases": [
-    "mulch morel",
-    "landscape morel"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "conical",
-      "pitted"
-    ],
-    "colors": [
-      "gray",
-      "brown",
-      "dark brown"
-    ],
-    "diameter_cm": [
-      4,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "cream"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "cream",
-  "habitat": "urban",
-  "substrate": "woodchips",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring"
-  ],
-  "distribution": "North America (urban landscaping); described 2012",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Blackish morel that fruits prolifically in woodchip beds, gardens, and landscaped areas in spring. Cap is attached to the stem with deep pits and ridges (True morel, hollow throughout). Choice edible when cooked thoroughly — raw morels cause GI distress. Must be distinguished from False morels (Gyromitra/Verpa). Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Gyromitra (False morels)",
-      "distinguish": "Brain-like wrinkled caps, not honeycomb pits; many contain gyromitrin and are dangerous."
+        "id": "xylaria-polymorpha",
+        "name": "Dead Man's Fingers",
+        "scientific_name": "Xylaria polymorpha",
+        "aliases": [
+            "dead mans fingers"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "club",
+                "finger"
+            ],
+            "colors": [
+                "black",
+                "dark brown",
+                "white-tipped when young"
+            ],
+            "diameter_cm": [
+                1,
+                8
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "black"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "black",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "year-round"
+        ],
+        "distribution": "Cosmopolitan",
+        "regions": [
+            "global"
+        ],
+        "description": "Eerie black club-shaped fruitbodies rising in clusters from buried hardwood — looking uncannily like charred fingers. Interior is white with a black outer crust. Inedible. A favorite of photographers and Halloween hike leaders. Educational reference only.",
+        "lookalikes": [
+            {
+                "name": "Xylaria hypoxylon (candlesnuff)",
+                "distinguish": "Thinner, antler-like, often powdery white at tips."
+            },
+            {
+                "name": "Dead man's foot (Pisolithus)",
+                "distinguish": "A powdery earthball mass, not upright black clubs."
+            }
+        ],
+        "fun_fact": "Young 'fingers' are pale and powdery with asexual spores before they blacken into the classic corpse-hand look."
     },
     {
-      "name": "Verpa species",
-      "distinguish": "Cap hangs free around the stem like a thimble; morel caps are fused to the stem and fully hollow."
-    }
-  ],
-  "fun_fact": "Described as a distinct species only in 2012 — the 'mulch morel' city foragers had been picking for years finally got a name."
-},
-    {
-  "id": "lactarius-volemus",
-  "name": "Weeping Milk Cap",
-  "scientific_name": "Lactarius volemus",
-  "aliases": [
-    "bradley",
-    "weeping milkcap",
-    "Lactifluus volemus"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "orange-brown",
-      "tawny",
-      "apricot"
-    ],
-    "diameter_cm": [
-      5,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "adnate",
-    "spacing": "close",
-    "colors": [
-      "cream",
-      "pale yellow"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "orange-brown",
-      "tawny"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Northern Hemisphere hardwoods",
-  "regions": [
-    "north-america",
-    "europe",
-    "asia"
-  ],
-  "description": "Stout orange-brown milkcap that gushes abundant white latex and smells strongly fishy (or shellfish-like) when mature — the scent is diagnostic, not a spoilage sign. Choice edible in many regions despite the odor, which mellows with cooking. Brittle russula-like flesh. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Other orange Lactarius / Lactifluus",
-      "distinguish": "Copious latex + strong fishy odor is the classic volemus combo."
+        "id": "morchella-importuna",
+        "name": "Landscape Morel",
+        "scientific_name": "Morchella importuna",
+        "aliases": [
+            "mulch morel",
+            "landscape morel"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "conical",
+                "pitted"
+            ],
+            "colors": [
+                "gray",
+                "brown",
+                "dark brown"
+            ],
+            "diameter_cm": [
+                4,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "cream",
+        "habitat": "urban",
+        "substrate": "woodchips",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring"
+        ],
+        "distribution": "North America (urban landscaping); described 2012",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Blackish morel that fruits prolifically in woodchip beds, gardens, and landscaped areas in spring. Cap is attached to the stem with deep pits and ridges (True morel, hollow throughout). Choice edible when cooked thoroughly — raw morels cause GI distress. Must be distinguished from False morels (Gyromitra/Verpa). Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Gyromitra (False morels)",
+                "distinguish": "Brain-like wrinkled caps, not honeycomb pits; many contain gyromitrin and are dangerous."
+            },
+            {
+                "name": "Verpa species",
+                "distinguish": "Cap hangs free around the stem like a thimble; morel caps are fused to the stem and fully hollow."
+            }
+        ],
+        "fun_fact": "Described as a distinct species only in 2012 — the 'mulch morel' city foragers had been picking for years finally got a name."
     },
     {
-      "name": "Lactarius corrugis",
-      "distinguish": "Closely related 'corrugated-cap' bradley; also edible where known."
-    }
-  ],
-  "fun_fact": "Now often placed in Lactifluus, not Lactarius — taxonomy moved, the fishy perfume did not."
-},
-    {
-  "id": "cortinarius-caperatus",
-  "name": "The Gypsy",
-  "scientific_name": "Cortinarius caperatus",
-  "aliases": [
-    "gypsy mushroom",
-    "wrinkled cort",
-    "Rozites caperata"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "convex",
-      "wrinkled"
-    ],
-    "colors": [
-      "ochre",
-      "tan",
-      "pale brown"
-    ],
-    "diameter_cm": [
-      5,
-      12
-    ]
-  },
-  "gills": {
-    "attachment": "adnate",
-    "spacing": "close",
-    "colors": [
-      "lilac",
-      "clay",
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "pale ochre"
-    ],
-    "ring": True,
-    "volva": False
-  },
-  "spore_print": "rusty-brown",
-  "habitat": "forest",
-  "substrate": "ground",
-  "ecology": "mycorrhizal",
-  "season": [
-    "late summer",
-    "autumn"
-  ],
-  "distribution": "Northern Hemisphere conifer and mixed woods",
-  "regions": [
-    "north-america",
-    "europe",
-    "asia"
-  ],
-  "description": "One of the few Cortinarius traditionally eaten. Ochre wrinkled cap, cobweb cortina that leaves a ring zone, and rusty-brown spores. Still: Cortinarius as a genus contains deadly species (orellanus group) — only experts should collect any cort. Listed here as educational context, not a recommendation. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Deadly Cortinarius (orellanus / rubellus group)",
-      "distinguish": "Often more orange-brown/rusty; never eat corts unless identity is certain — orellanine poisoning is delayed and severe."
+        "id": "lactarius-volemus",
+        "name": "Weeping Milk Cap",
+        "scientific_name": "Lactarius volemus",
+        "aliases": [
+            "bradley",
+            "weeping milkcap",
+            "Lactifluus volemus"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "orange-brown",
+                "tawny",
+                "apricot"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "cream",
+                "pale yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange-brown",
+                "tawny"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere hardwoods",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Stout orange-brown milkcap that gushes abundant white latex and smells strongly fishy (or shellfish-like) when mature — the scent is diagnostic, not a spoilage sign. Choice edible in many regions despite the odor, which mellows with cooking. Brittle russula-like flesh. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Other orange Lactarius / Lactifluus",
+                "distinguish": "Copious latex + strong fishy odor is the classic volemus combo."
+            },
+            {
+                "name": "Lactarius corrugis",
+                "distinguish": "Closely related 'corrugated-cap' bradley; also edible where known."
+            }
+        ],
+        "fun_fact": "Now often placed in Lactifluus, not Lactarius — taxonomy moved, the fishy perfume did not."
     },
     {
-      "name": "Other wrinkled-cap browns",
-      "distinguish": "Rusty spore print + cortina remnants point to Cortinarius."
-    }
-  ],
-  "fun_fact": "Long filed as Rozites caperata before DNA stuffed it back into Cortinarius — still the 'friendly' face of a dangerous genus."
-},
-    {
-  "id": "pholiota-nameko",
-  "name": "Nameko",
-  "scientific_name": "Pholiota nameko",
-  "aliases": [
-    "butterscotch mushroom",
-    "Pholiota microspora"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "sticky"
-    ],
-    "colors": [
-      "amber",
-      "orange-brown",
-      "butterscotch"
-    ],
-    "diameter_cm": [
-      2,
-      6
-    ]
-  },
-  "gills": {
-    "attachment": "adnate",
-    "spacing": "close",
-    "colors": [
-      "yellow",
-      "brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "amber",
-      "brown"
-    ],
-    "ring": True,
-    "volva": False
-  },
-  "spore_print": "brown",
-  "habitat": "forest",
-  "substrate": "deadwood",
-  "ecology": "saprotrophic",
-  "season": [
-    "autumn"
-  ],
-  "distribution": "East Asia (native); widely cultivated",
-  "regions": [
-    "asia"
-  ],
-  "description": "Small amber-brown mushroom with a glossy gelatinous cap coating — the signature nameko slime that thickens soups. Staple of Japanese cuisine (miso soup, nabemono). Almost always encountered cultivated rather than wild outside Asia. Educational reference only — never eat a wild Pholiota based on an app (some wild Pholiota are poor edibles or GI irritants).",
-  "lookalikes": [
-    {
-      "name": "Other Pholiota (e.g. P. aurivella, P. squarrosa)",
-      "distinguish": "Scalier caps, different slime profile; not all Pholiota are good edibles."
+        "id": "cortinarius-caperatus",
+        "name": "The Gypsy",
+        "scientific_name": "Cortinarius caperatus",
+        "aliases": [
+            "gypsy mushroom",
+            "wrinkled cort",
+            "Rozites caperata"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "wrinkled"
+            ],
+            "colors": [
+                "ochre",
+                "tan",
+                "pale brown"
+            ],
+            "diameter_cm": [
+                5,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "lilac",
+                "clay",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "pale ochre"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "rusty-brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "late summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere conifer and mixed woods",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "One of the few Cortinarius traditionally eaten. Ochre wrinkled cap, cobweb cortina that leaves a ring zone, and rusty-brown spores. Still: Cortinarius as a genus contains deadly species (orellanus group) — only experts should collect any cort. Listed here as educational context, not a recommendation. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Deadly Cortinarius (orellanus / rubellus group)",
+                "distinguish": "Often more orange-brown/rusty; never eat corts unless identity is certain — orellanine poisoning is delayed and severe."
+            },
+            {
+                "name": "Other wrinkled-cap browns",
+                "distinguish": "Rusty spore print + cortina remnants point to Cortinarius."
+            }
+        ],
+        "fun_fact": "Long filed as Rozites caperata before DNA stuffed it back into Cortinarius — still the 'friendly' face of a dangerous genus."
     },
     {
-      "name": "Galerina / deadly little browns",
-      "distinguish": "Never casually ID small brown wood mushrooms — Galerina marginata is deadly."
-    }
-  ],
-  "fun_fact": "That glossy slime isn't a flaw — it's the point. Nameko's mucilage is what gives Japanese soups their silky body."
-},
-    {
-  "id": "agaricus-bitorquis",
-  "name": "Pavement Mushroom",
-  "scientific_name": "Agaricus bitorquis",
-  "aliases": [
-    "torq",
-    "spring agaric",
-    "urban agaricus",
-    "banded agaric"
-  ],
-  "edibility": "choice",
-  "cap": {
-    "shape": [
-      "convex",
-      "flat"
-    ],
-    "colors": [
-      "white",
-      "cream"
-    ],
-    "diameter_cm": [
-      5,
-      15
-    ]
-  },
-  "gills": {
-    "attachment": "free",
-    "spacing": "crowded",
-    "colors": [
-      "pink",
-      "brown",
-      "dark brown"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white"
-    ],
-    "ring": True,
-    "volva": False
-  },
-  "spore_print": "dark brown",
-  "habitat": "urban",
-  "substrate": "soil",
-  "ecology": "saprotrophic",
-  "season": [
-    "spring",
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Widespread in urban areas worldwide",
-  "regions": [
-    "global"
-  ],
-  "description": "Stocky white Agaricus that fruits along sidewalks, hard-packed paths, and roadsides — sometimes pushing up asphalt. Double ring on the stem is a namesake trait. Choice edible like a firm button mushroom, but urban specimens may bioaccumulate roadside pollutants — many foragers skip city picks. Must be separated from yellow-staining toxic Agaricus. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Agaricus xanthodermus (Yellow Stainer)",
-      "distinguish": "Chrome-yellow staining at stem base and phenolic/ink smell; causes GI upset."
+        "id": "pholiota-nameko",
+        "name": "Nameko",
+        "scientific_name": "Pholiota nameko",
+        "aliases": [
+            "butterscotch mushroom",
+            "Pholiota microspora"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "sticky"
+            ],
+            "colors": [
+                "amber",
+                "orange-brown",
+                "butterscotch"
+            ],
+            "diameter_cm": [
+                2,
+                6
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "yellow",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "amber",
+                "brown"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn"
+        ],
+        "distribution": "East Asia (native); widely cultivated",
+        "regions": [
+            "asia"
+        ],
+        "description": "Small amber-brown mushroom with a glossy gelatinous cap coating — the signature nameko slime that thickens soups. Staple of Japanese cuisine (miso soup, nabemono). Almost always encountered cultivated rather than wild outside Asia. Educational reference only — never eat a wild Pholiota based on an app (some wild Pholiota are poor edibles or GI irritants).",
+        "lookalikes": [
+            {
+                "name": "Other Pholiota (e.g. P. aurivella, P. squarrosa)",
+                "distinguish": "Scalier caps, different slime profile; not all Pholiota are good edibles."
+            },
+            {
+                "name": "Galerina / deadly little browns",
+                "distinguish": "Never casually ID small brown wood mushrooms — Galerina marginata is deadly."
+            }
+        ],
+        "fun_fact": "That glossy slime isn't a flaw — it's the point. Nameko's mucilage is what gives Japanese soups their silky body."
     },
     {
-      "name": "Amanita (white species)",
-      "distinguish": "Amanitas have a volva (sac) at the base and white spore print; Agaricus has dark brown spores and no volva."
-    }
-  ],
-  "fun_fact": "Famous for fruiting under pavement and cracking sidewalks — mycological street art with dinner potential."
-},
-    {
-  "id": "mutinus-elegans",
-  "name": "Elegant Stinkhorn",
-  "scientific_name": "Mutinus elegans",
-  "aliases": [
-    "devil's dipstick",
-    "headless stinkhorn",
-    "dog stinkhorn relative"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "spindle",
-      "tapered"
-    ],
-    "colors": [
-      "orange",
-      "pink-orange",
-      "red-orange"
-    ],
-    "diameter_cm": [
-      1,
-      3
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "pink",
-      "orange"
-    ],
-    "ring": False,
-    "volva": True
-  },
-  "spore_print": "olive-brown",
-  "habitat": "garden",
-  "substrate": "woodchips",
-  "ecology": "saprotrophic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Eastern North America; introduced elsewhere",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Slender orange-pink stinkhorn without a separate cap — the foul olive spore slime coats the tapered tip directly. Erupts from a white egg in mulch and gardens, then reeks to attract flies. Not considered edible (and the smell settles the debate). Educational reference only.",
-  "lookalikes": [
-    {
-      "name": "Mutinus caninus (Dog Stinkhorn)",
-      "distinguish": "Usually smaller/paler with a more distinct darker tip zone."
+        "id": "agaricus-bitorquis",
+        "name": "Pavement Mushroom",
+        "scientific_name": "Agaricus bitorquis",
+        "aliases": [
+            "torq",
+            "spring agaric",
+            "urban agaricus",
+            "banded agaric"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "crowded",
+            "colors": [
+                "pink",
+                "brown",
+                "dark brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "dark brown",
+        "habitat": "urban",
+        "substrate": "soil",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Widespread in urban areas worldwide",
+        "regions": [
+            "global"
+        ],
+        "description": "Stocky white Agaricus that fruits along sidewalks, hard-packed paths, and roadsides — sometimes pushing up asphalt. Double ring on the stem is a namesake trait. Choice edible like a firm button mushroom, but urban specimens may bioaccumulate roadside pollutants — many foragers skip city picks. Must be separated from yellow-staining toxic Agaricus. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Agaricus xanthodermus (Yellow Stainer)",
+                "distinguish": "Chrome-yellow staining at stem base and phenolic/ink smell; causes GI upset."
+            },
+            {
+                "name": "Amanita (white species)",
+                "distinguish": "Amanitas have a volva (sac) at the base and white spore print; Agaricus has dark brown spores and no volva."
+            }
+        ],
+        "fun_fact": "Famous for fruiting under pavement and cracking sidewalks — mycological street art with dinner potential."
     },
     {
-      "name": "Phallus species",
-      "distinguish": "Have a distinct honeycombed or ridged cap separate from the stalk."
-    }
-  ],
-  "fun_fact": "Also called devil's dipstick — a name that needs no further explanation once you've smelled one in July mulch."
-},
-    {
-  "id": "bondarzewia-berkeleyi",
-  "name": "Berkeley's Polypore",
-  "scientific_name": "Bondarzewia berkeleyi",
-  "aliases": [
-    "stump blossoms",
-    "Berkeley's polypore"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "rosette",
-      "shelf"
-    ],
-    "colors": [
-      "cream",
-      "tan",
-      "pale yellow"
-    ],
-    "diameter_cm": [
-      20,
-      100
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": [
-      "white pores"
-    ]
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "cream"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "white",
-  "habitat": "forest",
-  "substrate": "roots",
-  "ecology": "parasitic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Eastern North America",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Massive cream-colored polypore rosette at the base of oaks and other hardwoods — individual caps radiate from a central core and can span a meter. Young tender edges are edible when cooked; mature flesh turns woody and bitter. Often confused with hen-of-the-woods at a glance but has pores, not a gilled underside. Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Grifola frondosa (Hen of the Woods)",
-      "distinguish": "Hen has many smaller gray-brown fronds; Berkeley's is cream/tan with larger fan lobes and tougher flesh."
+        "id": "mutinus-elegans",
+        "name": "Elegant Stinkhorn",
+        "scientific_name": "Mutinus elegans",
+        "aliases": [
+            "devil's dipstick",
+            "headless stinkhorn",
+            "dog stinkhorn relative"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "spindle",
+                "tapered"
+            ],
+            "colors": [
+                "orange",
+                "pink-orange",
+                "red-orange"
+            ],
+            "diameter_cm": [
+                1,
+                3
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "pink",
+                "orange"
+            ],
+            "ring": False,
+            "volva": True
+        },
+        "spore_print": "olive-brown",
+        "habitat": "garden",
+        "substrate": "woodchips",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America; introduced elsewhere",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Slender orange-pink stinkhorn without a separate cap — the foul olive spore slime coats the tapered tip directly. Erupts from a white egg in mulch and gardens, then reeks to attract flies. Not considered edible (and the smell settles the debate). Educational reference only.",
+        "lookalikes": [
+            {
+                "name": "Mutinus caninus (Dog Stinkhorn)",
+                "distinguish": "Usually smaller/paler with a more distinct darker tip zone."
+            },
+            {
+                "name": "Phallus species",
+                "distinguish": "Have a distinct honeycombed or ridged cap separate from the stalk."
+            }
+        ],
+        "fun_fact": "Also called devil's dipstick — a name that needs no further explanation once you've smelled one in July mulch."
     },
     {
-      "name": "Meripilus sumstinei (Black-staining polypore)",
-      "distinguish": "Bruises black quickly; Berkeley's does not."
-    }
-  ],
-  "fun_fact": "One of eastern North America's largest fleshy fungi — single rosettes can weigh more than a bowling ball."
-},
-    {
-  "id": "calvatia-cyathiformis",
-  "name": "Purple-spored Puffball",
-  "scientific_name": "Calvatia cyathiformis",
-  "aliases": [
-    "purple spore puffball"
-  ],
-  "edibility": "edible",
-  "cap": {
-    "shape": [
-      "spherical",
-      "pear",
-      "cup remnant"
-    ],
-    "colors": [
-      "white",
-      "tan",
-      "purple-brown"
-    ],
-    "diameter_cm": [
-      5,
-      20
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [
-      "white",
-      "tan"
-    ],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "purple-brown",
-  "habitat": "grassland",
-  "substrate": "ground",
-  "ecology": "saprotrophic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "North America grasslands and lawns",
-  "regions": [
-    "north-america"
-  ],
-  "description": "Large terrestrial puffball whose interior starts pure white (edible stage) and matures to distinctive purple-brown spore mass; old specimens leave a purple-stained cup in the grass. Only eat when interior is flawless white throughout — any yellow/purple means too old, and never confuse with Amanita 'eggs' (which show a developing mushroom outline when sectioned). Educational reference only — never eat a wild mushroom based on an app.",
-  "lookalikes": [
-    {
-      "name": "Amanita buttons (destroying angel etc.)",
-      "distinguish": "Slice vertically: Amanita eggs show cap/gills/stem outline; True puffballs are homogeneous white."
+        "id": "bondarzewia-berkeleyi",
+        "name": "Berkeley's Polypore",
+        "scientific_name": "Bondarzewia berkeleyi",
+        "aliases": [
+            "stump blossoms",
+            "Berkeley's polypore"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "rosette",
+                "shelf"
+            ],
+            "colors": [
+                "cream",
+                "tan",
+                "pale yellow"
+            ],
+            "diameter_cm": [
+                20,
+                100
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "white pores"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "roots",
+        "ecology": "parasitic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Massive cream-colored polypore rosette at the base of oaks and other hardwoods — individual caps radiate from a central core and can span a meter. Young tender edges are edible when cooked; mature flesh turns woody and bitter. Often confused with hen-of-the-woods at a glance but has pores, not a gilled underside. Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Grifola frondosa (Hen of the Woods)",
+                "distinguish": "Hen has many smaller gray-brown fronds; Berkeley's is cream/tan with larger fan lobes and tougher flesh."
+            },
+            {
+                "name": "Meripilus sumstinei (Black-staining polypore)",
+                "distinguish": "Bruises black quickly; Berkeley's does not."
+            }
+        ],
+        "fun_fact": "One of eastern North America's largest fleshy fungi — single rosettes can weigh more than a bowling ball."
     },
     {
-      "name": "Scleroderma (earthballs)",
-      "distinguish": "Interior is dark purple-black early and firm; often toxic GI irritants."
-    }
-  ],
-  "fun_fact": "After the spores blow away, the leftover purple cup looks like a tiny ceramic bowl glued in the lawn."
-},
-    {
-  "id": "geastrum-triplex",
-  "name": "Collared Earthstar",
-  "scientific_name": "Geastrum triplex",
-  "aliases": [
-    "saucered earthstar",
-    "triple earthstar"
-  ],
-  "edibility": "inedible",
-  "cap": {
-    "shape": [
-      "star",
-      "spherical spore sac"
-    ],
-    "colors": [
-      "tan",
-      "brown",
-      "beige"
-    ],
-    "diameter_cm": [
-      3,
-      10
-    ]
-  },
-  "gills": {
-    "attachment": "n/a",
-    "spacing": "n/a",
-    "colors": []
-  },
-  "stem": {
-    "colors": [],
-    "ring": False,
-    "volva": False
-  },
-  "spore_print": "brown",
-  "habitat": "forest",
-  "substrate": "leaf litter",
-  "ecology": "saprotrophic",
-  "season": [
-    "summer",
-    "autumn"
-  ],
-  "distribution": "Widespread worldwide",
-  "regions": [
-    "global"
-  ],
-  "description": "Classic earthstar: outer rays peel back into a star and often form a raised collar around the central spore sac, which puffs brown spores from an apical hole when rain hits. Inedible. Common in leaf litter under hardwoods. Educational reference only.",
-  "lookalikes": [
-    {
-      "name": "Other Geastrum species",
-      "distinguish": "Collar/saucer around the spore sac is the triplex hallmark when well developed."
+        "id": "calvatia-cyathiformis",
+        "name": "Purple-spored Puffball",
+        "scientific_name": "Calvatia cyathiformis",
+        "aliases": [
+            "purple spore puffball"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "spherical",
+                "pear",
+                "cup remnant"
+            ],
+            "colors": [
+                "white",
+                "tan",
+                "purple-brown"
+            ],
+            "diameter_cm": [
+                5,
+                20
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "tan"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "purple-brown",
+        "habitat": "grassland",
+        "substrate": "ground",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "North America grasslands and lawns",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Large terrestrial puffball whose interior starts pure white (edible stage) and matures to distinctive purple-brown spore mass; old specimens leave a purple-stained cup in the grass. Only eat when interior is flawless white throughout — any yellow/purple means too old, and never confuse with Amanita 'eggs' (which show a developing mushroom outline when sectioned). Educational reference only — never eat a wild mushroom based on an app.",
+        "lookalikes": [
+            {
+                "name": "Amanita buttons (destroying angel etc.)",
+                "distinguish": "Slice vertically: Amanita eggs show cap/gills/stem outline; True puffballs are homogeneous white."
+            },
+            {
+                "name": "Scleroderma (earthballs)",
+                "distinguish": "Interior is dark purple-black early and firm; often toxic GI irritants."
+            }
+        ],
+        "fun_fact": "After the spores blow away, the leftover purple cup looks like a tiny ceramic bowl glued in the lawn."
     },
     {
-      "name": "Astraeus hygrometricus",
-      "distinguish": "Rays are hygroscopic (open/close with humidity) and surface is rougher/cracked."
+        "id": "geastrum-triplex",
+        "name": "Collared Earthstar",
+        "scientific_name": "Geastrum triplex",
+        "aliases": [
+            "saucered earthstar",
+            "triple earthstar"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "star",
+                "spherical spore sac"
+            ],
+            "colors": [
+                "tan",
+                "brown",
+                "beige"
+            ],
+            "diameter_cm": [
+                3,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": []
+        },
+        "stem": {
+            "colors": [],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "leaf litter",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Widespread worldwide",
+        "regions": [
+            "global"
+        ],
+        "description": "Classic earthstar: outer rays peel back into a star and often form a raised collar around the central spore sac, which puffs brown spores from an apical hole when rain hits. Inedible. Common in leaf litter under hardwoods. Educational reference only.",
+        "lookalikes": [
+            {
+                "name": "Other Geastrum species",
+                "distinguish": "Collar/saucer around the spore sac is the triplex hallmark when well developed."
+            },
+            {
+                "name": "Astraeus hygrometricus",
+                "distinguish": "Rays are hygroscopic (open/close with humidity) and surface is rougher/cracked."
+            }
+        ],
+        "fun_fact": "Earthstars are nature's spore catapults — raindrops hit the sac like a drumhead and jet spores into the air."
+    },
+    {
+        "id": "omphalotus-illudens",
+        "name": "Eastern Jack-o'-lantern",
+        "scientific_name": "Omphalotus illudens",
+        "aliases": [
+            "jack-o-lantern",
+            "jack o lantern",
+            "False chanterelle",
+            "omphalotus illudens"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat",
+                "funnel"
+            ],
+            "colors": [
+                "orange",
+                "yellow"
+            ],
+            "diameter_cm": [
+                5,
+                20
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "orange",
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange",
+                "yellow"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "cream",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Bright orange gilled mushroom growing in dense clusters on hardwood stumps and buried roots. A classic toxic chanterelle lookalike. Gills and mycelium can glow greenish at night (bioluminescence). Causes severe GI poisoning if eaten — never for food.",
+        "lookalikes": [
+            {
+                "name": "Cantharellus cibarius (Golden Chanterelle)",
+                "distinguish": "True chanterelles have blunt, forked ridges (not sharp gills), usually grow singly/scattered on soil, and do not glow."
+            },
+            {
+                "name": "Laetiporus sulphureus (Chicken of the Woods)",
+                "distinguish": "Polypore shelves without True gills; different growth form."
+            }
+        ],
+        "fun_fact": "Its ghostly night glow is one of the easiest foxfire displays to spot in eastern North American woods."
+    },
+    {
+        "id": "omphalotus-olivascens",
+        "name": "Western Jack-o'-lantern",
+        "scientific_name": "Omphalotus olivascens",
+        "aliases": [
+            "western jack o lantern",
+            "olive jack-o-lantern"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat",
+                "funnel"
+            ],
+            "colors": [
+                "orange",
+                "olive",
+                "yellow"
+            ],
+            "diameter_cm": [
+                5,
+                25
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "orange",
+                "olive"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange",
+                "olive"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pale yellow",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn",
+            "winter"
+        ],
+        "distribution": "Western North America, especially California",
+        "regions": [
+            "north-america"
+        ],
+        "description": "West-coast relative of the jack-o'-lantern complex: large orange to olive clusters on hardwood (often oak). Toxic and bioluminescent. Commonly confused with chanterelles by beginners.",
+        "lookalikes": [
+            {
+                "name": "Cantharellus formosus (Pacific Golden Chanterelle)",
+                "distinguish": "Chanterelles have blunt ridges, fruity apricot odor, grow on soil under conifers/oaks — not dense stump clusters with sharp gills."
+            },
+            {
+                "name": "Omphalotus olearius",
+                "distinguish": "European/Mediterranean jack-o'-lantern; similar toxicity and glow, different range."
+            }
+        ],
+        "fun_fact": "Olive tones in the cap and gills help separate it from the brighter eastern O. illudens."
+    },
+    {
+        "id": "omphalotus-nidiformis",
+        "name": "Ghost Fungus",
+        "scientific_name": "Omphalotus nidiformis",
+        "aliases": [
+            "ghost fungus",
+            "australian ghost fungus"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "funnel",
+                "flat"
+            ],
+            "colors": [
+                "white",
+                "cream",
+                "brown",
+                "purple"
+            ],
+            "diameter_cm": [
+                5,
+                25
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn",
+            "winter",
+            "spring"
+        ],
+        "distribution": "Australia (and nearby regions)",
+        "regions": [
+            "oceania"
+        ],
+        "description": "Striking Australian Omphalotus that can appear pale, brown, or lilac-tinged. Famous for intense green bioluminescence of the gills at night. Toxic if eaten — educational glow species, not food.",
+        "lookalikes": [
+            {
+                "name": "Pleurotus ostreatus (Oyster Mushroom)",
+                "distinguish": "Oysters lack the strong night glow of ghost fungus and differ in ecology/range; never rely on glow alone for ID."
+            }
+        ],
+        "fun_fact": "One of the brightest large bioluminescent mushrooms — night photos often look unreal."
+    },
+    {
+        "id": "omphalotus-japonicus",
+        "name": "Tsukiyotake",
+        "scientific_name": "Omphalotus japonicus",
+        "aliases": [
+            "tsukiyotake",
+            "moon-night mushroom",
+            "lampteromyces japonicus"
+        ],
+        "edibility": "poisonous",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "olive",
+                "purple"
+            ],
+            "diameter_cm": [
+                5,
+                20
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "cream",
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "cream"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn"
+        ],
+        "distribution": "Japan and East Asia",
+        "regions": [
+            "asia"
+        ],
+        "description": "East Asian jack-o'-lantern relative (formerly Lampteromyces). Causes serious GI poisoning and is a known dangerous lookalike of edible wood-dwellers in Japan. Gills can luminesce. Not for consumption.",
+        "lookalikes": [
+            {
+                "name": "Lentinula edodes (Shiitake)",
+                "distinguish": "Shiitake has white gills that are not decurrent the same way, different odor/texture, and is cultivated on logs — do not confuse wild lookalikes."
+            },
+            {
+                "name": "Pleurotus ostreatus (Oyster Mushroom)",
+                "distinguish": "Oysters are typically paler-gilled shelf clusters without the toxic Omphalotus chemistry."
+            }
+        ],
+        "fun_fact": "The Japanese name roughly nods to 'moonlight' — a tip to its night glow."
+    },
+    {
+        "id": "panellus-stipticus",
+        "name": "Bitter Oyster",
+        "scientific_name": "Panellus stipticus",
+        "aliases": [
+            "luminescent panellus",
+            "astringent panus",
+            "bitter oysterling"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "kidney",
+                "fan",
+                "convex"
+            ],
+            "colors": [
+                "tan",
+                "brown",
+                "cream"
+            ],
+            "diameter_cm": [
+                1,
+                4
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "cream",
+                "tan"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "tan"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn",
+            "winter",
+            "year-round"
+        ],
+        "distribution": "Northern Hemisphere, widespread on hardwood",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Small, tough, kidney-shaped oysterling on dead hardwood. Very bitter/astringent and not eaten. Famous because North American populations often show strong green gill bioluminescence in the dark.",
+        "lookalikes": [
+            {
+                "name": "Schizophyllum commune (Split Gill)",
+                "distinguish": "Split gill has fuzzy, longitudinally split gill folds and different texture."
+            },
+            {
+                "name": "Crepidotus species",
+                "distinguish": "Usually browner spore prints and lack the classic bitter-oyster luminescence story."
+            }
+        ],
+        "fun_fact": "A go-to species for demonstrating foxfire — bring a dark box and give your eyes a few minutes."
+    },
+    {
+        "id": "mycena-chlorophos",
+        "name": "Green Pepe",
+        "scientific_name": "Mycena chlorophos",
+        "aliases": [
+            "glowing mushroom",
+            "green pepe",
+            "phosphorescent mycena"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "conical",
+                "bell",
+                "convex"
+            ],
+            "colors": [
+                "brown",
+                "gray",
+                "white"
+            ],
+            "diameter_cm": [
+                1,
+                3
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn",
+            "summer"
+        ],
+        "distribution": "Subtropical Asia and Pacific islands; locally famous in Japan/Taiwan etc.",
+        "regions": [
+            "asia",
+            "oceania"
+        ],
+        "description": "Delicate Mycena whose fruit bodies emit a clear green glow in darkness, especially in humid subtropical forests. Too small and fragile for food use; treated as inedible. A flagship bioluminescent mushroom in popular science and tourism night walks.",
+        "lookalikes": [
+            {
+                "name": "Other small Mycena species",
+                "distinguish": "Most Mycena do not glow; night observation and local range matter. Never eat tiny white-spored woodland mushrooms."
+            }
+        ],
+        "fun_fact": "Often featured in night-forest tourism — the glow is brightest on fresh, moist caps."
+    },
+    {
+        "id": "neonothopanus-nambi",
+        "name": "Neonothopanus nambi",
+        "scientific_name": "Neonothopanus nambi",
+        "aliases": [
+            "nambi neonothopanus",
+            "bioluminescent neonothopanus"
+        ],
+        "edibility": "unknown",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "yellow",
+                "orange"
+            ],
+            "diameter_cm": [
+                2,
+                8
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "cream",
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "yellow"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "summer"
+        ],
+        "distribution": "Southeast Asia and tropical regions (reported widely in bioluminescence literature)",
+        "regions": [
+            "asia"
+        ],
+        "description": "Tropical bioluminescent mushroom used in modern fungal light research (including engineered glow plants/fungal enzyme work). Not a culinary species — educational/scientific interest only.",
+        "lookalikes": [
+            {
+                "name": "Neonothopanus gardneri",
+                "distinguish": "Different continent/range; both glow and should not be eaten casually."
+            }
+        ],
+        "fun_fact": "Its luciferase system helped inspire high-profile 'glowing plant' and synthetic-biology glow projects."
+    },
+    {
+        "id": "filoboletus-manipularis",
+        "name": "Filoboletus manipularis",
+        "scientific_name": "Filoboletus manipularis",
+        "aliases": [
+            "poroid mycena",
+            "bioluminescent filoboletus"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "convex",
+                "bell"
+            ],
+            "colors": [
+                "white",
+                "cream",
+                "brown"
+            ],
+            "diameter_cm": [
+                1,
+                4
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "white"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "cream"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "summer"
+        ],
+        "distribution": "Tropical Asia, Australasia, and Pacific",
+        "regions": [
+            "asia",
+            "oceania"
+        ],
+        "description": "Small tropical wood-roting mushroom (poroid/gill-like hymenium depending on treatment) known for bioluminescence. Too small and unestablished for food; enjoy as a night-forest curiosity.",
+        "lookalikes": [
+            {
+                "name": "Mycena chlorophos",
+                "distinguish": "Different fruit-body architecture and local species concepts; both may glow in tropical night forests."
+            }
+        ],
+        "fun_fact": "Another reminder that fungal night-lights evolved multiple times across the tropics."
+    },
+    {
+        "id": "mycena-luxaeterna",
+        "name": "Eternal Light Mycena",
+        "scientific_name": "Mycena luxaeterna",
+        "aliases": [
+            "eternal light",
+            "lux aeterna mycena"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "conical",
+                "bell"
+            ],
+            "colors": [
+                "brown",
+                "gray"
+            ],
+            "diameter_cm": [
+                0.5,
+                2
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "white"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "yellow"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer"
+        ],
+        "distribution": "Atlantic Forest, Brazil (described from São Paulo state)",
+        "regions": [
+            "south-america"
+        ],
+        "description": "Minute Brazilian Mycena named for persistent glow ('eternal light'). Scientifically famous more than commonly encountered. Not edible.",
+        "lookalikes": [
+            {
+                "name": "Other tiny Mycena",
+                "distinguish": "Requires specialist keys and often microscopy; glow helps but is not unique to one species worldwide."
+            }
+        ],
+        "fun_fact": "Described in the 2010s as part of a wave of newly documented Brazilian glowing Mycena."
+    },
+    {
+        "id": "imleria-badia",
+        "name": "Bay Bolete",
+        "scientific_name": "Imleria badia",
+        "aliases": [
+            "boletus badius",
+            "bay bolete",
+            "xerocomus badius"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "bay",
+                "chestnut"
+            ],
+            "diameter_cm": [
+                4,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "n/a",
+            "colors": [
+                "yellow",
+                "olive"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "yellow"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "olive-brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Europe and Northern Hemisphere conifer/mixed woods",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia"
+        ],
+        "description": "Popular edible bolete with a bay-brown cap and yellow pores that often blue slowly when bruised. Mycorrhizal with conifers and some hardwoods. Still confirm pores (not gills) and learn bitter/toxic bolete lookalikes before any meal.",
+        "lookalikes": [
+            {
+                "name": "Tylopilus felleus (Bitter Bolete)",
+                "distinguish": "Pinkish pores and intensely bitter taste — spit test on a tiny nibble of pore surface is a classic field check (do not swallow)."
+            },
+            {
+                "name": "Boletus edulis (King Bolete)",
+                "distinguish": "Usually thicker white netted stipe and milder pore bruising behavior."
+            }
+        ],
+        "fun_fact": "Long filed under Boletus/Xerocomus; modern names settle it in Imleria."
+    },
+    {
+        "id": "strobilomyces-strobilaceus",
+        "name": "Old Man of the Woods",
+        "scientific_name": "Strobilomyces strobilaceus",
+        "aliases": [
+            "old man of the woods",
+            "strobilomyces floccopus"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex"
+            ],
+            "colors": [
+                "gray",
+                "black",
+                "brown"
+            ],
+            "diameter_cm": [
+                4,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "n/a",
+            "colors": [
+                "white",
+                "gray",
+                "black"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "gray",
+                "black"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "blackish",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere hardwood/conifer woods",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia"
+        ],
+        "description": "Unmistakable shaggy gray-black bolete with woolly scales and darkening flesh. Edible when young and properly cooked, but often skipped because of looks and variable quality. Great teaching species for bolete diversity.",
+        "lookalikes": [
+            {
+                "name": "Other Strobilomyces species",
+                "distinguish": "Several look similar regionally; check local keys for North American segregates."
+            }
+        ],
+        "fun_fact": "The pinecone-like cap scales inspired both the common name and Strobilomyces ('pinecone fungus')."
+    },
+    {
+        "id": "cyclocybe-aegerita",
+        "name": "Pioppino",
+        "scientific_name": "Cyclocybe aegerita",
+        "aliases": [
+            "pioppino",
+            "piopparello",
+            "black poplar mushroom",
+            "agrodcybe aegerita",
+            "cyclocybe cylindracea"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "white"
+            ],
+            "diameter_cm": [
+                3,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "brown"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "autumn"
+        ],
+        "distribution": "Southern Europe, widely cultivated; related poplar-associated taxa elsewhere",
+        "regions": [
+            "europe",
+            "asia",
+            "global"
+        ],
+        "description": "Choice cultivated mushroom (pioppino) associated with poplar and other hardwoods. Firm texture and nutty flavor. Wild lookalikes exist — cultivated specimens are the safe culinary default.",
+        "lookalikes": [
+            {
+                "name": "Kuehneromyces mutabilis (Sheathed Woodtuft)",
+                "distinguish": "Smaller clustered woodtuft with different ring/stem hygrophany; careful ID needed in the wild."
+            },
+            {
+                "name": "Galerina marginata (Funeral Bell)",
+                "distinguish": "Deadly small brown wood mushroom — never casually eat little brown mushrooms on wood."
+            }
+        ],
+        "fun_fact": "A staple of Italian markets long before it became a global specialty-cultivation crop."
+    },
+    {
+        "id": "hypsizygus-tessellatus",
+        "name": "Beech Mushroom",
+        "scientific_name": "Hypsizygus tessellatus",
+        "aliases": [
+            "buna-shimeji",
+            "beech mushroom",
+            "brown beech",
+            "hypsizygus marmoreus"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "white"
+            ],
+            "diameter_cm": [
+                2,
+                7
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn"
+        ],
+        "distribution": "East Asia in the wild; globally cultivated",
+        "regions": [
+            "asia",
+            "global"
+        ],
+        "description": "Popular cultivated 'shimeji' / beech mushroom with tight clusters and crisp texture when cooked. Mildly bitter raw — always cook. Wild Hypsizygus exist but grocery cultivated forms dominate kitchens.",
+        "lookalikes": [
+            {
+                "name": "Hypsizygus ulmarius (Elm Oyster)",
+                "distinguish": "Larger, often solitary/few on elm and other hardwoods; different market form."
+            },
+            {
+                "name": "Lyophyllum decastes (Fried Chicken Mushroom)",
+                "distinguish": "Grows in soil clusters, not the classic cultivated beech-mushroom look."
+            }
+        ],
+        "fun_fact": "Brown and white beech mushrooms are among the most common specialty mushrooms in East Asian cuisine abroad."
+    },
+    {
+        "id": "hypsizygus-ulmarius",
+        "name": "Elm Oyster",
+        "scientific_name": "Hypsizygus ulmarius",
+        "aliases": [
+            "elm oyster",
+            "oyster mushroom lookalike",
+            "lyophyllum ulmarium"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "white",
+                "cream",
+                "tan"
+            ],
+            "diameter_cm": [
+                5,
+                20
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn",
+            "spring"
+        ],
+        "distribution": "Northern Hemisphere on hardwoods (classically elm)",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Large pale wood-dwelling mushroom often compared to oysters but in Hypsizygus. Edible when young and well cooked; confirm ID carefully among white wood mushrooms.",
+        "lookalikes": [
+            {
+                "name": "Pleurotus ostreatus (Oyster Mushroom)",
+                "distinguish": "True oysters usually more clearly eccentric/lateral-stemmed shelves with decurrent gills."
+            },
+            {
+                "name": "Pleurocybella porrigens (Angel Wings)",
+                "distinguish": "Thinner pure-white shelves on conifers; associated with serious poisonings in some contexts — know your trees."
+            }
+        ],
+        "fun_fact": "Despite the 'oyster' nickname, it is more closely allied with the beech-mushroom group than Pleurotus."
+    },
+    {
+        "id": "pleurotus-djamor",
+        "name": "Pink Oyster",
+        "scientific_name": "Pleurotus djamor",
+        "aliases": [
+            "pink oyster",
+            "salmon oyster",
+            "flamingo oyster"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "fan",
+                "shelf",
+                "convex"
+            ],
+            "colors": [
+                "pink",
+                "salmon",
+                "orange"
+            ],
+            "diameter_cm": [
+                2,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "pink",
+                "white"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "pink",
+                "white"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "lilac-gray",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "year-round"
+        ],
+        "distribution": "Pantropical wild; globally cultivated",
+        "regions": [
+            "global",
+            "asia",
+            "south-america",
+            "africa"
+        ],
+        "description": "Vivid pink cultivated oyster mushroom with a delicate shelf form and seafood-like aroma when cooked. Color fades with heat. Easy grower on straw and hardwood sawdust.",
+        "lookalikes": [
+            {
+                "name": "Pleurotus ostreatus (Oyster Mushroom)",
+                "distinguish": "Usually gray/tan/blue, not neon pink; same general oyster architecture."
+            },
+            {
+                "name": "Omphalotus species (Jack-o'-lanterns)",
+                "distinguish": "Toxic, typically deeper orange clusters on stumps with True gills that may glow — not cultivated pink oysters."
+            }
+        ],
+        "fun_fact": "One of the most photogenic gourmet mushrooms — Instagram famous before dinner famous."
+    },
+    {
+        "id": "laetiporus-cincinnatus",
+        "name": "White-pored Chicken of the Woods",
+        "scientific_name": "Laetiporus cincinnatus",
+        "aliases": [
+            "white pored chicken",
+            "laetiporus cincinnatus",
+            "chicken of the woods white pore"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "shelf",
+                "rosette"
+            ],
+            "colors": [
+                "orange",
+                "salmon",
+                "white"
+            ],
+            "diameter_cm": [
+                10,
+                40
+            ]
+        },
+        "gills": {
+            "attachment": "n/a",
+            "spacing": "n/a",
+            "colors": [
+                "white",
+                "cream"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "orange"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America, often at oak bases",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Chicken-of-the-woods look with white pores and often a rosette at the base of hardwoods (especially oak). Choice edible for many when young and cooked thoroughly; some people still get GI upset — try a small portion first. Never eat from conifers or old crumbly specimens.",
+        "lookalikes": [
+            {
+                "name": "Laetiporus sulphureus (Chicken of the Woods)",
+                "distinguish": "Yellow pores and typically more bracket-like on trunks; still cook well and know host tree."
+            },
+            {
+                "name": "Omphalotus illudens (Eastern Jack-o'-lantern)",
+                "distinguish": "Has True gills, not pores — critical chicken vs jack separation."
+            }
+        ],
+        "fun_fact": "Many eastern foragers consider the white-pored form the tastiest 'chicken'."
+    },
+    {
+        "id": "craterellus-tubaeformis",
+        "name": "Yellowfoot",
+        "scientific_name": "Craterellus tubaeformis",
+        "aliases": [
+            "yellowfoot",
+            "winter chanterelle",
+            "funnel chanterelle",
+            "cantharellus tubaeformis"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "funnel",
+                "vase"
+            ],
+            "colors": [
+                "brown",
+                "yellow",
+                "tan"
+            ],
+            "diameter_cm": [
+                1,
+                6
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "distant",
+            "colors": [
+                "gray",
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "yellow",
+                "orange"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pale yellow",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "autumn",
+            "winter"
+        ],
+        "distribution": "Northern Hemisphere mossy conifer woods",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia"
+        ],
+        "description": "Choice late-season chanterelle relative with a hollow yellow stem and brownish funnel cap. Excellent in sautés and soups. Learn the blunt ridge hymenium of the chanterelle group versus True gills.",
+        "lookalikes": [
+            {
+                "name": "Craterellus cornucopioides (Black Trumpet)",
+                "distinguish": "Much darker, thinner trumpet without the bright yellow foot."
+            },
+            {
+                "name": "Toxic small brown mushrooms",
+                "distinguish": "Anything with True sharp gills and without the hollow yellow foot/chanterelle ridges is out."
+            }
+        ],
+        "fun_fact": "A winter-forager favorite — often still fruiting after frosts when summer mushrooms are long gone."
+    },
+    {
+        "id": "cantharellus-formosus",
+        "name": "Pacific Golden Chanterelle",
+        "scientific_name": "Cantharellus formosus",
+        "aliases": [
+            "pacific golden chanterelle",
+            "northwest chanterelle"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "convex",
+                "funnel",
+                "wavy"
+            ],
+            "colors": [
+                "orange",
+                "yellow",
+                "gold"
+            ],
+            "diameter_cm": [
+                3,
+                14
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "distant",
+            "colors": [
+                "yellow",
+                "orange"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "yellow",
+                "white"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "yellow",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "autumn",
+            "winter"
+        ],
+        "distribution": "Pacific Northwest of North America",
+        "regions": [
+            "north-america"
+        ],
+        "description": "The iconic PNW golden chanterelle — choice edible with fruity aroma and blunt forked ridges. State mushroom of Oregon. Still separate carefully from western jack-o'-lanterns and other orange lookalikes.",
+        "lookalikes": [
+            {
+                "name": "Omphalotus olivascens (Western Jack-o'-lantern)",
+                "distinguish": "Sharp True gills, dense clusters on wood, can glow — not soil-growing chanterelle ridges."
+            },
+            {
+                "name": "Turbinellus floccosus (Scaly Vase)",
+                "distinguish": "Scaly vase chanterelle relative; different texture and often causes GI upset for many people."
+            }
+        ],
+        "fun_fact": "Oregon made this species its official state mushroom."
+    },
+    {
+        "id": "hypholoma-lateritium",
+        "name": "Brick Cap",
+        "scientific_name": "Hypholoma lateritium",
+        "aliases": [
+            "brick cap",
+            "brick tuft",
+            "hypholoma sublateritium"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "red",
+                "brick",
+                "orange",
+                "brown"
+            ],
+            "diameter_cm": [
+                3,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "yellow",
+                "olive",
+                "purple-brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "yellow",
+                "brown"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "purple-brown",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere hardwood stumps and logs",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Brick-red clustered wood mushroom. Considered edible when thoroughly cooked by some traditions, but easy to confuse with sulfur tuft and other wood-rotting LBMs — many guides urge caution or avoidance. Not a beginner edible.",
+        "lookalikes": [
+            {
+                "name": "Hypholoma fasciculare (Sulfur Tuft)",
+                "distinguish": "More greenish-yellow gills, very bitter, poisonous — do not eat."
+            },
+            {
+                "name": "Galerina marginata (Funeral Bell)",
+                "distinguish": "Deadly; smaller brown caps on wood with rusty spore print — never guess clustered brown wood mushrooms."
+            }
+        ],
+        "fun_fact": "The brick-red cap color is the field clue in the name — still not enough alone for a meal."
+    },
+    {
+        "id": "paxillus-involutus",
+        "name": "Brown Roll-rim",
+        "scientific_name": "Paxillus involutus",
+        "aliases": [
+            "brown roll rim",
+            "common roll-rim",
+            "poison pax"
+        ],
+        "edibility": "deadly",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat",
+                "funnel"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "olive"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "yellow",
+                "brown"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "tan"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere, common with birch and other trees",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia"
+        ],
+        "description": "Once eaten in parts of Europe after boiling, now recognized as dangerously toxic: can trigger immune-mediated hemolysis after repeated meals, sometimes fatal. Inrolled cap margin and brown staining gills are classic. Do not eat — ever.",
+        "lookalikes": [
+            {
+                "name": "Lactarius / milkcaps",
+                "distinguish": "Milkcaps exude latex; roll-rim does not."
+            },
+            {
+                "name": "Other brown decurrent terrestrial mushrooms",
+                "distinguish": "Spore print, lack of milk, and inrolled margin help — but the safety rule is simple: do not eat Paxillus."
+            }
+        ],
+        "fun_fact": "A textbook case of 'traditional edible' overturned by modern toxicology."
+    },
+    {
+        "id": "tylopilus-felleus",
+        "name": "Bitter Bolete",
+        "scientific_name": "Tylopilus felleus",
+        "aliases": [
+            "bitter bolete",
+            "bitter tylopilus",
+            "boletus felleus"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "tan",
+                "gray"
+            ],
+            "diameter_cm": [
+                5,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "n/a",
+            "colors": [
+                "white",
+                "pink"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "brown",
+                "tan"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pinkish brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere woods",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia"
+        ],
+        "description": "King-bolete lookalike with pink pores (with age) and a strongly bitter taste that ruins a dish. Not considered poisonous in the classic sense, but inedible and a notorious porcini trap. Taste a tiny pore scrap and spit — bitterness is diagnostic.",
+        "lookalikes": [
+            {
+                "name": "Boletus edulis (King Bolete)",
+                "distinguish": "Mild/nutty taste, white pores when young becoming olive — not pink and not bitter."
+            },
+            {
+                "name": "Imleria badia (Bay Bolete)",
+                "distinguish": "Yellow pores that blue; not intensely bitter."
+            }
+        ],
+        "fun_fact": "One bitter fruit body can spoil an entire pan of mixed boletes — veterans always check."
+    },
+    {
+        "id": "clitopilus-prunulus",
+        "name": "The Miller",
+        "scientific_name": "Clitopilus prunulus",
+        "aliases": [
+            "the miller",
+            "sweetbread mushroom",
+            "clitopilus prunulus"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat",
+                "wavy"
+            ],
+            "colors": [
+                "white",
+                "gray",
+                "cream"
+            ],
+            "diameter_cm": [
+                3,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "pink"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "pink",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Europe and other temperate regions",
+        "regions": [
+            "europe",
+            "north-america"
+        ],
+        "description": "Edible pale mushroom with a strong farinaceous (mealy/cucumber-flour) odor — the 'miller' scent. Pink spore print and decurrent gills. Mistakes with white Clitocybe / other pale mushrooms can be dangerous; odor + spore print matter.",
+        "lookalikes": [
+            {
+                "name": "Clitocybe rivulosa / dealbata group",
+                "distinguish": "Toxic white grassland clitocybes; different habitat/odor and white spore print."
+            },
+            {
+                "name": "Entoloma species",
+                "distinguish": "Many Entoloma are toxic; pink spores alone are not a green light."
+            }
+        ],
+        "fun_fact": "The mealy 'fresh flour' smell is so distinctive that old field guides treat it as a primary key character."
+    },
+    {
+        "id": "polyozellus-multiplex",
+        "name": "Blue Chanterelle",
+        "scientific_name": "Polyozellus multiplex",
+        "aliases": [
+            "blue chanterelle",
+            "clustered blue chanterelle",
+            "polyozellus"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "funnel",
+                "clustered"
+            ],
+            "colors": [
+                "blue",
+                "purple",
+                "black"
+            ],
+            "diameter_cm": [
+                2,
+                10
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "blue",
+                "purple"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "blue",
+                "purple"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Western and northern North America, East Asia; conifer forests",
+        "regions": [
+            "north-america",
+            "asia"
+        ],
+        "description": "Deep blue-violet clustered chanterelle-like mushroom of conifer forests. Edible and choice for some, but uncommon enough that many foragers leave it. Confirm the clustered blue vases and white spores.",
+        "lookalikes": [
+            {
+                "name": "Craterellus cornucopioides (Black Trumpet)",
+                "distinguish": "Usually grayer/blacker trumpets without the rich blue-violet flesh tones."
+            },
+            {
+                "name": "Gomphus clavatus (Pig's Ear)",
+                "distinguish": "More violet-tan pig's-ear clubs, different structure."
+            }
+        ],
+        "fun_fact": "One of the few truly blue-looking 'chanterelle-ish' mushrooms — a PNW and montane prize photo subject."
+    },
+    {
+        "id": "gomphus-clavatus",
+        "name": "Pig's Ear",
+        "scientific_name": "Gomphus clavatus",
+        "aliases": [
+            "pig's ear",
+            "violet chanterelle",
+            "gomphus clavatus"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "funnel",
+                "club",
+                "vase"
+            ],
+            "colors": [
+                "purple",
+                "tan",
+                "lilac"
+            ],
+            "diameter_cm": [
+                4,
+                15
+            ]
+        },
+        "gills": {
+            "attachment": "decurrent",
+            "spacing": "close",
+            "colors": [
+                "purple",
+                "lilac",
+                "tan"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "tan",
+                "purple"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "yellow-brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere conifer forests",
+        "regions": [
+            "north-america",
+            "europe",
+            "asia"
+        ],
+        "description": "Chunky violet-tan vase mushroom (pig's ear) related to chanterelles/gomphoids. Edible when young and clean, though quality varies and it can be buggy. Not as universally praised as True golden chanterelles.",
+        "lookalikes": [
+            {
+                "name": "Turbinellus floccosus (Scaly Vase Chanterelle)",
+                "distinguish": "Scaly orange vase; causes GI upset for many people."
+            },
+            {
+                "name": "Polyozellus multiplex (Blue Chanterelle)",
+                "distinguish": "Deeper blue-black clustered form."
+            }
+        ],
+        "fun_fact": "The wrinkled, folded hymenium looks more like a wrinkled pig's ear than plate gills — hence the name."
+    },
+    {
+        "id": "suillus-spraguei",
+        "name": "Painted Suillus",
+        "scientific_name": "Suillus spraguei",
+        "aliases": [
+            "painted bolete",
+            "suillus pictus",
+            "painted suillus"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex"
+            ],
+            "colors": [
+                "red",
+                "pink",
+                "yellow"
+            ],
+            "diameter_cm": [
+                3,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "n/a",
+            "colors": [
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "yellow",
+                "red"
+            ],
+            "ring": True,
+            "volva": False
+        },
+        "spore_print": "brown",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America with white pine",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Beautiful red-scaly suillus tied to eastern white pine. Edible after peeling the slimy/scaly cuticle for many cooks; like other Suillus, quality is best young. Confirm pine association and pore surface.",
+        "lookalikes": [
+            {
+                "name": "Other Suillus species",
+                "distinguish": "Host tree and cap scale pattern separate painted suillus from slippery jacks and friends."
+            }
+        ],
+        "fun_fact": "A white-pine specialist — if there's no Pinus strobus around, rethink the ID."
+    },
+    {
+        "id": "mycena-leaiana",
+        "name": "Orange Mycena",
+        "scientific_name": "Mycena leaiana",
+        "aliases": [
+            "orange mycena",
+            "lea's mycena"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "convex",
+                "bell"
+            ],
+            "colors": [
+                "orange"
+            ],
+            "diameter_cm": [
+                1,
+                4
+            ]
+        },
+        "gills": {
+            "attachment": "adnate",
+            "spacing": "close",
+            "colors": [
+                "orange",
+                "yellow"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "orange"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "deadwood",
+        "ecology": "saprotrophic",
+        "season": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Eastern North America on hardwood logs",
+        "regions": [
+            "north-america"
+        ],
+        "description": "Vivid orange clustered Mycena on hardwood logs. Not considered edible (small, insubstantial, and Mycena as a group is a minefield). A favorite teaching and photography species.",
+        "lookalikes": [
+            {
+                "name": "Mycena luxaeterna / other Mycena",
+                "distinguish": "Most lack this intense pure orange; range and wood host help."
+            },
+            {
+                "name": "Hygrocybe / waxcaps",
+                "distinguish": "Usually terrestrial in grass/moss, not dense on hardwood logs."
+            }
+        ],
+        "fun_fact": "One of the easiest Mycena to recognize from across a trail — a neon orange log beacon."
+    },
+    {
+        "id": "volvariella-volvacea",
+        "name": "Paddy Straw Mushroom",
+        "scientific_name": "Volvariella volvacea",
+        "aliases": [
+            "straw mushroom",
+            "paddy straw",
+            "chinese mushroom"
+        ],
+        "edibility": "choice",
+        "cap": {
+            "shape": [
+                "conical",
+                "convex",
+                "flat"
+            ],
+            "colors": [
+                "brown",
+                "gray",
+                "white"
+            ],
+            "diameter_cm": [
+                4,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "close",
+            "colors": [
+                "white",
+                "pink"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white"
+            ],
+            "ring": False,
+            "volva": True
+        },
+        "spore_print": "pink",
+        "habitat": "grassland",
+        "substrate": "other",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "summer"
+        ],
+        "distribution": "East and Southeast Asia; cultivated on rice straw worldwide in warm climates",
+        "regions": [
+            "asia",
+            "global"
+        ],
+        "description": "Classic cultivated straw mushroom of Asian cuisine, sold fresh or canned. Has a volva and pink spores. Wild collection is risky because deadly Amanitas also have volvas — never treat a wild volva+free-gills mushroom as straw mushroom without expert certainty.",
+        "lookalikes": [
+            {
+                "name": "Amanita phalloides (Death Cap)",
+                "distinguish": "White spore print, usually different habitat, partial veil ring often present — deadly. Spore print color is critical."
+            },
+            {
+                "name": "Amanita bisporigera (Destroying Angel)",
+                "distinguish": "Pure white, white spores, deadly; not a straw-bed cultivated mushroom."
+            }
+        ],
+        "fun_fact": "One of the few first-tier commercial mushrooms that still often appears in grocery stores only in canned form outside Asia."
+    },
+    {
+        "id": "amanita-vaginata",
+        "name": "Grisette",
+        "scientific_name": "Amanita vaginata",
+        "aliases": [
+            "grisette",
+            "grisette amanita"
+        ],
+        "edibility": "edible",
+        "cap": {
+            "shape": [
+                "convex",
+                "flat",
+                "umbo"
+            ],
+            "colors": [
+                "gray",
+                "brown",
+                "orange"
+            ],
+            "diameter_cm": [
+                4,
+                12
+            ]
+        },
+        "gills": {
+            "attachment": "free",
+            "spacing": "close",
+            "colors": [
+                "white"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "white",
+                "gray"
+            ],
+            "ring": False,
+            "volva": True
+        },
+        "spore_print": "white",
+        "habitat": "forest",
+        "substrate": "ground",
+        "ecology": "mycorrhizal",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Northern Hemisphere (species complex)",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia"
+        ],
+        "description": "Elegant ringless Amanita with a sac-like volva and often striate cap margin. Some traditional cuisines eat well-cooked grisettes, but Amanita eating is inherently high-risk and not recommended for beginners — deadly white Amanitas are in the same genus. Educational entry, not a beginner food green light.",
+        "lookalikes": [
+            {
+                "name": "Amanita fulva (Tawny Grisette)",
+                "distinguish": "Tawny-orange cap tones; same ringless volva pattern."
+            },
+            {
+                "name": "Amanita bisporigera / phalloides group",
+                "distinguish": "Usually with a ring (partial veil) when intact; still — never casual-eat white-spored volva mushrooms."
+            }
+        ],
+        "fun_fact": "Grisettes are a whole complex — many regional names hide multiple look-alike species."
+    },
+    {
+        "id": "hygrocybe-conica",
+        "name": "Witch's Hat",
+        "scientific_name": "Hygrocybe conica",
+        "aliases": [
+            "witch's hat",
+            "conical waxcap",
+            "blackening waxcap"
+        ],
+        "edibility": "inedible",
+        "cap": {
+            "shape": [
+                "conical",
+                "bell"
+            ],
+            "colors": [
+                "red",
+                "orange",
+                "yellow",
+                "black"
+            ],
+            "diameter_cm": [
+                1,
+                5
+            ]
+        },
+        "gills": {
+            "attachment": "adnexed",
+            "spacing": "close",
+            "colors": [
+                "yellow",
+                "orange",
+                "white"
+            ]
+        },
+        "stem": {
+            "colors": [
+                "yellow",
+                "orange",
+                "red"
+            ],
+            "ring": False,
+            "volva": False
+        },
+        "spore_print": "white",
+        "habitat": "grassland",
+        "substrate": "ground",
+        "ecology": "saprotrophic",
+        "season": [
+            "summer",
+            "autumn"
+        ],
+        "distribution": "Widespread in grasslands and mossy lawns, Northern Hemisphere and beyond",
+        "regions": [
+            "europe",
+            "north-america",
+            "asia",
+            "oceania"
+        ],
+        "description": "Pointy waxcap that blackens with age or handling. Not considered a good edible (and waxcaps are often conservation-priority in unimproved grasslands). Leave for photos and habitat value.",
+        "lookalikes": [
+            {
+                "name": "Other Hygrocybe waxcaps",
+                "distinguish": "Color, blackening reaction, and ecology separate species; many are uncommon habitat specialists."
+            }
+        ],
+        "fun_fact": "The dramatic blackening earned it a witchy common name across several languages."
     }
-  ],
-  "fun_fact": "Earthstars are nature's spore catapults — raindrops hit the sac like a drumhead and jet spores into the air."
-}
 ]

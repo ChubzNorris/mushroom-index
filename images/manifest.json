@@ -1414,5 +1414,237 @@
     "source": "iNaturalist",
     "taxon_id": 63076,
     "matched_name": "Geastrum triplex"
+  },
+  "omphalotus-illudens": {
+    "file": "omphalotus-illudens.jpg",
+    "credit": "(c) Jason Hollinger, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 126831,
+    "matched_name": "Omphalotus illudens"
+  },
+  "omphalotus-olivascens": {
+    "file": "omphalotus-olivascens.jpg",
+    "credit": "(c) Lorri G., some rights reserved (CC BY-NC-ND), uploaded by Lorri G.",
+    "license": "cc-by-nc-nd",
+    "source": "iNaturalist",
+    "taxon_id": 67752,
+    "matched_name": "Omphalotus olivascens"
+  },
+  "omphalotus-nidiformis": {
+    "file": "omphalotus-nidiformis.jpg",
+    "credit": "(c) 明Yiming Xu, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 155166,
+    "matched_name": "Omphalotus nidiformis"
+  },
+  "omphalotus-japonicus": {
+    "file": "omphalotus-japonicus.jpg",
+    "credit": "(c) balawu, some rights reserved (CC BY-NC), uploaded by balawu",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 552696,
+    "matched_name": "Omphalotus japonicus"
+  },
+  "panellus-stipticus": {
+    "file": "panellus-stipticus.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 68309,
+    "matched_name": "Panellus stipticus"
+  },
+  "mycena-chlorophos": {
+    "file": "mycena-chlorophos.jpg",
+    "credit": "(c) Craig Robbins, some rights reserved (CC BY-NC), uploaded by Craig Robbins",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 155173,
+    "matched_name": "Mycena chlorophos"
+  },
+  "neonothopanus-nambi": {
+    "file": "neonothopanus-nambi.jpg",
+    "credit": "(c) Gim Siew Tan, some rights reserved (CC BY-NC), uploaded by Gim Siew Tan",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 552693,
+    "matched_name": "Neonothopanus nambi"
+  },
+  "filoboletus-manipularis": {
+    "file": "filoboletus-manipularis.jpg",
+    "credit": "(c) Gim Siew Tan, some rights reserved (CC BY-NC), uploaded by Gim Siew Tan",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 699912,
+    "matched_name": "Favolaschia manipularis"
+  },
+  "mycena-luxaeterna": {
+    "file": "mycena-luxaeterna.jpg",
+    "credit": "(c) Norton Santos, some rights reserved (CC BY-NC), uploaded by Norton Santos",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 1141243,
+    "matched_name": "Mycena luxaeterna"
+  },
+  "imleria-badia": {
+    "file": "imleria-badia.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 510854,
+    "matched_name": "Imleria badia"
+  },
+  "strobilomyces-strobilaceus": {
+    "file": "strobilomyces-strobilaceus.jpg",
+    "credit": "(c) Davide Puddu, some rights reserved (CC BY), uploaded by Davide Puddu",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 352462,
+    "matched_name": "Strobilomyces strobilaceus"
+  },
+  "cyclocybe-aegerita": {
+    "file": "cyclocybe-aegerita.jpg",
+    "credit": "(c) Inés Vázquez Cabrillana, some rights reserved (CC BY-NC), uploaded by Inés Vázquez Cabrillana",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 578456,
+    "matched_name": "Cyclocybe cylindracea"
+  },
+  "hypsizygus-tessellatus": {
+    "file": "hypsizygus-tessellatus.jpg",
+    "credit": "(c) Ryan Durand, some rights reserved (CC BY-NC), uploaded by Ryan Durand",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 499736,
+    "matched_name": "Hypsizygus tessulatus"
+  },
+  "hypsizygus-ulmarius": {
+    "file": "hypsizygus-ulmarius.jpg",
+    "credit": "(c) Jeff Steele, some rights reserved (CC BY-NC), uploaded by Jeff Steele",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 120862,
+    "matched_name": "Hypsizygus ulmarius"
+  },
+  "pleurotus-djamor": {
+    "file": "pleurotus-djamor.jpg",
+    "credit": "(c) José Roberto Peruca, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 328233,
+    "matched_name": "Pleurotus djamor"
+  },
+  "laetiporus-cincinnatus": {
+    "file": "laetiporus-cincinnatus.jpg",
+    "credit": "(c) Nate Swick, some rights reserved (CC BY-NC), uploaded by Nate Swick",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 487301,
+    "matched_name": "Laetiporus cincinnatus"
+  },
+  "craterellus-tubaeformis": {
+    "file": "craterellus-tubaeformis.jpg",
+    "credit": "(c) growbadlands, some rights reserved (CC BY-NC), uploaded by growbadlands",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 350511,
+    "matched_name": "Craterellus tubaeformis"
+  },
+  "cantharellus-formosus": {
+    "file": "cantharellus-formosus.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 120443,
+    "matched_name": "Cantharellus formosus"
+  },
+  "hypholoma-lateritium": {
+    "file": "hypholoma-lateritium.jpg",
+    "credit": "(c) mycowalt, some rights reserved (CC BY-SA), uploaded by mycowalt",
+    "license": "cc-by-sa",
+    "source": "iNaturalist",
+    "taxon_id": 130203,
+    "matched_name": "Hypholoma lateritium"
+  },
+  "paxillus-involutus": {
+    "file": "paxillus-involutus.jpg",
+    "credit": "(c) Matthieu Morin, some rights reserved (CC BY-NC), uploaded by Matthieu Morin",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 55941,
+    "matched_name": "Paxillus involutus"
+  },
+  "tylopilus-felleus": {
+    "file": "tylopilus-felleus.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 63489,
+    "matched_name": "Tylopilus felleus"
+  },
+  "clitopilus-prunulus": {
+    "file": "clitopilus-prunulus.jpg",
+    "credit": "(c) Tatiana Bulyonkova, some rights reserved (CC BY-NC-SA)",
+    "license": "cc-by-nc-sa",
+    "source": "iNaturalist",
+    "taxon_id": 64708,
+    "matched_name": "Clitopilus prunulus"
+  },
+  "polyozellus-multiplex": {
+    "file": "polyozellus-multiplex.jpg",
+    "credit": "(c) igorm, some rights reserved (CC BY-SA)",
+    "license": "cc-by-sa",
+    "source": "iNaturalist",
+    "taxon_id": 154877,
+    "matched_name": "Polyozellus multiplex"
+  },
+  "gomphus-clavatus": {
+    "file": "gomphus-clavatus.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 54121,
+    "matched_name": "Gomphus clavatus"
+  },
+  "suillus-spraguei": {
+    "file": "suillus-spraguei.jpg",
+    "credit": "(c) tombigelow, some rights reserved (CC BY-NC), uploaded by tombigelow",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 782231,
+    "matched_name": "Suillus spraguei"
+  },
+  "mycena-leaiana": {
+    "file": "mycena-leaiana.jpg",
+    "credit": "(c) Josh Kielsmeier-Cook, some rights reserved (CC BY-NC-ND), uploaded by Josh Kielsmeier-Cook",
+    "license": "cc-by-nc-nd",
+    "source": "iNaturalist",
+    "taxon_id": 128516,
+    "matched_name": "Mycena leana"
+  },
+  "volvariella-volvacea": {
+    "file": "volvariella-volvacea.jpg",
+    "credit": "(c) gena of Jesus, some rights reserved (CC BY-NC), uploaded by gena of Jesus",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 179054,
+    "matched_name": "Volvariella volvacea"
+  },
+  "amanita-vaginata": {
+    "file": "amanita-vaginata.jpg",
+    "credit": "(c) Dwayne Sabine, some rights reserved (CC BY-NC), uploaded by Dwayne Sabine",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 1690717,
+    "matched_name": "Amanita sp. 'vaginata-OR01'"
+  },
+  "hygrocybe-conica": {
+    "file": "hygrocybe-conica.jpg",
+    "credit": "(c) crgillette, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 51872,
+    "matched_name": "Hygrocybe conica"
   }
 }
