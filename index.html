@@ -53,6 +53,7 @@
 
   <div class="mode-toggle" role="tablist" aria-label="Browsing mode">
     <button type="button" id="mode-search-btn" class="mode-btn active" role="tab" aria-selected="true">🔍 Search &amp; filter</button>
+    <button type="button" id="mode-map-btn" class="mode-btn" role="tab" aria-selected="false">🌍 Region globe</button>
     <button type="button" id="mode-lookalikes-btn" class="mode-btn" role="tab" aria-selected="false">☠️ Browse dangerous lookalikes</button>
   </div>
 
@@ -107,6 +108,31 @@
       </section>
     </main>
   </div>
+
+  <section id="map-mode-wrap" class="map-mode" aria-label="Region distribution globe" hidden>
+    <p class="map-intro">Browse the index by broad geographic region. Regions are educational ranges from our
+      dataset — <strong>not</strong> precise occurrence maps or forage advice. Click a region to list matching species.</p>
+    <div class="map-layout">
+      <div class="map-stage">
+        <div id="region-globe" class="region-globe" role="img" aria-label="World map of mushroom regions"></div>
+        <div class="map-legend" aria-hidden="true">
+          <span class="map-legend-label">Fewer</span>
+          <span class="map-legend-swatch"></span>
+          <span class="map-legend-label">More species</span>
+        </div>
+        <div class="map-chips" id="map-region-chips" role="group" aria-label="Region shortcuts"></div>
+      </div>
+      <div class="map-side">
+        <div class="map-side-head">
+          <h2 id="map-region-title">All regions</h2>
+          <p id="map-region-sub" class="map-region-sub">Select a region on the globe.</p>
+          <p id="map-species-count" class="map-species-count"></p>
+        </div>
+        <div id="map-species-grid" class="grid map-species-grid"><!-- populated by JS --></div>
+        <p id="map-no-results" class="no-results" hidden>No species tagged for this region.</p>
+      </div>
+    </div>
+  </section>
 
   <section id="lookalikes-mode-wrap" class="lookalikes-mode" aria-label="Dangerous lookalike pairs" hidden>
     <p class="lookalikes-intro">Cross-species pairs where a poisonous or deadly mushroom is commonly confused with

@@ -46,6 +46,43 @@ const REGION_LABELS = {
   'africa': 'Africa',
   'oceania': 'Oceania',
   'global': 'Global / widespread',
+  // legacy alias present on a few older entries
+  'na': 'North America',
+};
+
+// Canonical region order for map UI (excludes legacy "na" alias).
+const MAP_REGIONS = [
+  'north-america',
+  'south-america',
+  'europe',
+  'africa',
+  'asia',
+  'oceania',
+  'global',
+];
+
+// Lightweight SVG continent silhouettes (viewBox 0 0 1000 500).
+// Educational region blobs — not political borders.
+const REGION_PATHS = {
+  'north-america':
+    'M78,78 L145,55 L210,68 L255,95 L280,140 L295,185 L270,230 L245,255 L200,270 ' +
+    'L165,250 L140,210 L115,175 L95,140 L80,110 Z ' +
+    'M255,250 L290,275 L310,320 L295,355 L260,370 L230,345 L220,300 Z',
+  'south-america':
+    'M265,320 L305,310 L340,340 L355,390 L340,445 L300,470 L265,450 L250,400 L245,355 Z',
+  'europe':
+    'M455,95 L510,85 L555,100 L570,130 L555,165 L520,180 L480,175 L450,150 L445,120 Z',
+  'africa':
+    'M470,195 L540,185 L585,220 L595,280 L570,340 L520,365 L470,350 L450,295 L455,235 Z',
+  'asia':
+    'M575,70 L680,55 L780,75 L850,110 L870,155 L840,195 L760,210 L690,200 L630,185 ' +
+    'L590,160 L575,120 Z ' +
+    'M720,210 L780,220 L810,260 L790,295 L740,300 L700,275 L695,235 Z',
+  'oceania':
+    'M800,320 L860,310 L910,340 L920,385 L880,415 L830,410 L800,375 Z ' +
+    'M860,430 L895,425 L915,450 L890,470 L855,460 Z',
+  'global':
+    'M40,40 h920 v420 h-920 Z',
 };
 
 const POTENCY_LABELS = {
@@ -107,19 +144,273 @@ async function loadLookalikePairs() {
 }
 
 let lookalikesLoaded = false;
+let mapInitialized = false;
+let mapSelectedRegion = null; // null = all regions overview
+let mapCounts = {};           // region -> species count
+let mapAllSpecies = [];       // cached full species list for map mode
 
 function setMode(mode) {
+  const isSearch = mode === 'search';
+  const isMap = mode === 'map';
   const isLookalikes = mode === 'lookalikes';
-  el('search-mode-wrap').hidden = isLookalikes;
+
+  el('search-mode-wrap').hidden = !isSearch;
+  el('map-mode-wrap').hidden = !isMap;
   el('lookalikes-mode-wrap').hidden = !isLookalikes;
-  el('mode-search-btn').classList.toggle('active', !isLookalikes);
-  el('mode-search-btn').setAttribute('aria-selected', String(!isLookalikes));
+
+  el('mode-search-btn').classList.toggle('active', isSearch);
+  el('mode-search-btn').setAttribute('aria-selected', String(isSearch));
+  el('mode-map-btn').classList.toggle('active', isMap);
+  el('mode-map-btn').setAttribute('aria-selected', String(isMap));
   el('mode-lookalikes-btn').classList.toggle('active', isLookalikes);
   el('mode-lookalikes-btn').setAttribute('aria-selected', String(isLookalikes));
+
   if (isLookalikes && !lookalikesLoaded) {
     lookalikesLoaded = true;
     loadLookalikePairs();
   }
+  if (isMap) {
+    ensureMapReady();
+  }
+}
+
+/* ---- Region globe (educational continent ranges) ---- */
+function normalizeRegion(r) {
+  return r === 'na' ? 'north-america' : r;
+}
+
+function speciesRegions(sp) {
+  const out = new Set();
+  for (const r of (sp.regions || [])) {
+    const n = normalizeRegion(r);
+    if (n) out.add(n);
+  }
+  return out;
+}
+
+function buildMapCounts(list) {
+  const counts = Object.fromEntries(MAP_REGIONS.map(r => [r, 0]));
+  for (const sp of list) {
+    const regs = speciesRegions(sp);
+    // Count each species once per canonical region it belongs to.
+    for (const r of regs) {
+      if (r in counts) counts[r] += 1;
+    }
+  }
+  return counts;
+}
+
+function regionFillIntensity(count, maxCount) {
+  if (!maxCount || !count) return 0.12;
+  // 0.18 .. 0.78 opacity band on mint fill
+  return 0.18 + 0.6 * (count / maxCount);
+}
+
+function regionGlobeSVG(selected, counts) {
+  const maxCount = Math.max(1, ...MAP_REGIONS.filter(r => r !== 'global').map(r => counts[r] || 0));
+  const paths = MAP_REGIONS.filter(r => r !== 'global').map(rid => {
+    const count = counts[rid] || 0;
+    const active = selected === rid;
+    const opacity = active ? 0.92 : regionFillIntensity(count, maxCount);
+    const label = REGION_LABELS[rid] || rid;
+    return (
+      `<path class="region-path${active ? ' active' : ''}" data-region="${rid}" ` +
+      `d="${REGION_PATHS[rid]}" style="--region-fill-opacity:${opacity.toFixed(3)}" ` +
+      `tabindex="0" role="button" aria-label="${escapeHTML(label)}: ${count} species" ` +
+      `aria-pressed="${active ? 'true' : 'false'}">` +
+      `<title>${escapeHTML(label)} — ${count} species</title></path>`
+    );
+  }).join('');
+
+  const globalActive = selected === 'global';
+  const globalCount = counts.global || 0;
+
+  return `
+    <svg class="region-globe-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <radialGradient id="globeOcean" cx="50%" cy="45%" r="65%">
+          <stop offset="0%" stop-color="#0c1a2e"/>
+          <stop offset="70%" stop-color="#070d18"/>
+          <stop offset="100%" stop-color="#04070c"/>
+        </radialGradient>
+        <filter id="globeGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <ellipse class="globe-disc" cx="500" cy="250" rx="470" ry="230" fill="url(#globeOcean)"/>
+      <ellipse class="globe-rim" cx="500" cy="250" rx="470" ry="230"/>
+      <g class="region-layer" filter="url(#globeGlow)">
+        ${paths}
+      </g>
+      <!-- subtle latitude hints -->
+      <g class="globe-grid" opacity="0.18">
+        <ellipse cx="500" cy="250" rx="470" ry="70" fill="none" stroke="#6ee7ff" stroke-width="1"/>
+        <ellipse cx="500" cy="250" rx="470" ry="140" fill="none" stroke="#6ee7ff" stroke-width="1"/>
+        <line x1="30" y1="250" x2="970" y2="250" stroke="#6ee7ff" stroke-width="1"/>
+        <line x1="500" y1="20" x2="500" y2="480" stroke="#6ee7ff" stroke-width="1"/>
+      </g>
+    </svg>
+    <button type="button" class="global-chip${globalActive ? ' active' : ''}" id="map-global-btn"
+      aria-pressed="${globalActive ? 'true' : 'false'}"
+      title="Species tagged global / widespread">
+      🌐 Global / widespread <span class="global-count">${globalCount}</span>
+    </button>
+  `;
+}
+
+function bindRegionGlobeHandlers(root) {
+  root.querySelectorAll('.region-path').forEach(pathEl => {
+    const pick = () => selectMapRegion(pathEl.dataset.region);
+    pathEl.addEventListener('click', pick);
+    pathEl.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); }
+    });
+  });
+  const gBtn = root.querySelector('#map-global-btn');
+  if (gBtn) {
+    gBtn.addEventListener('click', () => selectMapRegion('global'));
+  }
+}
+
+function renderRegionChips(selected, counts) {
+  const wrap = el('map-region-chips');
+  if (!wrap) return;
+  wrap.innerHTML = MAP_REGIONS.map(rid => {
+    const label = REGION_LABELS[rid] || rid;
+    const count = counts[rid] || 0;
+    const active = selected === rid;
+    return `<button type="button" class="map-chip${active ? ' active' : ''}" data-region="${rid}">` +
+      `${escapeHTML(label)} <span class="map-chip-count">${count}</span></button>`;
+  }).join('') +
+    `<button type="button" class="map-chip map-chip-clear${selected ? '' : ' active'}" data-region="">All regions</button>`;
+
+  wrap.querySelectorAll('.map-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const r = btn.dataset.region;
+      selectMapRegion(r || null);
+    });
+  });
+}
+
+function renderMapGlobe() {
+  const host = el('region-globe');
+  if (!host) return;
+  host.innerHTML = regionGlobeSVG(mapSelectedRegion, mapCounts);
+  bindRegionGlobeHandlers(host);
+  renderRegionChips(mapSelectedRegion, mapCounts);
+}
+
+function mapSpeciesForRegion(region) {
+  if (!region) return mapAllSpecies.slice();
+  return mapAllSpecies.filter(sp => speciesRegions(sp).has(region));
+}
+
+function renderMapSpeciesList(region) {
+  const list = mapSpeciesForRegion(region);
+  // Stable A–Z
+  list.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+  const title = el('map-region-title');
+  const sub = el('map-region-sub');
+  const countEl = el('map-species-count');
+  const grid = el('map-species-grid');
+  const empty = el('map-no-results');
+
+  if (!region) {
+    title.textContent = 'All regions';
+    sub.textContent = 'Click a continent (or Global) to filter the index by range.';
+  } else {
+    title.textContent = REGION_LABELS[region] || region;
+    sub.textContent = region === 'global'
+      ? 'Species tagged as global / widespread in the dataset.'
+      : 'Species whose educational range includes this region.';
+  }
+  countEl.textContent = list.length
+    ? `${list.length} species`
+    : '';
+
+  if (!list.length) {
+    grid.innerHTML = '';
+    empty.hidden = false;
+    return;
+  }
+  empty.hidden = true;
+  // Cap initial paint for huge "all" views; still show full region subsets.
+  const SHOW = region ? list.length : Math.min(list.length, 48);
+  const slice = list.slice(0, SHOW);
+  grid.innerHTML = slice.map(cardHTML).join('') +
+    (!region && list.length > SHOW
+      ? `<p class="map-more-hint">Showing ${SHOW} of ${list.length}. Pick a region to narrow the list.</p>`
+      : '');
+
+  grid.querySelectorAll('.card').forEach(card => {
+    const open = () => openDetail(card.dataset.id);
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+}
+
+function selectMapRegion(region) {
+  // Toggle off if re-clicking the active region.
+  if (region && mapSelectedRegion === region) {
+    mapSelectedRegion = null;
+  } else {
+    mapSelectedRegion = region || null;
+  }
+  renderMapGlobe();
+  renderMapSpeciesList(mapSelectedRegion);
+
+  // Keep search-mode region filter in sync so switching back preserves context.
+  if (mapSelectedRegion && mapSelectedRegion !== 'global') {
+    state.filters.regions = [mapSelectedRegion];
+  } else if (mapSelectedRegion === 'global') {
+    state.filters.regions = ['global'];
+  }
+  // Don't clear filters on "all regions" — user may have other trait filters.
+}
+
+async function ensureMapReady() {
+  if (!mapInitialized) {
+    try {
+      mapAllSpecies = await fetchJSON('/api/species');
+      mapCounts = buildMapCounts(mapAllSpecies);
+      mapInitialized = true;
+    } catch (e) {
+      console.error('map load failed', e);
+      el('map-species-count').textContent = 'Could not load species for the map.';
+      return;
+    }
+  }
+  renderMapGlobe();
+  renderMapSpeciesList(mapSelectedRegion);
+}
+
+function detailRegionMapHTML(regions) {
+  const regs = new Set((regions || []).map(normalizeRegion));
+  if (!regs.size) return '';
+
+  // Mini map: highlight this species' regions only (no count heat).
+  const paths = MAP_REGIONS.filter(r => r !== 'global').map(rid => {
+    const on = regs.has(rid) || regs.has('global');
+    return `<path class="detail-region-path${on ? ' on' : ''}" d="${REGION_PATHS[rid]}"></path>`;
+  }).join('');
+
+  const labels = [...regs].map(r => REGION_LABELS[r] || r).join(' · ');
+
+  return `
+    <div class="detail-section detail-map-section">
+      <h4>Where found (broad regions)</h4>
+      <div class="detail-region-map" aria-label="Region map: ${escapeHTML(labels)}">
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="500" cy="250" rx="470" ry="230" class="detail-globe-disc"/>
+          <g>${paths}</g>
+        </svg>
+      </div>
+      <p class="detail-map-note">Educational range tags only — not a precise occurrence or forage map. ${escapeHTML(labels)}</p>
+    </div>`;
 }
 
 /* ---- "What's fruiting near me now" quick-filter ----
@@ -455,6 +746,7 @@ function detailHTML(s) {
       <h4>Traits</h4>
       <table class="spec-table">${specs}</table>
     </div>
+    ${detailRegionMapHTML(s.regions)}
     ${look ? `<div class="detail-section"><h4>Look-alikes & how to tell them apart</h4>${look}</div>` : ''}
     ${s.fun_fact ? `<div class="fun-fact">🧠 ${escapeHTML(s.fun_fact)}</div>` : ''}
   `;
@@ -651,7 +943,14 @@ async function init() {
     if (e.key === 'Escape') closeDetail();
   });
 
-  el('mode-search-btn').addEventListener('click', () => setMode('search'));
+  el('mode-search-btn').addEventListener('click', () => {
+    setMode('search');
+    // If map set a region filter, refresh search results to match.
+    refresh();
+    // Re-paint chips so region selection from the globe shows as active.
+    fetchJSON('/api/facets').then(renderFilters).catch(() => {});
+  });
+  el('mode-map-btn').addEventListener('click', () => setMode('map'));
   el('mode-lookalikes-btn').addEventListener('click', () => setMode('lookalikes'));
 
   // Photo identify panel (local visual-similarity, never an identification).
