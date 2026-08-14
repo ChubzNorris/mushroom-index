@@ -6,7 +6,7 @@
   <title>The Spore Drop Index — Mushroom Search & ID</title>
   <meta name="description" content="The Spore Drop Index — search, filter, and learn mushrooms by traits. Educational reference from the Spore Drop newsletter." />
   <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/styles.css?v=scroll-results-2" />
+  <link rel="stylesheet" href="/styles.css?v=map-cards-1" />
 </head>
 <body>
   <header class="site-header">
@@ -151,8 +151,10 @@
           <p id="map-region-sub" class="map-region-sub">Select a region on the globe.</p>
           <p id="map-species-count" class="map-species-count"></p>
         </div>
-        <div id="map-species-grid" class="grid map-species-grid"><!-- populated by JS --></div>
-        <p id="map-no-results" class="no-results" hidden>No species tagged for this region.</p>
+        <div class="map-species-scroll">
+          <div id="map-species-grid" class="grid map-species-grid"><!-- populated by JS --></div>
+          <p id="map-no-results" class="no-results" hidden>No species tagged for this region.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -176,6 +178,6 @@
     <p>The Spore Drop Index · {count} species · Educational reference from the Spore Drop newsletter.</p>
   </footer>
 
-  <script src="/app.js?v=scroll-results-2"></script>
+  <script src="/app.js?v=map-cards-1"></script>
 </body>
 </html>
