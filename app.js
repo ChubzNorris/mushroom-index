@@ -911,15 +911,15 @@ function initQuickFilter(facets) {
   // Populate the region dropdown from API facets (same labels as the map).
     // Sidebar no longer renders a Region chip group — map mode owns that UX.
     const regions = facets.regions || [];
-  // Avoid duplicating options if init runs twice.
-  if (regionSelect && regionSelect.options.length <= 1) {
-    for (const r of regions) {
-      const opt = document.createElement('option');
-      opt.value = r.value;
-      opt.textContent = r.label;
-      regionSelect.appendChild(opt);
+    // Avoid duplicating options if init runs twice.
+    if (regionSelect && regionSelect.options.length <= 1) {
+      for (const r of regions) {
+        const opt = document.createElement('option');
+        opt.value = r.value;
+        opt.textContent = r.label;
+        regionSelect.appendChild(opt);
+      }
     }
-  }
 
   syncGlowControls();
   if (glowBtn && !glowBtn.dataset.bound) {
