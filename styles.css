@@ -683,39 +683,95 @@ img { max-width: 100%; }
   position: sticky;
   top: 12px;
 }
-.region-globe { position: relative; width: 100%; }
+.region-globe {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.globe-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
 .region-globe-svg {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 14px;
+  overflow: visible;
+  cursor: grab;
+  user-select: none;
+}
+.region-globe-svg:active { cursor: grabbing; }
+.globe-controls {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.globe-rot-btn {
+  width: 40px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(125,255,154,.28);
+  background: rgba(12, 20, 32, 0.9);
+  color: var(--accent);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all .14s ease;
+}
+.globe-rot-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(125,255,154,.25);
+  background: rgba(125,255,154,.08);
+}
+.globe-hint {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: .78rem;
+  text-align: center;
+}
+.globe-halo {
+  fill: none;
+  stroke: rgba(125, 255, 154, 0.12);
+  stroke-width: 14;
+  filter: blur(1px);
 }
 .globe-rim {
   fill: none;
-  stroke: rgba(125,255,154,.35);
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 10px rgba(125,255,154,.25));
+  stroke: rgba(125, 255, 154, 0.55);
+  stroke-width: 2.8;
+  filter: drop-shadow(0 0 14px rgba(125, 255, 154, 0.35));
+}
+.globe-terminator {
+  stroke: rgba(180, 220, 255, 0.12);
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+.globe-graticule-line {
+  stroke: rgba(110, 231, 255, 0.35);
+  stroke-width: 1;
 }
 .region-path {
   fill: rgba(125, 255, 154, var(--region-fill-opacity, 0.28));
-  stroke: rgba(110, 231, 255, 0.35);
-  stroke-width: 1.5;
+  stroke: rgba(180, 255, 210, 0.45);
+  stroke-width: 1.4;
   cursor: pointer;
   transition: fill .15s ease, stroke .15s ease, filter .15s ease;
   outline: none;
 }
 .region-path:hover,
 .region-path:focus-visible {
-  fill: rgba(125, 255, 154, 0.88);
+  fill: rgba(125, 255, 154, 0.9);
   stroke: #7dff9a;
   stroke-width: 2.2;
-  filter: drop-shadow(0 0 8px rgba(125,255,154,.55));
+  filter: drop-shadow(0 0 10px rgba(125, 255, 154, .65));
 }
 .region-path.active {
-  fill: rgba(125, 255, 154, 0.95);
+  fill: rgba(125, 255, 154, 0.96);
   stroke: #eef6ff;
-  stroke-width: 2.4;
-  filter: drop-shadow(0 0 12px rgba(125,255,154,.7));
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 14px rgba(125, 255, 154, .8));
 }
 .global-chip {
   display: inline-flex;
@@ -835,20 +891,25 @@ img { max-width: 100%; }
   margin-top: 8px;
   border-radius: 14px;
   border: 1px solid rgba(125,255,154,.18);
-  background: radial-gradient(ellipse at 50% 45%, #0c1a2e 0%, #05070c 75%);
+  background:
+    radial-gradient(ellipse at 50% 55%, rgba(12, 26, 46, 0.9) 0%, rgba(5, 7, 12, 0.98) 70%);
   overflow: hidden;
-  padding: 8px;
+  padding: 10px 12px;
+  max-width: 360px;
 }
 .detail-region-map svg { width: 100%; height: auto; display: block; }
 .detail-globe-disc {
-  fill: #070d18;
-  stroke: rgba(125,255,154,.28);
+  stroke: rgba(125,255,154,.22);
   stroke-width: 2;
 }
+.detail-globe-rim {
+  stroke: rgba(125,255,154,.45);
+  stroke-width: 2.4;
+}
 .detail-region-path {
-  fill: rgba(125,255,154,.12);
-  stroke: rgba(110,231,255,.2);
-  stroke-width: 1.2;
+  fill: rgba(125,255,154,.10);
+  stroke: rgba(110,231,255,.16);
+  stroke-width: 1.1;
 }
 .detail-region-path.on {
   fill: rgba(125,255,154,.82);

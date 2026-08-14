@@ -61,28 +61,56 @@ const MAP_REGIONS = [
   'global',
 ];
 
-// Lightweight SVG continent silhouettes (viewBox 0 0 1000 500).
-// Educational region blobs — not political borders.
-const REGION_PATHS = {
-  'north-america':
-    'M78,78 L145,55 L210,68 L255,95 L280,140 L295,185 L270,230 L245,255 L200,270 ' +
-    'L165,250 L140,210 L115,175 L95,140 L80,110 Z ' +
-    'M255,250 L290,275 L310,320 L295,355 L260,370 L230,345 L220,300 Z',
-  'south-america':
-    'M265,320 L305,310 L340,340 L355,390 L340,445 L300,470 L265,450 L250,400 L245,355 Z',
-  'europe':
-    'M455,95 L510,85 L555,100 L570,130 L555,165 L520,180 L480,175 L450,150 L445,120 Z',
-  'africa':
-    'M470,195 L540,185 L585,220 L595,280 L570,340 L520,365 L470,350 L450,295 L455,235 Z',
-  'asia':
-    'M575,70 L680,55 L780,75 L850,110 L870,155 L840,195 L760,210 L690,200 L630,185 ' +
-    'L590,160 L575,120 Z ' +
-    'M720,210 L780,220 L810,260 L790,295 L740,300 L700,275 L695,235 Z',
-  'oceania':
-    'M800,320 L860,310 L910,340 L920,385 L880,415 L830,410 L800,375 Z ' +
-    'M860,430 L895,425 L915,450 L890,470 L855,460 Z',
-  'global':
-    'M40,40 h920 v420 h-920 Z',
+// Educational continent rings as [lon, lat] degrees (WGS-ish).
+// Stylized blobs for range browsing — not political borders.
+const REGION_RINGS = {
+  'north-america': [
+    // Mainland + Alaska bulge + Central America taper
+    [-168, 65], [-155, 71], [-140, 70], [-125, 72], [-105, 72], [-90, 70],
+    [-80, 62], [-70, 58], [-60, 52], [-55, 47], [-65, 42], [-75, 35],
+    [-82, 28], [-90, 22], [-97, 18], [-105, 20], [-112, 24], [-118, 32],
+    [-125, 38], [-130, 48], [-140, 58], [-155, 60], [-168, 65],
+  ],
+  'south-america': [
+    [-81, 12], [-70, 12], [-60, 8], [-50, 2], [-40, -5], [-35, -15],
+    [-38, -30], [-45, -40], [-55, -50], [-68, -55], [-75, -50], [-78, -40],
+    [-80, -25], [-82, -10], [-81, 5], [-81, 12],
+  ],
+  'europe': [
+    [-10, 36], [-9, 43], [-5, 50], [-1, 58], [5, 62], [15, 70],
+    [28, 71], [40, 68], [42, 58], [40, 48], [35, 42], [28, 38],
+    [18, 36], [8, 38], [0, 38], [-8, 37], [-10, 36],
+  ],
+  'africa': [
+    [-17, 28], [-10, 35], [0, 36], [12, 33], [25, 32], [35, 28],
+    [42, 18], [50, 12], [51, 0], [48, -12], [40, -25], [32, -34],
+    [20, -35], [12, -30], [5, -20], [-5, -10], [-12, 0], [-17, 12],
+    [-18, 22], [-17, 28],
+  ],
+  'asia': [
+    // Broad Eurasia + India + SE Asia (one educational blob)
+    [42, 55], [50, 65], [70, 72], [100, 74], [130, 70], [150, 62],
+    [165, 55], [160, 42], [145, 35], [140, 22], [125, 10], [110, 5],
+    [100, 2], [90, 8], [80, 12], [75, 22], [70, 28], [62, 28],
+    [55, 32], [48, 38], [44, 45], [42, 55],
+  ],
+  'oceania': [
+    // Australia + NZ-ish satellite as one range tag
+    [114, -20], [125, -12], [140, -11], [150, -15], [153, -28],
+    [150, -38], [140, -42], [125, -36], [116, -34], [114, -26],
+    [114, -20],
+  ],
+};
+
+// Orthographic globe layout (square viewBox so the disc reads as a sphere).
+const GLOBE = {
+  CX: 500,
+  CY: 500,
+  R: 430,
+  // Center over the Atlantic so NA / EU / AF / SA all read on the front.
+  // Asia/Oceania sit toward the limb — chips still catch them.
+  LON0: -20,
+  LAT0: 12,
 };
 
 const POTENCY_LABELS = {
@@ -148,6 +176,7 @@ let mapInitialized = false;
 let mapSelectedRegion = null; // null = all regions overview
 let mapCounts = {};           // region -> species count
 let mapAllSpecies = [];       // cached full species list for map mode
+let mapGlobeLon0 = GLOBE.LON0; // rotatable yaw (degrees)
 
 function setMode(mode) {
   const isSearch = mode === 'search';
@@ -206,16 +235,97 @@ function regionFillIntensity(count, maxCount) {
   return 0.18 + 0.6 * (count / maxCount);
 }
 
+function deg2rad(d) { return d * Math.PI / 180; }
+
+/** Orthographic project lon/lat → SVG xy. Returns null if on the far side. */
+function projectOrtho(lon, lat, lon0 = mapGlobeLon0, lat0 = GLOBE.LAT0) {
+  const λ = deg2rad(lon - lon0);
+  const φ = deg2rad(lat);
+  const φ0 = deg2rad(lat0);
+  const cosc = Math.sin(φ0) * Math.sin(φ) + Math.cos(φ0) * Math.cos(φ) * Math.cos(λ);
+  if (cosc <= 0.02) return null; // back-face / limb cutoff
+  const x = GLOBE.R * Math.cos(φ) * Math.sin(λ);
+  const y = GLOBE.R * (Math.cos(φ0) * Math.sin(φ) - Math.sin(φ0) * Math.cos(φ) * Math.cos(λ));
+  return { x: GLOBE.CX + x, y: GLOBE.CY - y, cosc };
+}
+
+/** Densify a lon/lat ring, drop back-face points, build an SVG path. */
+function ringToPath(ring, stepsPerSeg = 6) {
+  const pts = [];
+  for (let i = 0; i < ring.length; i++) {
+    const [lon1, lat1] = ring[i];
+    const [lon2, lat2] = ring[(i + 1) % ring.length];
+    for (let s = 0; s < stepsPerSeg; s++) {
+      const t = s / stepsPerSeg;
+      const lon = lon1 + (lon2 - lon1) * t;
+      const lat = lat1 + (lat2 - lat1) * t;
+      const p = projectOrtho(lon, lat);
+      if (p) pts.push(p);
+    }
+  }
+  if (pts.length < 3) return '';
+  let d = `M${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`;
+  for (let i = 1; i < pts.length; i++) {
+    d += `L${pts[i].x.toFixed(1)},${pts[i].y.toFixed(1)}`;
+  }
+  return d + 'Z';
+}
+
+function graticulePaths() {
+  const lines = [];
+  // Parallels
+  for (const lat of [-60, -30, 0, 30, 60]) {
+    const pts = [];
+    for (let lon = -180; lon <= 180; lon += 4) {
+      const p = projectOrtho(lon, lat);
+      if (p) pts.push(p);
+      else if (pts.length > 1) {
+        lines.push(ptsToPolyline(pts));
+        pts.length = 0;
+      } else {
+        pts.length = 0;
+      }
+    }
+    if (pts.length > 1) lines.push(ptsToPolyline(pts));
+  }
+  // Meridians
+  for (let lon = -180; lon < 180; lon += 30) {
+    const pts = [];
+    for (let lat = -90; lat <= 90; lat += 3) {
+      const p = projectOrtho(lon, lat);
+      if (p) pts.push(p);
+      else if (pts.length > 1) {
+        lines.push(ptsToPolyline(pts));
+        pts.length = 0;
+      } else {
+        pts.length = 0;
+      }
+    }
+    if (pts.length > 1) lines.push(ptsToPolyline(pts));
+  }
+  return lines.join('');
+}
+
+function ptsToPolyline(pts) {
+  let d = `M${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`;
+  for (let i = 1; i < pts.length; i++) d += `L${pts[i].x.toFixed(1)},${pts[i].y.toFixed(1)}`;
+  return `<path class="globe-graticule-line" d="${d}" fill="none"/>`;
+}
+
 function regionGlobeSVG(selected, counts) {
   const maxCount = Math.max(1, ...MAP_REGIONS.filter(r => r !== 'global').map(r => counts[r] || 0));
+  const { CX, CY, R } = GLOBE;
+
   const paths = MAP_REGIONS.filter(r => r !== 'global').map(rid => {
+    const d = ringToPath(REGION_RINGS[rid] || []);
+    if (!d) return '';
     const count = counts[rid] || 0;
     const active = selected === rid;
     const opacity = active ? 0.92 : regionFillIntensity(count, maxCount);
     const label = REGION_LABELS[rid] || rid;
     return (
       `<path class="region-path${active ? ' active' : ''}" data-region="${rid}" ` +
-      `d="${REGION_PATHS[rid]}" style="--region-fill-opacity:${opacity.toFixed(3)}" ` +
+      `d="${d}" style="--region-fill-opacity:${opacity.toFixed(3)}" ` +
       `tabindex="0" role="button" aria-label="${escapeHTML(label)}: ${count} species" ` +
       `aria-pressed="${active ? 'true' : 'false'}">` +
       `<title>${escapeHTML(label)} — ${count} species</title></path>`
@@ -224,33 +334,63 @@ function regionGlobeSVG(selected, counts) {
 
   const globalActive = selected === 'global';
   const globalCount = counts.global || 0;
+  const uid = 'g' + Math.random().toString(36).slice(2, 8);
+  // Count how many continents are currently on the front face.
+  const visibleFront = MAP_REGIONS.filter(r => r !== 'global' && ringToPath(REGION_RINGS[r] || [])).length;
 
   return `
-    <svg class="region-globe-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <div class="globe-frame">
+    <svg class="region-globe-svg" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Orthographic globe of mushroom regions">
       <defs>
-        <radialGradient id="globeOcean" cx="50%" cy="45%" r="65%">
-          <stop offset="0%" stop-color="#0c1a2e"/>
-          <stop offset="70%" stop-color="#070d18"/>
-          <stop offset="100%" stop-color="#04070c"/>
+        <radialGradient id="${uid}-ocean" cx="38%" cy="32%" r="68%">
+          <stop offset="0%" stop-color="#16324f"/>
+          <stop offset="45%" stop-color="#0a1628"/>
+          <stop offset="78%" stop-color="#050b14"/>
+          <stop offset="100%" stop-color="#02050a"/>
         </radialGradient>
-        <filter id="globeGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="4" result="b"/>
+        <radialGradient id="${uid}-shine" cx="32%" cy="28%" r="55%">
+          <stop offset="0%" stop-color="rgba(180,230,255,0.22)"/>
+          <stop offset="35%" stop-color="rgba(110,180,255,0.06)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+        </radialGradient>
+        <radialGradient id="${uid}-limb" cx="50%" cy="50%" r="50%">
+          <stop offset="70%" stop-color="rgba(0,0,0,0)"/>
+          <stop offset="92%" stop-color="rgba(0,0,0,0.35)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0.65)"/>
+        </radialGradient>
+        <filter id="${uid}-glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3.5" result="b"/>
           <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
+        <clipPath id="${uid}-clip">
+          <circle cx="${CX}" cy="${CY}" r="${R}"/>
+        </clipPath>
       </defs>
-      <ellipse class="globe-disc" cx="500" cy="250" rx="470" ry="230" fill="url(#globeOcean)"/>
-      <ellipse class="globe-rim" cx="500" cy="250" rx="470" ry="230"/>
-      <g class="region-layer" filter="url(#globeGlow)">
-        ${paths}
+
+      <!-- faint outer atmosphere -->
+      <circle class="globe-halo" cx="${CX}" cy="${CY}" r="${R + 18}"/>
+      <circle class="globe-disc" cx="${CX}" cy="${CY}" r="${R}" fill="url(#${uid}-ocean)"/>
+
+      <g clip-path="url(#${uid}-clip)">
+        <g class="globe-grid" opacity="0.22">${graticulePaths()}</g>
+        <g class="region-layer" filter="url(#${uid}-glow)">${paths}</g>
+        <!-- specular highlight + limb darkening for sphere read -->
+        <circle cx="${CX}" cy="${CY}" r="${R}" fill="url(#${uid}-shine)" pointer-events="none"/>
+        <circle cx="${CX}" cy="${CY}" r="${R}" fill="url(#${uid}-limb)" pointer-events="none"/>
       </g>
-      <!-- subtle latitude hints -->
-      <g class="globe-grid" opacity="0.18">
-        <ellipse cx="500" cy="250" rx="470" ry="70" fill="none" stroke="#6ee7ff" stroke-width="1"/>
-        <ellipse cx="500" cy="250" rx="470" ry="140" fill="none" stroke="#6ee7ff" stroke-width="1"/>
-        <line x1="30" y1="250" x2="970" y2="250" stroke="#6ee7ff" stroke-width="1"/>
-        <line x1="500" y1="20" x2="500" y2="480" stroke="#6ee7ff" stroke-width="1"/>
-      </g>
+
+      <circle class="globe-rim" cx="${CX}" cy="${CY}" r="${R}"/>
+      <!-- tiny terminator crescent -->
+      <path class="globe-terminator" d="M${CX - R * 0.15},${CY - R * 0.96}
+        A ${R},${R} 0 0 0 ${CX - R * 0.15},${CY + R * 0.96}" fill="none"/>
     </svg>
+    <div class="globe-controls" role="group" aria-label="Rotate globe">
+      <button type="button" class="globe-rot-btn" id="globe-rot-left" title="Rotate west" aria-label="Rotate globe west">⟲</button>
+      <button type="button" class="globe-rot-btn" id="globe-rot-reset" title="Reset view" aria-label="Reset globe view">◎</button>
+      <button type="button" class="globe-rot-btn" id="globe-rot-right" title="Rotate east" aria-label="Rotate globe east">⟳</button>
+    </div>
+    <p class="globe-hint">${visibleFront < 6 ? 'Spin the globe to bring other continents into view.' : 'Click a lit continent to filter.'}</p>
+    </div>
     <button type="button" class="global-chip${globalActive ? ' active' : ''}" id="map-global-btn"
       aria-pressed="${globalActive ? 'true' : 'false'}"
       title="Species tagged global / widespread">
@@ -271,6 +411,81 @@ function bindRegionGlobeHandlers(root) {
   if (gBtn) {
     gBtn.addEventListener('click', () => selectMapRegion('global'));
   }
+  const left = root.querySelector('#globe-rot-left');
+  const right = root.querySelector('#globe-rot-right');
+  const reset = root.querySelector('#globe-rot-reset');
+  if (left) left.addEventListener('click', () => rotateGlobe(-30));
+  if (right) right.addEventListener('click', () => rotateGlobe(30));
+  if (reset) reset.addEventListener('click', () => {
+    mapGlobeLon0 = GLOBE.LON0;
+    renderMapGlobe();
+  });
+
+  // Drag starts on the SVG; move/up handled at window level so re-renders
+  // during spin don't drop the gesture.
+  const svg = root.querySelector('.region-globe-svg');
+  if (svg) {
+    svg.style.touchAction = 'none';
+    svg.addEventListener('pointerdown', (e) => {
+      if (e.target && e.target.classList && e.target.classList.contains('region-path')) return;
+      if (e.button != null && e.button !== 0) return;
+      globeDrag = { lastX: e.clientX, moved: false };
+      try { svg.setPointerCapture(e.pointerId); } catch (_) { /* ignore */ }
+    });
+  }
+}
+
+// Module-level drag state survives re-renders of the globe SVG.
+let globeDrag = null;
+let globeDragRaf = 0;
+
+function onGlobePointerMove(e) {
+  if (!globeDrag) return;
+  const dx = e.clientX - globeDrag.lastX;
+  if (Math.abs(dx) < 1) return;
+  globeDrag.lastX = e.clientX;
+  globeDrag.moved = true;
+  // Drag right → rotate west (natural globe feel).
+  mapGlobeLon0 = ((mapGlobeLon0 - dx * 0.5) % 360 + 540) % 360 - 180;
+  if (!globeDragRaf) {
+    globeDragRaf = requestAnimationFrame(() => {
+      globeDragRaf = 0;
+      renderMapGlobe();
+    });
+  }
+}
+
+function onGlobePointerUp() {
+  globeDrag = null;
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('pointermove', onGlobePointerMove);
+  window.addEventListener('pointerup', onGlobePointerUp);
+  window.addEventListener('pointercancel', onGlobePointerUp);
+}
+
+function rotateGlobe(deltaDeg) {
+  mapGlobeLon0 = ((mapGlobeLon0 + deltaDeg) % 360 + 540) % 360 - 180;
+  renderMapGlobe();
+}
+
+// Approximate centroid lon for each region (for auto-facing the globe).
+const REGION_FOCUS_LON = {
+  'north-america': -100,
+  'south-america': -60,
+  'europe': 15,
+  'africa': 20,
+  'asia': 100,
+  'oceania': 135,
+  'global': GLOBE.LON0,
+};
+
+function faceRegion(region) {
+  if (!region || region === 'global') return;
+  const target = REGION_FOCUS_LON[region];
+  if (target == null) return;
+  mapGlobeLon0 = target;
 }
 
 function renderRegionChips(selected, counts) {
@@ -359,6 +574,7 @@ function selectMapRegion(region) {
     mapSelectedRegion = null;
   } else {
     mapSelectedRegion = region || null;
+    if (mapSelectedRegion) faceRegion(mapSelectedRegion);
   }
   renderMapGlobe();
   renderMapSpeciesList(mapSelectedRegion);
@@ -392,10 +608,13 @@ function detailRegionMapHTML(regions) {
   const regs = new Set((regions || []).map(normalizeRegion));
   if (!regs.size) return '';
 
-  // Mini map: highlight this species' regions only (no count heat).
+  const { CX, CY, R } = GLOBE;
+  const uid = 'd' + Math.random().toString(36).slice(2, 8);
   const paths = MAP_REGIONS.filter(r => r !== 'global').map(rid => {
+    const d = ringToPath(REGION_RINGS[rid] || []);
+    if (!d) return '';
     const on = regs.has(rid) || regs.has('global');
-    return `<path class="detail-region-path${on ? ' on' : ''}" d="${REGION_PATHS[rid]}"></path>`;
+    return `<path class="detail-region-path${on ? ' on' : ''}" d="${d}"></path>`;
   }).join('');
 
   const labels = [...regs].map(r => REGION_LABELS[r] || r).join(' · ');
@@ -404,9 +623,18 @@ function detailRegionMapHTML(regions) {
     <div class="detail-section detail-map-section">
       <h4>Where found (broad regions)</h4>
       <div class="detail-region-map" aria-label="Region map: ${escapeHTML(labels)}">
-        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <ellipse cx="500" cy="250" rx="470" ry="230" class="detail-globe-disc"/>
-          <g>${paths}</g>
+        <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="${uid}-ocean" cx="38%" cy="32%" r="68%">
+              <stop offset="0%" stop-color="#16324f"/>
+              <stop offset="55%" stop-color="#0a1628"/>
+              <stop offset="100%" stop-color="#02050a"/>
+            </radialGradient>
+            <clipPath id="${uid}-clip"><circle cx="${CX}" cy="${CY}" r="${R}"/></clipPath>
+          </defs>
+          <circle cx="${CX}" cy="${CY}" r="${R}" fill="url(#${uid}-ocean)" class="detail-globe-disc"/>
+          <g clip-path="url(#${uid}-clip)">${paths}</g>
+          <circle cx="${CX}" cy="${CY}" r="${R}" class="detail-globe-rim" fill="none"/>
         </svg>
       </div>
       <p class="detail-map-note">Educational range tags only — not a precise occurrence or forage map. ${escapeHTML(labels)}</p>
