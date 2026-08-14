@@ -716,7 +716,8 @@ SPECIES = [
                 "distinguish": "Chanterelles have blunt False-gills, grow on ground, don't glow, don't cluster on wood."
             }
         ],
-        "fun_fact": "In the dark, a cluster can be bright enough to read by."
+        "fun_fact": "In the dark, a cluster can be bright enough to read by.",
+        "bioluminescent": True
     },
     {
         "id": "morchella-esculenta",
@@ -11333,7 +11334,8 @@ SPECIES = [
                 "distinguish": "Polypore shelves without True gills; different growth form."
             }
         ],
-        "fun_fact": "Its ghostly night glow is one of the easiest foxfire displays to spot in eastern North American woods."
+        "fun_fact": "Its ghostly night glow is one of the easiest foxfire displays to spot in eastern North American woods.",
+        "bioluminescent": True
     },
     {
         "id": "omphalotus-olivascens",
@@ -11399,7 +11401,8 @@ SPECIES = [
                 "distinguish": "European/Mediterranean jack-o'-lantern; similar toxicity and glow, different range."
             }
         ],
-        "fun_fact": "Olive tones in the cap and gills help separate it from the brighter eastern O. illudens."
+        "fun_fact": "Olive tones in the cap and gills help separate it from the brighter eastern O. illudens.",
+        "bioluminescent": True
     },
     {
         "id": "omphalotus-nidiformis",
@@ -11462,7 +11465,8 @@ SPECIES = [
                 "distinguish": "Oysters lack the strong night glow of ghost fungus and differ in ecology/range; never rely on glow alone for ID."
             }
         ],
-        "fun_fact": "One of the brightest large bioluminescent mushrooms — night photos often look unreal."
+        "fun_fact": "One of the brightest large bioluminescent mushrooms — night photos often look unreal.",
+        "bioluminescent": True
     },
     {
         "id": "omphalotus-japonicus",
@@ -11527,7 +11531,8 @@ SPECIES = [
                 "distinguish": "Oysters are typically paler-gilled shelf clusters without the toxic Omphalotus chemistry."
             }
         ],
-        "fun_fact": "The Japanese name roughly nods to 'moonlight' — a tip to its night glow."
+        "fun_fact": "The Japanese name roughly nods to 'moonlight' — a tip to its night glow.",
+        "bioluminescent": True
     },
     {
         "id": "panellus-stipticus",
@@ -11597,7 +11602,8 @@ SPECIES = [
                 "distinguish": "Usually browner spore prints and lack the classic bitter-oyster luminescence story."
             }
         ],
-        "fun_fact": "A go-to species for demonstrating foxfire — bring a dark box and give your eyes a few minutes."
+        "fun_fact": "A go-to species for demonstrating foxfire — bring a dark box and give your eyes a few minutes.",
+        "bioluminescent": True
     },
     {
         "id": "mycena-chlorophos",
@@ -11662,7 +11668,8 @@ SPECIES = [
                 "distinguish": "Most Mycena do not glow; night observation and local range matter. Never eat tiny white-spored woodland mushrooms."
             }
         ],
-        "fun_fact": "Often featured in night-forest tourism — the glow is brightest on fresh, moist caps."
+        "fun_fact": "Often featured in night-forest tourism — the glow is brightest on fresh, moist caps.",
+        "bioluminescent": True
     },
     {
         "id": "neonothopanus-nambi",
@@ -11723,7 +11730,8 @@ SPECIES = [
                 "distinguish": "Different continent/range; both glow and should not be eaten casually."
             }
         ],
-        "fun_fact": "Its luciferase system helped inspire high-profile 'glowing plant' and synthetic-biology glow projects."
+        "fun_fact": "Its luciferase system helped inspire high-profile 'glowing plant' and synthetic-biology glow projects.",
+        "bioluminescent": True
     },
     {
         "id": "filoboletus-manipularis",
@@ -11784,7 +11792,8 @@ SPECIES = [
                 "distinguish": "Different fruit-body architecture and local species concepts; both may glow in tropical night forests."
             }
         ],
-        "fun_fact": "Another reminder that fungal night-lights evolved multiple times across the tropics."
+        "fun_fact": "Another reminder that fungal night-lights evolved multiple times across the tropics.",
+        "bioluminescent": True
     },
     {
         "id": "mycena-luxaeterna",
@@ -11842,7 +11851,8 @@ SPECIES = [
                 "distinguish": "Requires specialist keys and often microscopy; glow helps but is not unique to one species worldwide."
             }
         ],
-        "fun_fact": "Described in the 2010s as part of a wave of newly documented Brazilian glowing Mycena."
+        "fun_fact": "Described in the 2010s as part of a wave of newly documented Brazilian glowing Mycena.",
+        "bioluminescent": True
     },
     {
         "id": "imleria-badia",

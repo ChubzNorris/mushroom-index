@@ -28,6 +28,7 @@ Query params for /api/species (all optional, combined with AND):
     potency      low | moderate | high (psychoactive species only)
     regions      north-america | europe | asia | south-america | africa |
                  oceania | global (matches ANY of comma-separated values)
+    bioluminescent  true | yes | 1  (species tagged as glow / foxfire fungi)
     sort         name | edibility | random
 """
 import json
@@ -388,6 +389,11 @@ REGION_LABELS = {
     "global": "Global / widespread",
 }
 
+# Boolean-ish trait facet: glow / foxfire fungi (curated tag on a subset).
+BIOLUM_LABELS = {
+    "true": "Bioluminescent only",
+}
+
 
 def _matches_filters(s, params):
     # `params` carries single string values from the query (or is {}). A key
@@ -458,6 +464,14 @@ def _matches_filters(s, params):
         if not (requested & species_regions):
             return False
 
+    # Bioluminescent: only filter when the client asks for glow species.
+    # Accept true/yes/1; anything else is ignored (no "false-only" mode).
+    biolum = params.get("bioluminescent")
+    if biolum is not None:
+        want = str(biolum).strip().lower() in {"1", "true", "yes", "y", "on"}
+        if want and not s.get("bioluminescent"):
+            return False
+
     return True
 
 
@@ -482,6 +496,11 @@ def build_facets():
                     if any(s.get("potency") == k for s in SPECIES)],
         "regions": [{"value": k, "label": REGION_LABELS[k]} for k in REGION_LABELS
                     if any(k in s.get("regions", []) for s in SPECIES)],
+        "bioluminescent": (
+            [{"value": "true", "label": BIOLUM_LABELS["true"]}]
+            if any(s.get("bioluminescent") for s in SPECIES)
+            else []
+        ),
     }
     return facets
 

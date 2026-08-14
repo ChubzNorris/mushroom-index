@@ -10,6 +10,7 @@ const state = {
 const stateKey = (k) => k;
 const FILTER_DEFS = [
   { key: 'edibility', title: 'Edibility' },
+  { key: 'bioluminescent', title: 'Bioluminescent' },
   { key: 'potency', title: 'Potency (psychoactive)' },
   { key: 'habitat', title: 'Habitat' },
   { key: 'substrate', title: 'Substrate' },
@@ -888,6 +889,7 @@ function initQuickFilter(facets) {
   const seasonLabel = el('qf-season-label');
   const regionSelect = el('qf-region-select');
   const applyBtn = el('qf-apply-btn');
+  const glowBtn = el('qf-glow-btn');
 
   seasonLabel.textContent = season.charAt(0).toUpperCase() + season.slice(1);
   let seasonSelected = true; // "This season" is on by default
@@ -911,6 +913,22 @@ function initQuickFilter(facets) {
     regionSelect.appendChild(opt);
   }
 
+  function refreshGlowBtn() {
+    if (!glowBtn) return;
+    glowBtn.classList.toggle('active', state.filters.bioluminescent === 'true');
+  }
+  refreshGlowBtn();
+  if (glowBtn) {
+    glowBtn.addEventListener('click', () => {
+      setMode('search');
+      if (state.filters.bioluminescent === 'true') delete state.filters.bioluminescent;
+      else state.filters.bioluminescent = 'true';
+      refreshGlowBtn();
+      renderFilters(facets);
+      refresh();
+    });
+  }
+
   applyBtn.addEventListener('click', () => {
     // Switch to the normal search/filter view and apply via the same
     // filter-application state/rendering path as the sidebar chips.
@@ -927,6 +945,7 @@ function initQuickFilter(facets) {
       delete state.filters.regions;
     }
     renderFilters(facets);
+    refreshGlowBtn();
     refresh();
   });
 }
@@ -992,19 +1011,20 @@ function renderFilters(facets) {
     const row = document.createElement('div');
     row.className = 'chip-row';
     for (const v of values) {
-      // Facet values are strings, except `edibility`/`potency`/`regions`
-      // which are {value, label}.
-      const isObj = v && typeof v === 'object';
-      const val = isObj ? v.value : v;
-      const label = isObj ? v.label
-        : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
-      const chip = document.createElement('span');
-      const edClass = def.key === 'edibility' ? ' ed-' + val : '';
-      const potClass = def.key === 'potency' ? ' pot-' + val : '';
-      const isActive = isMulti
-        ? (state.filters[def.key] || []).includes(val)
-        : state.filters[def.key] === val;
-      chip.className = 'chip' + edClass + potClass + (isActive ? ' active' : '');
+      // Facet values are strings, except `edibility`/`potency`/`regions`/
+            // `bioluminescent` which are {value, label}.
+            const isObj = v && typeof v === 'object';
+            const val = isObj ? v.value : v;
+            const label = isObj ? v.label
+              : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
+            const chip = document.createElement('span');
+            const edClass = def.key === 'edibility' ? ' ed-' + val : '';
+            const potClass = def.key === 'potency' ? ' pot-' + val : '';
+            const glowClass = def.key === 'bioluminescent' ? ' glow-chip' : '';
+            const isActive = isMulti
+              ? (state.filters[def.key] || []).includes(val)
+              : state.filters[def.key] === val;
+            chip.className = 'chip' + edClass + potClass + glowClass + (isActive ? ' active' : '');
       chip.textContent = label;
       chip.addEventListener('click', () => {
         if (isMulti) {
@@ -1037,19 +1057,22 @@ function cardHTML(s) {
     ? `<img class="card-img" src="${s.image.url}" alt="${escapeHTML(s.name)}" loading="lazy" />`
     : `<div class="card-emoji">${emoji}</div>`;
   const potencyBadge = s.potency
-    ? `<span class="badge-potency pot-${s.potency}" title="Psychoactive potency (see detail for sourcing)">${POTENCY_LABELS[s.potency] || s.potency}</span>`
-    : '';
-  return `
-    <article class="card" data-id="${s.id}" tabindex="0">
-      <div class="card-media">${img}</div>
-      <h3>${escapeHTML(s.name)}</h3>
-      <p class="sci">${escapeHTML(s.scientific_name)}</p>
-      <span class="badge ${s.edibility}">${s.edibility}</span>${potencyBadge}
-      <div class="traits">${colors}
-        <span class="tag">${escapeHTML(s.habitat || '—')}</span>
-      </div>
-    </article>`;
-}
+      ? `<span class="badge-potency pot-${s.potency}" title="Psychoactive potency (see detail for sourcing)">${POTENCY_LABELS[s.potency] || s.potency}</span>`
+      : '';
+    const glowBadge = s.bioluminescent
+      ? `<span class="badge-glow" title="Bioluminescent (glow / foxfire)">✨ Glow</span>`
+      : '';
+    return `
+      <article class="card" data-id="${s.id}" tabindex="0">
+        <div class="card-media">${img}</div>
+        <h3>${escapeHTML(s.name)}</h3>
+        <p class="sci">${escapeHTML(s.scientific_name)}</p>
+        <span class="badge ${s.edibility}">${s.edibility}</span>${potencyBadge}${glowBadge}
+        <div class="traits">${colors}
+          <span class="tag">${escapeHTML(s.habitat || '—')}</span>
+        </div>
+      </article>`;
+  }
 
 function escapeHTML(str) {
   return String(str).replace(/[&<>"']/g, c =>
@@ -1155,9 +1178,10 @@ function detailHTML(s) {
     ['Substrate', s.substrate || '—'],
     ['Ecology', s.ecology || '—'],
     ['Season', (s.season || []).join(', ')],
-    ['Distribution', s.distribution || '—'],
-    ['Regions', (s.regions || []).map(r => REGION_LABELS[r] || r).join(', ') || '—'],
-  ];
+        ['Distribution', s.distribution || '—'],
+        ['Regions', (s.regions || []).map(r => REGION_LABELS[r] || r).join(', ') || '—'],
+        ['Bioluminescent', s.bioluminescent ? 'Yes — glow / foxfire' : '—'],
+      ];
   const specs = rows.map(([k, v]) =>
     `<tr><td>${k}</td><td>${escapeHTML(v)}</td></tr>`).join('');
 
@@ -1178,17 +1202,20 @@ function detailHTML(s) {
     : `<div class="detail-emoji">${emoji}</div>`;
 
   const potencyBadge = s.potency
-    ? `<span class="badge-potency pot-${s.potency}" style="margin-left:8px" title="Psychoactive potency">${POTENCY_LABELS[s.potency] || s.potency}</span>`
-    : '';
+      ? `<span class="badge-potency pot-${s.potency}" style="margin-left:8px" title="Psychoactive potency">${POTENCY_LABELS[s.potency] || s.potency}</span>`
+      : '';
+    const glowBadge = s.bioluminescent
+      ? `<span class="badge-glow" style="margin-left:8px" title="Bioluminescent (glow / foxfire)">✨ Glow</span>`
+      : '';
 
-  return `
-    <div class="detail-head">
-      <div>
-        <h2 id="detail-name">${escapeHTML(s.name)}</h2>
-        <div class="sci">${escapeHTML(s.scientific_name)}</div>
+    return `
+      <div class="detail-head">
+        <div>
+          <h2 id="detail-name">${escapeHTML(s.name)}</h2>
+          <div class="sci">${escapeHTML(s.scientific_name)}</div>
+        </div>
+        <span class="badge ${s.edibility}" style="margin-left:auto">${s.edibility}</span>${potencyBadge}${glowBadge}
       </div>
-      <span class="badge ${s.edibility}" style="margin-left:auto">${s.edibility}</span>${potencyBadge}
-    </div>
     <div class="detail-hero">${hero}</div>
     <div class="detail-section">
       <h4>Also known as</h4>

@@ -328,6 +328,26 @@ html { background: var(--bg); }
   background: rgba(150,130,220,.20); color: #e6defa; border-color: rgba(150,130,220,.75);
 }
 
+/* Bioluminescent / glow trait */
+.badge-glow {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .72rem; font-weight: 700; padding: 4px 10px; border-radius: 999px;
+  border: 1px solid rgba(125,255,154,.45); white-space: nowrap; margin-left: 6px;
+  background: rgba(125,255,154,.12); color: #b8ffd0;
+  box-shadow: 0 0 12px rgba(125,255,154,.18);
+  text-transform: uppercase; letter-spacing: .03em;
+}
+.chip.glow-chip {
+  border-color: rgba(125,255,154,.4);
+  color: #c8ffe0;
+}
+.chip.glow-chip.active {
+  background: rgba(125,255,154,.18);
+  color: #eafff2;
+  border-color: rgba(125,255,154,.75);
+  box-shadow: 0 0 14px rgba(125,255,154,.22);
+}
+
 /* Trait tags: sized up for legibility + comfortable tap targets on mobile */
 .tag {
   font-size: .78rem; color: var(--ink); background: var(--panel-2);
@@ -616,6 +636,12 @@ img { max-width: 100%; }
   box-shadow: 0 0 14px var(--glow); transition: filter .15s ease, transform .1s ease;
 }
 .quick-filter-controls .primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.quick-filter-controls #qf-glow-btn.active {
+  background: rgba(125,255,154,.16);
+  border-color: rgba(125,255,154,.7);
+  color: #eafff2;
+  box-shadow: 0 0 14px rgba(125,255,154,.22);
+}
 
 /* ---- Mode toggle: search/filter vs dangerous-lookalikes browsing ---- */
 .mode-toggle {
