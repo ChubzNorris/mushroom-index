@@ -19,12 +19,17 @@ const FILTER_DEFS = [
   { key: 'cap_color', title: 'Cap color' },
   { key: 'gill_attachment', title: 'Gills / pores' },
   { key: 'season', title: 'Season' },
-  { key: 'regions', title: 'Region', multi: true },
+  // Region is NOT a sidebar chip group anymore — use Filter by region (map)
+  // and the fruiting quick-filter. Keep API multi-select wiring below.
 ];
 
 // Keys whose state.filters value is an array (multi-select, matches ANY);
-// everything else is a single-select string.
-const MULTI_KEYS = new Set(FILTER_DEFS.filter(d => d.multi).map(d => d.key));
+// everything else is a single-select string. `regions` stays multi even though
+// it is no longer rendered as a sidebar filter group.
+const MULTI_KEYS = new Set([
+  ...FILTER_DEFS.filter(d => d.multi).map(d => d.key),
+  'regions',
+]);
 
 const GILL_LABELS = {
   'free': 'Gills (free)',
@@ -903,9 +908,9 @@ function initQuickFilter(facets) {
     refreshSeasonBtn();
   });
 
-  // Populate the region dropdown from the same vocabulary as the sidebar's
-  // regions facet (array of {value, label}).
-  const regions = facets.regions || [];
+  // Populate the region dropdown from API facets (same labels as the map).
+    // Sidebar no longer renders a Region chip group — map mode owns that UX.
+    const regions = facets.regions || [];
   // Avoid duplicating options if init runs twice.
   if (regionSelect && regionSelect.options.length <= 1) {
     for (const r of regions) {
