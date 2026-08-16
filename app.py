@@ -721,6 +721,9 @@ class Handler(BaseHTTPRequestHandler):
         html = upsert_meta(html, "property", "og:url", page_url)
         html = upsert_meta(html, "property", "og:type", "article")
         html = upsert_meta(html, "name", "twitter:card", "summary_large_image")
+        html = upsert_meta(html, "name", "twitter:title", title)
+        html = upsert_meta(html, "name", "twitter:description", short_desc)
+        html = upsert_meta(html, "name", "twitter:image", img_url)
 
         # Hand the species id to the frontend so app.js's init() opens that
         # species' detail modal on load (see DEEPLINK_SPECIES_ID in app.js).
@@ -782,6 +785,7 @@ class Handler(BaseHTTPRequestHandler):
             "/app.js": "app.js",
             "/favicon.ico": "favicon.svg",
             "/favicon.svg": "favicon.svg",
+            "/og-image.png": "og-image.png",
         }
         if route in STATIC_WHITELIST:
             return self._send_file(os.path.join(HERE, STATIC_WHITELIST[route]))
