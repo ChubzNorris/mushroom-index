@@ -6,7 +6,7 @@
   <title>The Spore Drop Index — Mushroom Search & ID</title>
   <meta name="description" content="The Spore Drop Index — search, filter, and learn mushrooms by traits. Educational reference from the Spore Drop newsletter." />
   <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/styles.css?v=host-trees-1" />
+  <link rel="stylesheet" href="/styles.css?v=multi-photo-id-1" />
   <!-- Default site-wide link preview (species pages override these server-side). -->
   <meta property="og:site_name" content="The Spore Drop Index" />
   <meta property="og:title" content="The Spore Drop Index — Mushroom Search & ID" />
@@ -92,26 +92,28 @@
   </section>
 
   <div id="search-mode-wrap">
-    <section class="identify" aria-label="Identify from a photo">
+    <section class="identify" aria-label="Identify from photos">
       <div class="identify-head">
         <span class="brand-mark" aria-hidden="true">🔎</span>
         <div>
-          <h2>Identify from a photo</h2>
-          <p class="identify-sub">Upload a mushroom photo to find <b>visually similar</b> species in the index.
-            This is a colour/texture match, <b>not an identification</b> — always confirm with an expert.</p>
+          <h2>Identify from photos</h2>
+          <p class="identify-sub">Upload <b>1–5 photos</b> of the <b>same</b> mushroom (cap top, gills, stem, base)
+            to find <b>visually similar</b> species in the index. More angles help — still
+            <b>not an identification</b>; always confirm with an expert.</p>
         </div>
       </div>
       <div class="identify-controls">
         <label class="upload-btn">
-          <input id="identify-input" type="file" accept="image/*" hidden />
-          Choose photo
+          <input id="identify-input" type="file" accept="image/*" multiple hidden />
+          Add photos
         </label>
         <span id="identify-filename" class="identify-filename"></span>
-        <button id="identify-remove" type="button" class="ghost" hidden>Remove</button>
+        <button id="identify-remove" type="button" class="ghost" hidden>Clear all</button>
         <button id="identify-btn" type="button" class="primary" disabled>Find similar</button>
       </div>
       <div id="identify-preview" class="identify-preview" hidden>
-        <img id="identify-preview-img" alt="Uploaded preview" />
+        <ul id="identify-preview-list" class="identify-preview-list" aria-label="Selected photos"></ul>
+        <p id="identify-hint" class="identify-hint">Tip: cap from above + gills underneath + whole stem beats one glam shot.</p>
       </div>
       <p id="identify-note" class="identify-note" hidden></p>
       <div id="identify-results" class="grid identify-grid" hidden></div>
@@ -192,6 +194,6 @@
     <p>The Spore Drop Index · {count} species · Educational reference from the Spore Drop newsletter.</p>
   </footer>
 
-  <script src="/app.js?v=host-trees-1"></script>
+  <script src="/app.js?v=multi-photo-id-1"></script>
 </body>
 </html>

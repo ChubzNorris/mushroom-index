@@ -1318,25 +1318,34 @@ function closeDetail() {
   document.body.style.overflow = '';
 }
 
-/* ---- Photo identify (local visual-similarity, not identification) ---- */
+/* ---- Photo identify (1–5 angles; local visual-similarity / AI catalog match) ---- */
+const IDENTIFY_MAX_PHOTOS = 5;
+
 function initIdentify() {
   const input = el('identify-input');
   const btn = el('identify-btn');
   const removeBtn = el('identify-remove');
   const fname = el('identify-filename');
   const preview = el('identify-preview');
-  const previewImg = el('identify-preview-img');
+  const previewList = el('identify-preview-list');
   const note = el('identify-note');
   const results = el('identify-results');
-  let pendingFile = null;
+  /** @type {{file: File, url: string}[]} */
+  let pending = [];
 
-  // Reset everything back to the empty/choose state.
+  function revokeAll() {
+    pending.forEach(p => {
+      try { URL.revokeObjectURL(p.url); } catch (_) { /* ignore */ }
+    });
+  }
+
   function resetIdentify() {
-    pendingFile = null;
+    revokeAll();
+    pending = [];
     input.value = '';
     fname.textContent = '';
     preview.hidden = true;
-    previewImg.removeAttribute('src');
+    if (previewList) previewList.innerHTML = '';
     removeBtn.hidden = true;
     btn.disabled = true;
     note.hidden = true;
@@ -1344,62 +1353,129 @@ function initIdentify() {
     results.innerHTML = '';
   }
 
-  input.addEventListener('change', () => {
-    const f = input.files && input.files[0];
-    pendingFile = f || null;
-    if (!f) {
-      resetIdentify();
+  function renderPreviews() {
+    if (!previewList) return;
+    previewList.innerHTML = '';
+    pending.forEach((item, idx) => {
+      const li = document.createElement('li');
+      li.className = 'identify-thumb';
+      const img = document.createElement('img');
+      img.src = item.url;
+      img.alt = item.file.name || ('Photo ' + (idx + 1));
+      const rm = document.createElement('button');
+      rm.type = 'button';
+      rm.className = 'identify-thumb-remove';
+      rm.setAttribute('aria-label', 'Remove photo ' + (idx + 1));
+      rm.textContent = '×';
+      rm.addEventListener('click', () => {
+        try { URL.revokeObjectURL(item.url); } catch (_) { /* ignore */ }
+        pending.splice(idx, 1);
+        syncChrome();
+      });
+      li.appendChild(img);
+      li.appendChild(rm);
+      previewList.appendChild(li);
+    });
+  }
+
+  function syncChrome() {
+    const n = pending.length;
+    if (!n) {
+      fname.textContent = '';
+      preview.hidden = true;
+      if (previewList) previewList.innerHTML = '';
+      removeBtn.hidden = true;
+      btn.disabled = true;
       return;
     }
-    fname.textContent = f.name;
+    fname.textContent = n === 1
+      ? (pending[0].file.name || '1 photo')
+      : (n + ' photos selected');
     removeBtn.hidden = false;
     btn.disabled = false;
     preview.hidden = false;
-    const reader = new FileReader();
-    reader.onload = e => { previewImg.src = e.target.result; };
-    reader.readAsDataURL(f);
+    renderPreviews();
+  }
+
+  function addFiles(fileList) {
+    if (!fileList || !fileList.length) return;
+    const room = IDENTIFY_MAX_PHOTOS - pending.length;
+    if (room <= 0) {
+      note.hidden = false;
+      note.textContent = 'Max ' + IDENTIFY_MAX_PHOTOS + ' photos — remove one to add another.';
+      return;
+    }
+    const incoming = Array.from(fileList).filter(f => f && f.type && f.type.startsWith('image/'));
+    const take = incoming.slice(0, room);
+    take.forEach(f => {
+      pending.push({ file: f, url: URL.createObjectURL(f) });
+    });
+    if (incoming.length > room) {
+      note.hidden = false;
+      note.textContent = 'Only the first ' + IDENTIFY_MAX_PHOTOS + ' photos are kept (max per match).';
+    } else {
+      note.hidden = true;
+    }
     results.hidden = true;
     results.innerHTML = '';
-    note.hidden = true;
+    syncChrome();
+  }
+
+  input.addEventListener('change', () => {
+    addFiles(input.files);
+    // Allow re-picking the same file path after remove.
+    input.value = '';
   });
 
   removeBtn.addEventListener('click', resetIdentify);
 
   btn.addEventListener('click', async () => {
-    if (!pendingFile) return;
+    if (!pending.length) return;
     btn.disabled = true;
     btn.textContent = 'Matching…';
     note.hidden = false;
-    note.textContent = 'Analyzing photo…';
+    const n = pending.length;
+    note.textContent = n === 1
+      ? 'Analyzing photo…'
+      : ('Analyzing ' + n + ' photos together…');
     try {
       const fd = new FormData();
-      fd.append('image', pendingFile);
+      // Backend prefers name="images" (multi); still accepts legacy "image".
+      pending.forEach((item, i) => {
+        fd.append('images', item.file, item.file.name || ('photo-' + (i + 1) + '.jpg'));
+      });
       const res = await fetch('/api/identify', { method: 'POST', body: fd });
       if (!res.ok) throw new Error('Identify failed: ' + res.status);
       const data = await res.json();
       const list = data.results || [];
       const method = data.method || 'local';
+      const photoCount = data.photo_count || n;
       results.innerHTML = list.map(r => identifyCardHTML(r, method)).join('');
       results.hidden = false;
       note.hidden = false;
+      const multiBit = photoCount > 1
+        ? (' Used <b>' + photoCount + ' photos</b> of the same mushroom.')
+        : '';
       if (!list.length) {
         note.textContent = 'No indexed photos to compare against.';
       } else if (method === 'ai') {
-        note.innerHTML = 'Top matches from an <b>AI visual assessment</b> against our indexed species. ' +
-          'This is <b>not</b> an identification — confirm with an expert before touching anything.';
+        note.innerHTML = 'Top matches from an <b>AI visual assessment</b> against our indexed species.' +
+          multiBit +
+          ' This is <b>not</b> an identification — confirm with an expert before touching anything.';
       } else {
-        note.innerHTML = 'Top matches by <b>visual similarity</b> (colour/texture). ' +
-          'This is <b>not</b> an identification — confirm with an expert.';
+        note.innerHTML = 'Top matches by <b>visual similarity</b> (colour/texture).' +
+          multiBit +
+          ' This is <b>not</b> an identification — confirm with an expert.';
       }
       results.querySelectorAll('.card').forEach(card => {
         card.addEventListener('click', () => openDetail(card.dataset.id));
       });
     } catch (e) {
       note.hidden = false;
-      note.textContent = 'Could not process that photo. Try a different image.';
+      note.textContent = 'Could not process those photos. Try different images.';
       console.error(e);
     } finally {
-      btn.disabled = false;
+      btn.disabled = pending.length === 0;
       btn.textContent = 'Find similar';
     }
   });

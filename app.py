@@ -88,8 +88,41 @@ def _gemini_species_catalog():
     )
 
 
-def identify_by_photo_ai(upload_path, top_n=5, timeout=20):
+# Max photos accepted per identify request (UI + API share this intent).
+IDENTIFY_MAX_PHOTOS = 5
+# Soft per-photo decode budget after multipart parse (bytes).
+IDENTIFY_MAX_BYTES_EACH = 8 * 1024 * 1024
+
+
+def _normalize_upload_paths(upload_path_or_paths):
+    """Accept a single path or a list/tuple of paths; return a non-empty list."""
+    if isinstance(upload_path_or_paths, (list, tuple)):
+        paths = [p for p in upload_path_or_paths if p]
+    elif upload_path_or_paths:
+        paths = [upload_path_or_paths]
+    else:
+        paths = []
+    if not paths:
+        raise ValueError("No upload paths")
+    return paths[:IDENTIFY_MAX_PHOTOS]
+
+
+def _mime_for_image_path(path):
+    """Best-effort mime for Gemini inline_data; default jpeg."""
+    lower = (path or "").lower()
+    if lower.endswith(".png"):
+        return "image/png"
+    if lower.endswith(".webp"):
+        return "image/webp"
+    if lower.endswith(".gif"):
+        return "image/gif"
+    return "image/jpeg"
+
+
+def identify_by_photo_ai(upload_path_or_paths, top_n=5, timeout=30):
     """Ask Gemini to rank the closest matches from our species catalog.
+
+    Accepts one path or a list of paths (multiple angles of the same mushroom).
     Returns a list of dicts (id/name/scientific_name/edibility/confidence/
     reasoning) or raises on any failure -- caller falls back to the local
     matcher.
@@ -98,17 +131,30 @@ def identify_by_photo_ai(upload_path, top_n=5, timeout=20):
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
 
-    with open(upload_path, "rb") as f:
-        img_b64 = _base64.b64encode(f.read()).decode("ascii")
+    paths = _normalize_upload_paths(upload_path_or_paths)
+    n_photos = len(paths)
+
+    if n_photos == 1:
+        view_line = (
+            "Look at the uploaded photo and pick up to " + str(top_n) + " species "
+            "FROM THIS CATALOG ONLY that are the closest visual matches (cap "
+            "shape/color, gills/pores, stem, habitat cues visible in the photo)."
+        )
+    else:
+        view_line = (
+            "You are given " + str(n_photos) + " photos of the SAME mushroom from "
+            "different angles/distances. Use ALL of them together (cap top, gills, "
+            "stem, base, habitat cues) and pick up to " + str(top_n) + " species "
+            "FROM THIS CATALOG ONLY that best fit the combined evidence. Prefer "
+            "matches consistent across photos over a single flattering angle."
+        )
 
     prompt = (
         "You are assisting an EDUCATIONAL mushroom reference app. You are NOT "
         "identifying this mushroom for consumption safety -- never claim certainty "
         "and never suggest it is safe to eat. Below is a catalog of species IDs "
         "this app has entries for, one per line as 'id | common name | scientific "
-        "name'. Look at the uploaded photo and pick up to " + str(top_n) + " species "
-        "FROM THIS CATALOG ONLY that are the closest visual matches (cap shape/color, "
-        "gills/pores, stem, habitat cues visible in the photo). Do not invent a "
+        "name'. " + view_line + " Do not invent a "
         "species that is not in the catalog. If nothing in the catalog is a "
         "plausible match, return an empty list.\n\n"
         "Respond with ONLY compact JSON (no markdown fences, no prose) in this "
@@ -118,13 +164,23 @@ def identify_by_photo_ai(upload_path, top_n=5, timeout=20):
         "Catalog:\n" + _gemini_species_catalog()
     )
 
+    parts = [{"text": prompt}]
+    for p in paths:
+        with open(p, "rb") as f:
+            img_b64 = _base64.b64encode(f.read()).decode("ascii")
+        parts.append({
+            "inline_data": {
+                "mime_type": _mime_for_image_path(p),
+                "data": img_b64,
+            }
+        })
+
+    # Multi-image prompts need a bit more wall time on free-tier flash models.
+    if n_photos > 1:
+        timeout = max(timeout, 45)
+
     body = json.dumps({
-        "contents": [{
-            "parts": [
-                {"text": prompt},
-                {"inline_data": {"mime_type": "image/jpeg", "data": img_b64}},
-            ]
-        }],
+        "contents": [{"parts": parts}],
         "generationConfig": {
             "temperature": 0.1,
             "responseMimeType": "application/json",
@@ -215,16 +271,26 @@ for _sid, _meta in MANIFEST.items():
         except Exception:
             pass
 
-def identify_by_photo(upload_path, top_n=8):
-    """Rank indexed species by visual similarity to an uploaded photo.
-    Returns a list of dicts with id/name/edibility/similarity, best first."""
-    q = _features_from_file(upload_path)
+def identify_by_photo(upload_path_or_paths, top_n=8):
+    """Rank indexed species by visual similarity to one or more upload photos.
+
+    Multiple paths are treated as different angles of the same mushroom: we
+    take the *best* (lowest) distance per species across uploads, then rank.
+    That rewards species that match any strong angle without averaging away
+    a clear gill shot with a muddy habitat shot.
+    Returns a list of dicts with id/name/edibility/similarity, best first.
+    """
+    paths = _normalize_upload_paths(upload_path_or_paths)
+    queries = [_features_from_file(p) for p in paths]
+
     scored = []
     for s in SPECIES:
         f = _PHOTO_FEATURES.get(s["id"])
         if not f:
             continue
-        scored.append((_dist(q, f), s))
+        # Best match across the user's photos (min distance).
+        d = min(_dist(q, f) for q in queries)
+        scored.append((d, s))
     if not scored:
         return []
     scored.sort(key=lambda t: t[0])
@@ -803,6 +869,7 @@ class Handler(BaseHTTPRequestHandler):
         route = parsed.path
         if route != "/api/identify":
             return self.send_error(404, "Not found")
+        tmp_paths = []
         try:
             ctype = self.headers.get("Content-Type", "")
             if "multipart/form-data" not in ctype:
@@ -819,11 +886,19 @@ class Handler(BaseHTTPRequestHandler):
                 length = int(self.headers.get("Content-Length", "0"))
             except ValueError:
                 return self.send_error(400, "Bad Content-Length")
+            # Cap whole request (~5 x 8MB + multipart overhead).
+            max_body = IDENTIFY_MAX_PHOTOS * IDENTIFY_MAX_BYTES_EACH + 256 * 1024
+            if length <= 0 or length > max_body:
+                return self.send_error(400, "Bad or too-large upload")
             raw = self.rfile.read(length)
             # Split into parts on \r\n--<boundary>
             delim = ("--" + boundary).encode("utf-8")
             parts = raw.split(b"\r\n" + delim)
-            image_bytes = None
+            # Collect image parts. Prefer name="images" / "images[]" (multi). Fall
+            # back to legacy name="image" only when no multi parts were sent,
+            # so clients that append both don't double-count photo 1.
+            multi_blobs = []
+            single_blobs = []
             for p in parts:
                 if not p or p == b"--\r\n" or p == b"--":
                     continue
@@ -839,46 +914,82 @@ class Handler(BaseHTTPRequestHandler):
                 # Drop trailing \r\n that belongs to the boundary delimiter.
                 if body.endswith(b"\r\n"):
                     body = body[:-2]
-                if 'name="image"' in header_block and body:
-                    image_bytes = body
-                    break
-            if not image_bytes:
+                if not body:
+                    continue
+                hl = header_block.lower().replace(" ", "")
+                is_multi = (
+                    'name="images"' in header_block
+                    or 'name="images[]"' in header_block
+                    or "name=images" in hl
+                    or "name=images[]" in hl
+                )
+                is_single = (
+                    'name="image"' in header_block
+                    or ("name=image" in hl and "name=images" not in hl)
+                )
+                if is_multi:
+                    if len(body) > IDENTIFY_MAX_BYTES_EACH:
+                        return self.send_error(400, "One photo exceeds size limit")
+                    multi_blobs.append(body)
+                elif is_single:
+                    if len(body) > IDENTIFY_MAX_BYTES_EACH:
+                        return self.send_error(400, "One photo exceeds size limit")
+                    single_blobs.append(body)
+            image_blobs = multi_blobs if multi_blobs else single_blobs
+            image_blobs = image_blobs[:IDENTIFY_MAX_PHOTOS]
+            if not image_blobs:
                 return self.send_error(400, "No image uploaded")
-            # Stash to a temp file and run the local similarity matcher.
+
             import tempfile
-            fd, tmppath = tempfile.mkstemp(suffix=".jpg", prefix="id_")
-            with os.fdopen(fd, "wb") as fh:
-                fh.write(image_bytes)
-            try:
-                from PIL import UnidentifiedImageError
+            from PIL import UnidentifiedImageError
+
+            for blob in image_blobs:
+                fd, tmppath = tempfile.mkstemp(suffix=".jpg", prefix="id_")
+                with os.fdopen(fd, "wb") as fh:
+                    fh.write(blob)
                 try:
                     Image.open(tmppath).verify()
                 except (UnidentifiedImageError, OSError):
-                    os.remove(tmppath)
+                    try:
+                        os.remove(tmppath)
+                    except OSError:
+                        pass
                     return self.send_error(400, "File is not a valid image")
-                method = "local"
-                try:
-                    results = identify_by_photo_ai(tmppath, top_n=5)
-                    method = "ai"
-                    if not results:
-                        # Empty AI result (no plausible catalog match) --
-                        # still useful to fall back to visual similarity
-                        # rather than showing nothing.
-                        results = identify_by_photo(tmppath, top_n=8)
-                        method = "local"
-                except Exception as ai_err:  # noqa: BLE001
-                    sys.stderr.write(
-                        "[mushroom-index] Gemini identify unavailable, "
-                        "falling back to local matcher: %s\n" % ai_err
-                    )
-                    results = identify_by_photo(tmppath, top_n=8)
-            finally:
-                if os.path.exists(tmppath):
-                    os.remove(tmppath)
-            self._send_json({"results": results, "method": method})
+                tmp_paths.append(tmppath)
+
+            method = "local"
+            photo_count = len(tmp_paths)
+            try:
+                results = identify_by_photo_ai(tmp_paths, top_n=5)
+                method = "ai"
+                if not results:
+                    # Empty AI result (no plausible catalog match) --
+                    # still useful to fall back to visual similarity
+                    # rather than showing nothing.
+                    results = identify_by_photo(tmp_paths, top_n=8)
+                    method = "local"
+            except Exception as ai_err:  # noqa: BLE001
+                sys.stderr.write(
+                    "[mushroom-index] Gemini identify unavailable, "
+                    "falling back to local matcher: %s\n" % ai_err
+                )
+                results = identify_by_photo(tmp_paths, top_n=8)
+
+            self._send_json({
+                "results": results,
+                "method": method,
+                "photo_count": photo_count,
+            })
         except Exception as e:  # noqa: BLE001
             sys.stderr.write("[mushroom-index] identify error: %s\n" % e)
             self.send_error(500, "Identification failed")
+        finally:
+            for tp in tmp_paths:
+                try:
+                    if os.path.exists(tp):
+                        os.remove(tp)
+                except OSError:
+                    pass
 
     def log_message(self, fmt, *args):  # quieter logs
         sys.stderr.write("[mushroom-index] " + (fmt % args) + "\n")
