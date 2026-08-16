@@ -1646,5 +1646,101 @@
     "source": "iNaturalist",
     "taxon_id": 51872,
     "matched_name": "Hygrocybe conica"
+  },
+  "cortinarius-armillatus": {
+    "file": "cortinarius-armillatus.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 326353,
+    "matched_name": "Cortinarius armillatus"
+  },
+  "cortinarius-semisanguineus": {
+    "file": "cortinarius-semisanguineus.jpg",
+    "credit": "(c) shopkins70, some rights reserved (CC BY-NC), uploaded by shopkins70",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 125353,
+    "matched_name": "Cortinarius semisanguineus"
+  },
+  "cortinarius-iodes": {
+    "file": "cortinarius-iodes.jpg",
+    "credit": "(c) Charles de Martigny, some rights reserved (CC BY)",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 154583,
+    "matched_name": "Cortinarius iodes"
+  },
+  "cortinarius-traganus": {
+    "file": "cortinarius-traganus.jpg",
+    "credit": "(c) noah_siegel, some rights reserved (CC BY-NC-SA), uploaded by noah_siegel",
+    "license": "cc-by-nc-sa",
+    "source": "iNaturalist",
+    "taxon_id": 58676,
+    "matched_name": "Cortinarius traganus"
+  },
+  "cortinarius-alboviolaceus": {
+    "file": "cortinarius-alboviolaceus.jpg",
+    "credit": "(c) Alan Rockefeller, some rights reserved (CC BY), uploaded by Alan Rockefeller",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 58677,
+    "matched_name": "Cortinarius alboviolaceus"
+  },
+  "cortinarius-collinitus": {
+    "file": "cortinarius-collinitus.jpg",
+    "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC), uploaded by Federico Calledda",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 344629,
+    "matched_name": "Cortinarius collinitus"
+  },
+  "cortinarius-sanguineus": {
+    "file": "cortinarius-sanguineus.jpg",
+    "credit": "(c) Marco Floriani, some rights reserved (CC BY-NC), uploaded by Marco Floriani",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 55030,
+    "matched_name": "Cortinarius sanguineus"
+  },
+  "cortinarius-bolaris": {
+    "file": "cortinarius-bolaris.jpg",
+    "credit": "(c) Marco Floriani, some rights reserved (CC BY-NC), uploaded by Marco Floriani",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 203804,
+    "matched_name": "Cortinarius bolaris"
+  },
+  "cortinarius-triumphans": {
+    "file": "cortinarius-triumphans.jpg",
+    "credit": "(c) Felipe Hidalgo, some rights reserved (CC BY-NC), uploaded by Felipe Hidalgo",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 1636150,
+    "matched_name": "Phlegmacium triumphans"
+  },
+  "cortinarius-croceus": {
+    "file": "cortinarius-croceus.jpg",
+    "credit": "(c) Leah Zilberman, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 192638,
+    "matched_name": "Cortinarius croceus"
+  },
+  "cortinarius-cinnamomeus": {
+    "file": "cortinarius-cinnamomeus.jpg",
+    "credit": "(c) Mandy Hackney, some rights reserved (CC BY), uploaded by Mandy Hackney",
+    "license": "cc-by",
+    "source": "iNaturalist",
+    "taxon_id": 155225,
+    "matched_name": "Cortinarius cinnamomeus"
+  },
+  "cortinarius-mucosus": {
+    "file": "cortinarius-mucosus.jpg",
+    "credit": "(c) Mike Snyder, some rights reserved (CC BY-NC)",
+    "license": "cc-by-nc",
+    "source": "iNaturalist",
+    "taxon_id": 194282,
+    "matched_name": "Cortinarius mucosus"
   }
 }

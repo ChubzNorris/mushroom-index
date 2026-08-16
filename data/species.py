@@ -13542,5 +13542,893 @@ SPECIES = [
             }
         ],
         "fun_fact": "The dramatic blackening earned it a witchy common name across several languages."
+    },
+    {
+  "id": "cortinarius-armillatus",
+  "name": "Red-banded Webcap",
+  "scientific_name": "Cortinarius armillatus",
+  "aliases": [
+    "bracelet cort",
+    "red-banded cort",
+    "bracelet cortinarius"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "orange",
+      "brown",
+      "rusty"
+    ],
+    "diameter_cm": [
+      5,
+      12
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "cinnamon",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "pale",
+      "brown",
+      "orange"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern Hemisphere birch and mixed woods",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "A stocky birch associate with a rusty-orange to brownish cap and one or more bright reddish-orange bands (bracelets) on the stem from the cortina veil. Sometimes listed as edible in older guides, but it contains mycotoxins, can be confused with deadly orellanine webcaps, and is treated here as poisonous — never eat Cortinarius on app-level ID.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius rubellus (Deadly Webcap)",
+      "distinguish": "DEADLY orellanine species; usually more uniformly orange-rusty without clean red bracelet bands, and associated with conifers/birch in acidic ground — never gamble on banded corts."
+    },
+    {
+      "name": "Cortinarius triumphans (Birch Webcap)",
+      "distinguish": "Yellowish cap and yellow stem girdles rather than red-orange bracelets; also a birch associate and not a safe edible ID."
     }
+  ],
+  "fun_fact": "Those red stem 'bracelets' are leftover cortina veil tissue — the same cobweb that dusts young Cortinarius gills with rusty spores.",
+  "host_trees": [
+    "birch"
+  ]
+},
+    {
+  "id": "cortinarius-semisanguineus",
+  "name": "Surprise Webcap",
+  "scientific_name": "Cortinarius semisanguineus",
+  "aliases": [
+    "red-gilled webcap",
+    "surprise cort"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "brown",
+      "ochre",
+      "olive"
+    ],
+    "diameter_cm": [
+      2,
+      7
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "red",
+      "blood-red",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "yellow",
+      "ochre",
+      "brown"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern conifer woods and plantations",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "A medium dermocybe-type webcap with a dull ochre to olive-brown cap that hides a shock of blood-red young gills — the 'surprise' in the common name. Mycorrhizal with conifers. Poisonous / not for the table; several red-gilled Cortinarius are toxic and the genus includes deadly species.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius sanguineus (Bloodred Webcap)",
+      "distinguish": "Entire fruitbody is deep blood-red, not just the gills; same 'do not eat' rule."
+    },
+    {
+      "name": "Cortinarius cinnamomeus (Cinnamon Webcap)",
+      "distinguish": "More cinnamon-orange overall with yellow-orange (not blood-red) young gills."
+    }
+  ],
+  "fun_fact": "Dyers prize this group: the red gills and flesh yield strong textile pigments even though the mushrooms themselves are not food.",
+  "host_trees": [
+    "pine",
+    "spruce",
+    "conifers"
+  ]
+},
+    {
+  "id": "cortinarius-iodes",
+  "name": "Spotted Cort",
+  "scientific_name": "Cortinarius iodes",
+  "aliases": [
+    "viscid violet cort",
+    "spotted cortinarius"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "convex",
+      "bell"
+    ],
+    "colors": [
+      "purple",
+      "violet",
+      "yellow"
+    ],
+    "diameter_cm": [
+      2,
+      6
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "violet",
+      "rusty",
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "purple",
+      "violet",
+      "lilac"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "Eastern and central North America; also reported in northern Asia",
+  "regions": [
+    "north-america",
+    "asia"
+  ],
+  "description": "A small, slimy purple webcap that develops yellowish spots and streaks on the sticky cap as it ages — a classic eastern hardwood-forest Cortinarius. Gills start violet and rust over with spores. Inedible; bitter lookalikes exist and purple Cortinarius are never a beginner edible.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius iodeoides",
+      "distinguish": "Very similar slimy purple cort; cap cuticle tastes distinctly bitter (C. iodes is mild to only slightly bitter)."
+    },
+    {
+      "name": "Cortinarius violaceus (Violet Webcap)",
+      "distinguish": "Dry, velvety deep violet (not slimy/spotted) and usually larger."
+    },
+    {
+      "name": "Lepista nuda (Wood Blewit)",
+      "distinguish": "Pinkish-buff spore print, no cortina, not slimy-spotted purple."
+    }
+  ],
+  "fun_fact": "Those yellow freckles on a purple slimy cap are one of the few Cortinarius field marks beginners can actually remember.",
+  "host_trees": [
+    "oak",
+    "hardwoods"
+  ]
+},
+    {
+  "id": "cortinarius-traganus",
+  "name": "Gassy Webcap",
+  "scientific_name": "Cortinarius traganus",
+  "aliases": [
+    "lilac webcap",
+    "lilac conifer cort",
+    "gassy cort"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "lilac",
+      "purple",
+      "violet",
+      "brown"
+    ],
+    "diameter_cm": [
+      4,
+      12
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "cinnamon",
+      "rusty",
+      "brown"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "lilac",
+      "violet",
+      "rusty"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern conifer forests of Europe and North America",
+  "regions": [
+    "europe",
+    "north-america"
+  ],
+  "description": "A lilac-to-violet webcap of conifer woods with rusty-brown mature gills and flesh that bruises or ages rusty-brown in the stem. Famous for a strong, unpleasant sweet-gassy odor (hence 'gassy webcap'). Poisonous and easily mixed with other purple Cortinarius — leave it.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius alboviolaceus (Silvery-violet Webcap)",
+      "distinguish": "Silvery pale lilac, usually milder odor, often with hardwoods; still not edible."
+    },
+    {
+      "name": "Cortinarius camphoratus",
+      "distinguish": "Also foul-smelling lilac cort; odor is more camphorous/cheesy — microscopy/expert keys needed."
+    }
+  ],
+  "fun_fact": "The 'gassy' smell is so distinctive that field guides treat nose-to-mushroom as a primary character — still not a reason to taste it.",
+  "host_trees": [
+    "pine",
+    "spruce",
+    "conifers"
+  ]
+},
+    {
+  "id": "cortinarius-alboviolaceus",
+  "name": "Silvery-violet Webcap",
+  "scientific_name": "Cortinarius alboviolaceus",
+  "aliases": [
+    "pearly webcap",
+    "silvery violet cort"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "convex",
+      "bell"
+    ],
+    "colors": [
+      "lilac",
+      "violet",
+      "silvery",
+      "white"
+    ],
+    "diameter_cm": [
+      3,
+      9
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "lilac",
+      "gray",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "lilac",
+      "silvery",
+      "white"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Europe and North America in mixed and hardwood woods",
+  "regions": [
+    "europe",
+    "north-america"
+  ],
+  "description": "A pale silvery-lilac webcap with a silky to slightly shiny cap and a cortina that leaves faint rusty zones on the stem. Common under hardwoods (especially beech and birch) in autumn. Inedible; pale purple Cortinarius are a classic trap for blewit hunters who skip the spore print.",
+  "lookalikes": [
+    {
+      "name": "Lepista nuda (Wood Blewit)",
+      "distinguish": "Edible when correctly ID'd, but has pinkish-cream spores and no cobweb cortina leaving rusty stem bands."
+    },
+    {
+      "name": "Cortinarius traganus (Gassy Webcap)",
+      "distinguish": "Deeper lilac, strong gassy odor, conifer associate, rusty flesh in stem."
+    }
+  ],
+  "fun_fact": "If your 'blewit' leaves a rusty-brown print or shows a cobweb veil, you found a Cortinarius — abort the meal plan.",
+  "host_trees": [
+    "beech",
+    "birch",
+    "hardwoods"
+  ]
+},
+    {
+  "id": "cortinarius-collinitus",
+  "name": "Belted Slimy Cort",
+  "scientific_name": "Cortinarius collinitus",
+  "aliases": [
+    "blue-girdled webcap",
+    "belted slimy cortinarius"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "orange",
+      "brown",
+      "yellow"
+    ],
+    "diameter_cm": [
+      4,
+      10
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "pale",
+      "clay",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "blue",
+      "violet",
+      "white",
+      "orange"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern Hemisphere conifer and mixed woods",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "A myxacium (slimy-capped) Cortinarius with a glutinous orange-brown cap and a stem banded by bluish to violet slimy veil zones — the 'belt' in the common name. Inedible. Slimy orange corts are a large, messy species complex; treat all as non-edible educational IDs only.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius mucosus (Orange Webcap)",
+      "distinguish": "Also slimy orange; stem usually whiter/less blue-girdled and often under pines on sandy ground."
+    },
+    {
+      "name": "Cortinarius elatior / stillatitius group",
+      "distinguish": "Other slimy Phlegmacium/Myxacium corts — needs keys; none are beginner edibles."
+    }
+  ],
+  "fun_fact": "In wet weather the whole cap can look like it was dipped in orange varnish — classic Myxacium vibes.",
+  "host_trees": [
+    "pine",
+    "conifers",
+    "hardwoods"
+  ]
+},
+    {
+  "id": "cortinarius-sanguineus",
+  "name": "Bloodred Webcap",
+  "scientific_name": "Cortinarius sanguineus",
+  "aliases": [
+    "blood red cort",
+    "bloodred cortinarius"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "red",
+      "blood-red",
+      "crimson"
+    ],
+    "diameter_cm": [
+      2,
+      6
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "red",
+      "blood-red",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "red",
+      "blood-red"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern conifer forests, especially mossy spruce and pine woods",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "A small dermocybe that is blood-red almost throughout — cap, gills, stem, and often the flesh. Mycorrhizal with conifers in mossy woods. Poisonous and not for food; famous among natural-dye makers for deep red pigments.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius semisanguineus (Surprise Webcap)",
+      "distinguish": "Only the gills are blood-red; cap is dull brown/ochre."
+    },
+    {
+      "name": "Cortinarius rubellus (Deadly Webcap)",
+      "distinguish": "DEADLY; orange-rusty (not pure blood-red throughout) and larger — different toxin group, same genus-level do-not-eat rule."
+    }
+  ],
+  "fun_fact": "Despite the vampire cosplay, foragers should walk past — dye pot yes, dinner plate no.",
+  "host_trees": [
+    "spruce",
+    "pine",
+    "conifers"
+  ]
+},
+    {
+  "id": "cortinarius-bolaris",
+  "name": "Dappled Webcap",
+  "scientific_name": "Cortinarius bolaris",
+  "aliases": [
+    "red-flecked webcap",
+    "dappled cort"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "pale",
+      "yellow",
+      "orange",
+      "red"
+    ],
+    "diameter_cm": [
+      3,
+      8
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "pale",
+      "yellow",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "pale",
+      "yellow",
+      "orange",
+      "red"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Europe and eastern North America under hardwoods, especially beech and oak",
+  "regions": [
+    "europe",
+    "north-america"
+  ],
+  "description": "A pale yellowish webcap freckled with coppery-red to orange scales on the cap and stem — the dappled look is the field mark. Hardwood associate. Poisonous (gastrointestinal and more serious reports in the literature); another Cortinarius that must stay off the plate.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius rubellus (Deadly Webcap)",
+      "distinguish": "DEADLY; more uniformly orange-rusty without red scale freckling on a pale base."
+    },
+    {
+      "name": "Tricholomopsis rutilans (Plums and Custard)",
+      "distinguish": "Grows on conifer wood, purple-red on yellow, white spore print — not a ground mycorrhizal cort."
+    }
+  ],
+  "fun_fact": "The red flecks look painted on with a dry brush — once you see a textbook specimen, the common name clicks forever.",
+  "host_trees": [
+    "beech",
+    "oak",
+    "hardwoods"
+  ]
+},
+    {
+  "id": "cortinarius-triumphans",
+  "name": "Birch Webcap",
+  "scientific_name": "Cortinarius triumphans",
+  "aliases": [
+    "yellow girdled webcap",
+    "birch cort",
+    "Phlegmacium triumphans"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "yellow",
+      "ochre",
+      "brown"
+    ],
+    "diameter_cm": [
+      5,
+      15
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "cream",
+      "yellow",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "yellow",
+      "white",
+      "ochre"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Europe and parts of Asia with birch; limited or absent in much of North America",
+  "regions": [
+    "europe",
+    "asia"
+  ],
+  "description": "A robust birch-associated webcap (often moved to Phlegmacium triumphans in newer taxonomy) with a yellow to ochre cap and distinctive yellow girdles on the stem from the veil. Some European traditions list it edible; others call it suspect and it can be confused with dangerous Cortinarius. Spore Drop Index marks it poisonous / do-not-eat — genus risk wins.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius armillatus (Red-banded Webcap)",
+      "distinguish": "Red-orange stem bracelets rather than yellow girdles; also a birch associate."
+    },
+    {
+      "name": "Cortinarius orellanus / rubellus (deadly webcaps)",
+      "distinguish": "DEADLY orellanine species; usually more orange-rusty and lack tidy yellow stem girdles — still the reason yellow corts are not beginner food."
+    }
+  ],
+  "fun_fact": "Taxonomists keep renaming big yellow Phlegmacium corts, but the birch + yellow stem belts combo is still how field people talk about this one.",
+  "host_trees": [
+    "birch"
+  ]
+},
+    {
+  "id": "cortinarius-croceus",
+  "name": "Saffron Webcap",
+  "scientific_name": "Cortinarius croceus",
+  "aliases": [
+    "saffron cort",
+    "yellow webcap"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "yellow",
+      "orange",
+      "olive"
+    ],
+    "diameter_cm": [
+      2,
+      6
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "yellow",
+      "orange",
+      "saffron",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "yellow",
+      "orange"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern conifer and mixed woods across Europe, Asia, and North America",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "A small yellow-to-saffron dermocybe webcap with bright yellow-orange gills when young and a rusty-brown spore print. Common under conifers. Poisonous / not edible; part of the cinnamon-saffron Cortinarius complex that frustrates IDs and should never be eaten.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius cinnamomeus (Cinnamon Webcap)",
+      "distinguish": "More cinnamon-brown cap tones; same complex and same do-not-eat rule — often needs microscopy to separate cleanly."
+    },
+    {
+      "name": "Cortinarius semisanguineus (Surprise Webcap)",
+      "distinguish": "Blood-red young gills rather than saffron-yellow."
+    }
+  ],
+  "fun_fact": "Another dye-pot dermocybe: saffron yellows from these little corts show up in traditional mushroom-dye recipes.",
+  "host_trees": [
+    "pine",
+    "spruce",
+    "conifers"
+  ]
+},
+    {
+  "id": "cortinarius-cinnamomeus",
+  "name": "Cinnamon Webcap",
+  "scientific_name": "Cortinarius cinnamomeus",
+  "aliases": [
+    "cinnamon cort",
+    "cinnamon-colored webcap"
+  ],
+  "edibility": "poisonous",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "cinnamon",
+      "brown",
+      "orange",
+      "olive"
+    ],
+    "diameter_cm": [
+      2,
+      8
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "yellow",
+      "orange",
+      "cinnamon",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "yellow",
+      "cinnamon",
+      "brown"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Widespread in northern conifer forests",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "Namesake cinnamon-brown webcap of the dermocybe group: yellowish-cinnamon cap, yellow-to-cinnamon gills, rusty spores, mycorrhizal with conifers. Poisonous and frequently confused with neighboring yellow/red-gilled Cortinarius. Educational ID only.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius croceus (Saffron Webcap)",
+      "distinguish": "Brighter saffron-yellow overall; species complex often requires expert keys."
+    },
+    {
+      "name": "Cortinarius rubellus (Deadly Webcap)",
+      "distinguish": "DEADLY orellanine webcap; usually more orange-rusty with a tapered stem — never sample cinnamon/orange corts."
+    }
+  ],
+  "fun_fact": "Linnaeus-era 'cinnamon' naming stuck because the dry cap really does look like a stick of the spice — chemistry, sadly, does not.",
+  "host_trees": [
+    "pine",
+    "spruce",
+    "conifers"
+  ]
+},
+    {
+  "id": "cortinarius-mucosus",
+  "name": "Orange Webcap",
+  "scientific_name": "Cortinarius mucosus",
+  "aliases": [
+    "orange slimy cort",
+    "slimy webcap"
+  ],
+  "edibility": "inedible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "orange",
+      "brown",
+      "yellow"
+    ],
+    "diameter_cm": [
+      4,
+      10
+    ]
+  },
+  "gills": {
+    "attachment": "attached",
+    "spacing": "close",
+    "colors": [
+      "cream",
+      "clay",
+      "rusty"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "pale",
+      "orange"
+    ],
+    "ring": True,
+    "volva": False
+  },
+  "spore_print": "rusty-brown",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "late summer",
+    "autumn"
+  ],
+  "distribution": "Northern pine woods, often on sandy acidic soils",
+  "regions": [
+    "europe",
+    "north-america",
+    "asia"
+  ],
+  "description": "A glutinous orange-to-tawny myxacium Cortinarius typical of pine woods, with a slimy cap and a paler stem that may show faint rusty veil zones. Inedible. Orange slimy corts form a hard complex (including C. collinitus and allies); none are recommended edibles.",
+  "lookalikes": [
+    {
+      "name": "Cortinarius collinitus (Belted Slimy Cort)",
+      "distinguish": "Stem more distinctly blue/violet-girdled when fresh; same slimy-orange habit."
+    },
+    {
+      "name": "Cortinarius rubellus (Deadly Webcap)",
+      "distinguish": "DEADLY; dry to only slightly moist orange-rusty cap (not heavy pine-woods slime layer) — still reinforces: no orange Cortinarius for dinner."
+    }
+  ],
+  "fun_fact": "Mucosus literally means 'slimy' — if your fingers come away glossy orange after a pinch of the cap, you're in Myxacium territory.",
+  "host_trees": [
+    "pine"
+  ]
+}
 ]
