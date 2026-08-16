@@ -15,6 +15,7 @@ const FILTER_DEFS = [
   { key: 'habitat', title: 'Habitat' },
   { key: 'substrate', title: 'Substrate' },
   { key: 'ecology', title: 'Ecology' },
+  { key: 'host_trees', title: 'Host trees (mycorrhizal)', multi: true },
   { key: 'spore_print', title: 'Spore print' },
   { key: 'cap_color', title: 'Cap color' },
   { key: 'gill_attachment', title: 'Gills / pores' },
@@ -55,6 +56,37 @@ const REGION_LABELS = {
   // legacy alias present on a few older entries
   'na': 'North America',
 };
+
+// Educational mycorrhizal host-tree labels (match app.py HOST_TREE_LABELS).
+const HOST_TREE_LABELS = {
+  'oak': 'Oak',
+  'pine': 'Pine',
+  'birch': 'Birch',
+  'beech': 'Beech',
+  'fir': 'Fir',
+  'spruce': 'Spruce',
+  'hemlock': 'Hemlock',
+  'aspen': 'Aspen',
+  'poplar': 'Poplar',
+  'willow': 'Willow',
+  'hazel': 'Hazel',
+  'chestnut': 'Chestnut',
+  'larch': 'Larch',
+  'cedar': 'Cedar',
+  'maple': 'Maple',
+  'alder': 'Alder',
+  'hickory': 'Hickory',
+  'douglas-fir': 'Douglas-fir',
+  'tanoak': 'Tanoak',
+  'madrone': 'Madrone',
+  'eucalyptus': 'Eucalyptus',
+  'hardwoods': 'Hardwoods (mixed)',
+  'conifers': 'Conifers (mixed)',
+};
+
+function hostTreeLabel(t) {
+  return HOST_TREE_LABELS[t] || t;
+}
 
 // Canonical region order for map UI (excludes legacy "na" alias).
 const MAP_REGIONS = [
@@ -1047,11 +1079,11 @@ function renderFilters(facets) {
     row.className = 'chip-row';
     for (const v of values) {
       // Facet values are strings, except `edibility`/`potency`/`regions`/
-      // `bioluminescent` which are {value, label}.
-      const isObj = v && typeof v === 'object';
-      const val = isObj ? v.value : v;
-      const label = isObj ? v.label
-        : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
+            // `bioluminescent`/`host_trees` which are {value, label}.
+            const isObj = v && typeof v === 'object';
+            const val = isObj ? v.value : v;
+            const label = isObj ? v.label
+              : (def.key === 'gill_attachment' ? (GILL_LABELS[v] || v) : v);
       const chip = document.createElement('button');
       chip.type = 'button';
       const edClass = def.key === 'edibility' ? ' ed-' + val : '';
@@ -1091,6 +1123,12 @@ function cardHTML(s) {
   const emoji = EMOJI_FOR[s.edibility] || '🍄';
   const colors = (s.cap && s.cap.colors || []).slice(0, 3)
     .map(c => `<span class="tag cap-color">${c}</span>`).join('');
+  const hosts = (s.host_trees || []).slice(0, 3)
+    .map(t => `<span class="tag host-tree" title="Often found with ${escapeHTML(hostTreeLabel(t))} (educational)">🌳 ${escapeHTML(hostTreeLabel(t))}</span>`)
+    .join('');
+  const moreHosts = (s.host_trees || []).length > 3
+    ? `<span class="tag host-tree more" title="${escapeHTML((s.host_trees || []).map(hostTreeLabel).join(', '))}">+${(s.host_trees || []).length - 3}</span>`
+    : '';
   const img = s.image
     ? `<img class="card-img" src="${s.image.url}" alt="${escapeHTML(s.name)}" loading="lazy" />`
     : `<div class="card-emoji">${emoji}</div>`;
@@ -1108,6 +1146,7 @@ function cardHTML(s) {
         <span class="badge ${s.edibility}">${s.edibility}</span>${potencyBadge}${glowBadge}
         <div class="traits">${colors}
           <span class="tag">${escapeHTML(s.habitat || '—')}</span>
+          ${hosts}${moreHosts}
         </div>
       </article>`;
   }
@@ -1206,22 +1245,23 @@ function detailHTML(s) {
   const gills = s.gills || {};
   const stem = s.stem || {};
   const rows = [
-    ['Cap shape', (cap.shape || []).join(', ')],
-    ['Cap diameter', cap.diameter_cm ? cap.diameter_cm.join('–') + ' cm' : '—'],
-    ['Gills / pores', gills.attachment || '—'],
-    ['Gill spacing', gills.spacing !== 'n/a' ? gills.spacing : '—'],
-    ['Stem', (stem.colors && stem.colors.join(', ')) || '—' + (stem.ring ? ' · ring' : '') + (stem.volva ? ' · volva' : '')],
-    ['Spore print', s.spore_print || '—'],
-    ['Habitat', s.habitat || '—'],
-    ['Substrate', s.substrate || '—'],
-    ['Ecology', s.ecology || '—'],
-    ['Season', (s.season || []).join(', ')],
-        ['Distribution', s.distribution || '—'],
-        ['Regions', (s.regions || []).map(r => REGION_LABELS[r] || r).join(', ') || '—'],
-        ['Bioluminescent', s.bioluminescent ? 'Yes — glow / foxfire' : '—'],
-      ];
-  const specs = rows.map(([k, v]) =>
-    `<tr><td>${k}</td><td>${escapeHTML(v)}</td></tr>`).join('');
+      ['Cap shape', (cap.shape || []).join(', ')],
+      ['Cap diameter', cap.diameter_cm ? cap.diameter_cm.join('–') + ' cm' : '—'],
+      ['Gills / pores', gills.attachment || '—'],
+      ['Gill spacing', gills.spacing !== 'n/a' ? gills.spacing : '—'],
+      ['Stem', (stem.colors && stem.colors.join(', ')) || '—' + (stem.ring ? ' · ring' : '') + (stem.volva ? ' · volva' : '')],
+      ['Spore print', s.spore_print || '—'],
+      ['Habitat', s.habitat || '—'],
+      ['Substrate', s.substrate || '—'],
+      ['Ecology', s.ecology || '—'],
+      ['Host trees', (s.host_trees || []).map(hostTreeLabel).join(', ') || (s.ecology === 'mycorrhizal' ? 'Not yet tagged' : '— (not mycorrhizal)')],
+      ['Season', (s.season || []).join(', ')],
+      ['Distribution', s.distribution || '—'],
+      ['Regions', (s.regions || []).map(r => REGION_LABELS[r] || r).join(', ') || '—'],
+      ['Bioluminescent', s.bioluminescent ? 'Yes — glow / foxfire' : '—'],
+    ];
+    const specs = rows.map(([k, v]) =>
+      `<tr><td>${k}</td><td>${escapeHTML(v)}</td></tr>`).join('');
 
   const look = (s.lookalikes || []).map(l => {
     const nameHTML = l.link

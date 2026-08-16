@@ -84,7 +84,13 @@ SPECIES = [
                 "distinguish": "Smaller yellow-orange cousin with yellow warts."
             }
         ],
-        "fun_fact": "The model for most 'mushroom' illustrations and Super Mario's power-ups."
+        "fun_fact": "The model for most 'mushroom' illustrations and Super Mario's power-ups.",
+        "host_trees": [
+            "pine",
+            "birch",
+            "fir",
+            "spruce"
+        ]
     },
     {
         "id": "amanita-phalloides",
@@ -155,7 +161,13 @@ SPECIES = [
                 "distinguish": "Has a shaggy brown-scaled cap and a movable ring; no volva."
             }
         ],
-        "fun_fact": "A single cap can contain enough amatoxin to kill an adult."
+        "fun_fact": "A single cap can contain enough amatoxin to kill an adult.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "beech",
+            "chestnut"
+        ]
     },
     {
         "id": "amanita-bisporigera",
@@ -215,7 +227,12 @@ SPECIES = [
                 "distinguish": "Lack a volva cup and have attached (not free) gills."
             }
         ],
-        "fun_fact": "Its name refers to its angelic appearance, not its intent."
+        "fun_fact": "Its name refers to its angelic appearance, not its intent.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hickory"
+        ]
     },
     {
         "id": "amanita-caesarea",
@@ -281,7 +298,12 @@ SPECIES = [
                 "distinguish": "Death cap is greenish-tan with white gills -- never golden."
             }
         ],
-        "fun_fact": "Roman emperors reserved this mushroom for themselves — hence 'Caesar's mushroom.' Deadly Amanita muscaria grows right beside it, so the ego boost isn't worth a mispick."
+        "fun_fact": "Roman emperors reserved this mushroom for themselves — hence 'Caesar's mushroom.' Deadly Amanita muscaria grows right beside it, so the ego boost isn't worth a mispick.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "chestnut"
+        ]
     },
     {
         "id": "agaricus-bisporus",
@@ -534,7 +556,15 @@ SPECIES = [
                 "distinguish": "Intensely bitter; pinkish pore mouths."
             }
         ],
-        "fun_fact": "Dried porcini are more aromatic than fresh -- umami bombs."
+        "fun_fact": "Dried porcini are more aromatic than fresh -- umami bombs.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "fir",
+            "spruce"
+        ]
     },
     {
         "id": "boletus-satanas",
@@ -594,7 +624,11 @@ SPECIES = [
                 "distinguish": "King bolete has whitish pores and a pale, netted stem -- no red."
             }
         ],
-        "fun_fact": "Named for the devil for a reason — a bloated red-stemmed bolete that causes violent gut turmoil. Looks meaty and tempting; tastes like regret."
+        "fun_fact": "Named for the devil for a reason — a bloated red-stemmed bolete that causes violent gut turmoil. Looks meaty and tempting; tastes like regret.",
+        "host_trees": [
+            "oak",
+            "beech"
+        ]
     },
     {
         "id": "cantharellus-cibarius",
@@ -660,7 +694,14 @@ SPECIES = [
                 "distinguish": "Has True forked gills; less choice."
             }
         ],
-        "fun_fact": "Its 'gills' are actually blunt folds that run down the stem — that's the key mark separating real chanterelles from the poisonous jack-o'-lantern impostor."
+        "fun_fact": "Its 'gills' are actually blunt folds that run down the stem — that's the key mark separating real chanterelles from the poisonous jack-o'-lantern impostor.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "spruce"
+        ]
     },
     {
         "id": "omphalotus-olearius",
@@ -902,7 +943,10 @@ SPECIES = [
                 "distinguish": "Shaggy/inrolled cap edge, acrid; poisonous."
             }
         ],
-        "fun_fact": "Bleeds carrot-orange latex that stains your fingers — and the mushroom — blue-green with age. The color shift is part of the ID, not a defect."
+        "fun_fact": "Bleeds carrot-orange latex that stains your fingers — and the mushroom — blue-green with age. The color shift is part of the ID, not a defect.",
+        "host_trees": [
+            "pine"
+        ]
     },
     {
         "id": "pleurotus-ostreatus",
@@ -1695,7 +1739,14 @@ SPECIES = [
                 "distinguish": "Puffballs are white inside at edible stage."
             }
         ],
-        "fun_fact": "Looks like a puffball from outside but is poisonous inside — the giveaway is the dark, powdery interior and the lack of any stem. Cut before you commit."
+        "fun_fact": "Looks like a puffball from outside but is poisonous inside — the giveaway is the dark, powdery interior and the lack of any stem. Cut before you commit.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "lycoperdon-perlatum",
@@ -1814,7 +1865,10 @@ SPECIES = [
                 "distinguish": "Larger with a dry, non-slimy cap and no ring; a choice edible, so confusion is harmless."
             }
         ],
-        "fun_fact": "Named for the slimy, peelable cap cuticle that slips off like a jacket. The slimy layer is best removed before cooking or it gets gloopy."
+        "fun_fact": "Named for the slimy, peelable cap cuticle that slips off like a jacket. The slimy layer is best removed before cooking or it gets gloopy.",
+        "host_trees": [
+            "pine"
+        ]
     },
     {
         "id": "tricholoma-matsutake",
@@ -1879,7 +1933,12 @@ SPECIES = [
                 "distinguish": "POISONOUS; similar size and white gills but a scaly/felted cap and an abruptly bulbous stem base causing violent GI poisoning. Check the cap surface and base."
             }
         ],
-        "fun_fact": "Prized in Japan for a smell described as spicy-cinnamon-dirty-socks; a single prime specimen can outprice a steak. Near-impossible to cultivate, so wild harvests fetch absurd money."
+        "fun_fact": "Prized in Japan for a smell described as spicy-cinnamon-dirty-socks; a single prime specimen can outprice a steak. Near-impossible to cultivate, so wild harvests fetch absurd money.",
+        "host_trees": [
+            "pine",
+            "fir",
+            "tanoak"
+        ]
     },
     {
         "id": "russula-emetica",
@@ -1938,7 +1997,12 @@ SPECIES = [
                 "distinguish": "Those lack the hot, peppery taste and are not bright red."
             }
         ],
-        "fun_fact": "Named for exactly what it does — emetic (vomit-inducing). The bright red cap with white gills is a classic 'looks great, feels terrible' mushroom."
+        "fun_fact": "Named for exactly what it does — emetic (vomit-inducing). The bright red cap with white gills is a classic 'looks great, feels terrible' mushroom.",
+        "host_trees": [
+            "pine",
+            "birch",
+            "spruce"
+        ]
     },
     {
         "id": "russula-cyanoxantha",
@@ -2000,7 +2064,13 @@ SPECIES = [
                 "distinguish": "Sickener is bright red and acrid-tasting."
             }
         ],
-        "fun_fact": "One of the few Russulas safe to eat raw — its stem doesn't crumble like chalk, the 'crunch test' that separates edible Russulas from nasty ones."
+        "fun_fact": "One of the few Russulas safe to eat raw — its stem doesn't crumble like chalk, the 'crunch test' that separates edible Russulas from nasty ones.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "hypholoma-fasciculare",
@@ -2125,7 +2195,12 @@ SPECIES = [
                 "distinguish": "The whole genus is risky; rusty spore print is a unifying trait."
             }
         ],
-        "fun_fact": "Contains orellanine, which destroys your kidneys over days to weeks — often too late by the time symptoms show. That cobweb (cortina) veil is the genus giveaway."
+        "fun_fact": "Contains orellanine, which destroys your kidneys over days to weeks — often too late by the time symptoms show. That cobweb (cortina) veil is the genus giveaway.",
+        "host_trees": [
+            "pine",
+            "birch",
+            "spruce"
+        ]
     },
     {
         "id": "clitocybe-dealbata",
@@ -2606,7 +2681,12 @@ SPECIES = [
                 "distinguish": "Different color/branch tips; coral ID is expert-level."
             }
         ],
-        "fun_fact": "A pink coral pretty enough to pick and poisonous enough to regret it — causes violent vomiting. With coral fungi, the edible species are the exception, not the rule."
+        "fun_fact": "A pink coral pretty enough to pick and poisonous enough to regret it — causes violent vomiting. With coral fungi, the edible species are the exception, not the rule.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "clavulina-cristata",
@@ -2663,7 +2743,14 @@ SPECIES = [
                 "distinguish": "That one is pink and poisonous."
             }
         ],
-        "fun_fact": "White branching coral with toothed tips — sometimes turning brown or gray from a water mold that parasitizes it. Still edible, just uglier."
+        "fun_fact": "White branching coral with toothed tips — sometimes turning brown or gray from a water mold that parasitizes it. Still edible, just uglier.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "hardwoods",
+            "conifers"
+        ]
     },
     {
         "id": "leccinum-scrobum",
@@ -2727,7 +2814,10 @@ SPECIES = [
                 "distinguish": "No scabrous stem dots and a smooth stem; a choice edible."
             }
         ],
-        "fun_fact": "Always found under birch, with a stem covered in dark scabrous scales like a woolly jumper. The birch partnership is so tight it rarely shows up anywhere else."
+        "fun_fact": "Always found under birch, with a stem covered in dark scabrous scales like a woolly jumper. The birch partnership is so tight it rarely shows up anywhere else.",
+        "host_trees": [
+            "birch"
+        ]
     },
     {
         "id": "verpa-bohemica",
@@ -2910,7 +3000,13 @@ SPECIES = [
                 "distinguish": "Have pink-then-brown gills and a ring but no volva/ring combination like Amanita."
             }
         ],
-        "fun_fact": "One of several 'little brown' amanitas whose look is no clue to its lethality."
+        "fun_fact": "One of several 'little brown' amanitas whose look is no clue to its lethality.",
+        "host_trees": [
+            "fir",
+            "hemlock",
+            "douglas-fir",
+            "hardwoods"
+        ]
     },
     {
         "id": "amanita-ocreata",
@@ -2973,7 +3069,10 @@ SPECIES = [
                 "distinguish": "Have pink/brown gills even when young, never a True volva cup."
             }
         ],
-        "fun_fact": "Its toxicity is unrelated to cooking — amatoxins survive heat intact."
+        "fun_fact": "Its toxicity is unrelated to cooking — amatoxins survive heat intact.",
+        "host_trees": [
+            "oak"
+        ]
     },
     {
         "id": "entoloma-sinuatum",
@@ -3038,7 +3137,13 @@ SPECIES = [
                 "distinguish": "White-spored lookalikes; check spore print color."
             }
         ],
-        "fun_fact": "The pink spore print is the family trademark and the key to telling it from white-spored toxic amanitas."
+        "fun_fact": "The pink spore print is the family trademark and the key to telling it from white-spored toxic amanitas.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "sarcosphaera-crassa",
@@ -3098,7 +3203,12 @@ SPECIES = [
                 "distinguish": "Smaller brilliant-red cup with no violet tone or crown split; edible."
             }
         ],
-        "fun_fact": "Its color fades to cream as it ages and dries in the sun."
+        "fun_fact": "Its color fades to cream as it ages and dries in the sun.",
+        "host_trees": [
+            "pine",
+            "fir",
+            "conifers"
+        ]
     },
     {
         "id": "mutinus-caninus",
@@ -3278,7 +3388,13 @@ SPECIES = [
                 "distinguish": "Poisonous; has a red-tinged stem and stains blue."
             }
         ],
-        "fun_fact": "The red 'cracks' are how it got the name chrysenteron — 'golden inside'."
+        "fun_fact": "The red 'cracks' are how it got the name chrysenteron — 'golden inside'.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "stropharia-rugosoannulata",
@@ -3535,7 +3651,11 @@ SPECIES = [
                 "distinguish": "Inedible False truffle with a different internal marbling; ID needs expertise."
             }
         ],
-        "fun_fact": "Truffle hunters once used pigs, but dogs are preferred now — pigs tend to eat the prize."
+        "fun_fact": "Truffle hunters once used pigs, but dogs are preferred now — pigs tend to eat the prize.",
+        "host_trees": [
+            "oak",
+            "hazel"
+        ]
     },
     {
         "id": "morchella-conica",
@@ -3665,7 +3785,13 @@ SPECIES = [
                 "distinguish": "Young puffballs are solid white inside; destroying angels have gills + a stem."
             }
         ],
-        "fun_fact": "Amatoxins resist cooking, freezing, and drying -- no preparation makes it safe."
+        "fun_fact": "Amatoxins resist cooking, freezing, and drying -- no preparation makes it safe.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "spruce"
+        ]
     },
     {
         "id": "amanita-rubescens",
@@ -3730,7 +3856,14 @@ SPECIES = [
                 "distinguish": "Death cap stays green/tan and does NOT redden; if in doubt, never eat an Amanita."
             }
         ],
-        "fun_fact": "Its scientific name means 'reddening' -- the bruise colour is the ID clue."
+        "fun_fact": "Its scientific name means 'reddening' -- the bruise colour is the ID clue.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "spruce"
+        ]
     },
     {
         "id": "cortinarius-orellanus",
@@ -3794,7 +3927,12 @@ SPECIES = [
                 "distinguish": "Chanterelles are yellow with blunt False gills and a yellow spore print, not rusty."
             }
         ],
-        "fun_fact": "Symptoms can appear up to 3 weeks later -- by then kidney damage is often permanent."
+        "fun_fact": "Symptoms can appear up to 3 weeks later -- by then kidney damage is often permanent.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech"
+        ]
     },
     {
         "id": "lepiota-brunneoincarnata",
@@ -4120,7 +4258,14 @@ SPECIES = [
                 "distinguish": "Many white gilled mushrooms are dangerous; the mealy odour is a Hebeloma clue."
             }
         ],
-        "fun_fact": "Its Latin name means 'crust-like', a nod to the smooth, bun-like cap."
+        "fun_fact": "Its Latin name means 'crust-like', a nod to the smooth, bun-like cap.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "poplar",
+            "willow",
+            "conifers"
+        ]
     },
     {
         "id": "tricholoma-equestre",
@@ -4183,7 +4328,12 @@ SPECIES = [
                 "distinguish": "Matsutake is prizzed and edible but smells of cinnamon/spice; equestre smells faintly of flour."
             }
         ],
-        "fun_fact": "A reminder that 'edible' can be conditional -- this one fails only after repeated meals."
+        "fun_fact": "A reminder that 'edible' can be conditional -- this one fails only after repeated meals.",
+        "host_trees": [
+            "pine",
+            "spruce",
+            "conifers"
+        ]
     },
     {
         "id": "marasmius-oreades",
@@ -4443,7 +4593,12 @@ SPECIES = [
                 "distinguish": "Near-identical and also edible; the two are treated as interchangeable in the kitchen."
             }
         ],
-        "fun_fact": "It is one of the few choice fungi with essentially no poisonous confusion -- a safe one to learn first."
+        "fun_fact": "It is one of the few choice fungi with essentially no poisonous confusion -- a safe one to learn first.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hazel"
+        ]
     },
     {
         "id": "boletus-bicolor",
@@ -4504,7 +4659,10 @@ SPECIES = [
                 "distinguish": "Devil's bolete is poisonous with a bulbous base and red pores on a fat stem; avoid all red-pored boletes when unsure."
             }
         ],
-        "fun_fact": "The rule for boletes: red pores + blue bruising = be very careful; many are edible, some are not."
+        "fun_fact": "The rule for boletes: red pores + blue bruising = be very careful; many are edible, some are not.",
+        "host_trees": [
+            "oak"
+        ]
     },
     {
         "id": "suillus-americanus",
@@ -4564,7 +4722,10 @@ SPECIES = [
                 "distinguish": "Red-scaled cap, also eastern pine + edible; the dotted stem on americanus separates them."
             }
         ],
-        "fun_fact": "The slimy cap is the 'slippery' part -- peel it and the mushroom underneath is the meal."
+        "fun_fact": "The slimy cap is the 'slippery' part -- peel it and the mushroom underneath is the meal.",
+        "host_trees": [
+            "pine"
+        ]
     },
     {
         "id": "russula-brevipes",
@@ -4625,7 +4786,13 @@ SPECIES = [
                 "distinguish": "Its brittle flesh (snaps like chalk) is the Russula family trait -- useful but not enough alone to declare safe."
             }
         ],
-        "fun_fact": "Underneath, this mushroom is sometimes parasitised into a 'lobster mushroom' by another fungus."
+        "fun_fact": "Underneath, this mushroom is sometimes parasitised into a 'lobster mushroom' by another fungus.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "fir",
+            "conifers"
+        ]
     },
     {
         "id": "armillaria-tabescens",
@@ -5006,7 +5173,13 @@ SPECIES = [
                 "distinguish": "Woolly milkcap is also inedible with a fuzzy cap edge; both are white and peppery."
             }
         ],
-        "fun_fact": "The peppery burn is a defence chemical -- insects and mammals learn to leave milkcaps alone."
+        "fun_fact": "The peppery burn is a defence chemical -- insects and mammals learn to leave milkcaps alone.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "chlorophyllum-brunneum",
@@ -5186,7 +5359,13 @@ SPECIES = [
                 "distinguish": "A common False truffle that is inedible and lacks the aromatic interior."
             }
         ],
-        "fun_fact": "Truffles have no cap, gills, or stem -- they are the underground fruit of a fungus, more like a potato than a mushroom."
+        "fun_fact": "Truffles have no cap, gills, or stem -- they are the underground fruit of a fungus, more like a potato than a mushroom.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hazel",
+            "hardwoods"
+        ]
     },
     {
         "id": "hericium-coralloides",
@@ -5906,7 +6085,12 @@ SPECIES = [
                 "distinguish": "Most Inocybe species are also toxic to some degree; the whole genus is best avoided entirely."
             }
         ],
-        "fun_fact": "Its reddening flesh gives it the alternate name 'red-staining inocybe' and is one of the clues used to separate it from edible spring mushrooms it can be mistaken for."
+        "fun_fact": "Its reddening flesh gives it the alternate name 'red-staining inocybe' and is one of the clues used to separate it from edible spring mushrooms it can be mistaken for.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "clitocybe-nuda",
@@ -6365,7 +6549,13 @@ SPECIES = [
                 "distinguish": "Does not blue when cut and has white-to-yellow pores rather than orange-red."
             }
         ],
-        "fun_fact": "The instant, dramatic blue-black bruising of its flesh is one of the fastest color-change reactions of any bolete."
+        "fun_fact": "The instant, dramatic blue-black bruising of its flesh is one of the fastest color-change reactions of any bolete.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "spruce"
+        ]
     },
     {
         "id": "amanita-pantherina",
@@ -6427,7 +6617,14 @@ SPECIES = [
                 "distinguish": "Edible when cooked; flesh reddens/blushes when cut, unlike panther cap, and has a less prominent basal cup."
             }
         ],
-        "fun_fact": "Despite the danger, its neurotoxins produce a distinctly different, more sedative intoxication than psilocybin mushrooms and it has a long history of recreational misuse in parts of Europe."
+        "fun_fact": "Despite the danger, its neurotoxins produce a distinctly different, more sedative intoxication than psilocybin mushrooms and it has a long history of recreational misuse in parts of Europe.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "spruce"
+        ]
     },
     {
         "id": "cortinarius-violaceus",
@@ -6490,7 +6687,13 @@ SPECIES = [
                 "distinguish": "Also purple but has a pinkish-cream (not rusty-brown) spore print and lacks the cobweb-like cortina veil."
             }
         ],
-        "fun_fact": "Its intense violet color comes from pigments so striking that entire mushroom-hunting trips have been organized around finding it, even though it's rarely eaten."
+        "fun_fact": "Its intense violet color comes from pigments so striking that entire mushroom-hunting trips have been organized around finding it, even though it's rarely eaten.",
+        "host_trees": [
+            "birch",
+            "beech",
+            "hardwoods",
+            "conifers"
+        ]
     },
     {
         "id": "russula-virescens",
@@ -6554,7 +6757,12 @@ SPECIES = [
                 "distinguish": "Some greenish Russulas are mildly toxic; the cracked, patchwork cap texture is the key ID feature for this species."
             }
         ],
-        "fun_fact": "Its cracked, jigsaw-puzzle cap pattern is unique enough among green mushrooms that it helps rule out confusion with the deadly death cap, which has a smooth cap."
+        "fun_fact": "Its cracked, jigsaw-puzzle cap pattern is unique enough among green mushrooms that it helps rule out confusion with the deadly death cap, which has a smooth cap.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "polyporus-squamosus",
@@ -7712,7 +7920,13 @@ SPECIES = [
                 "distinguish": "Larger lilac mushroom in leaf litter; edible."
             }
         ],
-        "fun_fact": "Its colour bleaches out in dry weather, fooling novice collectors -- hence 'deceiver'."
+        "fun_fact": "Its colour bleaches out in dry weather, fooling novice collectors -- hence 'deceiver'.",
+        "host_trees": [
+            "oak",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "laccaria-laccata",
@@ -7780,7 +7994,14 @@ SPECIES = [
                 "distinguish": "Some small brown Inocybe are deadly; check spores and habitat."
             }
         ],
-        "fun_fact": "No two seem to look alike, which is the whole point of the name."
+        "fun_fact": "No two seem to look alike, which is the whole point of the name.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "hardwoods",
+            "conifers"
+        ]
     },
     {
         "id": "lactarius-quietus",
@@ -7847,7 +8068,10 @@ SPECIES = [
                 "distinguish": "White, fierce hot taste; edible but needs treatment."
             }
         ],
-        "fun_fact": "The odd 'truffle' perfume is why Europeans once called it the truffle milkcap."
+        "fun_fact": "The odd 'truffle' perfume is why Europeans once called it the truffle milkcap.",
+        "host_trees": [
+            "oak"
+        ]
     },
     {
         "id": "leucoagaricus-leucothites",
@@ -8578,7 +8802,12 @@ SPECIES = [
                 "distinguish": "Yellow-tan, on wood, inedible."
             }
         ],
-        "fun_fact": "The pink tips are the 'botrytis' (grape-like) clue that this is the good one."
+        "fun_fact": "The pink tips are the 'botrytis' (grape-like) clue that this is the good one.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "tremiscus-helvelloides",
@@ -9466,7 +9695,11 @@ SPECIES = [
                 "distinguish": "The Old-World original; jacksonii is the NA version."
             }
         ],
-        "fun_fact": "In a genus where most relatives can kill you, jacksonii is the rare Amanita that gourmets actively seek - and it still demands an expert ID."
+        "fun_fact": "In a genus where most relatives can kill you, jacksonii is the rare Amanita that gourmets actively seek - and it still demands an expert ID.",
+        "host_trees": [
+            "oak",
+            "pine"
+        ]
     },
     {
         "id": "cantharellus-lateritius",
@@ -9530,7 +9763,12 @@ SPECIES = [
                 "distinguish": "POISONOUS; True gills (not wrinkles) and grows in clusters on wood."
             }
         ],
-        "fun_fact": "Smell is the shortcut: a chanterelle smells like apricots, while its poisonous 'False chanterelle' impostors smell of nothing or decay."
+        "fun_fact": "Smell is the shortcut: a chanterelle smells like apricots, while its poisonous 'False chanterelle' impostors smell of nothing or decay.",
+        "host_trees": [
+            "oak",
+            "hickory",
+            "hardwoods"
+        ]
     },
     {
         "id": "lepiota-cristata",
@@ -9660,7 +9898,11 @@ SPECIES = [
                 "distinguish": "Some edible (e.g. wood blewit) - careful ID needed."
             }
         ],
-        "fun_fact": "Big enough to fill a pan, but the 'edible for some, havoc for others' record is why cautious guides file it under 'not worth the risk'."
+        "fun_fact": "Big enough to fill a pan, but the 'edible for some, havoc for others' record is why cautious guides file it under 'not worth the risk'.",
+        "host_trees": [
+            "hardwoods",
+            "conifers"
+        ]
     },
     {
         "id": "hygrophorus-russula",
@@ -9727,7 +9969,12 @@ SPECIES = [
                 "distinguish": "Similar pink woodwax; both edible."
             }
         ],
-        "fun_fact": "Despite the 'False russula' nickname, its gills are waxy and flexible - the real tell that it's a Hygrophorus, not a brittle-gilled Russula."
+        "fun_fact": "Despite the 'False russula' nickname, its gills are waxy and flexible - the real tell that it's a Hygrophorus, not a brittle-gilled Russula.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "boletus-variipes",
@@ -9792,7 +10039,12 @@ SPECIES = [
                 "distinguish": "Some are inedible-bitter; check taste cautiously and spore colour."
             }
         ],
-        "fun_fact": "The name 'variipes' (variable foot) nods to its stem, which ranges from smooth to strongly netted across individuals."
+        "fun_fact": "The name 'variipes' (variable foot) nods to its stem, which ranges from smooth to strongly netted across individuals.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hickory"
+        ]
     },
     {
         "id": "hypomyces-lactifluorum",
@@ -9979,7 +10231,13 @@ SPECIES = [
                 "distinguish": "Related 'curry milkcap' of Europe/elsewhere; similar scent chemistry but different range."
             }
         ],
-        "fun_fact": "The maple-syrup smell comes from sotolon — the same compound behind fenugreek and artificial maple flavoring."
+        "fun_fact": "The maple-syrup smell comes from sotolon — the same compound behind fenugreek and artificial maple flavoring.",
+        "host_trees": [
+            "oak",
+            "douglas-fir",
+            "tanoak",
+            "madrone"
+        ]
     },
     {
         "id": "hydnum-repandum",
@@ -10047,7 +10305,15 @@ SPECIES = [
                 "distinguish": "Chanterelles have False gills (ridges), not soft downward spines."
             }
         ],
-        "fun_fact": "One of the few choice edibles that almost never gets confused with anything deadly — a classic 'safe beginner' species."
+        "fun_fact": "One of the few choice edibles that almost never gets confused with anything deadly — a classic 'safe beginner' species.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "fir",
+            "spruce"
+        ]
     },
     {
         "id": "lactarius-indigo",
@@ -10115,7 +10381,11 @@ SPECIES = [
                 "distinguish": "Cortinarius has a cobweb veil and rusty-brown spores; no blue milk."
             }
         ],
-        "fun_fact": "One of the only mushrooms that is truly blue in the field — the pigment is a azulene compound rare in fungi."
+        "fun_fact": "One of the only mushrooms that is truly blue in the field — the pigment is a azulene compound rare in fungi.",
+        "host_trees": [
+            "oak",
+            "pine"
+        ]
     },
     {
         "id": "entoloma-abortivum",
@@ -10315,7 +10585,12 @@ SPECIES = [
                 "distinguish": "Regional red chanterelles; treat similarly but confirm local species."
             }
         ],
-        "fun_fact": "Its pigment is a carotenoid — the same chemical family that makes carrots orange and flamingos pink."
+        "fun_fact": "Its pigment is a carotenoid — the same chemical family that makes carrots orange and flamingos pink.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "pleurotus-citrinopileatus",
@@ -10818,7 +11093,12 @@ SPECIES = [
                 "distinguish": "Closely related 'corrugated-cap' bradley; also edible where known."
             }
         ],
-        "fun_fact": "Now often placed in Lactifluus, not Lactarius — taxonomy moved, the fishy perfume did not."
+        "fun_fact": "Now often placed in Lactifluus, not Lactarius — taxonomy moved, the fishy perfume did not.",
+        "host_trees": [
+            "oak",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "cortinarius-caperatus",
@@ -10887,7 +11167,13 @@ SPECIES = [
                 "distinguish": "Rusty spore print + cortina remnants point to Cortinarius."
             }
         ],
-        "fun_fact": "Long filed as Rozites caperata before DNA stuffed it back into Cortinarius — still the 'friendly' face of a dangerous genus."
+        "fun_fact": "Long filed as Rozites caperata before DNA stuffed it back into Cortinarius — still the 'friendly' face of a dangerous genus.",
+        "host_trees": [
+            "pine",
+            "birch",
+            "spruce",
+            "conifers"
+        ]
     },
     {
         "id": "pholiota-nameko",
@@ -11920,7 +12206,15 @@ SPECIES = [
                 "distinguish": "Usually thicker white netted stipe and milder pore bruising behavior."
             }
         ],
-        "fun_fact": "Long filed under Boletus/Xerocomus; modern names settle it in Imleria."
+        "fun_fact": "Long filed under Boletus/Xerocomus; modern names settle it in Imleria.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "beech",
+            "spruce",
+            "hardwoods",
+            "conifers"
+        ]
     },
     {
         "id": "strobilomyces-strobilaceus",
@@ -11983,7 +12277,13 @@ SPECIES = [
                 "distinguish": "Several look similar regionally; check local keys for North American segregates."
             }
         ],
-        "fun_fact": "The pinecone-like cap scales inspired both the common name and Strobilomyces ('pinecone fungus')."
+        "fun_fact": "The pinecone-like cap scales inspired both the common name and Strobilomyces ('pinecone fungus').",
+        "host_trees": [
+            "oak",
+            "pine",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "cyclocybe-aegerita",
@@ -12390,7 +12690,14 @@ SPECIES = [
                 "distinguish": "Anything with True sharp gills and without the hollow yellow foot/chanterelle ridges is out."
             }
         ],
-        "fun_fact": "A winter-forager favorite — often still fruiting after frosts when summer mushrooms are long gone."
+        "fun_fact": "A winter-forager favorite — often still fruiting after frosts when summer mushrooms are long gone.",
+        "host_trees": [
+            "pine",
+            "beech",
+            "fir",
+            "spruce",
+            "hemlock"
+        ]
     },
     {
         "id": "cantharellus-formosus",
@@ -12456,7 +12763,13 @@ SPECIES = [
                 "distinguish": "Scaly vase chanterelle relative; different texture and often causes GI upset for many people."
             }
         ],
-        "fun_fact": "Oregon made this species its official state mushroom."
+        "fun_fact": "Oregon made this species its official state mushroom.",
+        "host_trees": [
+            "fir",
+            "spruce",
+            "hemlock",
+            "douglas-fir"
+        ]
     },
     {
         "id": "hypholoma-lateritium",
@@ -12594,7 +12907,14 @@ SPECIES = [
                 "distinguish": "Spore print, lack of milk, and inrolled margin help — but the safety rule is simple: do not eat Paxillus."
             }
         ],
-        "fun_fact": "A textbook case of 'traditional edible' overturned by modern toxicology."
+        "fun_fact": "A textbook case of 'traditional edible' overturned by modern toxicology.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "poplar",
+            "willow"
+        ]
     },
     {
         "id": "tylopilus-felleus",
@@ -12662,7 +12982,15 @@ SPECIES = [
                 "distinguish": "Yellow pores that blue; not intensely bitter."
             }
         ],
-        "fun_fact": "One bitter fruit body can spoil an entire pan of mixed boletes — veterans always check."
+        "fun_fact": "One bitter fruit body can spoil an entire pan of mixed boletes — veterans always check.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "beech",
+            "hemlock",
+            "hardwoods",
+            "conifers"
+        ]
     },
     {
         "id": "clitopilus-prunulus",
@@ -12796,7 +13124,13 @@ SPECIES = [
                 "distinguish": "More violet-tan pig's-ear clubs, different structure."
             }
         ],
-        "fun_fact": "One of the few truly blue-looking 'chanterelle-ish' mushrooms — a PNW and montane prize photo subject."
+        "fun_fact": "One of the few truly blue-looking 'chanterelle-ish' mushrooms — a PNW and montane prize photo subject.",
+        "host_trees": [
+            "fir",
+            "spruce",
+            "hemlock",
+            "conifers"
+        ]
     },
     {
         "id": "gomphus-clavatus",
@@ -12866,7 +13200,13 @@ SPECIES = [
                 "distinguish": "Deeper blue-black clustered form."
             }
         ],
-        "fun_fact": "The wrinkled, folded hymenium looks more like a wrinkled pig's ear than plate gills — hence the name."
+        "fun_fact": "The wrinkled, folded hymenium looks more like a wrinkled pig's ear than plate gills — hence the name.",
+        "host_trees": [
+            "fir",
+            "spruce",
+            "hemlock",
+            "conifers"
+        ]
     },
     {
         "id": "suillus-spraguei",
@@ -12926,7 +13266,10 @@ SPECIES = [
                 "distinguish": "Host tree and cap scale pattern separate painted suillus from slippery jacks and friends."
             }
         ],
-        "fun_fact": "A white-pine specialist — if there's no Pinus strobus around, rethink the ID."
+        "fun_fact": "A white-pine specialist — if there's no Pinus strobus around, rethink the ID.",
+        "host_trees": [
+            "pine"
+        ]
     },
     {
         "id": "mycena-leaiana",
@@ -13123,7 +13466,14 @@ SPECIES = [
                 "distinguish": "Usually with a ring (partial veil) when intact; still — never casual-eat white-spored volva mushrooms."
             }
         ],
-        "fun_fact": "Grisettes are a whole complex — many regional names hide multiple look-alike species."
+        "fun_fact": "Grisettes are a whole complex — many regional names hide multiple look-alike species.",
+        "host_trees": [
+            "oak",
+            "pine",
+            "birch",
+            "beech",
+            "hardwoods"
+        ]
     },
     {
         "id": "hygrocybe-conica",

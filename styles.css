@@ -433,6 +433,15 @@ button.chip { margin: 0; }
   min-height: 30px; display: inline-flex; align-items: center;
 }
 .tag.cap-color { border-color: rgba(125,255,154,.3); }
+.tag.host-tree {
+  border-color: rgba(196,140,255,.35);
+  color: #e8d8ff;
+  background: rgba(196,140,255,.10);
+}
+.tag.host-tree.more {
+  opacity: .85;
+  font-weight: 700;
+}
 
 .no-results { text-align: center; color: var(--ink-dim); padding: 40px; }
 

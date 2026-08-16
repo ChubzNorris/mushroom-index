@@ -29,6 +29,8 @@ Query params for /api/species (all optional, combined with AND):
     regions      north-america | europe | asia | south-america | africa |
                  oceania | global (matches ANY of comma-separated values)
     bioluminescent  true | yes | 1  (species tagged as glow / foxfire fungi)
+    host_trees   oak | pine | birch | ... (mycorrhizal host trees; ANY of
+                 comma-separated values). Educational associations only.
     sort         name | edibility | random
 """
 import json
@@ -394,6 +396,34 @@ BIOLUM_LABELS = {
     "true": "Bioluminescent only",
 }
 
+# Mycorrhizal host-tree associations (educational; not exclusive occurrence).
+# Order controls facet chip ordering in the sidebar.
+HOST_TREE_LABELS = {
+    "oak": "Oak",
+    "pine": "Pine",
+    "birch": "Birch",
+    "beech": "Beech",
+    "fir": "Fir",
+    "spruce": "Spruce",
+    "hemlock": "Hemlock",
+    "aspen": "Aspen",
+    "poplar": "Poplar",
+    "willow": "Willow",
+    "hazel": "Hazel",
+    "chestnut": "Chestnut",
+    "larch": "Larch",
+    "cedar": "Cedar",
+    "maple": "Maple",
+    "alder": "Alder",
+    "hickory": "Hickory",
+    "douglas-fir": "Douglas-fir",
+    "tanoak": "Tanoak",
+    "madrone": "Madrone",
+    "eucalyptus": "Eucalyptus",
+    "hardwoods": "Hardwoods (mixed)",
+    "conifers": "Conifers (mixed)",
+}
+
 
 def _matches_filters(s, params):
     # `params` carries single string values from the query (or is {}). A key
@@ -415,10 +445,15 @@ def _matches_filters(s, params):
     q = params.get("q")
     if q:
         q = q.lower()
+        host_labels = [
+            HOST_TREE_LABELS.get(t, t) for t in s.get("host_trees", [])
+        ]
         haystack = " ".join([
             s["name"], s["scientific_name"],
             " ".join(s.get("aliases", [])),
             s.get("description", ""),
+            " ".join(s.get("host_trees", [])),
+            " ".join(host_labels),
         ]).lower()
         if q not in haystack:
             return False
@@ -472,6 +507,15 @@ def _matches_filters(s, params):
         if want and not s.get("bioluminescent"):
             return False
 
+    # Host trees: mycorrhizal associations stored as a list; query may be
+    # comma-separated (OR match), same contract as regions.
+    host_param = params.get("host_trees")
+    if host_param:
+        requested = {r.strip() for r in host_param.split(",") if r.strip()}
+        species_hosts = set(s.get("host_trees", []))
+        if not (requested & species_hosts):
+            return False
+
     return True
 
 
@@ -501,6 +545,11 @@ def build_facets():
             if any(s.get("bioluminescent") for s in SPECIES)
             else []
         ),
+        "host_trees": [
+            {"value": k, "label": HOST_TREE_LABELS[k]}
+            for k in HOST_TREE_LABELS
+            if any(k in s.get("host_trees", []) for s in SPECIES)
+        ],
     }
     return facets
 
