@@ -14430,5 +14430,312 @@ SPECIES = [
   "host_trees": [
     "pine"
   ]
+},
+    {
+  "id": "gyroporus-castaneus",
+  "name": "Chestnut Bolete",
+  "scientific_name": "Gyroporus castaneus",
+  "aliases": [
+    "chestnut gyroporus",
+    "Gyroporus castaneus"
+  ],
+  "edibility": "choice",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "brown",
+      "tan",
+      "chestnut",
+      "rust"
+    ],
+    "diameter_cm": [
+      3,
+      10
+    ]
+  },
+  "gills": {
+    "attachment": "pores",
+    "spacing": "n/a",
+    "colors": [
+      "white",
+      "cream",
+      "yellow"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "brown",
+      "tan",
+      "chestnut"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "pale-yellow",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "Europe, Britain, eastern North America; rare in western North America; with oaks",
+  "regions": [
+    "europe",
+    "north-america"
+  ],
+  "description": "A smallish white-pored bolete with a chestnut-brown cap and a brittle stem that is hollowed into chambers (cut it lengthwise). Unlike many True boletes, the flesh does not blue and the spore print is pale straw-yellow, not olive-brown. Usually mycorrhizal with oak. Choice edible when firm and free of insect tunnels — educational reference only; never eat a wild mushroom based on an app.",
+  "lookalikes": [
+    {
+      "name": "Gyroporus cyanescens (cornflower bolete)",
+      "distinguish": "Bruises an intense cornflower blue within seconds; castaneus does not blue."
+    },
+    {
+      "name": "Gyroporus purpurinus (red gyroporus)",
+      "distinguish": "Cap and stem are purple-red to burgundy rather than chestnut brown; eastern North America."
+    },
+    {
+      "name": "Tylopilus felleus (bitter bolete)",
+      "distinguish": "Pinkish pore mouths and intensely bitter taste; not chambered-hollow like Gyroporus."
+    }
+  ],
+  "fun_fact": "Gyroporus means round pores; the brittle, chambered stem is a better field clue than pore shape alone.",
+  "host_trees": [
+    "oak"
+  ]
+},
+    {
+  "id": "gyroporus-cyanescens",
+  "name": "Cornflower Bolete",
+  "scientific_name": "Gyroporus cyanescens",
+  "aliases": [
+    "bluing bolete",
+    "bluing gyroporus",
+    "cornflower bolete"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "yellow",
+      "buff",
+      "tan",
+      "cream"
+    ],
+    "diameter_cm": [
+      4,
+      12
+    ]
+  },
+  "gills": {
+    "attachment": "pores",
+    "spacing": "n/a",
+    "colors": [
+      "white",
+      "cream",
+      "yellow"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "yellow",
+      "buff",
+      "cream"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "pale-yellow",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "Eurasia, eastern North America, and Australia; coniferous and mixed forests",
+  "regions": [
+    "europe",
+    "asia",
+    "north-america",
+    "oceania"
+  ],
+  "description": "The classic bluing bolete of Gyroporaceae: a fibrous yellowish-buff cap, white to pale pores, and a thick chambered-hollow stem. Every part flashes intense cornflower blue within moments of bruising or cutting — from enzymatic oxidation of gyrocyanin. Edible despite the tough stem (many cooks discard it). A less common form bruises deep violet instead of blue. Educational only; never eat wild mushrooms from an app ID.",
+  "lookalikes": [
+    {
+      "name": "Gyroporus castaneus (chestnut bolete)",
+      "distinguish": "Chestnut-brown overall and does not blue; cyanescens is yellower and blues dramatically."
+    },
+    {
+      "name": "Boletus luridiformis (scarletina bolete)",
+      "distinguish": "True bolete with olive-brown spores, red pore mouths/stem flecking, and different stem anatomy — not chambered-brittle Gyroporus."
+    },
+    {
+      "name": "Boletus satanas (devil's bolete)",
+      "distinguish": "Pale cap with red pores and a swollen red-netted stem; poisonous. Not a Gyroporus."
+    }
+  ],
+  "fun_fact": "The instant blue flash comes from gyrocyanin — same dramatic stain that makes this one hard to misplace in a field guide.",
+  "host_trees": [
+    "pine",
+    "oak",
+    "birch"
+  ]
+},
+    {
+  "id": "gyroporus-purpurinus",
+  "name": "Red Gyroporus",
+  "scientific_name": "Gyroporus purpurinus",
+  "aliases": [
+    "purple gyroporus",
+    "Gyroporus purpurinus"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "purple",
+      "red",
+      "burgundy",
+      "brown"
+    ],
+    "diameter_cm": [
+      2,
+      8
+    ]
+  },
+  "gills": {
+    "attachment": "pores",
+    "spacing": "n/a",
+    "colors": [
+      "white",
+      "cream",
+      "yellow"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "purple",
+      "red",
+      "burgundy"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "pale-yellow",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "Eastern North America",
+  "regions": [
+    "north-america"
+  ],
+  "description": "A small eastern North American Gyroporus with purple-red to burgundy cap and stem, pale pores, and the genus's brittle chambered-hollow stipe. Long treated as a color form of the chestnut bolete complex before being validated as its own species. Generally listed as edible; still treat all wild boletes with caution and never eat based on an app alone.",
+  "lookalikes": [
+    {
+      "name": "Gyroporus castaneus (chestnut bolete)",
+      "distinguish": "Chestnut to rusty brown rather than purple-red/burgundy."
+    },
+    {
+      "name": "Gyroporus cyanescens (cornflower bolete)",
+      "distinguish": "Yellowish-buff and blues intensely; purpurinus is wine-colored and is not a strong bluer."
+    },
+    {
+      "name": "Boletus bicolor (two-colored bolete)",
+      "distinguish": "True bolete with yellow pores that blue, a red-and-yellow color split, and olive-brown spores — stem not chambered like Gyroporus."
+    }
+  ],
+  "fun_fact": "Its name was only validly published in 2013 even though North American collectors had used it for decades.",
+  "host_trees": [
+    "oak"
+  ]
+},
+    {
+  "id": "gyroporus-subalbellus",
+  "name": "Pale Gyroporus",
+  "scientific_name": "Gyroporus subalbellus",
+  "aliases": [
+    "whitish gyroporus",
+    "Gyroporus subalbellus"
+  ],
+  "edibility": "edible",
+  "cap": {
+    "shape": [
+      "convex",
+      "flat"
+    ],
+    "colors": [
+      "white",
+      "cream",
+      "buff",
+      "tan"
+    ],
+    "diameter_cm": [
+      3,
+      10
+    ]
+  },
+  "gills": {
+    "attachment": "pores",
+    "spacing": "n/a",
+    "colors": [
+      "white",
+      "cream"
+    ]
+  },
+  "stem": {
+    "colors": [
+      "white",
+      "cream",
+      "buff"
+    ],
+    "ring": False,
+    "volva": False
+  },
+  "spore_print": "pale-yellow",
+  "habitat": "forest",
+  "substrate": "ground",
+  "ecology": "mycorrhizal",
+  "season": [
+    "summer",
+    "autumn"
+  ],
+  "distribution": "North America",
+  "regions": [
+    "north-america"
+  ],
+  "description": "A pale, whitish to buff Gyroporus of North America with white pores and a brittle stem that becomes chambered-hollow. Part of the same False-bolete genus as the chestnut and cornflower boletes — pale spore print and hollow stem separate it from olive-spored True boletes. Listed as edible in standard references; educational only, never forage from an app ID.",
+  "lookalikes": [
+    {
+      "name": "Gyroporus castaneus (chestnut bolete)",
+      "distinguish": "Distinctly chestnut-brown cap and stem rather than whitish-buff."
+    },
+    {
+      "name": "Gyroporus cyanescens (cornflower bolete)",
+      "distinguish": "Strong instant blue bruising; subalbellus stays pale without a cornflower flash."
+    },
+    {
+      "name": "Boletus edulis (king bolete)",
+      "distinguish": "Much stockier with a finely netted solid stem, darker brown cap, and olive-brown spores — not chambered-hollow."
+    }
+  ],
+  "fun_fact": "Described by W.A. Murrill in 1910 — one of the quieter North American members of a small but distinctive bolete family.",
+  "host_trees": [
+    "oak",
+    "pine"
+  ]
 }
 ]

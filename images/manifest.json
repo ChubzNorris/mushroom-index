@@ -1742,5 +1742,37 @@
     "source": "iNaturalist",
     "taxon_id": 194282,
     "matched_name": "Cortinarius mucosus"
+  },
+  "gyroporus-castaneus": {
+    "file": "gyroporus-castaneus.jpg",
+    "credit": "Federico Calledda",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 125688,
+    "matched_name": "Gyroporus castaneus"
+  },
+  "gyroporus-cyanescens": {
+    "file": "gyroporus-cyanescens.jpg",
+    "credit": "Adam Bryant",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 335276,
+    "matched_name": "Gyroporus cyanescens"
+  },
+  "gyroporus-purpurinus": {
+    "file": "gyroporus-purpurinus.jpg",
+    "credit": "huafang",
+    "license": "CC BY-NC",
+    "source": "iNaturalist",
+    "taxon_id": 506466,
+    "matched_name": "Gyroporus purpurinus"
+  },
+  "gyroporus-subalbellus": {
+    "file": "gyroporus-subalbellus.jpg",
+    "credit": "Annie Weissman",
+    "license": "CC BY",
+    "source": "iNaturalist",
+    "taxon_id": 194221,
+    "matched_name": "Gyroporus subalbellus"
   }
 }
