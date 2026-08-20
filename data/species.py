@@ -14737,5 +14737,1911 @@ SPECIES = [
     "oak",
     "pine"
   ]
+},
+    {
+    "id": "gyroporus-borealis",
+    "name": "Northern Gyroporus",
+    "scientific_name": "Gyroporus borealis",
+    "aliases": [
+        "gyroporus borealis",
+        "northern gyroporus"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "colors": [
+            "pale-brown",
+            "tan",
+            "ochre"
+        ],
+        "diameter_cm": [
+            2,
+            8
+        ]
+    },
+    "gills": {
+        "attachment": "pores",
+        "colors": [
+            "pale-yellow",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "pale-brown",
+            "cream"
+        ]
+    },
+    "spore_print": "pale-yellow",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Northern species of Gyroporus with pale yellow pores and brittle, hollow stem. Mycorrhizal with conifers. Edible when young and firm.",
+    "lookalikes": [],
+    "fun_fact": "Part of the Gyroporus genus."
+},
+    {
+    "id": "gyroporus-lacteus",
+    "name": "Milky Gyroporus",
+    "scientific_name": "Gyroporus lacteus",
+    "aliases": [
+        "gyroporus lacteus",
+        "milky gyroporus"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "colors": [
+            "white",
+            "pale-cream",
+            "ivory"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "pores",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "spore_print": "pale-yellow",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "The 'milky' name refers to its white appearance. Pale pores and brittle hollow stem characteristic of Gyroporus. Edible.",
+    "lookalikes": [],
+    "fun_fact": "Part of the Gyroporus genus."
+},
+    {
+    "id": "gyroporus-longicystidiatus",
+    "name": "Long-cystidia Gyroporus",
+    "scientific_name": "Gyroporus longicystidiatus",
+    "aliases": [
+        "gyroporus longicystidiatus",
+        "long-cystidia gyroporus"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "pores",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "pale-yellow",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Long-cystidia Gyroporus (Gyroporus longicystidiatus). Educational reference only.",
+    "lookalikes": [],
+    "fun_fact": "Part of the Gyroporus genus."
+},
+    {
+    "id": "gyroporus-mcnabbii",
+    "name": "McNabb's Gyroporus",
+    "scientific_name": "Gyroporus mcnabbii",
+    "aliases": [
+        "gyroporus mcnabbii",
+        "mcnabb's gyroporus"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "pores",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "pale-yellow",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "McNabb's Gyroporus (Gyroporus mcnabbii). Educational reference only.",
+    "lookalikes": [],
+    "fun_fact": "Part of the Gyroporus genus."
+},
+    {
+    "id": "gyroporus-phaeocyanescens",
+    "name": "Dark-bluing Gyroporus",
+    "scientific_name": "Gyroporus phaeocyanescens",
+    "aliases": [
+        "gyroporus phaeocyanescens",
+        "dark-bluing gyroporus"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "pores",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "pale-yellow",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Dark-bluing Gyroporus (Gyroporus phaeocyanescens). Educational reference only.",
+    "lookalikes": [],
+    "fun_fact": "Part of the Gyroporus genus."
+},
+    {
+    "id": "russula-aeruginea",
+    "name": "Green Russula",
+    "scientific_name": "Russula aeruginea",
+    "aliases": [
+        "russula aeruginea",
+        "green russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "colors": [
+            "green",
+            "olive-green",
+            "yellow-green"
+        ],
+        "diameter_cm": [
+            4,
+            12
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Green-capped Russula with white gills. Mild taste, edible. Often found with birch.",
+    "lookalikes": [
+        {
+            "name": "Russula emetica",
+            "distinguish": "The Sickener has bright red cap and acrid taste"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-albonigra",
+    "name": "Black and White Russula",
+    "scientific_name": "Russula albonigra",
+    "aliases": [
+        "russula albonigra",
+        "black and white russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Black and White Russula (Russula albonigra). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-aurata",
+    "name": "Gilded Russula",
+    "scientific_name": "Russula aurata",
+    "aliases": [
+        "russula aurata",
+        "gilded russula"
+    ],
+    "edibility": "choice",
+    "cap": {
+        "colors": [
+            "orange-red",
+            "golden",
+            "yellow"
+        ],
+        "diameter_cm": [
+            5,
+            15
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Gilded Russula with beautiful orange-gold cap. Edible and sought after in Europe.",
+    "lookalikes": [
+        {
+            "name": "Other red-capped Russulas",
+            "distinguish": "Lack the golden sheen and have different taste"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-claroflava",
+    "name": "Yellow Swamp Russula",
+    "scientific_name": "Russula claroflava",
+    "aliases": [
+        "russula claroflava",
+        "yellow swamp russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Yellow Swamp Russula (Russula claroflava). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-crustosa",
+    "name": "Crusted Russula",
+    "scientific_name": "Russula crustosa",
+    "aliases": [
+        "russula crustosa",
+        "crusted russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Crusted Russula (Russula crustosa). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-decolorans",
+    "name": "Graying Russula",
+    "scientific_name": "Russula decolorans",
+    "aliases": [
+        "russula decolorans",
+        "graying russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Graying Russula (Russula decolorans). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-delica",
+    "name": "Milk-white Russula",
+    "scientific_name": "Russula delica",
+    "aliases": [
+        "russula delica",
+        "milk-white russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Milk-white Russula (Russula delica). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-densifolia",
+    "name": "Dense Russula",
+    "scientific_name": "Russula densifolia",
+    "aliases": [
+        "russula densifolia",
+        "dense russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Dense Russula (Russula densifolia). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-foetens",
+    "name": "Stinking Russula",
+    "scientific_name": "Russula foetens",
+    "aliases": [
+        "russula foetens",
+        "stinking russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Stinking Russula (Russula foetens). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-fragilis",
+    "name": "Fragile Russula",
+    "scientific_name": "Russula fragilis",
+    "aliases": [
+        "russula fragilis",
+        "fragile russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Fragile Russula (Russula fragilis). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-grisea",
+    "name": "Gray Russula",
+    "scientific_name": "Russula grisea",
+    "aliases": [
+        "russula grisea",
+        "gray russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Gray Russula (Russula grisea). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-heterophylla",
+    "name": "Variable Russula",
+    "scientific_name": "Russula heterophylla",
+    "aliases": [
+        "russula heterophylla",
+        "variable russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Variable Russula (Russula heterophylla). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-integra",
+    "name": "Entire Russula",
+    "scientific_name": "Russula integra",
+    "aliases": [
+        "russula integra",
+        "entire russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Entire Russula (Russula integra). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-laurocerasi",
+    "name": "Cherry-laurel Russula",
+    "scientific_name": "Russula laurocerasi",
+    "aliases": [
+        "russula laurocerasi",
+        "cherry-laurel russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Cherry-laurel Russula (Russula laurocerasi). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-mustelina",
+    "name": "Mustelina Russula",
+    "scientific_name": "Russula mustelina",
+    "aliases": [
+        "russula mustelina",
+        "mustelina russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Mustelina Russula (Russula mustelina). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-nigricans",
+    "name": "Blackening Russula",
+    "scientific_name": "Russula nigricans",
+    "aliases": [
+        "russula nigricans",
+        "blackening russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Blackening Russula (Russula nigricans). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-olivacea",
+    "name": "Olive Russula",
+    "scientific_name": "Russula olivacea",
+    "aliases": [
+        "russula olivacea",
+        "olive russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Olive Russula (Russula olivacea). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-paludosa",
+    "name": "Marsh Russula",
+    "scientific_name": "Russula paludosa",
+    "aliases": [
+        "russula paludosa",
+        "marsh russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Marsh Russula (Russula paludosa). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-parazurea",
+    "name": "Powdery-blue Russula",
+    "scientific_name": "Russula parazurea",
+    "aliases": [
+        "russula parazurea",
+        "powdery-blue russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Powdery-blue Russula (Russula parazurea). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-queletii",
+    "name": "Quelet's Russula",
+    "scientific_name": "Russula queletii",
+    "aliases": [
+        "russula queletii",
+        "quelet's russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Quelet's Russula (Russula queletii). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-risigallina",
+    "name": "Chicken Russula",
+    "scientific_name": "Russula risigallina",
+    "aliases": [
+        "russula risigallina",
+        "chicken russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Chicken Russula (Russula risigallina). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-romellii",
+    "name": "Romell's Russula",
+    "scientific_name": "Russula romellii",
+    "aliases": [
+        "russula romellii",
+        "romell's russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Romell's Russula (Russula romellii). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-sanguinaria",
+    "name": "Bloody Russula",
+    "scientific_name": "Russula sanguinaria",
+    "aliases": [
+        "russula sanguinaria",
+        "bloody russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Bloody Russula (Russula sanguinaria). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-sardonia",
+    "name": "Sardonic Russula",
+    "scientific_name": "Russula sardonia",
+    "aliases": [
+        "russula sardonia",
+        "sardonic russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Sardonic Russula (Russula sardonia). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-vesca",
+    "name": "Bare-toothed Russula",
+    "scientific_name": "Russula vesca",
+    "aliases": [
+        "russula vesca",
+        "bare-toothed russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Bare-toothed Russula (Russula vesca). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-violeipes",
+    "name": "Violet-footed Russula",
+    "scientific_name": "Russula violeipes",
+    "aliases": [
+        "russula violeipes",
+        "violet-footed russula"
+    ],
+    "edibility": "edible",
+    "cap": {
+        "shape": [
+            "convex",
+            "flat"
+        ],
+        "colors": [
+            "brown",
+            "tan"
+        ],
+        "diameter_cm": [
+            3,
+            10
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Violet-footed Russula (Russula violeipes). Characteristic Russula brittleness. Educational reference only.",
+    "lookalikes": [
+        {
+            "name": "Other Russula species",
+            "distinguish": "Species-level ID critical - taste test often needed"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
+},
+    {
+    "id": "russula-xerampelina",
+    "name": "Shrimp Russula",
+    "scientific_name": "Russula xerampelina",
+    "aliases": [
+        "russula xerampelina",
+        "shrimp russula"
+    ],
+    "edibility": "choice",
+    "cap": {
+        "colors": [
+            "red",
+            "purple-red",
+            "brown"
+        ],
+        "diameter_cm": [
+            5,
+            15
+        ]
+    },
+    "gills": {
+        "attachment": "attached",
+        "spacing": "crowded",
+        "colors": [
+            "white",
+            "cream"
+        ]
+    },
+    "stem": {
+        "colors": [
+            "white",
+            "cream"
+        ],
+        "ring": False,
+        "volva": False
+    },
+    "spore_print": "white",
+    "habitat": "forest",
+    "substrate": "ground",
+    "ecology": "mycorrhizal",
+    "season": [
+        "summer",
+        "autumn"
+    ],
+    "distribution": "Northern Hemisphere",
+    "regions": [
+        "north-america",
+        "europe"
+    ],
+    "description": "Shrimp Russula - smells like seafood when mature. Choice edible with distinctive odor.",
+    "lookalikes": [
+        {
+            "name": "Other red Russulas",
+            "distinguish": "Lack the shrimp-like odor"
+        }
+    ],
+    "fun_fact": "Part of the Russula genus."
 }
 ]
