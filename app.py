@@ -694,7 +694,9 @@ class Handler(BaseHTTPRequestHandler):
     server_version = "SporeDropIndex/1.0"
 
     def _send_json(self, payload, status=200):
-        # Enable gzip compression
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        
+        # Enable gzip compression for large responses
         import gzip
         import io
         buf = io.BytesIO()
