@@ -694,13 +694,24 @@ class Handler(BaseHTTPRequestHandler):
     server_version = "SporeDropIndex/1.0"
 
     def _send_json(self, payload, status=200):
-        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        # Enable gzip compression
+        import gzip
+        import io
+        buf = io.BytesIO()
+        with gzip.GzipFile(fileobj=buf, mode='wb') as f:
+            f.write(body)
+        compressed_body = buf.getvalue()
+        
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Content-Length", str(len(compressed_body)))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Encoding", "gzip")
+        # Cache species data for 5 minutes (API responses change rarely)
+        if self.path.startswith("/api/species"):
+            self.send_header("Cache-Control", "public, max-age=300")
         self.end_headers()
-        self.wfile.write(body)
+        self.wfile.write(compressed_body)
 
     def _send_file(self, path):
         try:
