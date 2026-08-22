@@ -3,15 +3,9 @@
 builder = "nixpacks"
 
 [deploy]
+# Boot runs catalog hash-sync then serves. See data/catalog_sync.py.
 startCommand = "python app.py"
+restartPolicyType = "ON_FAILURE"
 
-# Environment variables
 [env]
 PORT = "8793"
-
-# Dependencies
-[[packages]]
-name = "psycopg2-binary"
-
-[[packages]]
-name = "python-dotenv"

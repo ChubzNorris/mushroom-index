@@ -45,9 +45,19 @@ from PIL import Image, ImageFilter
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-# Species source: prefer PostgreSQL when DATABASE_URL is set (Phase 2),
-# otherwise fall back to the in-repo data/species.py catalog.
+# Catalog auto-sync: when DATABASE_URL is set, hash data/species.py and
+# reload Postgres only if the file changed (or CATALOG_FORCE_SYNC=1).
+# Then prefer Postgres for SPECIES; fall back to the file on any failure.
 _SPECIES_SOURCE = "species.py"
+if os.environ.get("DATABASE_URL", "").strip():
+    try:
+        from data.catalog_sync import boot_sync  # noqa: E402
+
+        boot_sync()
+    except Exception as _sync_err:  # noqa: BLE001
+        sys.stderr.write(
+            "[mushroom-index] catalog boot_sync error: %s\n" % _sync_err
+        )
 try:
     from data.db import try_load_species  # noqa: E402
 
