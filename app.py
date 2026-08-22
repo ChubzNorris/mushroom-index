@@ -44,7 +44,24 @@ from PIL import Image, ImageFilter
 # Make the data package importable regardless of where the server is launched.
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from data.species import SPECIES  # noqa: E402
+
+# Species source: prefer PostgreSQL when DATABASE_URL is set (Phase 2),
+# otherwise fall back to the in-repo data/species.py catalog.
+_SPECIES_SOURCE = "species.py"
+try:
+    from data.db import try_load_species  # noqa: E402
+
+    SPECIES, _SPECIES_SOURCE = try_load_species()
+except Exception as _db_err:  # noqa: BLE001
+    from data.species import SPECIES as _FILE_SPECIES  # noqa: E402
+
+    SPECIES = _FILE_SPECIES
+    _SPECIES_SOURCE = "species.py"
+    if os.environ.get("DATABASE_URL", "").strip():
+        sys.stderr.write(
+            "[mushroom-index] Postgres load failed (%s); using data/species.py\n"
+            % _db_err
+        )
 
 # Optional image manifest (written by fetch_images.py). Maps species id ->
 # {file, credit, license, source, taxon_id, matched_name}.
@@ -695,25 +712,26 @@ class Handler(BaseHTTPRequestHandler):
 
     def _send_json(self, payload, status=200):
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        
-        # Enable gzip compression for large responses
-        import gzip
-        import io
-        buf = io.BytesIO()
-        with gzip.GzipFile(fileobj=buf, mode='wb') as f:
-            f.write(body)
-        compressed_body = buf.getvalue()
-        
+        accept = (self.headers.get("Accept-Encoding") or "").lower()
+        use_gzip = "gzip" in accept and len(body) > 1024
+        if use_gzip:
+            import gzip
+            import io
+            buf = io.BytesIO()
+            with gzip.GzipFile(fileobj=buf, mode="wb") as f:
+                f.write(body)
+            body = buf.getvalue()
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(compressed_body)))
+        self.send_header("Content-Length", str(len(body)))
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Content-Encoding", "gzip")
-        # Cache species data for 5 minutes (API responses change rarely)
-        if self.path.startswith("/api/species"):
+        if use_gzip:
+            self.send_header("Content-Encoding", "gzip")
+        # Cache list/detail JSON briefly behind CDN (catalog changes rarely).
+        if self.path.startswith("/api/species") or self.path.startswith("/api/facets"):
             self.send_header("Cache-Control", "public, max-age=300")
         self.end_headers()
-        self.wfile.write(compressed_body)
+        self.wfile.write(body)
 
     def _send_file(self, path):
         try:
@@ -1019,7 +1037,7 @@ def main():
     httpd = ThreadingHTTPServer((args.host, args.port), Handler)
     url = f"http://{args.host}:{args.port}/"
     print(f"Spore Drop Index running at {url}")
-    print(f"Serving {len(SPECIES)} species. Press Ctrl+C to stop.")
+    print(f"Serving {len(SPECIES)} species from {_SPECIES_SOURCE}. Press Ctrl+C to stop.")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

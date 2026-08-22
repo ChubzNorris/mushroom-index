@@ -1,3 +1,5 @@
-# Spore Drop Index now uses Pillow for the local photo "identify" feature
-# (HSV histogram + edge-density features). The rest of the app is stdlib-only.
+# Spore Drop Index dependencies.
+# Core server is stdlib; these are optional-path deps used in production.
 Pillow==12.2.0
+psycopg2-binary==2.9.12
+python-dotenv==1.0.1
