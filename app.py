@@ -49,11 +49,26 @@ sys.path.insert(0, HERE)
 # reload Postgres only if the file changed (or CATALOG_FORCE_SYNC=1).
 # Then prefer Postgres for SPECIES; fall back to the file on any failure.
 _SPECIES_SOURCE = "species.py"
+_CATALOG_SYNC_STATUS = None
 if os.environ.get("DATABASE_URL", "").strip():
     try:
         from data.catalog_sync import boot_sync  # noqa: E402
 
-        boot_sync()
+        _ok, _CATALOG_SYNC_STATUS = boot_sync()
+        # After a real catalog rewrite, bust Cloudflare edge cache so users
+        # don't keep seeing the previous species list for s-maxage.
+        if _ok and (_CATALOG_SYNC_STATUS or {}).get("action") in {
+            "migrated",
+            "forced",
+        }:
+            try:
+                from data.cdn_purge import purge_after_catalog_change  # noqa: E402
+
+                purge_after_catalog_change()
+            except Exception as _purge_err:  # noqa: BLE001
+                sys.stderr.write(
+                    "[mushroom-index] CDN purge error: %s\n" % _purge_err
+                )
     except Exception as _sync_err:  # noqa: BLE001
         sys.stderr.write(
             "[mushroom-index] catalog boot_sync error: %s\n" % _sync_err
@@ -737,9 +752,16 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Origin", "*")
         if use_gzip:
             self.send_header("Content-Encoding", "gzip")
-        # Cache list/detail JSON briefly behind CDN (catalog changes rarely).
-        if self.path.startswith("/api/species") or self.path.startswith("/api/facets"):
-            self.send_header("Cache-Control", "public, max-age=300")
+            self.send_header("Vary", "Accept-Encoding")
+        # Phase 3 CDN: short browser TTL, long edge TTL (Cloudflare s-maxage).
+        # Catalog rewrites purge these URLs on boot (data/cdn_purge.py).
+        path = self.path.split("?", 1)[0]
+        if path.startswith("/api/species") or path.startswith("/api/facets") or path.startswith("/api/lookalike-pairs"):
+            self.send_header(
+                "Cache-Control",
+                "public, max-age=60, s-maxage=3600, stale-while-revalidate=600",
+            )
+            self.send_header("CDN-Cache-Control", "public, max-age=3600")
         self.end_headers()
         self.wfile.write(body)
 
@@ -767,11 +789,28 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(body)))
-        # Keep HTML/JS/CSS fresh behind Cloudflare. Images can stay longer.
-        if ext in (".html", ".js", ".css", ".svg"):
-            self.send_header("Cache-Control", "public, max-age=120, must-revalidate")
+        # HTML short-lived (shell). JS/CSS long-lived + ?v= bust in index.html.
+        # Species photos stay warm on the edge for a week.
+        if ext == ".html":
+            self.send_header(
+                "Cache-Control",
+                "public, max-age=60, s-maxage=300, must-revalidate",
+            )
+        elif ext in (".js", ".css"):
+            self.send_header(
+                "Cache-Control",
+                "public, max-age=86400, s-maxage=604800, immutable",
+            )
+        elif ext in (".svg",):
+            self.send_header(
+                "Cache-Control",
+                "public, max-age=86400, s-maxage=604800",
+            )
         elif ext in (".jpg", ".jpeg", ".png", ".webp", ".gif"):
-            self.send_header("Cache-Control", "public, max-age=86400")
+            self.send_header(
+                "Cache-Control",
+                "public, max-age=604800, s-maxage=2592000",
+            )
         self.end_headers()
         self.wfile.write(body)
 
