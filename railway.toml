@@ -1,0 +1,17 @@
+# Railway configuration
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python app.py"
+
+# Environment variables
+[env]
+PORT = "8793"
+
+# Dependencies
+[[packages]]
+name = "psycopg2-binary"
+
+[[packages]]
+name = "python-dotenv"
