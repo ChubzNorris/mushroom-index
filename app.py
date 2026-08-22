@@ -444,6 +444,13 @@ def _resolve_lookalike(name, source_id=None):
     return None
 
 
+# Shared-taxa deep links to mcpedia.earth (sitemap intersection).
+try:
+    from data.mcpedia_links import MCPEDIA_LINKS  # noqa: E402
+except Exception:  # noqa: BLE001
+    MCPEDIA_LINKS = {}
+
+
 def with_image(s):
     """Return a copy of the species record with an `image` field attached when
     a downloaded photo exists."""
@@ -462,6 +469,13 @@ def with_image(s):
         rec["lookalikes"] = [
             dict(la, link=_resolve_lookalike(la["name"], s["id"])) for la in lookalikes
         ]
+    # External collab: only species that exist on mcpedia.earth.
+    mcp = MCPEDIA_LINKS.get(s["id"])
+    if mcp:
+        rec["mcpedia"] = {
+            "url": mcp,
+            "label": "More on mcpedia.earth",
+        }
     return rec
 
 # Vocabulary used for sorting edibility from safest to most dangerous.

@@ -525,6 +525,49 @@ button.chip { margin: 0; }
 .lookalike-link { color: #f1c684; text-decoration: none; font-weight: 700; cursor: pointer; }
 .lookalike-link:hover { text-decoration: underline; color: #ffd9a0; }
 .lookalike:has(.lookalike-link):hover { background: rgba(224,166,75,.14); }
+
+/* mcpedia.earth collab deep-links (shared taxa only) */
+.card .mcpedia-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(110, 231, 255, 0.35);
+  background: rgba(110, 231, 255, 0.08);
+  color: var(--cyan, #6ee7ff);
+  font-size: .78rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .02em;
+  width: fit-content;
+}
+.card .mcpedia-link:hover {
+  background: rgba(110, 231, 255, 0.16);
+  border-color: rgba(110, 231, 255, 0.55);
+  text-decoration: none;
+}
+.mcpedia-detail {
+  border-left: 3px solid var(--cyan, #6ee7ff);
+  padding: 10px 12px;
+  background: rgba(110, 231, 255, 0.07);
+  border-radius: 0 8px 8px 0;
+}
+a.mcpedia-link-lg {
+  display: inline-flex;
+  color: var(--cyan, #6ee7ff);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: .95rem;
+}
+a.mcpedia-link-lg:hover { text-decoration: underline; }
+.mcpedia-note {
+  margin: 6px 0 0;
+  color: var(--ink-dim);
+  font-size: .82rem;
+  line-height: 1.35;
+}
+
 .fun-fact { border-left: 3px solid var(--accent); padding: 8px 12px; background: rgba(125,255,154,.07); border-radius: 0 8px 8px 0; margin-top: 14px; }
 
 /* Spore-dot footer rhythm */

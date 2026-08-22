@@ -1138,6 +1138,11 @@ function cardHTML(s) {
     const glowBadge = s.bioluminescent
       ? `<span class="badge-glow" title="Bioluminescent (glow / foxfire)">✨ Glow</span>`
       : '';
+    // External collab link — only when this taxon exists on mcpedia.earth.
+    // stopPropagation handled in bind via .mcpedia-link class.
+    const mcp = s.mcpedia && s.mcpedia.url
+      ? `<a class="mcpedia-link" href="${escapeHTML(s.mcpedia.url)}" target="_blank" rel="noopener noreferrer" title="More information on mcpedia.earth (opens in new tab)">mcpedia ↗</a>`
+      : '';
     return `
       <article class="card" data-id="${s.id}" tabindex="0">
         <div class="card-media">${img}</div>
@@ -1148,6 +1153,7 @@ function cardHTML(s) {
           <span class="tag">${escapeHTML(s.habitat || '—')}</span>
           ${hosts}${moreHosts}
         </div>
+        ${mcp}
       </article>`;
   }
 
@@ -1191,6 +1197,11 @@ function renderNextPage() {
     card.addEventListener('click', open);
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+    // External mcpedia links must not open the detail modal.
+    card.querySelectorAll('a.mcpedia-link').forEach(a => {
+      a.addEventListener('click', e => e.stopPropagation());
+      a.addEventListener('keydown', e => e.stopPropagation());
     });
   });
 
@@ -1270,6 +1281,16 @@ function detailHTML(s) {
     return `<div class="lookalike">${nameHTML}<br>${escapeHTML(l.distinguish)}</div>`;
   }).join('');
 
+  // Collab block sits next to look-alikes — more depth on mcpedia when shared.
+  const mcpBlock = (s.mcpedia && s.mcpedia.url)
+    ? `<div class="mcpedia-detail">
+         <a class="mcpedia-link mcpedia-link-lg" href="${escapeHTML(s.mcpedia.url)}" target="_blank" rel="noopener noreferrer">
+           More on mcpedia.earth ↗
+         </a>
+         <p class="mcpedia-note">External collab — cited species info on mcpedia.earth. Educational only; not an ID or foraging guide.</p>
+       </div>`
+    : '';
+
   const aliases = (s.aliases || []).length
     ? `<p>${s.aliases.map(escapeHTML).join(' · ')}</p>` : '';
 
@@ -1309,6 +1330,7 @@ function detailHTML(s) {
     </div>
     ${detailRegionMapHTML(s.regions)}
     ${look ? `<div class="detail-section"><h4>Look-alikes & how to tell them apart</h4>${look}</div>` : ''}
+    ${mcpBlock ? `<div class="detail-section"><h4>More information</h4>${mcpBlock}</div>` : ''}
     ${s.fun_fact ? `<div class="fun-fact">🧠 ${escapeHTML(s.fun_fact)}</div>` : ''}
   `;
 }
